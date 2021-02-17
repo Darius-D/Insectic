@@ -5,5 +5,7 @@
 ![](img/Analytic%20page.JPG)
 <b>Archives</b>
 ![](img/Archives.JPG)
-<b>Archives</b>
+<b>Ticket Submission</b>
 ![](img/ticket%20submission.JPG)
+<b>Archives</b>
+![](img/Contact.JPG)
