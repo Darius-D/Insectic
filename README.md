@@ -1,3 +1,3 @@
 # Insectic
 
-![GitHub Logo](/img/dashboard2.jpg)
+![Dashboard](/img/dashboard2.jpg)
