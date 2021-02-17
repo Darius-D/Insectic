@@ -1,3 +1,3 @@
 # Insectic
 
-![GitHub Logo](/images/logo.png)
+![GitHub Logo](/C:\Users\ddubo\Desktop\MSAA HW\wk3)
