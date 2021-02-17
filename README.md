@@ -1,3 +1,3 @@
 # Insectic
 
-![txt](/img/Analytic page.jpg)
+![txt](img/Analytic page.jpg)
