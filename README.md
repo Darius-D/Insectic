@@ -1,3 +1,3 @@
 # Insectic
 
-![Dashboard](insectic/img/dashboard2.jpg)
+![](img/Analytic page.JPG)
