@@ -12,7 +12,7 @@ ERD
 
 
 
-<h3><b>Analytics</b></h3><br>
+<b>Analytics</b><br>
 ![](img/Analytic%20page.JPG)
 
 
