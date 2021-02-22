@@ -31,9 +31,8 @@ Insectic will be an interactive bug/patches tracking web application that will f
 
 ###   <p align="center">  Ticket Submission
 
-<br>
 
-![](img/ticket%20submission.png)
+<p align="center">  ![](img/ticket%20submission.png) </p>
 
 ***
 
