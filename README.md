@@ -3,7 +3,7 @@
 Insectic will be an interactive bug/patches tracking web application that will forcus on the unplanned work aspect of DevOPs. This Web application will allow Managers to track current items being worked on with detailed statistics to help locate bottle necks. 
 
 DRAFT WIREFRAMES
-<b>Dashboard</b><br>
+<b>Dashboard</b><br><lb>
 ![](img/dashboard2.JPG)
 <b>Analytics</b><br>
 ![](img/Analytic%20page.JPG)
