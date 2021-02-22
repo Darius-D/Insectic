@@ -4,7 +4,7 @@ Insectic will be an interactive bug/patches tracking web application that will f
 ERD
 
 
-DRAFT WIREFRAMES
+<h3>DRAFT WIREFRAMES</h3>
 <br> 
 
 <b>Dashboard</b><br>
