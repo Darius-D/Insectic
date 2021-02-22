@@ -9,21 +9,23 @@ Insectic will be an interactive bug/patches tracking web application that will f
 ## DRAFT WIREFRAMES
 <br> 
 ***
-### <b>Dashboard</b><br>
+### Dashboard
+<br>
 ![](img/dashboard2.JPG)
 ***
-### <b>Analytics</b><br>
+### Analytics
+<br>
 ![](img/Analytic%20page.JPG)
 ***
-### <b>Archives</b>
+### Archives
 <br>
 ![](img/Archives.JPG)
 ***
-### <b>Ticket Submission</b>
+### Ticket Submission
 <br>
 ![](img/ticket%20submission.png)
 ***
-### <b>Contact</b>
+### Contact
 <br>
 ![](img/Contact.JPG)
 
