@@ -16,7 +16,7 @@ Insectic will be an interactive bug/patches tracking web application that will f
 
 ###   <p align="center">  Dashboard
 
-<img src="https://github.com/Darius-D/Insectic/blob/main/img/dashboard2.JPG" width="100" height="100">
+<img src="https://github.com/Darius-D/Insectic/blob/main/img/dashboard2.JPG" width="250" height="250">
 
 ###   <p align="center">  Analytics
 
