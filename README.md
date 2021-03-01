@@ -2,7 +2,7 @@
  1. [Why Insectic?](#head)
  2. [What is Insectic](#head2)
  3. [Case Use Diagram](#head3)
- 4. [Case Use Diagram](#erd)
+ 4. [ERD](#erd)
  5. [Draft WireFrames](#head4)
     1. [Dashboard page](#head41)
     2. [Analytics page](#head42)
