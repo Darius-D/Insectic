@@ -1,6 +1,6 @@
  ## table of contents
  1. [Why Insectic?](#head)
- 2. [What is Insectic](#beetle-what-is-insectic-beetle)
+ 2. [What is Insectic](#head2)
 
 
 ***
@@ -12,7 +12,7 @@ Insectic is a side project I am working on to help viuslize one of the 4 pillars
 ## :beetle: What Is Insectic? :beetle: 
 Insectic will be an interactive bug/patches tracking web application that will forcus on the unplanned work aspect of DevOPs. This Web application will allow Managers to track current items being worked on with detailed statistics to help locate bottle necks. Team leaders will be able to utilize this tool to task out team members, track team progress and will be able to see team analytics to better articulate the needs of the team to the department manager. 
 ***
-
+<a name="head2"></a>
 ### <p align="center"> :page_facing_up: [Case Use Diagram](https://github.com/Darius-D/Insectic/blob/main/CaseUseDiagram.jpg) :page_facing_up: </p>
 ***
 ###  ERD [:arrow_up_small:](#table-of-contents) 
