@@ -1,4 +1,4 @@
- ## <p align="center"> Table of Contents </p>
+ ## Table of Contents 
  1. [Why Insectic?](#head)
  2. [What is Insectic](#head2)
  3. [Case Use Diagram](#head3)
