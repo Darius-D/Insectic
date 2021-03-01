@@ -26,7 +26,7 @@ Insectic will be an interactive bug/patches tracking web application that will f
 <a name="head3"></a>
 ### <p align="center"> :page_facing_up: [Case Use Diagram](https://github.com/Darius-D/Insectic/blob/main/CaseUseDiagram.jpg) :page_facing_up: </p>
 ***
-###  ERD [:arrow_up_small:](#table-of-contents) 
+### <p align ="center"> ERD [:arrow_up_small:](#table-of-contents) </p>
 ***
 <a name="erd"></a>
 ![](img/myERD.jpg)
