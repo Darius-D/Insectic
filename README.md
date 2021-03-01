@@ -2,14 +2,15 @@
  1. [Why Insectic?](#head)
  2. [What is Insectic](#head2)
  3. [Case Use Diagram](#head3)
- 4. [Draft WireFrames](#head4)
+ 4. [Case Use Diagram](#erd)
+ 5. [Draft WireFrames](#head4)
     1. [Dashboard page](#head41)
     2. [Analytics page](#head42)
     3. [Archive page](#head43)
     4. [Ticket Submission page](#head44)
- 5. [User Stories](#head5)
- 6. [Use Cases](#head6)
- 7. [Requirements](#head7)
+ 6. [User Stories](#head5)
+ 7. [Use Cases](#head6)
+ 8. [Requirements](#head7)
 
 ***
 <a name="head"></a>
@@ -26,6 +27,7 @@ Insectic will be an interactive bug/patches tracking web application that will f
 ***
 ###  ERD [:arrow_up_small:](#table-of-contents) 
 ***
+<a name="erd"></a>
 ![](img/myERD.jpg)
 
 ***
