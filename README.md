@@ -122,18 +122,18 @@ Then populate drop by selection to select groups available and update user’s g
 | Requirement ID | Requirement Description | Test Method | Test Result |
 |:-------------|:------------------:|:----------: |:-----------:|
 | 1 | The system shall create a user account with all required fields filled. | Analyze | :red_circle: |
-| 1.1 | The system shall allow github authentication. | Analyze | :red_circle: |
+| 1.1 | The system shall allow github authentication. | Test | :red_circle: |
 | 2 | The system shall display the users name and roles on all pages | Analyze | :red_circle:|
-| 3 | The system Shall create unique ticket objects for each ticket submitted | Analyze | :red_circle: |
-| 3.1 | The system shall make a unique ticket ID for every ticket creation | Analyze | :red_circle: |
-| 3.2 | The system shall store all attributes of the ticket. | Analyze | :red_circle:|
-| 4 | The system shall provide Department managers with Analytics for the whole company | Analyze | :red_circle:|
-| 4.1 | The system shall provide Department managers with Analytics for the whole company | Analyze | :red_circle: |
-| 4.2 | The System shall provide the Team Leaders with analytics for their team | Analyze | :red_circle: |
+| 3 | The system Shall create unique ticket objects for each ticket submitted | Test | :red_circle: |
+| 3.1 | The system shall make a unique ticket ID for every ticket creation | Test | :red_circle: |
+| 3.2 | The system shall store all attributes of the ticket. | Test | :red_circle:|
+| 4 | The system shall provide Department managers with Analytics for the whole company | Test | :red_circle:|
+| 4.1 | The system shall provide Department managers with Analytics for the whole company | Test | :red_circle: |
+| 4.2 | The System shall provide the Team Leaders with analytics for their team | Test | :red_circle: |
 | 4.3 | The system shall provide Team members with only their analytics. | Analyze | :red_circle: |
-| 5 | The System shall archive closed tickets | Analyze | :red_circle:|
-| 5.1 | The System shall only allow Department managers to close tickets | Analyze | :red_circle: |
-| 5.2 | The System shall provide team members/ Team leaders the option to place ticket in pending close status | Analyze | :red_circle:|
-| 6 | The System shall allow Department managers to move team member groups around | Analyze | :red_circle: |
+| 5 | The System shall archive closed tickets | Test | :red_circle:|
+| 5.1 | The System shall only allow Department managers to close tickets | Test | :red_circle: |
+| 5.2 | The System shall provide team members/ Team leaders the option to place ticket in pending close status | Test | :red_circle:|
+| 6 | The System shall allow Department managers to move team member groups around | Test | :red_circle: |
 
 
