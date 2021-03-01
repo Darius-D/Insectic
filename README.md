@@ -62,35 +62,35 @@ Insectic will be an interactive bug/patches tracking web application that will f
 ***
 ### Use Cases
 
-Given a new user
+* Given a new user
 When user fills out application
 Then assign values to new user object
 
-Given a user discovers a reportable issue
+* Given a user discovers a reportable issue
 When all required forms are filled properly, 
 Then create a ticket object and store the data.
 
-Given a ticket number 
+* Given a ticket number 
 when a user desires to update a ticket
 Then pull ticket data and allow comments to be added and update database. 
 
-Given a ticket number, 
+* Given a ticket number, 
 When a team member desires to close a ticket, 
 Then query ticket and change status to pending closure and alert Department Manager.
 
-Given a ticket number, 
+* Given a ticket number, 
 When a Department manager desires to close a ticket, 
 Then query ticket and change status to close to add to archives.
 
-Given a Ticket ID
+* Given a Ticket ID
 When user wants to view the ticket
 Then populate the ticket into a table.
 
-Given a filtering condition, 
+* Given a filtering condition, 
 When user wants to pull analytics, 
 Then generate a query that outputs values to display the count of all tickets by category, subcategory.
 
-Given a user ID
+* Given a user ID
 When a user needs to be assigned to a group
 Then populate drop by selection to select groups available and update user’s group in DB.
 
