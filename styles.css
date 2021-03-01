@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.MainContainer {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom right, #7785Ac, #9ac6c5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.InnerContainer {
+  max-width: 2000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #7785Ac, #360568);
+  border-radius: 20px;
+  height: 95%;
+  width: 95%;
+}
+.innerTop {
+  background: linear-gradient(to right top, #9ac6c5, #A5e6ba);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 50px;
+  border-radius: 15px;
+  width: 95%;
+  height: 10%;
+}
+.innerBottom {
+  display: flex;
+  width: 95%;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background: #5B2A86;
+  flex:2;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20%;
+  background: linear-gradient(to top, #7785Ac, #9Ac6c5);
+  border-radius: 20px;
+  margin: 15px 5px 15px 15px;
+}
+.link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 10%;
+}
+.link:hover{
+  background:lightgreen;
+}
+.right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  background: #5B2A86;
+  margin: 15px 15px 15px 5px;
+  border-radius: 20px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 95%;
+  width: 32%;
+  margin: 10px 5px;
+  background: #9AC6C5;
+  border-radius: 15px;
+}
+.ticket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex:1;
+  width:98%;
+  border-bottom: solid black 2px;
+}
+.ticketData{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex:4;
+}
