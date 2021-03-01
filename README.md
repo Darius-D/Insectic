@@ -134,4 +134,9 @@ Then populate drop by selection to select groups available and update user’s g
      2. The System shall provide team members/ Team leaders the option to place ticket in pending close status
 6. The System shall allow Department managers to move team member groups around 
 
+| Requirement ID | Requirement Description | Test Method | Test Result |
+|:-------------|:------------------:|:----------: |:-----------:|
+| 1 | The system shall create a user account with all required fields filled. | Analyze | TDB |
+| 1.1 | The system shall allow github authentication. | | Analyze | TDB |
+
 
