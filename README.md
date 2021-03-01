@@ -119,21 +119,21 @@ Then populate drop by selection to select groups available and update user’s g
 *** 
 ### <p align ="center"> Requirements [:arrow_up_small:](#table-of-contents) </p>
 
-| Requirement ID | Requirement Description | Test Method | Test Result |
-|:-------------|:------------------:|:----------: |:-----------:|
-| 1 | The system shall create a user account with all required fields filled. | Analyze | :red_circle: |
-| 1.1 | The system shall allow github authentication. | Test | :red_circle: |
-| 2 | The system shall display the users name and roles on all pages | Analyze | :red_circle:|
-| 3 | The system Shall create unique ticket objects for each ticket submitted | Test | :red_circle: |
-| 3.1 | The system shall make a unique ticket ID for every ticket creation | Test | :red_circle: |
-| 3.2 | The system shall store all attributes of the ticket. | Test | :red_circle:|
-| 4 | The system shall provide Department managers with Analytics for the whole company | Test | :red_circle:|
-| 4.1 | The system shall provide Department managers with Analytics for the whole company | Test | :red_circle: |
-| 4.2 | The System shall provide the Team Leaders with analytics for their team | Test | :red_circle: |
-| 4.3 | The system shall provide Team members with only their analytics. | Analyze | :red_circle: |
-| 5 | The System shall archive closed tickets | Test | :red_circle:|
-| 5.1 | The System shall only allow Department managers to close tickets | Test | :red_circle: |
-| 5.2 | The System shall provide team members/ Team leaders the option to place ticket in pending close status | Test | :red_circle:|
-| 6 | The System shall allow Department managers to move team member groups around | Test | :red_circle: |
+| Requirement ID | Requirement Description | Test Method | Test Result | Time Stamp | Test Procedure|
+|:-------------|:------------------:|:----------: |:-----------:| --- | --- |
+| 1 | The system shall create a user account with all required fields filled. | Analysis | :red_circle: | N/A | submit form |
+| 1.1 | The system shall allow github authentication. | Analysis | :red_circle: | N/A | create acocunt using GitHub  |
+| 2 | The system shall display the users name and roles on all pages | Inspection | :red_circle:| N/A | view webpage |
+| 3 | The system Shall create unique ticket objects for each ticket submitted | Test | :red_circle: | N/A | Unit Test |
+| 3.1 | The system shall make a unique ticket ID for every ticket creation | Test | :red_circle: | N/A | Unit Test |
+| 3.2 | The system shall store all attributes of the ticket. | Test | :red_circle:| N/A | Unit Test |
+| 4 | The system shall provide Department managers with Analytics for the whole company | Demonstration | :red_circle:| N/A | Select Analysis page|
+| 4.1 | The system shall provide Department managers with Analytics for the whole company | Demonstration | :red_circle: | N/A | Select Analysis page|
+| 4.2 | The System shall provide the Team Leaders with analytics for their team | Demonstration | :red_circle: | N/A | Select Analysis page|
+| 4.3 | The system shall provide Team members with only their analytics. | Demonstration | :red_circle: | N/A | Select Analysis page|
+| 5 | The System shall archive closed tickets | Test | :red_circle:| Test | N/A | Unit Test |
+| 5.1 | The System shall only allow Department managers to close tickets | Demonstration | :red_circle: | N/A | Attempt to close ticket on other roles |
+| 5.2 | The System shall provide users the option to place ticket in pending close status | Demonstration | :red_circle:|N/A | Attempt to close ticket on all roles |
+| 6 | The System shall allow Department managers to move team member groups around | Demonstration | :red_circle: | N/A | Move team members |
 
 
