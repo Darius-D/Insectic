@@ -122,7 +122,7 @@ Then populate drop by selection to select groups available and update user’s g
 | Requirement ID | Requirement Description | Test Method | Test Result |
 |:-------------|:------------------:|:----------: |:-----------:|
 | 1 | The system shall create a user account with all required fields filled. | Analyze | :red_circle: |
-| 1.1 | The system shall allow github authentication. | Analyze | TDB |
+| 1.1 | The system shall allow github authentication. | Analyze | :red_circle: |
 | 2 | The system shall display the users name and roles on all pages | Analyze | :red_circle:|
 | 3 | The system Shall create unique ticket objects for each ticket submitted | Analyze | :red_circle: |
 | 3.1 | The system shall make a unique ticket ID for every ticket creation | Analyze | :red_circle: |
