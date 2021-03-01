@@ -98,7 +98,7 @@ Then populate drop by selection to select groups available and update user’s g
 ### Requirements
 
 1. The system shall create a user account with all required fields filled.
-     2.The system shall allow github authentication.
+    1. The system shall allow github authentication.
 2.	The system shall display the users name and roles on all pages
 3.	The system Shall create unique ticket objects for each ticket submitted
      1. The system shall make a unique ticket ID for every ticket creation
@@ -108,7 +108,7 @@ Then populate drop by selection to select groups available and update user’s g
      2. The System shall provide the Team Leaders with analytics for their team
      3. The system shall provide Team members with only their analytics. 
 5. The System shall archive closed tickets
-     1.The System shall only allow Department managers to close tickets
+     1. The System shall only allow Department managers to close tickets
      2. The System shall provide team members/ Team leaders the option to place ticket in pending close status
 6. The System shall allow Department managers to move team member groups around 
 
