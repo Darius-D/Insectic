@@ -8,18 +8,19 @@
     2. [Analytics page](#head42)
     3. [Archive page](#head43)
     4. [Ticket Submission page](#head44)
+    5. [Contact page](#head45)
  6. [User Stories](#head5)
  7. [Use Cases](#head6)
  8. [Requirements](#head7)
 
 ***
 <a name="head"></a>
- # <p align ="center"> :beetle: Why Insectic? :beetle: </p>
+ # <p align ="center"> :beetle: Why Insectic? :beetle: [:arrow_up_small:](#table-of-contents) </p>
 
 Insectic is a side project I am working on to help viuslize one of the 4 pillars of work; Unplanned work. This idea came to me after reading <i>The Phoenix Project</i> I wanted to follow along with Bill and Patty and see if I could create an application that would of helped visualize, track, and streamline the complition of unplanned tasks and work. 
 
 <a name="head2"></a>
-## :beetle: What Is Insectic? :beetle: 
+## :beetle: What Is Insectic? :beetle: [:arrow_up_small:](#table-of-contents)
 Insectic will be an interactive bug/patches tracking web application that will forcus on the unplanned work aspect of DevOPs. This Web application will allow Managers to track current items being worked on with detailed statistics to help locate bottle necks. Team leaders will be able to utilize this tool to task out team members, track team progress and will be able to see team analytics to better articulate the needs of the team to the department manager. 
 ***
 <a name="head3"></a>
@@ -64,15 +65,15 @@ Insectic will be an interactive bug/patches tracking web application that will f
   </p>
 
 ***
-
-###   <p align="center">  Contact Page
+<a name="head45"></a>
+###   <p align="center">  Contact Page [:arrow_up_small:](#table-of-contents)
 
 <a name="head45"></a>
 ![](img/Contact.JPG)
 
 ***
 <a name="head5"></a>
-### User Stories
+### User Stories [:arrow_up_small:](#table-of-contents)
 
 1. As a Department Manager, I need to create “tickets” when ever a problem is detected in our process, so that we can visualize the bottleneck and common trends. 
 2. As a Department Manager, I need to see the analytics of all the tickets in our system so that I can provide detailed reports to the CEO. 
@@ -80,7 +81,7 @@ Insectic will be an interactive bug/patches tracking web application that will f
 4. As a Team Members, I need to be able to submit tickets for issues encountered with a detailed description and categories so that my team lead can articulate our current issues and progress with the Department Manager
 
 ***
-### Use Cases
+### Use Cases [:arrow_up_small:](#table-of-contents)
 
 * Given a new user
 When user fills out application
@@ -115,7 +116,7 @@ When a user needs to be assigned to a group
 Then populate drop by selection to select groups available and update user’s group in DB.
 
 *** 
-### Requirements
+### Requirements [:arrow_up_small:](#table-of-contents)
 
 1. The system shall create a user account with all required fields filled.
     1. The system shall allow github authentication.
