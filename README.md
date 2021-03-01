@@ -7,7 +7,7 @@ Insectic will be an interactive bug/patches tracking web application that will f
 ***
  ## table of contents
  1. [Why Insectic?](#beetle-why-insectic-beetle)
- 2. [What is Insectic](#beetle-what-is-insectic?-beetle-p)
+ 2. [What is Insectic](#beetle-what-is-insectic?-beetle)
 
 
 ***
