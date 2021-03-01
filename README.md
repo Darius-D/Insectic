@@ -66,7 +66,7 @@ Insectic will be an interactive bug/patches tracking web application that will f
 
 ***
 <a name="head45"></a>
-###   <p align="center">  Contact Page [:arrow_up_small:](#table-of-contents)
+###   <p align="center">  Contact Page </p> [:arrow_up_small:](#table-of-contents)
 
 <a name="head45"></a>
 ![](img/Contact.JPG)
