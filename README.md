@@ -1,7 +1,15 @@
  ## table of contents
  1. [Why Insectic?](#head)
  2. [What is Insectic](#head2)
-
+ 3. [Case Use Diagram](#head3)
+ 4. [Draft WireFrames](#head4)
+    1. [Dashboard page](#head41)
+    2. [Analytics page](#head42)
+    3. [Archive page](#head43)
+    4. [Ticket Submission page](#head44)
+ 5. [User Stories](#head5)
+ 6. [Use Cases](#head6)
+ 7. [Requirements](#head7)
 
 ***
 <a name="head"></a>
@@ -9,10 +17,11 @@
 
 Insectic is a side project I am working on to help viuslize one of the 4 pillars of work; Unplanned work. This idea came to me after reading <i>The Phoenix Project</i> I wanted to follow along with Bill and Patty and see if I could create an application that would of helped visualize, track, and streamline the complition of unplanned tasks and work. 
 
+<a name="head2"></a>
 ## :beetle: What Is Insectic? :beetle: 
 Insectic will be an interactive bug/patches tracking web application that will forcus on the unplanned work aspect of DevOPs. This Web application will allow Managers to track current items being worked on with detailed statistics to help locate bottle necks. Team leaders will be able to utilize this tool to task out team members, track team progress and will be able to see team analytics to better articulate the needs of the team to the department manager. 
 ***
-<a name="head2"></a>
+<a name="head3"></a>
 ### <p align="center"> :page_facing_up: [Case Use Diagram](https://github.com/Darius-D/Insectic/blob/main/CaseUseDiagram.jpg) :page_facing_up: </p>
 ***
 ###  ERD [:arrow_up_small:](#table-of-contents) 
@@ -20,28 +29,28 @@ Insectic will be an interactive bug/patches tracking web application that will f
 ![](img/myERD.jpg)
 
 ***
-
+<a name="head4"></a>
 ###     DRAFT WIREFRAMES [:arrow_up_small:](#table-of-contents)
 
 ***
-
+<a name="head41"></a>
 ###   Dashboard/Home [:arrow_up_small:](#table-of-contents)
 
 <img src="https://github.com/Darius-D/Insectic/blob/main/img/dashboard2.JPG" width="1000" height="600">
-
+<a name="head42"></a>
 ###   Analytics Page [:arrow_up_small:](#table-of-contents)
 
 
 ![](img/Analytic%20page.JPG)
 
 ***
-
+<a name="head43"></a>
 ###    Archives Page [:arrow_up_small:](#table-of-contents)
 
 ![](img/Archives.JPG)
 
 ***
-
+<a name="head44"></a>
 ###   Ticket Submission [:arrow_up_small:](#table-of-contents)
 
 
@@ -56,10 +65,11 @@ Insectic will be an interactive bug/patches tracking web application that will f
 
 ###   <p align="center">  Contact Page
 
-
+<a name="head45"></a>
 ![](img/Contact.JPG)
 
 ***
+<a name="head5"></a>
 ### User Stories
 
 1. As a Department Manager, I need to create “tickets” when ever a problem is detected in our process, so that we can visualize the bottleneck and common trends. 
