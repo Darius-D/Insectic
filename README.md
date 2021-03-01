@@ -33,28 +33,28 @@ Insectic will be an interactive bug/patches tracking web application that will f
 
 ***
 <a name="head4"></a>
-###     DRAFT WIREFRAMES [:arrow_up_small:](#table-of-contents)
+###     <p align ="center"> DRAFT WIREFRAMES [:arrow_up_small:](#table-of-contents) </p>
 
 ***
 <a name="head41"></a>
-###   Dashboard/Home [:arrow_up_small:](#table-of-contents)
+###   <p align ="center"> Dashboard/Home [:arrow_up_small:](#table-of-contents) </p>
 
 <img src="https://github.com/Darius-D/Insectic/blob/main/img/dashboard2.JPG" width="1000" height="600">
 <a name="head42"></a>
-###   Analytics Page [:arrow_up_small:](#table-of-contents)
+###  <p align ="center"> Analytics Page [:arrow_up_small:](#table-of-contents) </p>
 
 
 ![](img/Analytic%20page.JPG)
 
 ***
 <a name="head43"></a>
-###    Archives Page [:arrow_up_small:](#table-of-contents)
+###   <p align ="center"> Archives Page [:arrow_up_small:](#table-of-contents) </p>
 
 ![](img/Archives.JPG)
 
 ***
 <a name="head44"></a>
-###   Ticket Submission [:arrow_up_small:](#table-of-contents)
+###   <p align ="center"> Ticket Submission [:arrow_up_small:](#table-of-contents) </p>
 
 
 <p align="center">  
@@ -73,7 +73,7 @@ Insectic will be an interactive bug/patches tracking web application that will f
 
 ***
 <a name="head5"></a>
-### User Stories [:arrow_up_small:](#table-of-contents)
+### <p align ="center"> User Stories [:arrow_up_small:](#table-of-contents) </p>
 
 1. As a Department Manager, I need to create “tickets” when ever a problem is detected in our process, so that we can visualize the bottleneck and common trends. 
 2. As a Department Manager, I need to see the analytics of all the tickets in our system so that I can provide detailed reports to the CEO. 
@@ -81,7 +81,7 @@ Insectic will be an interactive bug/patches tracking web application that will f
 4. As a Team Members, I need to be able to submit tickets for issues encountered with a detailed description and categories so that my team lead can articulate our current issues and progress with the Department Manager
 
 ***
-### Use Cases [:arrow_up_small:](#table-of-contents)
+### <p align ="center"> Use Cases [:arrow_up_small:](#table-of-contents) </p>
 
 * Given a new user
 When user fills out application
@@ -116,7 +116,7 @@ When a user needs to be assigned to a group
 Then populate drop by selection to select groups available and update user’s group in DB.
 
 *** 
-### Requirements [:arrow_up_small:](#table-of-contents)
+### <p align ="center"> Requirements [:arrow_up_small:](#table-of-contents) </p>
 
 1. The system shall create a user account with all required fields filled.
     1. The system shall allow github authentication.
