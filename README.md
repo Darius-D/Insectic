@@ -1,4 +1,4 @@
-# :beetle: Why Insectic?  
+# :beetle: Why Insectic? :beetle: 
 
 Insectic is a side project I am working on to help viuslize one of the 4 pillars of work; Unplanned work. This idea came to me after reading <i>The Phoenix Project</i> I wanted to follow along with Bill and Patty and see if I could create an application that would of helped visualize, track, and streamline the complition of unplanned tasks and work. 
 
@@ -6,7 +6,7 @@ Insectic is a side project I am working on to help viuslize one of the 4 pillars
 Insectic will be an interactive bug/patches tracking web application that will forcus on the unplanned work aspect of DevOPs. This Web application will allow Managers to track current items being worked on with detailed statistics to help locate bottle necks. Team leaders will be able to utilize this tool to task out team members, track team progress and will be able to see team analytics to better articulate the needs of the team to the department manager. 
 ***
  ## table of contents
- 1. [Why Insectic?](#beetle-why-insectic)
+ 1. [Why Insectic?](#beetle-why-insectic-beetle)
  2. [test](#case-use-diagram)
 
 
