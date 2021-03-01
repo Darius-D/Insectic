@@ -98,18 +98,18 @@ Then populate drop by selection to select groups available and update user’s g
 ### Requirements
 
 1.	The system shall create a user account with all required fields filled.
- 1.1.	 The system shall allow github authentication.
+ i.The system shall allow github authentication.
 2.	The system shall display the users name and roles on all pages
 3.	The system Shall create unique ticket objects for each ticket submitted
- 3.1.	The system shall make a unique ticket ID for every ticket creation
- 3.2.	The system shall store all attributes of the ticket.
+ i.	The system shall make a unique ticket ID for every ticket creation
+ ii.	The system shall store all attributes of the ticket.
 4.	The system shall provide ticket Analytics using ASP.Net graphing solutions
- 4.1.	The system shall provide Department managers with Analytics for the whole company
- 4.2.	The System shall provide the Team Leaders with analytics for their team
- 4.3.	The system shall provide Team members with only their analytics. 
+ i.	The system shall provide Department managers with Analytics for the whole company
+ ii.	The System shall provide the Team Leaders with analytics for their team
+ iii.	The system shall provide Team members with only their analytics. 
 5.	The System shall archive closed tickets
- 5.1.	 The System shall only allow Department managers to close tickets
- 5.2.	The System shall provide team members/ Team leaders the option to place ticket in pending close status
+ i.	 The System shall only allow Department managers to close tickets
+ ii.	The System shall provide team members/ Team leaders the option to place ticket in pending close status
 6.	The System shall allow Department managers to move team member groups around 
 
 
