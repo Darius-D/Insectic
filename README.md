@@ -15,7 +15,7 @@
 
 ***
 <a name="head"></a>
- # <p align ="center"> :beetle: Why Insectic? :beetle: [:arrow_up_small:](#table-of-contents) </p>
+ # <p align ="center"> :beetle: Why Insectic? :beetle:</p> <p align ="right"> [:arrow_up_small:](#table-of-contents) </p>
 
 Insectic is a side project I am working on to help viuslize one of the 4 pillars of work; Unplanned work. This idea came to me after reading <i>The Phoenix Project</i> I wanted to follow along with Bill and Patty and see if I could create an application that would of helped visualize, track, and streamline the complition of unplanned tasks and work. 
 
