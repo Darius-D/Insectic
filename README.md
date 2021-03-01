@@ -5,44 +5,44 @@
 
 ***
 
-# :beetle: Why Insectic? :beetle: [:thumbsup:](#table-of-contents)
+# :beetle: Why Insectic? :beetle: [:arrow_up_small:](#table-of-contents)
 
 Insectic is a side project I am working on to help viuslize one of the 4 pillars of work; Unplanned work. This idea came to me after reading <i>The Phoenix Project</i> I wanted to follow along with Bill and Patty and see if I could create an application that would of helped visualize, track, and streamline the complition of unplanned tasks and work. 
 
-# :beetle: What Is Insectic? :beetle:
+## :beetle: What Is Insectic? :beetle: [:arrow_up_small:](#table-of-contents)
 Insectic will be an interactive bug/patches tracking web application that will forcus on the unplanned work aspect of DevOPs. This Web application will allow Managers to track current items being worked on with detailed statistics to help locate bottle necks. Team leaders will be able to utilize this tool to task out team members, track team progress and will be able to see team analytics to better articulate the needs of the team to the department manager. 
 ***
 
 ### <p align="center"> :page_facing_up: [Case Use Diagram](https://github.com/Darius-D/Insectic/blob/main/CaseUseDiagram.jpg) :page_facing_up: </p>
 ***
-###   <p align="center">  ERD  </p>
+###  ERD [:arrow_up_small:](#table-of-contents) 
 ***
 ![](img/myERD.jpg)
 
 ***
 
-###   <p align="center">  DRAFT WIREFRAMES </p>
+###     DRAFT WIREFRAMES [:arrow_up_small:](#table-of-contents)
 
 ***
 
-###   <p align="center">  Dashboard/Home
+###   Dashboard/Home [:arrow_up_small:](#table-of-contents)
 
 <img src="https://github.com/Darius-D/Insectic/blob/main/img/dashboard2.JPG" width="1000" height="600">
 
-###   <p align="center">  Analytics Page
+###   Analytics Page [:arrow_up_small:](#table-of-contents)
 
 
 ![](img/Analytic%20page.JPG)
 
 ***
 
-###   <p align="center">  Archives Page
+###    Archives Page [:arrow_up_small:](#table-of-contents)
 
 ![](img/Archives.JPG)
 
 ***
 
-###   <p align="center">  Ticket Submission
+###   Ticket Submission [:arrow_up_small:](#table-of-contents)
 
 
 <p align="center">  
