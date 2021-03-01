@@ -7,6 +7,9 @@ Insectic will be an interactive bug/patches tracking web application that will f
 ***
  ## table of contents
  1. [Why Insectic?](#why-insectic)
+ 2. [test](#case-use-diagram)
+
+
 ***
  ### <p align="center"> :page_facing_up: [Case Use Diagram](https://github.com/Darius-D/Insectic/blob/main/CaseUseDiagram.jpg) :page_facing_up: </p>
 ***
