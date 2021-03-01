@@ -131,7 +131,7 @@ Then populate drop by selection to select groups available and update user’s g
 | 4.1 | The system shall provide Department managers with Analytics for the whole company | Demonstration | :red_circle: | N/A | Select Analysis page|
 | 4.2 | The System shall provide the Team Leaders with analytics for their team | Demonstration | :red_circle: | N/A | Select Analysis page|
 | 4.3 | The system shall provide Team members with only their analytics. | Demonstration | :red_circle: | N/A | Select Analysis page|
-| 5 | The System shall archive closed tickets | Test | :red_circle:| Test | N/A | Unit Test |
+| 5 | The System shall archive closed tickets | Test | :red_circle:| N/A | Unit Test |
 | 5.1 | The System shall only allow Department managers to close tickets | Demonstration | :red_circle: | N/A | Attempt to close ticket on other roles |
 | 5.2 | The System shall provide users the option to place ticket in pending close status | Demonstration | :red_circle:|N/A | Attempt to close ticket on all roles |
 | 6 | The System shall allow Department managers to move team member groups around | Demonstration | :red_circle: | N/A | Move team members |
