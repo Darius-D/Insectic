@@ -140,7 +140,7 @@ Then populate drop by selection to select groups available and update user’s g
 <a name="head8"></a>
 ### <p align="center"> Test Table  [:arrow_up_small:](#table-of-contents) </p> 
 
-| Test ID | Requirement ID | Test Prodedure | Current Status | TimeStamp |0
+| Test ID | Requirement ID | Test Prodedure | Current Status | TimeStamp |
 |:--------|:--------------:|:--------------:|:--------------:|:---------:|
 | 100     |     1          | Fill out form on page and verify model biniding occured and stored the values toa new user object |:red_circle:|TBD|
 | 101     |     1.1        | Utilizing GitHub authentication, ensure new user object is created and values are stores in the DB |:red_circle:|TBD|
