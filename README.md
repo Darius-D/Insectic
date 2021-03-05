@@ -120,7 +120,7 @@ Then populate drop by selection to select groups available and update user’s g
 ### <p align ="center"> Requirements [:arrow_up_small:](#table-of-contents) </p>
 
 | Requirement ID | Requirement Description | Test Method | Test ID | Test Procedure|
-|:-------------|:------------------:|:----------: |:-----------:| --- | --- |
+|:-------------|:------------------:|:----------: |:-----------:| --- |
 | 1 | The system shall create a user account with all required fields filled. | Analysis | TBD | submit form |
 | 1.1 | The system shall allow github authentication. | Analysis | :TBD: | create acocunt using GitHub  |
 | 2 | The system shall display the users name and roles on all pages | Inspection | :TBD:|view webpage |
