@@ -12,6 +12,7 @@
  6. [User Stories](#head5)
  7. [Use Cases](#head6)
  8. [Requirements](#head7)
+ 9. [Test Table](#head8)
 
 ***
 <a name="head"></a>
@@ -117,6 +118,7 @@ When a user needs to be assigned to a group
 Then populate drop by selection to select groups available and update user’s group in DB.
 
 *** 
+<a name="head7"></a>
 ### <p align ="center"> Requirements [:arrow_up_small:](#table-of-contents) </p>
 
 | Requirement ID | Requirement Description | Test Method | Test ID |
