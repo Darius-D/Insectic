@@ -83,6 +83,7 @@ Insectic will be an interactive bug/patches tracking web application that will f
 4. As a Team Members, I need to be able to submit tickets for issues encountered with a detailed description and categories so that my team lead can articulate our current issues and progress with the Department Manager
 
 ***
+<a name="head6"></a>
 ### <p align ="center"> Use Cases [:arrow_up_small:](#table-of-contents) </p>
 
 * Given a new user
