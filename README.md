@@ -44,7 +44,7 @@ Insectic will be an interactive bug/patches tracking web application that will f
 <img src="https://github.com/Darius-D/Insectic/blob/main/img/dashboard2.JPG" width="1000" height="600">
 
 <a name="head411"></a>
-###<p align="center"> Dashboard/Home Beta [:arrow_up_small:](#table-of-contents) </p>
+### <p align="center"> Dashboard/Home Beta [:arrow_up_small:](#table-of-contents) </p>
 ![](img/final.JPG)
 
 
