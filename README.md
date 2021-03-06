@@ -5,7 +5,7 @@
  4. [ERD](#erd)
  5. [Draft WireFrames](#head4)
     1. [Dashboard page](#head41)
-      1. [Dashboard Page Beta Design](#head411)
+      2. [Dashboard Page Beta Design](#head411)
     3. [Analytics page](#head42)
     4. [Archive page](#head43)
     5. [Ticket Submission page](#head44)
