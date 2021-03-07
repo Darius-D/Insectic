@@ -15,6 +15,7 @@
  7. [Use Cases](#head6)
  8. [Requirements](#head7)
  9. [Test Table](#head8)
+ 10. [Current Issues](#head9)
 
 ***
 <a name="head"></a>
@@ -169,7 +170,8 @@ Then populate drop by selection to select groups available and update user’s g
 | 600     |       6        | Utilizing a Department Manager role user attempt to change user permissions |:red_circle:|TBD|
    
 ***
-Current Issues
+<a name="head9"></a>
+### <p align="center"> Current Issues </p>
 
 | Problem ID  | Problem Description | Solution| 
 |:---:|:---:|:---:|
