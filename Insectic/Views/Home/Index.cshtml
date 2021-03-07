@@ -1,89 +1,244 @@
 ﻿@{
     Layout = null;
 }
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="js" href="/script.js">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
     <link href="~/css/index.css" rel="stylesheet" />
-    <title>TestIndex</title>
+
+    <title>Dashboard</title>
 </head>
+
 <body>
-    <main>
-        <section class="container">
-            <div class="dashboard">
-                <div class="logo">
-                    <img src="/img/cropedlogo2.png" align="center" alt="">
+    <div class="wrapper">
+        <!--Splitting the page into two halfs utilizing flex.-->
+
+        <nav class="top-navbar">
+            <!--Top nav bar flex bow-->
+            <div class="logo"><a href="#"> <img src="/images/cropedlogo.png" alt="logo"> </a></div>
+            <form action="">
+                <input class="search-bar" type="search" placeholder="Search">
+            </form>
+            <div class="profile-pic"><a href="#"><img src="/images/20210113_144228[47].jpg" alt="Avatar"></a></div>
+        </nav>
+
+        <main>
+
+            <div class="sidebar">
+                <!--Flex box into two rows -->
+                <div class="heading">
+                    <a href="#">
+                        <h1>Cork Board</h1>
+                    </a>
                 </div>
-                <div class="links">
-                    <div class="link">
-                        <img src="/img/business-report.png" alt="" width="30px">
-                        <a href="#">Dashboard</a>
+                <ul class="sidebar-links">
+                    <li>
+                        <a class="L1" href="CreateTicket.html">
+                            <h2>Create Ticket</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="L2" href="#">
+                            <h2>View Tickets</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="L3" href="#">
+                            <h2>Manage Team</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="L4" href="#">
+                            <h2>Address Book</h2>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <div class="top-content">
+
+                    <div class="main-content">
+                        <div class="ticket-assigned">
+                            <div id="table-scroll">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Tickets Assigned </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Ticket ID</th>
+                                            <th>Ticket Description</th>
+                                        </tr>
+                                        <tr>
+                                            <td>make for each line</td>
+                                            <td>make for each line</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data</td>
+                                            <td>data</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="box4">
+                            <div class="box4-1 urgent">
+                                <div class="insideTop ">
+                                    <h3> Urgent Tickets</h3>
+                                </div>
+                                <div class="insideBottom">
+                                    <h1>#</h1>
+                                </div>
+                            </div>
+                            <div class="box4-1 reg">
+                                <div class="insideTop">
+                                    <h3> Routine Tickets</h3>
+                                </div>
+                                <div class="insideBottom">
+                                    <h1>#</h1>
+                                </div>
+                            </div>
+                            <div class="box4-1 reg">
+                                <div class="insideTop">
+                                    <h3> New Tickets</h3>
+                                </div>
+                                <div class="insideBottom">
+                                    <h1>#</h1>
+                                </div>
+                            </div>
+                            <div class="box4-1 reg">
+                                <div class="insideTop">
+                                    <h3> Closed tickets</h3>
+                                </div>
+                                <div class="insideBottom">
+                                    <h1>#</h1>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="link">
-                        <img src="/img/ticket.png" alt="" align="center" width="30px">
-                        <a href="#">Create Ticket</a>
-                    </div>
-                    <div class="link">
-                        <img src="/img/doughnut.png" alt="" align="center" width="30px">
-                        <a href="#">Department Analytics </a>
-                    </div>
-                    <div class="link">
-                        <img src="/img/group.png" alt="" align="center" width="30px">
-                        <a href="#">Manage Team</a>
-                    </div>
-                    <div class="link">
-                        <img src="/img/file.png" alt="" align="center" width="30px">
-                        <a href="#">Archives</a>
-                    </div>
-                    <div class="link">
-                        <img src="/img/agenda.png" alt="" align="center" width="30px">
-                        <a href="#">Contacts</a>
-                    </div>
-                    <div class="link">
-                        <img src="/img/settings.png" alt="" align="center" width="30px">
-                        <a href="#">Settings</a>
-                    </div>
+                </div>
+                <div class="note-board">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <h2 contenteditable="true">Title</h2>
+                                <p contenteditable="true">Click & Edit Me</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h2 contenteditable="true">Title</h2>
+                                <p contenteditable="true">Really..Try</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h2 contenteditable="true">Title</h2>
+                                <p contenteditable="true">#No Cap</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h2 contenteditable="true">Title</h2>
+                                <p contenteditable="true">Having Fun Yet?!</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h2 contenteditable="true">Title</h2>
+                                <p contenteditable="true">Edit Me Already</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h2 contenteditable="true">Title</h2>
+                                <p contenteditable="true">LOL Thank you!</p>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="display">
-                <div class="header">
-                    <div class="h">
-                        <h1>Dashboard</h1>
-                    </div>
-                </div>
-                <div class="TopRow">
-                    <div class="box">
-                        //TODO:[#]:Pending Completion Tickets
-                    </div>
-                    <div class="box">
-                        //TODO:[#]:Notifications?
-                    </div>
-                    <div class="box">
-                        //TODO:[#]:Pending Completion Tickets
-                    </div>
-                </div>
-                <div class="MiddleRow">
-                    <div class="box">
-                        //TODO:[#]:User Assigned Tickets opened
-                    </div>
-                    <div class="box">
-                        //TODO:[#]:Pending Urgent Tickets opened
-                    </div>
-                </div>
-                <div class="BottomRow">
-                    <div class="box">
-                        //TODO:[INSERT bar graph/ API here?]
-                    </div>
-                    <div class="box">
-                        //TODO:[INSERT pie chart of tickets opened/ pending closed/ ect]
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        </main>
+    </div>
 </body>
+
 </html>
