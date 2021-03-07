@@ -168,6 +168,11 @@ Then populate drop by selection to select groups available and update user’s g
 | 502     |       5.2      | Utilizing any role besides Department Manager role, enusre pending close ticket is a drop down option|:red_circle:|TBD|
 | 600     |       6        | Utilizing a Department Manager role user attempt to change user permissions |:red_circle:|TBD|
    
-    
+***
+Current Issues
+
+| Problem ID  | Problem Description | Solution| 
+|:---:|:---:|:---:|
+|01|After Creating my layout for my views, the taxtarea input on the ticket page expands out of the container when the browser is less than 500px. |I have created a media query to counter this. Further testing will be done, including the use of grid. |
     
     
