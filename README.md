@@ -5,11 +5,11 @@
  4. [ERD](#erd)
  5. [Draft WireFrames](#head4)
     1. [Dashboard page](#head41)
-      2. [Dashboard Page Beta Design](#head411)
+     
     3. [Analytics page](#head42)
     4. [Archive page](#head43)
     5. [Ticket Submission page](#head44)
-     1. [Ticket Page Beta Design](head441)
+    
     7. [Contact page](#head45)
  6. [User Stories](#head5)
  7. [Use Cases](#head6)
@@ -45,10 +45,6 @@ Insectic will be an interactive bug/patches tracking web application that will f
 
 <img src="https://github.com/Darius-D/Insectic/blob/main/img/dashboard2.JPG" width="1000" height="600">
 
-<a name="head411"></a>
-### <p align="center"> Dashboard/Home Beta [:arrow_up_small:](#table-of-contents) </p>
-![](img/final.JPG)
-
 
 
 <a name="head42"></a>
@@ -72,9 +68,6 @@ Insectic will be an interactive bug/patches tracking web application that will f
   
   <img src="https://github.com/Darius-D/Insectic/blob/main/img/ticket%20submission.png" width="1000" height="600"></p>
   
-<a name="head441"></a>
-### <p align="center"> Ticket Submission Beta Page  [:arrow_up_small:](#table-of-contents) </p>
-![](img/ticket.JPG)
 ***
 <a name="head45"></a>
 ###   <p align="center">  Contact Page [:arrow_up_small:](#table-of-contents) </p>
