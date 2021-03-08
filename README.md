@@ -126,20 +126,20 @@ Then populate drop by selection to select groups available and update user’s g
 
 | Requirement ID | Requirement Description | Test Method | Test ID |
 |:-------------|:------------------:|:----------: |:-----------:|
-| 1 | The system shall create a user account with all required fields filled. | Analysis |  [100](#100) | 
-| 1.1 | The system shall allow github authentication. | Analysis | [101](#101) |
-| 2 | The system shall display the users name and roles on all pages | Inspection | [200](#200)|
-| 3 | The system Shall create unique ticket objects for each ticket submitted | Test | [300](#300) |
-| 3.1 | The system shall make a unique ticket ID for every ticket creation | Test | [301](#101) |
-| 3.2 | The system shall store all attributes of the ticket. | Test | [302](#101)|
-| 4 | The system shall provide Department managers with Analytics for the whole company | Demonstration | [400](#401) | 
-| 4.1 | The system shall provide Department managers with Analytics for the whole company | Demonstration | [401](#401) |
-| 4.2 | The System shall provide the Team Leaders with analytics for their team | Demonstration | [402](#402) |
-| 4.3 | The system shall provide Team members with only their analytics. | Demonstration | [403](#403) |
-| 5 | The System shall archive closed tickets | Test |[500](#500)|
-| 5.1 | The System shall only allow Department managers to close tickets | Demonstration | [501](#501) | 
-| 5.2 | The System shall provide users the option to place ticket in pending close status | Demonstration | [502](#502) |
-| 6 | The System shall allow Department managers to move team member groups around | Demonstration | [600](#600) |
+| <a name="1"></a> 1 | The system shall create a user account with all required fields filled. | Analysis |  [100](#100) | 
+| <a name="11"></a> 1.1 | The system shall allow github authentication. | Analysis | [101](#101) |
+|<a name="2"></a>  2 | The system shall display the users name and roles on all pages | Inspection | [200](#200)|
+|<a name="3"></a>  3 | The system Shall create unique ticket objects for each ticket submitted | Test | [300](#300) |
+|<a name="31"></a>  3.1 | The system shall make a unique ticket ID for every ticket creation | Test | [301](#101) |
+|<a name="32"></a>  3.2 | The system shall store all attributes of the ticket. | Test | [302](#101)|
+| <a name="4"></a> 4 | The system shall provide Department managers with Analytics for the whole company | Demonstration | [400](#401) | 
+| <a name="41"></a> 4.1 | The system shall provide Department managers with Analytics for the whole company | Demonstration | [401](#401) |
+|<a name="42"></a>  4.2 | The System shall provide the Team Leaders with analytics for their team | Demonstration | [402](#402) |
+| <a name="43"></a> 4.3 | The system shall provide Team members with only their analytics. | Demonstration | [403](#403) |
+|<a name="5"></a> 5| The System shall archive closed tickets | Test |[500](#500)|
+| <a name="51"></a> 5.1 | The System shall only allow Department managers to close tickets | Demonstration | [501](#501) | 
+|<a name="52"></a> 5.2 | The System shall provide users the option to place ticket in pending close status | Demonstration | [502](#502) |
+|<a name="6"></a>  6 | The System shall allow Department managers to move team member groups around | Demonstration | [600](#600) |
 
 ***
 <a name="head8"></a>
@@ -147,10 +147,10 @@ Then populate drop by selection to select groups available and update user’s g
 
 | Test ID | Requirement ID | Test Prodedure | Current Status | TimeStamp |
 |:--------|:--------------:|:--------------:|:--------------:|:---------:|
-|  <a name="100"></a>100  |     1          | Fill out form on page and verify model biniding occured and stored the values toa new user object |:red_circle:|TBD|
-| <a name="101"></a> 101     |     1.1        | Utilizing GitHub authentication, ensure new user object is created and values are stores in the DB |:red_circle:|TBD|
-| <a name="200">200     |      2         | With seveal users created in multiple roles, verify all pages render appropriate headers |:red_circle:|TBD|
-| <a name="300">300     |      3         | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
+|  <a name="100"></a>100  |     [1](#1)          | Fill out form on page and verify model biniding occured and stored the values toa new user object |:red_circle:|TBD|
+| <a name="101"></a> 101     |     [1.1](#11)        | Utilizing GitHub authentication, ensure new user object is created and values are stores in the DB |:red_circle:|TBD|
+| <a name="200">200     |     [2](#2)         | With seveal users created in multiple roles, verify all pages render appropriate headers |:red_circle:|TBD|
+| <a name="300">300     |      [3](#3)        | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
 | <a name="301">301     |       3.1      | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
 | <a name="302">302     |      3.2       | Upon creation of a ticket verify all NOT NULL fields are assigned values in the ticket table on server|:red_circle:|TBD|
 |<a name="400"> 400     |      4         | Inspect the Analytics web page ensuring data values are correct and match data in the server |:red_circle:|TBD|
