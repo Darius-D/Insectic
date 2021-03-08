@@ -28,4 +28,4 @@
 </p>
 
 
-<a href="https://github.com/Darius-D/Insectic/blob/main/README.md#100">link</a>
+
