@@ -15,4 +15,4 @@
 ***
 
  ## <p align="center"> Prototype "CorkBoard" Mobile view page
-<p align="center"> ![](/img/mobileview.png) </p>
+![](/img/mobileview.png)
