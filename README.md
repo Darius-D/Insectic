@@ -5,17 +5,16 @@
  4. [ERD](#erd)
  5. [Draft WireFrames](#head4)
     1. [Dashboard page](#head41)
-     
-    3. [Analytics page](#head42)
-    4. [Archive page](#head43)
-    5. [Ticket Submission page](#head44)
-    
-    7. [Contact page](#head45)
+    2. [Analytics page](#head42)
+    3. [Archive page](#head43)
+    4. [Ticket Submission page](#head44)
+    5. [Contact page](#head45)
  6. [User Stories](#head5)
  7. [Use Cases](#head6)
  8. [Requirements](#head7)
  9. [Test Table](#head8)
  10. [Current Issues](#head9)
+ 11. <a href=https://github.com/Darius-D/Insectic/tree/main/prototype> Prototype Section </a>
 
 ***
 <a name="head"></a>
