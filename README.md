@@ -127,7 +127,7 @@ Then populate drop by selection to select groups available and update user’s g
 | Requirement ID | Requirement Description | Test Method | Test ID |
 |:-------------|:------------------:|:----------: |:-----------:|
 | 1 | The system shall create a user account with all required fields filled. | Analysis | [100](#100) | 
-| 1.1 | The system shall allow github authentication. | Analysis | 101 |
+| 1.1 | The system shall allow github authentication. | Analysis | [101](#101) |
 | 2 | The system shall display the users name and roles on all pages | Inspection | 200|
 | 3 | The system Shall create unique ticket objects for each ticket submitted | Test | 300 |
 | 3.1 | The system shall make a unique ticket ID for every ticket creation | Test | 301 |
@@ -148,7 +148,7 @@ Then populate drop by selection to select groups available and update user’s g
 | Test ID | Requirement ID | Test Prodedure | Current Status | TimeStamp |
 |:--------|:--------------:|:--------------:|:--------------:|:---------:|
 | <a name="100"></a> 100     |     1          | Fill out form on page and verify model biniding occured and stored the values toa new user object |:red_circle:|TBD|
-| 101     |     1.1        | Utilizing GitHub authentication, ensure new user object is created and values are stores in the DB |:red_circle:|TBD|
+| <a name="101"></a> 101     |     1.1        | Utilizing GitHub authentication, ensure new user object is created and values are stores in the DB |:red_circle:|TBD|
 | 200     |      2         | With seveal users created in multiple roles, verify all pages render appropriate headers |:red_circle:|TBD|
 | 300     |      3         | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
 | 301     |       3.1      | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
