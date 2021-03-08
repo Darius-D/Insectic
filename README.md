@@ -151,16 +151,16 @@ Then populate drop by selection to select groups available and update user’s g
 | <a name="101"></a> 101     |     [1.1](#11)        | Utilizing GitHub authentication, ensure new user object is created and values are stores in the DB |:red_circle:|TBD|
 | <a name="200">200     |     [2](#2)         | With seveal users created in multiple roles, verify all pages render appropriate headers |:red_circle:|TBD|
 | <a name="300">300     |      [3](#3)        | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
-| <a name="301">301     |       3.1      | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
-| <a name="302">302     |      3.2       | Upon creation of a ticket verify all NOT NULL fields are assigned values in the ticket table on server|:red_circle:|TBD|
-|<a name="400"> 400     |      4         | Inspect the Analytics web page ensuring data values are correct and match data in the server |:red_circle:|TBD|
-| <a name="401">401     |      4.1       | Utilizing a department Manager assigned user account, verify detailed analytics page displayes correct informtaion |:red_circle:|TBD|
-| <a name="402">402     |       4.2      | Utilizing a Team Leader assigned user account, verify detailed analytics page displayes correct informtaion |:red_circle:|TBD|
-| <a name="403">403     |       4.3      | Utilizing a Team Member assigned user account, verify detailed analytics page displayes correct informtaion |:red_circle:|TBD|
-| <a name="500"> 500     |       5        | Utilizing a Department manager role user, chnage an open ticket to closed and verify status in date base has been changed |:red_circle:|TBD|
-| <a name="501"> 501     |       5.1      | Utilizing any role besides Department Manager role, enusre close ticket is not a drop down option |:red_circle:|TBD|
-| <a name="502"> 502     |       5.2      | Utilizing any role besides Department Manager role, enusre pending close ticket is a drop down option|:red_circle:|TBD|
-| <a name="600"> 600     |       6        | Utilizing a Department Manager role user attempt to change user permissions |:red_circle:|TBD|
+| <a name="301">301     |       [3.1](#31)      | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
+| <a name="302">302     |      [3.2](#32)       | Upon creation of a ticket verify all NOT NULL fields are assigned values in the ticket table on server|:red_circle:|TBD|
+|<a name="400"> 400     |      [4](#4)         | Inspect the Analytics web page ensuring data values are correct and match data in the server |:red_circle:|TBD|
+| <a name="401">401     |      [4.1](#41)       | Utilizing a department Manager assigned user account, verify detailed analytics page displayes correct informtaion |:red_circle:|TBD|
+| <a name="402">402     |       [4.2](#42)      | Utilizing a Team Leader assigned user account, verify detailed analytics page displayes correct informtaion |:red_circle:|TBD|
+| <a name="403">403     |       [4.3](#43)      | Utilizing a Team Member assigned user account, verify detailed analytics page displayes correct informtaion |:red_circle:|TBD|
+| <a name="500"> 500     |       [5](#44)        | Utilizing a Department manager role user, chnage an open ticket to closed and verify status in date base has been changed |:red_circle:|TBD|
+| <a name="501"> 501     |       [5.1](#51)      | Utilizing any role besides Department Manager role, enusre close ticket is not a drop down option |:red_circle:|TBD|
+| <a name="502"> 502     |       [5.2](#52)      | Utilizing any role besides Department Manager role, enusre pending close ticket is a drop down option|:red_circle:|TBD|
+| <a name="600"> 600     |       [6](#6)        | Utilizing a Department Manager role user attempt to change user permissions |:red_circle:|TBD|
    
 ***
 <a name="head9"></a>
