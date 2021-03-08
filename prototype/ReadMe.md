@@ -11,3 +11,8 @@
   
  ## <p align="center"> Prototype "CorkBoard" view page
 ![](/img/prototype.JPG)
+
+***
+
+ ## <p align="center"> Prototype "CorkBoard" Mobile view page
+![](/img/mobileview.JPG)
