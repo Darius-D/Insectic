@@ -7,4 +7,4 @@
   edit with a simple double click. The stickey notes have a overflow of auto allowing for a the stickey note to hold unlimited amounts of characters with out modifying the view.</p> 
   <p> The table is currently a work in porgess as I will need to use Javascript to find a way to make the scroll work on the table without altering the page layout.</p>
   
-![](prototype.JPG)
+![](/img/prototype.JPG)
