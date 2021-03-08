@@ -164,7 +164,7 @@ Then populate drop by selection to select groups available and update user’s g
    
 ***
 <a name="head9"></a>
-### <p align="center"> Current Issues </p>
+### <p align="center"> Current Issues [:arrow_up_small:](#table-of-contents) </p>
 
 | Problem ID  | Problem Description | Solution| Date|
 |:---:|:---:|:---:|:---:|
