@@ -128,18 +128,18 @@ Then populate drop by selection to select groups available and update user’s g
 |:-------------|:------------------:|:----------: |:-----------:|
 | 1 | The system shall create a user account with all required fields filled. | Analysis | [100](#100) | 
 | 1.1 | The system shall allow github authentication. | Analysis | [101](#101) |
-| 2 | The system shall display the users name and roles on all pages | Inspection | 200|
-| 3 | The system Shall create unique ticket objects for each ticket submitted | Test | 300 |
-| 3.1 | The system shall make a unique ticket ID for every ticket creation | Test | 301 |
-| 3.2 | The system shall store all attributes of the ticket. | Test | 302|
-| 4 | The system shall provide Department managers with Analytics for the whole company | Demonstration | 400 | 
-| 4.1 | The system shall provide Department managers with Analytics for the whole company | Demonstration | 401 |
-| 4.2 | The System shall provide the Team Leaders with analytics for their team | Demonstration | 402 |
-| 4.3 | The system shall provide Team members with only their analytics. | Demonstration | 403 |
-| 5 | The System shall archive closed tickets | Test |500|
-| 5.1 | The System shall only allow Department managers to close tickets | Demonstration | 501 | 
-| 5.2 | The System shall provide users the option to place ticket in pending close status | Demonstration | 502 |
-| 6 | The System shall allow Department managers to move team member groups around | Demonstration | 600 |
+| 2 | The system shall display the users name and roles on all pages | Inspection | [200](#200)|
+| 3 | The system Shall create unique ticket objects for each ticket submitted | Test | [300](#300) |
+| 3.1 | The system shall make a unique ticket ID for every ticket creation | Test | [301](#101) |
+| 3.2 | The system shall store all attributes of the ticket. | Test | [302](#101)|
+| 4 | The system shall provide Department managers with Analytics for the whole company | Demonstration | [400](#401) | 
+| 4.1 | The system shall provide Department managers with Analytics for the whole company | Demonstration | [401](#401) |
+| 4.2 | The System shall provide the Team Leaders with analytics for their team | Demonstration | [402](#402) |
+| 4.3 | The system shall provide Team members with only their analytics. | Demonstration | [403](#403) |
+| 5 | The System shall archive closed tickets | Test |[500](#500)|
+| 5.1 | The System shall only allow Department managers to close tickets | Demonstration | [501](#501) | 
+| 5.2 | The System shall provide users the option to place ticket in pending close status | Demonstration | [502](#502) |
+| 6 | The System shall allow Department managers to move team member groups around | Demonstration | [600](#600) |
 
 ***
 <a name="head8"></a>
@@ -149,18 +149,18 @@ Then populate drop by selection to select groups available and update user’s g
 |:--------|:--------------:|:--------------:|:--------------:|:---------:|
 | <a name="100"></a> 100     |     1          | Fill out form on page and verify model biniding occured and stored the values toa new user object |:red_circle:|TBD|
 | <a name="101"></a> 101     |     1.1        | Utilizing GitHub authentication, ensure new user object is created and values are stores in the DB |:red_circle:|TBD|
-| 200     |      2         | With seveal users created in multiple roles, verify all pages render appropriate headers |:red_circle:|TBD|
-| 300     |      3         | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
-| 301     |       3.1      | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
-| 302     |      3.2       | Upon creation of a ticket verify all NOT NULL fields are assigned values in the ticket table on server|:red_circle:|TBD|
-| 400     |      4         | Inspect the Analytics web page ensuring data values are correct and match data in the server |:red_circle:|TBD|
-| 401     |      4.1       | Utilizing a department Manager assigned user account, verify detailed analytics page displayes correct informtaion |:red_circle:|TBD|
-| 402     |       4.2      | Utilizing a Team Leader assigned user account, verify detailed analytics page displayes correct informtaion |:red_circle:|TBD|
-| 403     |       4.3      | Utilizing a Team Member assigned user account, verify detailed analytics page displayes correct informtaion |:red_circle:|TBD|
-| 500     |       5        | Utilizing a Department manager role user, chnage an open ticket to closed and verify status in date base has been changed |:red_circle:|TBD|
-| 501     |       5.1      | Utilizing any role besides Department Manager role, enusre close ticket is not a drop down option |:red_circle:|TBD|
-| 502     |       5.2      | Utilizing any role besides Department Manager role, enusre pending close ticket is a drop down option|:red_circle:|TBD|
-| 600     |       6        | Utilizing a Department Manager role user attempt to change user permissions |:red_circle:|TBD|
+| <a name="200">200     |      2         | With seveal users created in multiple roles, verify all pages render appropriate headers |:red_circle:|TBD|
+| <a name="300">300     |      3         | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
+| <a name="301">301     |       3.1      | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
+| <a name="302">302     |      3.2       | Upon creation of a ticket verify all NOT NULL fields are assigned values in the ticket table on server|:red_circle:|TBD|
+|<a name="400"> 400     |      4         | Inspect the Analytics web page ensuring data values are correct and match data in the server |:red_circle:|TBD|
+| <a name="401">401     |      4.1       | Utilizing a department Manager assigned user account, verify detailed analytics page displayes correct informtaion |:red_circle:|TBD|
+| <a name="402">402     |       4.2      | Utilizing a Team Leader assigned user account, verify detailed analytics page displayes correct informtaion |:red_circle:|TBD|
+| <a name="403">403     |       4.3      | Utilizing a Team Member assigned user account, verify detailed analytics page displayes correct informtaion |:red_circle:|TBD|
+| <a name="500"> 500     |       5        | Utilizing a Department manager role user, chnage an open ticket to closed and verify status in date base has been changed |:red_circle:|TBD|
+| <a name="501"> 501     |       5.1      | Utilizing any role besides Department Manager role, enusre close ticket is not a drop down option |:red_circle:|TBD|
+| <a name="502"> 502     |       5.2      | Utilizing any role besides Department Manager role, enusre pending close ticket is a drop down option|:red_circle:|TBD|
+| <a name="600"> 600     |       6        | Utilizing a Department Manager role user attempt to change user permissions |:red_circle:|TBD|
    
 ***
 <a name="head9"></a>
