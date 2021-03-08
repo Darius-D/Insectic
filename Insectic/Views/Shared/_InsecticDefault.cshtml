@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="js" href="/script.js">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="/css/ResponsiveTemplate.css">
+    <link rel="stylesheet" href="/css/NewDashboard.css">
+
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-dark  bg-dark navbar-expand-lg justify-content-between">
+            <button class="navbar-toggler order-2" type="button" data-toggle="collapse" data-target="#navbar-list-9"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse w-100 order-3 order-lg-1" id="navbar-list-9">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">CorkBoard <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="navbar-brand mx-lg-0 order-1 order-lg-2" href="#">
+                Insectic
+            </a>
+            <div class="collapse navbar-collapse justify-content-end w-100 order-3" id="navbar-list-9">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="avatar" href="#">
+                            @RenderSection("image", true)
+                            @*<img src="@RenderSection("image",true)" ref="avatar" width="40" height="40" class="rounded-circle avatar">*@
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Dashboard</a>
+                            <a class="dropdown-item" href="#">Edit Profile</a>
+                            <a class="dropdown-item" href="#">Log Out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class=inner-wrapper>
+            <div class="sidebar">
+
+                <div class="heading fun-font">
+                    <a href="#">
+                        <h1>Cork Board</h1>
+                    </a>
+                </div>
+
+                <div class="links fun-font">
+                    <a class="note first" href="#">
+                        <h2>Create Ticket</h2>
+                    </a>
+                    <a class="note second" href="#">
+                        <h2>View Tickets</h2>
+                    </a>
+                    <a class="note third " href="#">
+                        <h2>Manage Team</h2>
+                    </a>
+                    <a class="note fourth " href="#">
+                        <h2> Address Book</h2>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="main-content">
+                <!-- Left section/ table ECT -->
+                <div class="left-section">
+                    <div class="ticket-assigned">
+                        <table>
+                            <h2 id=table-header>Tickets Assigned</h2>
+                            <thead>
+                                <tr>
+                                    <th>Ticket ID</th>
+                                    <th>Ticket Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#Razor ID</td>
+                                    <td>#Razor Desc</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Right Section my HUB ect -->
+                <div class="right-section">
+                    <div class="top-boxes">
+                        <div class="box4-1 urgent">
+                            <div class="insideTop ">
+                                <h3> Urgent Tickets</h3>
+                            </div>
+                            <div class="insideBottom">
+                                <h1>@RenderSection("urgent",true)</h1>
+                            </div>
+                        </div>
+                        <div class="box4-1 box-two">
+                            <div class="insideTop">
+                                <h3> Routine Tickets</h3>
+                            </div>
+                            <div class="insideBottom">
+                                <h1>@RenderSection("routine",true)</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-boxes">
+                        <div class="box4-1 reg box-four">
+                            <div class="insideTop ">
+                                <h3> New Tickets</h3>
+                            </div>
+                            <div class="insideBottom">
+                                <h1>@RenderSection("newTickets",true)</h1>
+                            </div>
+                        </div>
+                        <div class="box4-1 reg box-three">
+                            <div class="insideTop">
+                                <h3> Closed tickets</h3>
+                            </div>
+                            <div class="insideBottom">
+                                <h1>@RenderSection("closedTickets",true)</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer section editable notes ect.  -->
+                <div class="note-board">
+                    <ul class="sticky-notes">
+                        <li class="one">
+                            <a href="#">
+                                <h2 contenteditable="true">Click</h2>
+                                <p contenteditable="true">& Edit Me</p>
+                            </a>
+                        </li>
+                        <li class="two">
+                            <a href="#">
+                                <h2 contenteditable="true">Really</h2>
+                                <p contenteditable="true">..Try</p>
+                            </a>
+                        </li>
+                        <li class="three">
+                            <a href="#">
+                                <h2 contenteditable="true">#</h2>
+                                <p contenteditable="true">No Cap</p>
+                            </a>
+                        </li>
+                        <li class="four">
+                            <a href="#">
+                                <h2 contenteditable="true">Having</h2>
+                                <p contenteditable="true">Fun Yet?!</p>
+                            </a>
+                        </li>
+                        <li class="five">
+                            <a href="#">
+                                <h2 contenteditable="true">Edit</h2>
+                                <p contenteditable="true">Me Already</p>
+                            </a>
+                        </li>
+                        <li class="six">
+                            <a href="#">
+                                <h2 contenteditable="true">LOL</h2>
+                                <p contenteditable="true">Thank you!</p>
+                            </a>
+                        </li>
+                        <li class="seven">
+                            <a href="#">
+                                <h2 contenteditable="true">Try</h2>
+                                <p contenteditable="true">Me...</p>
+                            </a>
+                        </li>
+                        <li class="eight">
+                            <a href="#">
+                                <h2 contenteditable="true">BE</h2>
+                                <p contenteditable="true">my friend?</p>
+                            </a>
+                        </li>
+                        <li class="nine">
+                            <a href="#">
+                                <h2 contenteditable="true">Cool</h2>
+                                <p contenteditable="true">work!</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
