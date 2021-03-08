@@ -126,7 +126,7 @@ Then populate drop by selection to select groups available and update user’s g
 
 | Requirement ID | Requirement Description | Test Method | Test ID |
 |:-------------|:------------------:|:----------: |:-----------:|
-| 1 | The system shall create a user account with all required fields filled. | Analysis | <a https://github.com/Darius-D/Insectic/blob/main/README.md#test> 100 </a> | 
+| 1 | The system shall create a user account with all required fields filled. | Analysis | <a https://github.com/DariusD/Insectic/blob/main/README.md#test > 100 </a> | 
 | 1.1 | The system shall allow github authentication. | Analysis | [101](#101) |
 | 2 | The system shall display the users name and roles on all pages | Inspection | [200](#200)|
 | 3 | The system Shall create unique ticket objects for each ticket submitted | Test | [300](#300) |
