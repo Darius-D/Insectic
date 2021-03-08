@@ -16,4 +16,4 @@
 
  ## <p align="center"> Prototype "CorkBoard" Mobile view page
 ![](/img/mobileview.png)
-  <div style="text-align:center"><img src="/img/mobileview.png" /></div>
+ <p align="center" > <div style="text-align:center"><img src="/img/mobileview.png" /></div> </p>
