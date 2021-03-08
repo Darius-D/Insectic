@@ -26,4 +26,6 @@
 <p align="center">
   <img src="/img/ticket.JPG" />
 </p>
-[Github](#https://github.com/Darius-D/Insectic/blob/main/README.md#100)
+
+
+<a href="https://github.com/Darius-D/Insectic/blob/main/README.md#100">link</a>
