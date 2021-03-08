@@ -26,10 +26,9 @@
 <p align="center">
   
   
-  
-<a src=https://github.com/Darius-D/Insectic/blob/main/README.md#test> test </a> 
   <img src="/img/ticket.JPG" />
 </p>
 
 
 
+<a src="https://github.com/Darius-D/Insectic/blob/main/README.md#test"> test </a> 
