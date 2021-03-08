@@ -1,5 +1,5 @@
 # <p align="center" > Caution: This is a prototype as of March 7, 2021. </p>
-<p> Anything below is subject to change</p>
+<p align="center" > Anything below is subject to change</p>
 
 ## <p align="center" > Curent working features </p>
 
