@@ -1,21 +1,23 @@
-﻿@{
+﻿
+@{
     Layout = "_InsecticDefault";
 }
 
-
+@section userName
+{<a class="nav-link" href="#">@ViewBag.Name<span class="sr-only">(current)</span></a>}
 @section urgent
-{24}
+{@ViewBag.Urgent}
 
 @section closedTickets
-{0}
+{@ViewBag.ClosedTickets}
 
 @section newTickets
-{12}
+{@ViewBag.NewTickets}
 
 @section routine
-{84}
+{@ViewBag.Routine}
 
 @section image
-{<img src="https://source.unsplash.com/random"ref="avatar" width="40" height="40" class="rounded-circle avatar"/>}
+{<img src="@ViewBag.Image"ref="avatar" width="40" height="40" class="rounded-circle avatar"/>}
 
 

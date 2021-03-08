@@ -20,6 +20,13 @@ namespace Insectic.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.ClosedTickets = 8;
+            ViewBag.Name = "Darius";
+            ViewBag.Urgent = 5;
+            ViewBag.NewTickets = 13;
+            ViewBag.Routine = 24;
+            ViewBag.Image = "https://source.unsplash.com/random";
+
             return View();
         }
 
