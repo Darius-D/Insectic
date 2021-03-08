@@ -15,7 +15,6 @@
 ***
 
  ## <p align="center"> Prototype "CorkBoard" Mobile view page
-![](/img/mobileview.png)
 <p align="center">
   <img src="/img/mobileview.png" />
 </p>
