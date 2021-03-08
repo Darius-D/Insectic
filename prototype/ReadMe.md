@@ -15,6 +15,7 @@
 ***
 
  ## <p align="center"> Prototype "CorkBoard" Mobile view page
+  <p> The mobile view has a drop down hamburger menu that allows the user to go to their profile page and return to the "corkboard". 
 <p align="center">
   <img src="/img/mobileview.png" />
 </p>
