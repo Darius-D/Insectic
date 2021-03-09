@@ -1,0 +1,82 @@
+﻿.main-content {
+    max-height: 100%;
+    grid-area: 1/2/2/3;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr minmax(0,200px);
+    background-color: rgb(37, 38, 39);
+    grid-gap: 0px;
+    color: #f4f4f4;
+}
+
+.main-section {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background: linear-gradient(45deg, rgb(48, 47, 47), rgb(114, 114, 117));
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.row div {
+    margin: 0 5px;
+}
+
+.form-title h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.third-row {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+textarea {
+    resize: none;
+}
+
+@media only screen and (max-width:850px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    textarea {
+        max-width: 250px;
+    }
+
+    .submit-button {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width:1450) {
+}
