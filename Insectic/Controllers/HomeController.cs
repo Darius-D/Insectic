@@ -20,11 +20,7 @@ namespace Insectic.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.ClosedTickets = 8;
             ViewBag.Name = "Darius";
-            ViewBag.Urgent = 5;
-            ViewBag.NewTickets = 13;
-            ViewBag.Routine = 24;
             ViewBag.Image = "https://source.unsplash.com/random";
 
             return View();
@@ -34,6 +30,20 @@ namespace Insectic.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public ViewResult CreateTicket()
+        {
+            ViewBag.Image = "https://source.unsplash.com/random";
+            return View();
+        }
+        [HttpPost]
+        public ViewResult CreateTicket(TicketForm ticket)
+        {
+            ViewBag.Image = "https://source.unsplash.com/random";
+            Repository.AddTicket(ticket);
+            return View("Index",ticket);
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -78,10 +79,10 @@
                 </div>
 
                 <div class="links fun-font">
-                    <a class="note first" href="#">
+                    <a asp-action=CreateTicket class="note first" >
                         <h2>Create Ticket</h2>
                     </a>
-                    <a class="note second" href="">
+                    <a class="note second" href="#">
                         <h2>View Tickets</h2>
                     </a>
                     <a class="note third " href="#">
@@ -101,16 +102,19 @@
                         <table>
                             <h2 id=table-header>Tickets Assigned</h2>
                             <thead>
-                                <tr>
-                                    <th>Ticket ID</th>
-                                    <th>Ticket Description</th>
-                                </tr>
+                            <tr>
+                                <th>Ticket ID</th>
+                                <th>Ticket Description</th>
+                            </tr>
                             </thead>
                             <tbody>
+                            @foreach (var t in Repository.Tickets)
+                            {
                                 <tr>
-                                    <td>#Razor ID</td>
-                                    <td>#Razor Desc</td>
+                                    <td>@t.TicketID</td>
+                                    <td>@t.TicketDescription</td>
                                 </tr>
+                            }
                             </tbody>
                         </table>
                     </div>
@@ -120,36 +124,36 @@
                     <div class="top-boxes">
                         <div class="box4-1 urgent">
                             <div class="insideTop ">
-                                <h3> Urgent Tickets</h3>
+                                <h3> Urgent Priority Tickets</h3>
                             </div>
                             <div class="insideBottom">
-                                <h1>@RenderSection("urgent",true)</h1>
+                                <h1>@Repository.CountTicketCategory(@Repository.Tickets).Item1</h1>
                             </div>
                         </div>
                         <div class="box4-1 box-two">
                             <div class="insideTop">
-                                <h3> Routine Tickets</h3>
+                                <h3> Routine Priority Tickets</h3>
                             </div>
                             <div class="insideBottom">
-                                <h1>@RenderSection("routine",true)</h1>
+                                <h1>@Repository.CountTicketCategory(@Repository.Tickets).Item2</h1>
                             </div>
                         </div>
                     </div>
                     <div class="bottom-boxes">
                         <div class="box4-1 reg box-four">
                             <div class="insideTop ">
-                                <h3> New Tickets</h3>
+                                <h3> Routine Priority Tickets</h3>
                             </div>
                             <div class="insideBottom">
-                                <h1>@RenderSection("newTickets",true)</h1>
+                                <h1>@Repository.CountTicketCategory(@Repository.Tickets).Item3</h1>
                             </div>
                         </div>
                         <div class="box4-1 reg box-three">
                             <div class="insideTop">
-                                <h3> Closed tickets</h3>
+                                <h3> Low Priority Tickets</h3>
                             </div>
                             <div class="insideBottom">
-                                <h1>@RenderSection("closedTickets",true)</h1>
+                                <h1>@Repository.CountTicketCategory(@Repository.Tickets).Item4</h1>
                             </div>
                         </div>
                     </div>
