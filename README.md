@@ -167,6 +167,6 @@ Then populate drop by selection to select groups available and update user’s g
 
 | Problem ID  | Problem Description | Solution| Encounter Date| Solution Date |
 |:---:|:---:|:---:|:---:|:--:|
-|01|After Creating my layout for my views, the taxtarea input on the ticket page expands out of the container when the browser is less than 500px. |I reconstructed the webpage utilizing Grid in the main content space. The web page now uses several media queries to hide several tags at various lengths and with the utilization of grid has become more responsive.  | March 7, 2021 |
+|01|After Creating my layout for my views, the taxtarea input on the ticket page expands out of the container when the browser is less than 500px. |I reconstructed the webpage utilizing Grid in the main content space. The web page now uses several media queries to hide several tags at various lengths and with the utilization of grid has become more responsive.  | March 6, 2021 | March 7,2021|
     
     
