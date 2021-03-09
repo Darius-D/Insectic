@@ -13,7 +13,7 @@
  7. [Use Cases](#head6)
  8. [Requirements](#head7)
  9. [Test Table](#head8)
- 10. [Current Issues](#head9)
+ 10. [Issues Encountered](#head9)
  11. <a href=https://github.com/Darius-D/Insectic/tree/main/prototype> Prototype Section </a>
 
 ***
@@ -163,10 +163,10 @@ Then populate drop by selection to select groups available and update user’s g
    
 ***
 <a name="head9"></a>
-### <p align="center"> Current Issues [:arrow_up_small:](#table-of-contents) </p>
+### <p align="center"> Issues Encountered  [:arrow_up_small:](#table-of-contents) </p>
 
-| Problem ID  | Problem Description | Solution| Date|
-|:---:|:---:|:---:|:---:|
+| Problem ID  | Problem Description | Solution| Encounter Date| Solution Date |
+|:---:|:---:|:---:|:---:|:--:|
 |01|After Creating my layout for my views, the taxtarea input on the ticket page expands out of the container when the browser is less than 500px. |I reconstructed the webpage utilizing Grid in the main content space. The web page now uses several media queries to hide several tags at various lengths and with the utilization of grid has become more responsive.  | March 7, 2021 |
     
     
