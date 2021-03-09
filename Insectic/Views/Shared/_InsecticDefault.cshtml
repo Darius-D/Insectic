@@ -111,8 +111,8 @@
                             @foreach (var t in Repository.Tickets)
                             {
                                 <tr>
-                                    <td>@t.TicketID</td>
-                                    <td>@t.TicketDescription</td>
+                                    <td>@t.TicketId</td>
+                                    <td>@Repository.TruncateAtWord(t,50)</td>
                                 </tr>
                             }
                             </tbody>

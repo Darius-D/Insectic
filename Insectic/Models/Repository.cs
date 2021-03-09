@@ -36,6 +36,12 @@ namespace Insectic.Models
             }
             return new Tuple<int, int, int, int>(urgentCount,highCount,routineCount,lowCount);
         }
-
+        public static string TruncateAtWord(TicketForm ticket, int length)
+        {
+            if (ticket.TicketDescription == null || ticket.TicketDescription.Length < length)
+                return ticket.TicketDescription;
+            int iNextSpace = ticket.TicketDescription.LastIndexOf(" ", length, StringComparison.Ordinal);
+            return string.Format("{0}…", ticket.TicketDescription.Substring(0, (iNextSpace > 0) ? iNextSpace : length).Trim());
+        }
     }
 }
