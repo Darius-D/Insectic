@@ -168,5 +168,5 @@ Then populate drop by selection to select groups available and update user’s g
 | Problem ID  | Problem Description | Solution| Encounter Date| Solution Date |
 |:---:|:---:|:---:|:---:|:--:|
 |01|After Creating my layout for my views, the taxtarea input on the ticket page expands out of the container when the browser is less than 500px. |I reconstructed the webpage utilizing Grid in the main content space. The web page now uses several media queries to hide several tags at various lengths and with the utilization of grid has become more responsive.  | March 6, 2021 | March 7,2021|
-|02| Difficulty makine a Ticket ID property that increments each time an object is made. I attempeted to make a constructor that incremented +1 hoever that seemed to not work. I believe there is an error on my side .| March 8,2021|TBD|   
+|02| Difficulty makine a Ticket ID property that increments each time an object is made. I attempeted to make a constructor that incremented +1 hoever that seemed to not work. I believe there is an error on my side .| The failure was in the fact i did not have a static variable to assign to my TicketId property. I was attempting to increment TicketId by 1 everytime an instance was created however since TicketId is not static the value reset to 0 every insatnce. |March 8,2021|March 8,2020|   
     
