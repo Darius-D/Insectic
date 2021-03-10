@@ -23,14 +23,12 @@ namespace Insectic.Models
 
         public int UserRoles { get; set; }
 
-
+        public string ProfilePicture { get; set; }
 
         public User(string password, string resourceGroup)
         {
             ResourceGroup = resourceGroup;
             UserPassword = password;
         }
-
-
     }
 }

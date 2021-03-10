@@ -20,7 +20,7 @@ namespace Insectic.Models
         public int Status { get; set; }
 
         public DateTime IncidentDate { get; set; }
-        public DateTime  DueDate { get; set; }
+        public DateTime?  DueDate { get; set; }
         
         public string PhoneNumber { get; set; }
         public string Email { get; set; }

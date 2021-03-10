@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Insectic.Models
 {
-    public class Repository
+    public class TicketRepository
     {
         private static List<TicketForm> tickets = new List<TicketForm>();
 
@@ -16,14 +16,14 @@ namespace Insectic.Models
             tickets.Add(ticket);
         }
 
-        public static Tuple<int,int,int,int> CountTicketCategory(IEnumerable<TicketForm> tickets)
+        public static Tuple<int,int,int,int> CountTicketCategory(IEnumerable<TicketForm> tic)
         {
             var urgentCount = 0;
             var highCount = 0;
             var routineCount = 0;
             var lowCount = 0;
 
-            foreach (var t in tickets)
+            foreach (var t in tic)
             {
 
                 if (t.Priority == 1) urgentCount++;
@@ -38,10 +38,10 @@ namespace Insectic.Models
         }
         public static string TruncateAtWord(TicketForm ticket, int length)
         {
-            if (ticket.TicketDescription == null || ticket.TicketDescription.Length < length)
+            if ( ticket.TicketDescription.Length < length)
                 return ticket.TicketDescription;
-            int iNextSpace = ticket.TicketDescription.LastIndexOf(" ", length, StringComparison.Ordinal);
-            return string.Format("{0}…", ticket.TicketDescription.Substring(0, (iNextSpace > 0) ? iNextSpace : length).Trim());
+            int nextSpace = ticket.TicketDescription.LastIndexOf(" ", length, StringComparison.Ordinal);
+            return $"{ticket.TicketDescription.Substring(0, (nextSpace > 0) ? nextSpace : length).Trim()}…";
         }
     }
 }

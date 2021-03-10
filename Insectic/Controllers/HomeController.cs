@@ -40,10 +40,22 @@ namespace Insectic.Controllers
         public ViewResult CreateTicket(TicketForm ticket)
         {
             ViewBag.Image = "https://source.unsplash.com/random";
-            Repository.AddTicket(ticket);
+            TicketRepository.AddTicket(ticket);
             return View("Index",ticket);
         }
 
+        public ViewResult AddressBook()
+        {
+            var  test = new User("1234",null)
+            {
+                ProfilePicture = "https://source.unsplash.com/random",
+                FirstName = "Darius",
+                LastName = "Dubose",
+                Email = "dariusdubose1@gmail.com",
+                
+            };
+            return View("AddressBook",test);
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

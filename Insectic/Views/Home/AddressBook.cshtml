@@ -1,4 +1,7 @@
-﻿
+﻿@model Insectic.Models.User
+
+@{ Layout = null;}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,17 +18,16 @@
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/ResponsiveTemplate.css">
-    <link rel="stylesheet" href="/css/NewDashboard.css">
+    <link rel="stylesheet" href="/css/AddressBook.css">
 
 
     <title>Dashboard</title>
@@ -41,11 +43,16 @@
             <div class="collapse navbar-collapse w-100 order-3 order-lg-1" id="navbar-list-9">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        @RenderSection("userName",true)
-                        @*<a class="nav-link" href="#">CorkBoard <span class="sr-only">(current)</span></a>*@
+                        <a class="nav-link" asp-action="Index">CorkBoard <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Test</a>
+                        <a class="nav-link" asp-action="Index">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" asp-action="CreateTicket">Create Ticket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" asp-action="AddressBook">Contacts</a>
                     </li>
                 </ul>
             </div>
@@ -56,13 +63,12 @@
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="avatar" href="#">
-                            @RenderSection("image", true)
-                            @*<img src="@RenderSection("image",true)" ref="avatar" width="40" height="40" class="rounded-circle avatar">*@
+                            <img src="@Model.ProfilePicture" width="40" height="40" class="rounded-circle avatar">
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Dashboard</a>
-                            <a class="dropdown-item" href="#">Edit Profile</a>
-                            <a class="dropdown-item" href="#">Log Out</a>
+                            <a class="dropdown-item" asp-action="Index">Dashboard</a>
+                            <a class="dropdown-item" asp-action="CreateTicket">Create Ticket</a>
+                            <a class="dropdown-item" asp-action="AddressBook">Contacts</a>
                         </div>
                     </li>
                 </ul>
@@ -79,7 +85,7 @@
                 </div>
 
                 <div class="links fun-font">
-                    <a asp-action=CreateTicket class="note first" >
+                    <a class="note first" asp-action="CreateTicket">
                         <h2>Create Ticket</h2>
                     </a>
                     <a class="note second" href="#">
@@ -96,74 +102,32 @@
             </div>
 
             <div class="main-content">
-                <!-- Left section/ table ECT -->
-                <div class="left-section">
-                    <div class="ticket-assigned">
-                        <table>
-                            <h2 id=table-header>Tickets Assigned</h2>
-                            <thead>
-                            <tr>
-                                <th>Ticket ID</th>
-                                <th>Ticket Description</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach (var t in TicketRepository.Tickets)
-                            {
-                                <tr>
-                                    <td>@t.TicketId</td>
-                                    <td>@TicketRepository.TruncateAtWord(t,50)</td>
-                                </tr>
-                            }
-                            </tbody>
-                        </table>
-                    </div>
+
+                <div class="main-wrapper">
+                    
+                    
+                    @foreach (var u in UserRepository.Users)
+                    {
+                        <div class="profile">
+                            <h3 class= name>@(u.FirstName +" "+ u.LastName)</h3>
+                            <div class=image><p><img src="@(u.ProfilePicture)" alt=""></p></div>
+                            <div class="bottom-profile">
+                                <div class="role"> <h6>@(u.UserRoles)</h6></div>
+                                <div class="contact-info"><p>Work: @(u.ContactNumber)</p></div>
+                                <div class=email><a href="@("mailto:"+""+u.Email)">Email</a></div>
+                            </div>
+                        </div>
+                    }
+                    
+
+
+
                 </div>
-                <!-- Right Section my HUB ect -->
-                <div class="right-section">
-                    <div class="top-boxes">
-                        <div class="box4-1 urgent">
-                            <div class="insideTop ">
-                                <h3> Urgent Priority Tickets</h3>
-                            </div>
-                            <div class="insideBottom">
-                                <h1>@TicketRepository.CountTicketCategory(TicketRepository.Tickets).Item1</h1>
-                            </div>
-                        </div>
-                        <div class="box4-1 box-two">
-                            <div class="insideTop">
-                                <h3> Routine Priority Tickets</h3>
-                            </div>
-                            <div class="insideBottom">
-                                <h1>@TicketRepository.CountTicketCategory(TicketRepository.Tickets).Item2</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bottom-boxes">
-                        <div class="box4-1 reg box-four">
-                            <div class="insideTop ">
-                                <h3> Routine Priority Tickets</h3>
-                            </div>
-                            <div class="insideBottom">
-                                <h1>@TicketRepository.CountTicketCategory(TicketRepository.Tickets).Item3</h1>
-                            </div>
-                        </div>
-                        <div class="box4-1 reg box-three">
-                            <div class="insideTop">
-                                <h3> Low Priority Tickets</h3>
-                            </div>
-                            <div class="insideBottom">
-                                <h1>@TicketRepository.CountTicketCategory(TicketRepository.Tickets).Item4</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Footer section editable notes ect.  -->
                 <div class="note-board">
                     <ul class="sticky-notes">
                         <li class="one">
                             <a href="#">
-                                <h2 contenteditable="true">Click</h2>
+                                <<h2 contenteditable="true">Click</h2>
                                 <p contenteditable="true">& Edit Me</p>
                             </a>
                         </li>
