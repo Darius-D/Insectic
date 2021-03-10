@@ -1,7 +1,7 @@
  ## Table of Contents 
  1. [Why Insectic?](#head)
  2. [What is Insectic](#head2)
- 3. [Case Use Diagram](#head3)
+ 3. [Use-Case Diagram](#head3)
  4. [ERD](#erd)
  5. [Draft WireFrames](#head4)
     1. [Dashboard page](#head41)
