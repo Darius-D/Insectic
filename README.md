@@ -15,6 +15,7 @@
  9. [Test Table](#head8)
  10. [Issues Encountered](#head9)
  11. <a href=https://github.com/Darius-D/Insectic/tree/main/prototype> Prototype Section </a>
+ 12. [Todo List](#head10)
 
 ***
 <a name="head"></a>
