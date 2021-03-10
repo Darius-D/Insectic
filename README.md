@@ -174,7 +174,7 @@ Then populate drop by selection to select groups available and update user’s g
  ***
 <a name="head10"></a> 
 ###  <p align="center"> TODO:// </p>
-<p align="center">
+
 - [x] Create Dashboard view
 - [x] Create Ticket Submission view
 - [x] Create Contact Page
@@ -192,4 +192,4 @@ Then populate drop by selection to select groups available and update user’s g
 - [ ] Run second Beta Test
 - [ ] Run Alpha Test
 - [ ] Rerun all tests
-</P>
+
