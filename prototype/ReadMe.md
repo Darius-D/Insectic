@@ -27,4 +27,4 @@
   
   
   <img src="/img/ticket.JPG" />
-</p>
+
