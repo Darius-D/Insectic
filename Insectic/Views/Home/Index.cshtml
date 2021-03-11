@@ -22,10 +22,13 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>#Razor ID</td>
-                <td>#Razor Desc</td>
-            </tr>
+            @foreach (var t in TicketRepository.Tickets)
+            {
+                <tr>
+                    <td>@t.TicketId</td>
+                    <td>@t.TicketDescription</td>
+                </tr>
+            }
             </tbody>
         </table>
     </div>
@@ -37,33 +40,33 @@
                 <h3> Urgent Tickets</h3>
             </div>
             <div class="insideBottom">
-                <h1>#</h1>
+                <h1>@TicketRepository.CountTicketCategory(@TicketRepository.Tickets).Item1</h1>
             </div>
         </div>
         <div class="box4-1 box-two">
             <div class="insideTop">
-                <h3> Routine Tickets</h3>
+                <h3> High Tickets</h3>
             </div>
             <div class="insideBottom">
-                <h1>#</h1>
+                <h1>@TicketRepository.CountTicketCategory(@TicketRepository.Tickets).Item2</h1>
             </div>
         </div>
     </div>
     <div class="bottom-boxes">
         <div class="box4-1 reg box-four">
             <div class="insideTop ">
-                <h3> New Tickets</h3>
+                <h3> Routine Tickets</h3>
             </div>
             <div class="insideBottom">
-                <h1>#</h1>
+                <h1>@TicketRepository.CountTicketCategory(@TicketRepository.Tickets).Item3</h1>
             </div>
         </div>
         <div class="box4-1 reg box-three">
             <div class="insideTop">
-                <h3> Closed tickets</h3>
+                <h3> Low tickets</h3>
             </div>
             <div class="insideBottom">
-                <h1>#</h1>
+                <h1>@TicketRepository.CountTicketCategory(@TicketRepository.Tickets).Item4</h1>
             </div>
         </div>
     </div>

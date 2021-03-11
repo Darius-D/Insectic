@@ -17,13 +17,13 @@
 {Create Ticket}
 
 
-<form action="">
+<form method="post">
     <div>
         <h1>Create A Ticket</h1>
     </div>
     <div class="first-row row">
         <div>
-            <label for="BugCategory">BugCategory</label>
+            <label asp-for="Category">BugCategory</label>
             <select>
                 <option value="0">Bug Category</option>
                 <option value="1">Functionality Error</option>
@@ -35,7 +35,7 @@
             </select>
         </div>
         <div class=custom-button>
-            <label for="Priority">Priority</label>
+            <label asp-for="Priority">Priority</label>
             <select name="Priority" id="Priority">
                 <option value="0">Priority</option>
                 <option value="1">Urgent</option>
@@ -45,11 +45,11 @@
             </select>
         </div>
         <div>
-            <label for="IncidentDate">Incident Date</label>
+            <label asp-for="IncidentDate">Incident Date</label>
             <input type="datetime-local" id="IncidentDate" name="IncidentDate">
         </div>
         <div class="custom-button">
-            <label for="CurrentStatus">CurrentStatus</label>
+            <label asp-for="Status">CurrentStatus</label>
             <select name="CurrentStatus" id="CurrentStatus">
                 <option value="0">Current Status</option>
                 <option value="1">Awtg Assignment</option>
@@ -73,23 +73,23 @@
         </div>
 
         <div>
-            <label for="DueDate">Due Date</label>
+            <label asp-for="DueDate">Due Date</label>
             <input type="datetime-local" id="DueDate" name="DueDate">
         </div>
 
         <div>
-            <label for="PhoneNumber">Contact Number</label>
+            <label asp-for="PhoneNumber">Contact Number</label>
             <input type="tel" id="PhoneNumer" name="PhoneNumber" placeholder="123-456-7890"
                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
         </div>
 
         <div>
-            <label for="Email">Email</label>
+            <label asp-for="Email">Email</label>
             <input type="email" name="Email" id="Email" placeholder="work Email addresss">
         </div>
     </div>
     <div class="third-row">
-        <label for="TicketDescription">Ticket Description:</label>
+        <label asp-for="TicketDescription">Ticket Description:</label>
         <textarea name="TicketDescription" cols="105" rows="10"
                   placeholder="Please enter detailed account of current issue and actions already taken."></textarea>
         <input type="submit" class="submit-button">

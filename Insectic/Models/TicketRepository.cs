@@ -40,7 +40,7 @@ namespace Insectic.Models
         {
             if ( ticket.TicketDescription.Length < length)
                 return ticket.TicketDescription;
-            int nextSpace = ticket.TicketDescription.LastIndexOf(" ", length, StringComparison.Ordinal);
+            var nextSpace = ticket.TicketDescription.LastIndexOf(" ", length, StringComparison.Ordinal);
             return $"{ticket.TicketDescription.Substring(0, (nextSpace > 0) ? nextSpace : length).Trim()}…";
         }
     }
