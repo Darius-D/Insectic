@@ -32,4 +32,4 @@
 ##  <p align="center"> Prototype AddressBook view
   <p> This view will populate a contact card for each user in the repository with an individual profile picture, mailto: Email link and role. In the case of having more than six users, the address book will overflow into a scroll on the conatiner allowing for additional cards without disfiguring the layout. The colors currently used were for testing purposes and will be changed shortly. </p>
   
-<img src="/img/AddressBook.png">
+<img src="/img/AddressBook.JPG">
