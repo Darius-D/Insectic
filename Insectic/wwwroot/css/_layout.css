@@ -180,7 +180,8 @@ img {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr minmax(0, 200px);
-    background: rgb(37, 38, 39);
+    background: url(/img/Paper.png) center center no-repeat;
+    background-size: cover;
 }
 
 
