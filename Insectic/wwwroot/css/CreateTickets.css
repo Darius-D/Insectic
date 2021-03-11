@@ -10,19 +10,17 @@
 
 .main-section {
     display: flex;
-    justify-content: center;
 }
 
 form {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
     display: flex;
     flex-direction: column;
     padding: 15px;
     background: linear-gradient(45deg, rgb(48, 47, 47), rgb(114, 114, 117));
-    margin: 10px;
+    margin: 100px auto;
     border-radius: 8px;
+    text-align: center;
+    max-width: 1200px;
 }
 
 .row {
@@ -43,16 +41,23 @@ form {
     margin-bottom: 20px;
 }
 
+.first-row, .second-row {
+    margin: 0 auto;
+}
+
 .third-row {
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 textarea {
     resize: none;
+    max-width: 900px;
 }
 
 @media only screen and (max-width:850px) {
@@ -76,7 +81,4 @@ textarea {
     .submit-button {
         width: 250px;
     }
-}
-
-@media only screen and (max-width:1450) {
 }

@@ -1,4 +1,5 @@
 ﻿
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,20 +16,19 @@
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/_layout.css">
+    @RenderSection("LinkOne",false)
+    @RenderSection("LinkTwo",false)
 
-    <link rel="stylesheet" href="/css/ResponsiveTemplate.css">
-    <link rel="stylesheet" href="/css/NewDashboard.css">
-
-
-    <title>Dashboard</title>
+    <title>@RenderSection("Title",true)</title>
 </head>
 
 <body>
@@ -41,11 +41,10 @@
             <div class="collapse navbar-collapse w-100 order-3 order-lg-1" id="navbar-list-9">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        @RenderSection("userName",true)
-                        @*<a class="nav-link" href="#">CorkBoard <span class="sr-only">(current)</span></a>*@
+                        <a class="nav-link" asp-action="Index">CorkBoard <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Test</a>
+                        <a class="nav-link" href="#">About Us</a>
                     </li>
                 </ul>
             </div>
@@ -56,11 +55,10 @@
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="avatar" href="#">
-                            @RenderSection("image", true)
-                            @*<img src="@RenderSection("image",true)" ref="avatar" width="40" height="40" class="rounded-circle avatar">*@
+                            <img src="/img/avatar.jpg" width="40" height="40" class="rounded-circle avatar">
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Dashboard</a>
+                            <a class="dropdown-item" asp-action="Index">Dashboard</a>
                             <a class="dropdown-item" href="#">Edit Profile</a>
                             <a class="dropdown-item" href="#">Log Out</a>
                         </div>
@@ -73,13 +71,13 @@
             <div class="sidebar">
 
                 <div class="heading fun-font">
-                    <a asp-action="Index">
+                    <a href="#">
                         <h1>Cork Board</h1>
                     </a>
                 </div>
 
                 <div class="links fun-font">
-                    <a asp-action=CreateTicket class="note first" >
+                    <a class="note first" asp-action="CreateTicket">
                         <h2>Create Ticket</h2>
                     </a>
                     <a class="note second" href="#">
@@ -88,7 +86,7 @@
                     <a class="note third " href="#">
                         <h2>Manage Team</h2>
                     </a>
-                    <a class="note fourth " asp-action="AddressBook">
+                    <a class="note fourth "asp-action="AddressBook">
                         <h2> Address Book</h2>
                     </a>
                 </div>
@@ -96,87 +94,30 @@
             </div>
 
             <div class="main-content">
-                <!-- Left section/ table ECT -->
-                <div class="left-section">
-                    <div class="ticket-assigned">
-                        <table>
-                            <h2 id=table-header>Tickets Assigned</h2>
-                            <thead>
-                            <tr>
-                                <th>Ticket ID</th>
-                                <th>Ticket Description</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach (var t in TicketRepository.Tickets)
-                            {
-                                <tr>
-                                    <td>@t.TicketId</td>
-                                    <td>@TicketRepository.TruncateAtWord(t,50)</td>
-                                </tr>
-                            }
-                            </tbody>
-                        </table>
-                    </div>
+
+                <div class="Main-section">
+
+                    @RenderBody()
+
                 </div>
-                <!-- Right Section my HUB ect -->
-                <div class="right-section">
-                    <div class="top-boxes">
-                        <div class="box4-1 urgent">
-                            <div class="insideTop ">
-                                <h3> Urgent Priority Tickets</h3>
-                            </div>
-                            <div class="insideBottom">
-                                <h1>@TicketRepository.CountTicketCategory(TicketRepository.Tickets).Item1</h1>
-                            </div>
-                        </div>
-                        <div class="box4-1 box-two">
-                            <div class="insideTop">
-                                <h3> Routine Priority Tickets</h3>
-                            </div>
-                            <div class="insideBottom">
-                                <h1>@TicketRepository.CountTicketCategory(TicketRepository.Tickets).Item2</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bottom-boxes">
-                        <div class="box4-1 reg box-four">
-                            <div class="insideTop ">
-                                <h3> Routine Priority Tickets</h3>
-                            </div>
-                            <div class="insideBottom">
-                                <h1>@TicketRepository.CountTicketCategory(TicketRepository.Tickets).Item3</h1>
-                            </div>
-                        </div>
-                        <div class="box4-1 reg box-three">
-                            <div class="insideTop">
-                                <h3> Low Priority Tickets</h3>
-                            </div>
-                            <div class="insideBottom">
-                                <h1>@TicketRepository.CountTicketCategory(TicketRepository.Tickets).Item4</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Footer section editable notes ect.  -->
                 <div class="note-board">
                     <ul class="sticky-notes">
                         <li class="one">
                             <a href="#">
-                                <h2 contenteditable="true">Click</h2>
-                                <p contenteditable="true">& Edit Me</p>
+                                <h2 contenteditable="true">Click &</h2>
+                                <p contenteditable="true">Edit Me</p>
                             </a>
                         </li>
                         <li class="two">
                             <a href="#">
-                                <h2 contenteditable="true">Really</h2>
-                                <p contenteditable="true">..Try</p>
+                                <h2 contenteditable="true">Title</h2>
+                                <p contenteditable="true">Really..Try</p>
                             </a>
                         </li>
                         <li class="three">
                             <a href="#">
-                                <h2 contenteditable="true">#</h2>
-                                <p contenteditable="true">No Cap</p>
+                                <h2 contenteditable="true">Title</h2>
+                                <p contenteditable="true">#No Cap</p>
                             </a>
                         </li>
                         <li class="four">
@@ -193,26 +134,26 @@
                         </li>
                         <li class="six">
                             <a href="#">
-                                <h2 contenteditable="true">LOL</h2>
-                                <p contenteditable="true">Thank you!</p>
+                                <h2 contenteditable="true">About </h2>
+                                <p contenteditable="true">Time!</p>
                             </a>
                         </li>
                         <li class="seven">
                             <a href="#">
-                                <h2 contenteditable="true">Try</h2>
-                                <p contenteditable="true">Me...</p>
+                                <h2 contenteditable="true">Is It</h2>
+                                <p contenteditable="true">Lunch yet</p>
                             </a>
                         </li>
                         <li class="eight">
                             <a href="#">
-                                <h2 contenteditable="true">BE</h2>
-                                <p contenteditable="true">my friend?</p>
+                                <h2 contenteditable="true">Bingo</h2>
+                                <p contenteditable="true">Time!</p>
                             </a>
                         </li>
                         <li class="nine">
                             <a href="#">
-                                <h2 contenteditable="true">Cool</h2>
-                                <p contenteditable="true">work!</p>
+                                <h2 contenteditable="true">This</h2>
+                                <p contenteditable="true">sucks</p>
                             </a>
                         </li>
 

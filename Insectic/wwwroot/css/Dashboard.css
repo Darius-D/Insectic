@@ -1,0 +1,129 @@
+﻿
+
+
+.Main-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+    padding: 10px 10px;
+}
+
+.left-section {
+    grid-area: 1/1/2/2;
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+.right-section {
+    grid-area: 1/2/2/3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.ticket-assigned {
+    overflow: auto;
+    border-radius: 10px;
+}
+
+th, tr, td {
+    padding: 5px;
+    border: black solid 2px;
+    text-align: center;
+}
+
+table {
+    padding: 5px;
+    border: black solid 2px;
+    overflow: auto;
+    max-width: 100%;
+    max-height: 90%;
+}
+
+.ticket-table {
+    max-height: 80%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    border-radius: 8px;
+    padding-top: 20px;
+}
+
+.top-boxes {
+    flex-basis: 100%;
+    display: flex;
+    padding-bottom: 5px;
+    justify-content: space-evenly;
+}
+
+.box4-1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.insideTop {
+    flex: 1;
+}
+
+.insideBottom {
+    flex: 2;
+}
+
+    .insideBottom h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 3em;
+        height: 3em;
+        margin: 0 auto;
+        border-radius: 8px;
+        background: #fff;
+    }
+
+.urgent {
+    background: rgb(180, 30, 30);
+}
+
+.box-two {
+    background: rgb(120, 224, 219)
+}
+
+.box-three {
+    background: rgb(166, 230, 107);
+}
+
+.box-four {
+    background: rgb(226, 201, 120);
+}
+
+.bottom-boxes {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+@media only screen and (max-width:850px) {
+
+    .Main-section {
+        display: unset;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow: auto;
+    }
+}

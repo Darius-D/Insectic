@@ -5,4 +5,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\img\corkboard.jpg" />
+  </ItemGroup>
+
 </Project>

@@ -2,17 +2,9 @@
 
 
 
-.main-content {
-    max-height: inherit;
-    grid-area: 1/2/2/3;
-    grid-template-columns: 1fr !important;
-    grid-template-rows: 1fr minmax(0,200px);
-    background-color: rgb(37, 38, 39);
-    grid-gap: 0px;
-    color: #f4f4f4;
-}
 
-.main-wrapper {
+
+.Main-section {
     display: grid;
     grid-gap: 1em;
     padding: 1em;

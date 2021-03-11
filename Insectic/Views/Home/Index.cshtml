@@ -2,12 +2,69 @@
 @{
     Layout = "_InsecticDefault";
 }
-
-@section userName
-{<a class="nav-link" href="#">@ViewBag.Name<span class="sr-only">(current)</span></a>}
-
-
-@section image
-{<img src="@ViewBag.Image"ref="avatar" width="40" height="40" class="rounded-circle avatar"/>}
+@section LinkOne
+{
+    <link rel="stylesheet" href="/css/Dashboard.css">
+}
 
 
+@section Title
+{CorkBoard}
+
+<div class="left-section">
+    <div class="ticket-assigned">
+        <table>
+            <h2 id="table-header">Tickets Assigned</h2>
+            <thead>
+            <tr>
+                <th>Ticket ID</th>
+                <th>Ticket Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>#Razor ID</td>
+                <td>#Razor Desc</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="right-section">
+    <div class="top-boxes">
+        <div class="box4-1 urgent">
+            <div class="insideTop ">
+                <h3> Urgent Tickets</h3>
+            </div>
+            <div class="insideBottom">
+                <h1>#</h1>
+            </div>
+        </div>
+        <div class="box4-1 box-two">
+            <div class="insideTop">
+                <h3> Routine Tickets</h3>
+            </div>
+            <div class="insideBottom">
+                <h1>#</h1>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-boxes">
+        <div class="box4-1 reg box-four">
+            <div class="insideTop ">
+                <h3> New Tickets</h3>
+            </div>
+            <div class="insideBottom">
+                <h1>#</h1>
+            </div>
+        </div>
+        <div class="box4-1 reg box-three">
+            <div class="insideTop">
+                <h3> Closed tickets</h3>
+            </div>
+            <div class="insideBottom">
+                <h1>#</h1>
+            </div>
+        </div>
+    </div>
+</div>

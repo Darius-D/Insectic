@@ -1,245 +1,98 @@
 ﻿
 
 @model Insectic.Models.TicketForm
-@{ Layout = null;}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="js" href="/script.js">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/ResponsiveTemplate.css">
-    <link rel="stylesheet" href="/css/createTicket.css">
-    <title>Dashboard</title>
-</head>
+@{
+    Layout = "_InsecticDefault";
 
-<body>
-    <div class="wrapper">
-        <nav class="navbar navbar-dark  bg-dark navbar-expand-lg justify-content-between">
-            <button class="navbar-toggler order-2" type="button" data-toggle="collapse" data-target="#navbar-list-9"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse w-100 order-3 order-lg-1" id="navbar-list-9">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" asp-action="Index">CorkBoard<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                </ul>
-            </div>
-            <a class="navbar-brand mx-lg-0 order-1 order-lg-2" href="#">
-                Insectic
-            </a>
-            <div class="collapse navbar-collapse justify-content-end w-100 order-3" id="navbar-list-9">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="avatar" href="#">
-                            <img src="@ViewBag.Image" width="40" height="40" class="rounded-circle avatar">
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Dashboard</a>
-                            <a class="dropdown-item" href="#">Edit Profile</a>
-                            <a class="dropdown-item" href="#">Log Out</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <main class=inner-wrapper>
-            <div class="sidebar">
-
-                <div class="heading fun-font">
-                    <a asp-action="Index">
-                        <h1>Cork Board</h1>
-                    </a>
-                </div>
-
-                <div class="links fun-font">
-                    <a asp-action="CreateTicket" class="note first" >
-                        <h2>Create Ticket</h2>
-                    </a>
-                    <a class="note second" asp-action="">
-                        <h2>View Tickets</h2>
-                    </a>
-                    <a class="note third " asp-action="">
-                        <h2>Manage Team</h2>
-                    </a>
-                    <a class="note fourth " asp-action="">
-                        <h2> Address Book</h2>
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="main-content">
-                <div class="main-section">
-
-                    <form method="post">
-
-                        <div class="form-title">
-                            <h1>Create A Ticket</h1>
-                        </div>
-                        <div class="first-row row">
-                            <div>
-                                <label asp-for="Category">Bug Category</label>
-                                <select name="Category" id="Category">
-                                    <option value="0">Bug Category</option>
-                                    <option value="1">Functionality Error</option>
-                                    <option value="2">Logic Error</option>
-                                    <option value="3">Syntactic Error</option>
-                                    <option value="4">Error Handling Error</option>
-                                    <option value="5">Calculation Error</option>
-                                    <option value="6">Security Defect</option>
-                                </select>
-                            </div>
-                            <div class=custom-button>
-                                <label asp-for="Priority">Priority</label>
-                                <select name="Priority" id="Priority">
-                                    <option value="0">Priority</option>
-                                    <option value="1">Urgent</option>
-                                    <option value="2">High</option>
-                                    <option value="3">Routine</option>
-                                    <option value="4">Low</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label asp-for="IncidentDate">Incident Date</label>
-                                <input type="datetime-local" id="IncidentDate" name="IncidentDate">
-                            </div>
-                            <div class=custom-button>
-                                <label asp-for="Status">Current Status</label>
-                                <select name="Status" id="Status">
-                                    <option value="0">Current Status</option>
-                                    <option value="1">Awtg Assignment</option>
-                                    <option value="2">In Progress</option>
-                                    <option value="3">Pending Closure</option>
-                                    <option value="4">Close</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="second-row row">
-                            <div class=custom-button>
-                                <label for="CurrentStatus">Current Status</label>
-                                <select name="CurrentStatus" id="CurrentStatus">
-                                    <option value="0">Current Status</option>
-                                    <option value="1">Awtg Assignment</option>
-                                    <option value="2">In Progress</option>
-                                    <option value="3">Pending Closure</option>
-                                    <option value="4">Close</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label asp-for="DueDate">Due Date</label>
-                                <input type="datetime-local" id="DueDate" name="DueDate">
-                            </div>
-
-                            <div>
-                                <label asp-for="PhoneNumber">Contact Number</label>
-                                <input type="tel" id="PhoneNumer" name="PhoneNumber" placeholder="123-456-7890"
-                                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                            </div>
-
-                            <div>
-                                <label asp-for="Email">Email</label>
-                                <input type="email" name="Email" id="Email" placeholder="Work email addresss">
-                            </div>
-                        </div>
-                        <div class="third-row">
-                            <label asp-for="TicketDescription">Ticket Description:</label><br>
-                            <textarea name="TicketDescription" id="TicketDescription" cols="105" rows="10" placeholder="Please enter detailed account of current issue and actions already taken."></textarea><br>
-                            <input type="submit" class="submit-button">
-                        </div>
-
-                    </form>
-                </div>
+}
 
 
-                <div class="note-board">
-                    <ul class="sticky-notes">
-                        <li class="one">
-                            <a href="#">
-                                <h2 contenteditable="true">Title</h2>
-                                <p contenteditable="true">Click & Edit Me</p>
-                            </a>
-                        </li>
-                        <li class="two">
-                            <a href="#">
-                                <h2 contenteditable="true">Title</h2>
-                                <p contenteditable="true">Really..Try</p>
-                            </a>
-                        </li>
-                        <li class="three">
-                            <a href="#">
-                                <h2 contenteditable="true">Title</h2>
-                                <p contenteditable="true">#No Cap</p>
-                            </a>
-                        </li>
-                        <li class="four">
-                            <a href="#">
-                                <h2 contenteditable="true">Having</h2>
-                                <p contenteditable="true">Fun Yet?!</p>
-                            </a>
-                        </li>
-                        <li class="five">
-                            <a href="#">
-                                <h2 contenteditable="true">Title</h2>
-                                <p contenteditable="true">Edit Me Already</p>
-                            </a>
-                        </li>
-                        <li class="six">
-                            <a href="#">
-                                <h2 contenteditable="true">Title</h2>
-                                <p contenteditable="true">LOL Thank you!</p>
-                            </a>
-                        </li>
-                        <li class="seven">
-                            <a href="#">
-                                <h2 contenteditable="true">Title</h2>
-                                <p contenteditable="true">LOL Thank you!</p>
-                            </a>
-                        </li>
-                        <li class="eight">
-                            <a href="#">
-                                <h2 contenteditable="true">Title</h2>
-                                <p contenteditable="true">LOL Thank you!</p>
-                            </a>
-                        </li>
-                        <li class="nine">
-                            <a href="#">
-                                <h2 contenteditable="true">Title</h2>
-                                <p contenteditable="true">LOL Thank you!</p>
-                            </a>
-                        </li>
+@section LinkOne
+{
+    <link rel="stylesheet" href="/css/CreateTickets.css">
+}
 
-                    </ul>
-                </div>
-            </div>
-        </main>
+@section Title
+{Create Ticket}
+
+
+<form action="">
+    <div>
+        <h1>Create A Ticket</h1>
     </div>
-</body>
+    <div class="first-row row">
+        <div>
+            <label for="BugCategory">BugCategory</label>
+            <select>
+                <option value="0">Bug Category</option>
+                <option value="1">Functionality Error</option>
+                <option value="2">Logic Error</option>
+                <option value="3">Syntactic Error</option>
+                <option value="4">Error Handling Error</option>
+                <option value="5">Calculation Error</option>
+                <option value="6">Security Defect</option>
+            </select>
+        </div>
+        <div class=custom-button>
+            <label for="Priority">Priority</label>
+            <select name="Priority" id="Priority">
+                <option value="0">Priority</option>
+                <option value="1">Urgent</option>
+                <option value="2">High</option>
+                <option value="3">Routine</option>
+                <option value="4">Low</option>
+            </select>
+        </div>
+        <div>
+            <label for="IncidentDate">Incident Date</label>
+            <input type="datetime-local" id="IncidentDate" name="IncidentDate">
+        </div>
+        <div class="custom-button">
+            <label for="CurrentStatus">CurrentStatus</label>
+            <select name="CurrentStatus" id="CurrentStatus">
+                <option value="0">Current Status</option>
+                <option value="1">Awtg Assignment</option>
+                <option value="2">In Progress</option>
+                <option value="3">Pending Closure</option>
+                <option value="4">Close</option>
+            </select>
+        </div>
+    </div>
 
-</html>
+    <div class="second-row row">
+        <div class="custom-button">
+            <label for="CurrentStatus">Current Status</label>
+            <select name="CurrentStatus" id="CurrentStatus">
+                <option value="0">Current Status</option>
+                <option value="1">Awtg Assignment</option>
+                <option value="2">In Progress</option>
+                <option value="3">Pending Closure</option>
+                <option value="4">Close</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="DueDate">Due Date</label>
+            <input type="datetime-local" id="DueDate" name="DueDate">
+        </div>
+
+        <div>
+            <label for="PhoneNumber">Contact Number</label>
+            <input type="tel" id="PhoneNumer" name="PhoneNumber" placeholder="123-456-7890"
+                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        </div>
+
+        <div>
+            <label for="Email">Email</label>
+            <input type="email" name="Email" id="Email" placeholder="work Email addresss">
+        </div>
+    </div>
+    <div class="third-row">
+        <label for="TicketDescription">Ticket Description:</label>
+        <textarea name="TicketDescription" cols="105" rows="10"
+                  placeholder="Please enter detailed account of current issue and actions already taken."></textarea>
+        <input type="submit" class="submit-button">
+    </div>
+
+</form>
