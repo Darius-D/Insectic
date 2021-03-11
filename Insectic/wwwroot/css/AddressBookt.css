@@ -25,6 +25,7 @@
     align-items: center;
     border-radius: 10px;
     position: relative;
+    box-shadow: 10px 10px 7px rgba(0,0,0,.7);
 }
 
 .name {

@@ -35,6 +35,7 @@ form {
     border-radius: 8px;
     text-align: center;
     max-width: 1200px;
+    box-shadow: 10px 10px 7px rgba(0,0,0,.7);
 }
 
 .row {
