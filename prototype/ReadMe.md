@@ -11,7 +11,7 @@
   
  ## <p align="center"> Prototype "CorkBoard" view page
 ![](/img/prototype.JPG)
-![](/img/dashboard1.JPG)
+![](/img/dashboard2.1.JPG)
 
 ***
 
@@ -27,7 +27,7 @@
 <p align="center">
   
   
-  <img src="/img/tickets2.JPG" />
+  <img src="/img/Createticket2.1.JPG" />
 
 ***
 ##  <p align="center"> Prototype AddressBook view
