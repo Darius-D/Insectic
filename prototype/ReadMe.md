@@ -11,7 +11,7 @@
   
  ## <p align="center"> Prototype "CorkBoard" view page
 ![](/img/prototype.JPG)
-![](/img/dashboard2.JPG)
+![](/img/dashboard1.JPG)
 
 ***
 
