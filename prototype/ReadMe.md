@@ -11,6 +11,7 @@
   
  ## <p align="center"> Prototype "CorkBoard" view page
 ![](/img/prototype.JPG)
+![](/img/dashboard2.JPG)
 
 ***
 
@@ -26,10 +27,10 @@
 <p align="center">
   
   
-  <img src="/img/createTicket.JPG" />
+  <img src="/img/tickets2.JPG" />
 
 ***
 ##  <p align="center"> Prototype AddressBook view
   <p> This view will populate a contact card for each user in the repository with an individual profile picture, mailto: Email link and role. In the case of having more than six users, the address book will overflow into a scroll on the conatiner allowing for additional cards without disfiguring the layout. The colors currently used were for testing purposes and will be changed shortly. </p>
   
-<img src="/img/AddressBook.JPG">
+<img src="/img/contact2.JPG">
