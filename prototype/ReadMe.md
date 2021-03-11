@@ -27,7 +27,7 @@
 <p align="center">
   
   
-  <img src="/img/Createticket2.1.JPG" />
+  <img src="/img/createTicket2.1.JPG/>
 
 ***
 ##  <p align="center"> Prototype AddressBook view
