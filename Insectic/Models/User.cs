@@ -19,7 +19,7 @@ namespace Insectic.Models
 
         public string UserPassword { get; private set; }
 
-        public string? ResourceGroup { get; set; }
+        public string? ResourceGroup{ get; set; }
 
         public int UserRoles { get; set; }
 

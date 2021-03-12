@@ -12,7 +12,7 @@ namespace Insectic.Models
     {
         public static int count = 0;
 
-        public int TicketId { get; set; }
+        public int TicketId { get; }
         public int Category { get; set; }
 
         public int Priority { get; set; }
