@@ -171,25 +171,27 @@ img {
     background: rgb(236, 207, 110)
 }
 
-.main-section {
+.Main-section {
     position: relative;
 }
 
 .tac {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 55px;
-    left: 250px;
+    width: 35px;
+    height: 35px;
+    top: 0px;
+    left: 0;
 }
 
 .tac2 {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    bottom: 200px;
-    left: 250px;
+    width: 45px;
+    height: 45px;
+    bottom: 0;
+    left: 0;
 }
+
+
 
 
 

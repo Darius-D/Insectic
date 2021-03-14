@@ -10,7 +10,7 @@ namespace Insectic.Models
     
     public class TicketForm
     {
-        public static int count = 0;
+        public static int Count = 0;
 
         public int TicketId { get; }
         public int Category { get; set; }
@@ -29,8 +29,8 @@ namespace Insectic.Models
 
         public TicketForm()
         {
-            count++;
-            TicketId = count;
+            Count++;
+            TicketId = Count;
         }
     }
 }
