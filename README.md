@@ -176,12 +176,13 @@ Then populate drop by selection to select groups available and update user’s g
 <a name="head10"></a> 
 ###  <p align="center"> TODO:// </p>
 
--[] find solution to "floating" paper background.
+
 - [x] Create Dashboard view
 - [x] Create Ticket Submission view
 - [x] Create Contact Page
 - [x] Create Contact Page Profile Cards
 - [ ] Create View Tickets Page
+- [ ] Find solution to "floating" paper background.
 - [ ] Assign name values to grid columns and rows for easier media queries.
 - [ ] Create model for view tickets page
 - [ ] Normalize DB
