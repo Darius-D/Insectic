@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 namespace Insectic.Models
 {
     public class User
     {
+       
         public string UserId { get; private set; }
 
         public string FirstName { get; set; }
@@ -17,7 +19,7 @@ namespace Insectic.Models
 
         public string ContactNumber { get; set; }
 
-        public string UserPassword { get; private set; }
+        public string UserPassword { set => UserPassword = value;}
 
         public string? ResourceGroup{ get; set; }
 
@@ -27,8 +29,15 @@ namespace Insectic.Models
 
         public User(string password, string resourceGroup)
         {
-            ResourceGroup = resourceGroup;
-            UserPassword = password;
+            if (!string.IsNullOrEmpty(password))
+            {
+                ResourceGroup = resourceGroup;
+                UserPassword = password;
+            }
+            else
+            {
+                throw new Exception("Password must not be empty");
+            }
         }
     }
 }

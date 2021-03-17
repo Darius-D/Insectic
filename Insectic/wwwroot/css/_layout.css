@@ -225,6 +225,7 @@ img {
     max-width: 100%;
     display: grid;
     grid-auto-flow: column;
+    
 }
 
 .note-board ul li {
