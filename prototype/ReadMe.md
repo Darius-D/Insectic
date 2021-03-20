@@ -7,6 +7,11 @@
   edit with a simple double click. The stickey notes have a overflow of auto allowing for a the stickey note to hold unlimited amounts of characters with out modifying the view. Mulitiple media queries allow this page to be mobile friendly periodically removing elements as screen size shrinks. With mobile phones, only the nav links will be available to allow the user to make tickets, view tickets and manage team members. </p> 
   <p> The table is currently a work in porgess as I will need to use Javascript to find a way to make the scroll work on the table without altering the page layout.</p>
   
+ ### Changes 
+ |Date|Change Made|current status|
+ |---|---|---|
+ |March 19, 2021| Moved single ticket table into four seperate tables in their respective priorities making sorting much easier.| Implemented|
+  
   ***
   
  ## <p align="center"> Prototype "CorkBoard" view page
