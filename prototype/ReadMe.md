@@ -16,6 +16,7 @@
   
  ## <p align="center"> Prototype "CorkBoard" view page
 ![](/img/prototype.JPG)
+###  <align="center"> Current Dashboard view </p>
 ![](/img/new%20dash.JPG)
 
 ***
