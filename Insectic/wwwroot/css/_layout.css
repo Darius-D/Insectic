@@ -99,8 +99,9 @@ img {
     }
 
         .heading a:hover {
-            border-bottom: #fff solid 3px;
-            background: rgba(197, 177, 177, 0.7);
+            transform: scale(1.15);
+            position: relative;
+            color: rgb(6,0,54)
         }
 
 .links {

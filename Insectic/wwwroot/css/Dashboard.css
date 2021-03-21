@@ -81,7 +81,8 @@ table {
     height: 100%;
     margin: 5px;
     border-radius: 10px;
-    box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+    /*box-shadow: 10px 10px 7px rgba(0,0,0,.7);*/
+    
 }
 
 .box4-1 table {
@@ -122,18 +123,22 @@ table {
 
 .urgent {
     background: rgb(180, 30, 30);
+    box-shadow: 8px 8px 5px rgb(135, 12, 12,.9);
 }
 
 .box-two {
-    background: rgb(120, 224, 219)
+    background: rgb(120, 224, 219);
+    box-shadow: 8px 8px 5px rgb(10, 145, 138, .9);
 }
 
 .box-three {
     background: rgb(166, 230, 107);
+    box-shadow: 10px 8px 5px rgb(65, 110, 23, .9);
 }
 
 .box-four {
     background: rgb(226, 201, 120);
+    box-shadow: 10px 8px 5px rgb(214, 170, 26, .9);
 }
 
 
