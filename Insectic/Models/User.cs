@@ -8,7 +8,7 @@ namespace Insectic.Models
 {
     public class User
     {
-       
+        private string _userPassword;
         public string UserId { get; private set; }
 
         public string FirstName { get; set; }
@@ -19,7 +19,7 @@ namespace Insectic.Models
 
         public string ContactNumber { get; set; }
 
-        public string UserPassword { set => UserPassword = value;}
+        public string UserPassword { set => this._userPassword = value;}
 
         public string? ResourceGroup{ get; set; }
 

@@ -18,6 +18,7 @@
     flex-direction: row;
     text-align: center;
     justify-content: center;
+    padding: 5px 0;
 }
 
 .right-section {
@@ -27,15 +28,24 @@
     flex-direction: column;
 }
 
-
-.ticket-assigned {
+.todo-list {
+    width: 100%;
     overflow: auto;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(115, 171, 224, .9);
+}
+
+.todo-list table {
+    background: rgb(161, 195, 230);
+    width: 90%;
 }
 
 th, tr, td {
     padding: 5px;
-    border: black solid 2px;
+    border: black solid 1px;
     text-align: center;
 }
 
@@ -56,8 +66,8 @@ table {
     padding-top: 20px;
 }
 
-.top-boxes {
-    flex-basis: 100%;
+.top-boxes, .bottom-boxes{
+    flex: 1;
     display: flex;
     padding-bottom: 5px;
     justify-content: space-evenly;
@@ -74,12 +84,28 @@ table {
     box-shadow: 10px 10px 7px rgba(0,0,0,.7);
 }
 
+.box4-1 table {
+    width: 90%;
+    max-height: 90%;
+}
+
+#ticket-id {
+    width: 10px;
+}
+
 .insideTop {
     flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
 }
 
 .insideBottom {
-    flex: 2;
+    flex: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
 }
 
     .insideBottom h1 {
@@ -110,13 +136,7 @@ table {
     background: rgb(226, 201, 120);
 }
 
-.bottom-boxes {
-    flex-basis: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
+
 
 @media only screen and (max-width:850px) {
 

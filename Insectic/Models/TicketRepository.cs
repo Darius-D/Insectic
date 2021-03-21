@@ -26,13 +26,21 @@ namespace Insectic.Models
             foreach (var t in tic)
             {
 
-                if (t.Priority == 1) urgentCount++;
-
-                if (t.Priority==2) highCount++;
-
-                if (t.Priority == 3) routineCount++;
-
-                if (t.Priority == 4) lowCount++;
+                switch (t.Priority)
+                {
+                    case 1:
+                        urgentCount++;
+                        break;
+                    case 2:
+                        highCount++;
+                        break;
+                    case 3:
+                        routineCount++;
+                        break;
+                    case 4:
+                        lowCount++;
+                        break;
+                }
             }
             return new Tuple<int, int, int, int>(urgentCount,highCount,routineCount,lowCount);
         }
