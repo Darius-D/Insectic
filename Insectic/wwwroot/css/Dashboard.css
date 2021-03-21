@@ -35,7 +35,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgb(115, 171, 224, .9);
+    background: rgb(115, 171, 224);
+    box-shadow: 10px 5px 5px rgb(10, 90, 166);
 }
 
 .todo-list table {
@@ -124,6 +125,7 @@ table {
 .urgent {
     background: rgb(180, 30, 30);
     box-shadow: 8px 8px 5px rgb(135, 12, 12,.9);
+    
 }
 
 .box-two {
@@ -138,7 +140,7 @@ table {
 
 .box-four {
     background: rgb(226, 201, 120);
-    box-shadow: 10px 8px 5px rgb(214, 170, 26, .9);
+    box-shadow: 10px 8px 5px rgb(214, 170, 26, .8);
 }
 
 
