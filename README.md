@@ -54,13 +54,13 @@ Insectic will be an interactive bug/patches tracking web application that will f
 
 ![](img/Analytic%20page.JPG)
 
-***
+
 <a name="head43"></a>
 ###   <p align ="center"> Archives Page [🔝](#table-of-contents) </p>
 
 ![](img/Archives.JPG)
 
-***
+
 <a name="head44"></a>
 ###   <p align ="center"> Ticket Submission [🔝](#table-of-contents)  </p>
 
@@ -69,7 +69,7 @@ Insectic will be an interactive bug/patches tracking web application that will f
   
   <img src="https://github.com/Darius-D/Insectic/blob/main/img/ticket%20submission.png" width="1000" height="600"></p>
   
-***
+
 <a name="head45"></a>
 ###   <p align="center">  Contact Page [🔝](#table-of-contents) </p>
 
