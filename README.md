@@ -1,4 +1,4 @@
- <style>H2{color:Red;}</style>
+
  ## Table of Contents 
  1. [Why Insectic?](#head)
  2. [What is Insectic](#head2)
