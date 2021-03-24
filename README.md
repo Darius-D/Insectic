@@ -1,6 +1,6 @@
-<style>
- H2{color:Red !important;}
-</style>
+    <style>
+     H2{color:Red !important;}
+    </style>
  
  ## Table of Contents 
  1. [Why Insectic?](#head)
