@@ -13,7 +13,7 @@
   |March 10, 2021| Changed background from chalkboard black to an image of college rulled paper. | Implemented|
   |March 15, 2021|Added small tacks to pages in various locations to add small details. Tack images are position:relative. | Implemented|
  |March 19, 2021| Moved single ticket table into four seperate tables in their respective priorities making sorting much easier. Prior image can be foundin img folder named /dashbord2.1.JPG for reference.| Implemented|
- |March 21, 2021|Made a Todo list in replace of the original assigned ticket table.| Implemented|
+ |March 21, 2021|Made a Todo list in replace of the original assigned ticket table. This change will be temporary as I create a SCRUM board view page. | Implemented|
   
   ***
   
