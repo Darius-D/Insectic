@@ -10,6 +10,7 @@
  ###  <p align="center"> Major Changes </p> 
  |Date|Change Made|Current status|
  |----|-----------|--------------|
+  |March 10, 2021| Changed background from chalkboard black to an image of college rulled paper. | Implemented|
  |March 19, 2021| Moved single ticket table into four seperate tables in their respective priorities making sorting much easier. Prior image can be foundin img folder named /dashbord2.1.JPG for reference.| Implemented|
   
   ***
