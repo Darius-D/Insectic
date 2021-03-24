@@ -1,6 +1,6 @@
 
  ## Table of Contents 
- 1. [Why Insectic?](#head)
+ 1. + [Why Insectic?](#head)
  2. [What is Insectic](#head2)
  3. [Use-Case Diagram](#head3)
  4. [ERD](#erd)
