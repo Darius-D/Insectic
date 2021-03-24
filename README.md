@@ -165,7 +165,7 @@ Then populate drop by selection to select groups available and update user’s g
    
 ***
 <a name="head9"></a>
-### <p align="center"> Issues Encountered  [🔝](#table-of-contents) </p>
+### <p align="center"> <u>Issues Encountered </u> [🔝](#table-of-contents) </p>
 
 | Problem ID  | Problem Description | Solution| Encounter Date| Solution Date |
 |:---:|:---:|:---:|:---:|:--:|
