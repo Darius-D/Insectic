@@ -175,7 +175,7 @@ Then populate drop by selection to select groups available and update user’s g
 |05| Foreach loop for auto table generation for each of the ticket priority boxes would not work with LINQ syntax| I believe this was due to me writing the syntax in the SQL syntax variant. Intelisense did not like me utilizing the "select" keyword. I am not sure if this is because It knew more than one value would be returned from the query. This was corrected by using the more appropriate method syntax | March 20,2021|March 21,2021|
 
  ***
- ###   <p align="center"><a href="https://github.com/Darius-D/Insectic/tree/main/prototype"> :construction: Prototype :construction:</a></p>
+ ###   <p align="center"><a href="https://github.com/Darius-D/Insectic/tree/main/prototype"> :construction: Current Prototype :construction:</a></p>
  ***
 <a name="head10"></a> 
 ###  <p align="center"> TODO:// </p>
