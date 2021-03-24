@@ -31,38 +31,38 @@ Insectic will be an interactive bug/patches tracking web application that will f
 <a name="head3"></a>
 ### <p align="center"> :page_facing_up: [ Use-Case Diagram](https://github.com/Darius-D/Insectic/blob/main/CaseUseDiagram.jpg) :page_facing_up: </p>
 ***
-### <p align ="center"> ERD [:arrow_up_small:](#table-of-contents) </p>
+### <p align ="center"> ERD [🔝](#table-of-contents) </p>
 ***
 <a name="erd"></a>
 ![](img/myERD.jpg)
 
 ***
 <a name="head4"></a>
-###     <p align ="center"> DRAFT WIREFRAMES [:arrow_up_small:](#table-of-contents) </p>
+###     <p align ="center"> DRAFT WIREFRAMES [🔝](#table-of-contents) </p>
 
 ***
 <a name="head41"></a>
-###   <p align ="center"> Dashboard/Home Draft [:arrow_up_small:](#table-of-contents) </p>
+###   <p align ="center"> Dashboard/Home Draft [🔝](#table-of-contents) </p>
 
 <img src="https://github.com/Darius-D/Insectic/blob/main/img/dashboard0.JPG" width="1000" height="600">
 
 
 
 <a name="head42"></a>
-###  <p align ="center"> Analytics Page [:arrow_up_small:](#table-of-contents) </p>
+###  <p align ="center"> Analytics Page [🔝](#table-of-contents) </p>
 
 
 ![](img/Analytic%20page.JPG)
 
 ***
 <a name="head43"></a>
-###   <p align ="center"> Archives Page [:arrow_up_small:](#table-of-contents) </p>
+###   <p align ="center"> Archives Page [🔝](#table-of-contents) </p>
 
 ![](img/Archives.JPG)
 
 ***
 <a name="head44"></a>
-###   <p align ="center"> Ticket Submission [:arrow_up_small:](#table-of-contents)  </p>
+###   <p align ="center"> Ticket Submission [🔝](#table-of-contents)  </p>
 
 
 <p align="center">  
@@ -71,14 +71,14 @@ Insectic will be an interactive bug/patches tracking web application that will f
   
 ***
 <a name="head45"></a>
-###   <p align="center">  Contact Page [:arrow_up_small:](#table-of-contents) </p>
+###   <p align="center">  Contact Page [🔝](#table-of-contents) </p>
 
 <a name="head45"></a>
 ![](img/Contact.JPG)
 
 ***
 <a name="head5"></a>
-### <p align ="center"> User Stories [:arrow_up_small:](#table-of-contents) </p>
+### <p align ="center"> User Stories [🔝](#table-of-contents) </p>
 
 1. As a Department Manager, I need to create “tickets” when ever a problem is detected in our process, so that we can visualize the bottleneck and common trends. 
 2. As a Department Manager, I need to see the analytics of all the tickets in our system so that I can provide detailed reports to the CEO. 
@@ -87,7 +87,7 @@ Insectic will be an interactive bug/patches tracking web application that will f
 
 ***
 <a name="head6"></a>
-### <p align ="center"> Use Cases [:arrow_up_small:](#table-of-contents) </p>
+### <p align ="center"> Use Cases [🔝](#table-of-contents) </p>
 
 * Given a new user
 When user fills out application
@@ -123,7 +123,7 @@ Then populate drop by selection to select groups available and update user’s g
 
 *** 
 <a name="head7"></a>
-### <p align ="center"> Requirements [:arrow_up_small:](#table-of-contents) </p>
+### <p align ="center"> Requirements [🔝](#table-of-contents) </p>
 
 | Requirement ID | Requirement Description | Test Method | Test ID |
 |:-------------|:------------------:|:----------: |:-----------:|
@@ -144,7 +144,7 @@ Then populate drop by selection to select groups available and update user’s g
 
 ***
 <a name="head8"></a>
-### <p align="center"> Test Table  [:arrow_up_small:](#table-of-contents) </p> 
+### <p align="center"> Test Table  [🔝](#table-of-contents) </p> 
 
 | Test ID | Requirement ID | Test Prodedure | Current Status | TimeStamp |
 |:--------|:--------------:|:--------------:|:--------------:|:---------:|
@@ -165,7 +165,7 @@ Then populate drop by selection to select groups available and update user’s g
    
 ***
 <a name="head9"></a>
-### <p align="center"> Issues Encountered  [:arrow_up_small:](#table-of-contents) </p>
+### <p align="center"> Issues Encountered  [🔝](#table-of-contents) </p>
 
 | Problem ID  | Problem Description | Solution| Encounter Date| Solution Date |
 |:---:|:---:|:---:|:---:|:--:|
@@ -179,7 +179,7 @@ Then populate drop by selection to select groups available and update user’s g
  ###   <p align="center"><a href="https://github.com/Darius-D/Insectic/tree/main/prototype"> :construction: Current Prototype :construction:</a></p>
  ***
 <a name="head10"></a> 
-###  <p align="center"> TODO:// [:arrow_up_small:](#table-of-contents) </p>
+###  <p align="center"> TODO:// [🔝](#table-of-contents) </p>
 
 
 - [x] Create Dashboard view
