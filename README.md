@@ -38,45 +38,13 @@ Insectic will be an interactive bug/patches tracking web application that will f
 
 ***
 <a name="head4"></a>
+
 ###     <p align ="center"> DRAFT WIREFRAMES [🔝](#table-of-contents) </p>
+
 ![](/img/wireframe.jpg)
-***
-<a name="head41"></a>
-###   <p align ="center"> Dashboard/Home Draft [🔝](#table-of-contents) </p>
-
-<img src="https://github.com/Darius-D/Insectic/blob/main/img/dashboard0.JPG" width="1000" height="600">
-
-
-
-<a name="head42"></a>
-###  <p align ="center"> Analytics Page [🔝](#table-of-contents) </p>
-
-
-![](img/Analytic%20page.JPG)
-
-
-<a name="head43"></a>
-###   <p align ="center"> Archives Page [🔝](#table-of-contents) </p>
-
-![](img/Archives.JPG)
-
-
-<a name="head44"></a>
-###   <p align ="center"> Ticket Submission [🔝](#table-of-contents)  </p>
-
-
-<p align="center">  
-  
-  <img src="https://github.com/Darius-D/Insectic/blob/main/img/ticket%20submission.png" width="1000" height="600"></p>
-  
-
-<a name="head45"></a>
-###   <p align="center">  Contact Page [🔝](#table-of-contents) </p>
-
-<a name="head45"></a>
-![](img/Contact.JPG)
 
 ***
+
 <a name="head5"></a>
 ### <p align ="center"> User Stories [🔝](#table-of-contents) </p>
 
