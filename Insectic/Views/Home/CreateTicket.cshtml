@@ -25,7 +25,7 @@
     <div class="first-row row">
         <div>
             <label asp-for="Category">BugCategory</label>
-            <select>
+            <select name="Category" id="Category">
                 <option value="0">Bug Category</option>
                 <option value="1">Functionality Error</option>
                 <option value="2">Logic Error</option>
@@ -51,7 +51,7 @@
         </div>
         <div class="custom-button">
             <label asp-for="Status">CurrentStatus</label>
-            <select name="CurrentStatus" id="CurrentStatus">
+            <select name="Status" id="Status">
                 <option value="0">Current Status</option>
                 <option value="1">Awtg Assignment</option>
                 <option value="2">In Progress</option>
@@ -63,8 +63,8 @@
 
     <div class="second-row row">
         <div class="custom-button">
-            <label for="CurrentStatus">Current Status</label>
-            <select name="CurrentStatus" id="CurrentStatus">
+            <label for="PlaceHolder">place Holder</label>
+            <select name="PlaceHolder" id="PlaceHolder">
                 <option value="0">Current Status</option>
                 <option value="1">Awtg Assignment</option>
                 <option value="2">In Progress</option>
