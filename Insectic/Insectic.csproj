@@ -9,4 +9,9 @@
     <None Include="wwwroot\img\corkboard.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Contacts\" />
+    <Folder Include="Views\Tickets\" />
+  </ItemGroup>
+
 </Project>
