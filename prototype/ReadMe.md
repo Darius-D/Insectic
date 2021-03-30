@@ -38,11 +38,10 @@
 
 ***
 
-##   <p align="center"> Prototype "CorkBoard" Mobile view page
+##   <p align="center"> Prototype "CorkBoard" Mobile view page </p>
   <p> The mobile view has a drop down hamburger menu that allows the user to go to their profile page and return to the "corkboard". </p>
-<p align="center">
   <img src="/img/mobileview.png" />
-</p>
 
-##<p align="center"> Ticket Api List </p>
+
+##   <p align="center"> Ticket Api List </p>
 <img src="/img/TicketControllerApi.JPG"/>
