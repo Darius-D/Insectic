@@ -10,7 +10,7 @@ namespace InsecticDatabaseApi.InsecticData
     {
         List<User> GetAllUsers();
 
-        User GetUser(Guid id);
+        User GetUser(string id);
 
         void AddUser(User user);
 

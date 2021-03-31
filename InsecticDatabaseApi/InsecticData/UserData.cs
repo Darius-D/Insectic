@@ -19,7 +19,7 @@ namespace InsecticDatabaseApi.InsecticData
             return _insecticContext.UsersList.ToList();
         }
 
-        public User GetUser(Guid id)
+        public User GetUser(string id)
         {
             return _insecticContext.UsersList.Find(id);
         }

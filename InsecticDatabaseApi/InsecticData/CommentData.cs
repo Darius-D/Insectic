@@ -64,11 +64,13 @@ namespace InsecticDatabaseApi.InsecticData
         /// Adds a comment to the desired ticket and saves it in the DB. 
         /// </summary>
         /// <param name="comment"> Takes in the newly created ticket</param>
-        /// <param name="ticket"> Takes in the ticket comment is associated with</param>
-        public void AddComment(TicketComment comment, Ticket ticket)
+        /// <param name="ticketId"> Takes in the ticket Guid comment is associated with</param>
+        public void AddComment(Guid ticketId, TicketComment comment)
         {
+
             comment.CommentId = Guid.NewGuid();
-            comment.TicketId = ticket.TicketId;
+            comment.TicketId = ticketId;
+            comment.CommentDateTime = DateTime.Now;
             _insecticContext.TicketComments.Add(comment);
             _insecticContext.SaveChanges();
         }
@@ -76,17 +78,35 @@ namespace InsecticDatabaseApi.InsecticData
 
 
 
-        public void DeleteComment(TicketComment comment)
+        public void DeleteComment(Guid commentId)
         {
-            throw new NotImplementedException();
+            var existingComment = _insecticContext.TicketComments.Find(commentId);
+
+            if (existingComment != null)
+            {
+                _insecticContext.Remove(existingComment);
+                _insecticContext.SaveChanges();
+                
+            }
+            
         }
 
 
 
 
-        public TicketComment EditComment(TicketComment comment)
+        public void EditComment(TicketComment comment)
         {
-            throw new NotImplementedException();
+            var existingComment = _insecticContext.TicketComments.Find(comment.CommentId);
+
+            if (existingComment != null)
+            {
+                existingComment.TicketId = comment.TicketId;
+                existingComment.CommentId = comment.CommentId;
+                existingComment.UserId = comment.UserId;
+                existingComment.Comment = comment.Comment;
+                _insecticContext.TicketComments.Update(existingComment);
+                _insecticContext.SaveChanges();
+            }
         }
     }
 }

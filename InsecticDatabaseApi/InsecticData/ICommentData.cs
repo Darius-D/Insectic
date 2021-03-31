@@ -14,10 +14,10 @@ namespace InsecticDatabaseApi.InsecticData
 
         TicketComment GetComment(Guid id);
 
-        void AddComment(TicketComment comment, Ticket ticket);
+        void AddComment(Guid ticketId, TicketComment comment);
 
-        void DeleteComment(TicketComment comment);
+        void DeleteComment(Guid commentId);
 
-        TicketComment EditComment(TicketComment comment);
+        void EditComment(TicketComment comment);
     }
 }

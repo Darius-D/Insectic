@@ -21,17 +21,14 @@ namespace InsecticDatabaseApi.Models
         public Guid TicketId { get; set; }
 
         [Required]
-        public int UserId { get; set; }
+        public string UserId { get; set; }
 
-        [DataType(DataType.DateTime)]
-        DateTime CommentDateTime { get; }
+        [DataType(DataType.DateTime)] 
+        public DateTime CommentDateTime { get; set; }
 
         public string Comment { get; set; }
 
-         TicketComment()
-         {
-             CommentDateTime = DateTime.Now;
-         }
+         
         
     }
 
