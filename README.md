@@ -157,10 +157,10 @@ Then populate drop by selection to select groups available and update user’s g
 - [x] Create Contact Page
 - [x] Create Contact Page Profile Cards
 - [ ] Create View Tickets Page
-- [ ] Find solution to "floating" paper background.
+- [x] create database Api
 - [ ] Assign name values to grid columns and rows for easier media queries.
 - [ ] Create model for view tickets page
-- [ ] Normalize DB
+- [x] Normalize DB
 - [ ] Link DB
 - [ ] Optimize Mobile View
 - [ ] Optimize classes
