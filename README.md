@@ -109,6 +109,9 @@ Then populate drop by selection to select groups available and update user’s g
 | <a name="51"></a> 5.1 | The System shall only allow Department managers to close tickets | Demonstration | [501](#501) | 
 |<a name="52"></a> 5.2 | The System shall provide users the option to place ticket in pending close status | Demonstration | [502](#502) |
 |<a name="6"></a>  6 | The System shall allow Department managers to move team member groups around | Demonstration | [600](#600) |
+|<a name="7"></a>  7 | The System shall utilize a API to perform C.R.U.D operations for the tickets | Test | [700](#700) |
+|<a name="8"></a>  8 | The System shall utilize a API to perform C.R.U.D operations for the Comments | Test | [800](#800) |
+|<a name="9"></a>  9 | The System shall utilize a API to perform C.R.U.D operations for the Users | Test | [900](#900) |
 
 ***
 <a name="head8"></a>
@@ -130,14 +133,14 @@ Then populate drop by selection to select groups available and update user’s g
 | <a name="501"> 501     |       [5.1](#51)      | Utilizing any role besides Department Manager role, enusre close ticket is not a drop down option |:red_circle:|TBD|
 | <a name="502"> 502     |       [5.2](#52)      | Utilizing any role besides Department Manager role, enusre pending close ticket is a drop down option|:red_circle:|TBD|
 | <a name="600"> 600     |       [6](#6)        | Utilizing a Department Manager role user attempt to change user permissions |:red_circle:|TBD|
-| <a name="700"> 700     |       [7](#6)        | Utilizing Postman, ensure all TicketController API requests work and output expected results |:green_circle:|March 30, 2021|
- | <a name="700"> 701     |       [7.1](#6)        | Utilizing Postman, ensure GetAllTickets TicketController API request works and output expected results |:green_circle:|March 30, 2021|
- | <a name="700"> 702     |       [7.2](#6)        | Utilizing Postman, ensure GetTicket TicketController API request works and output expected results |:green_circle:|March 30, 2021|
- | <a name="700"> 703     |       [7.3](#6)        | Utilizing Postman, ensure AddTicket TicketController API request works and output expected results |:green_circle:|March 30, 2021|
- | <a name="700"> 704     |       [7.4](#6)        | Utilizing Postman, ensure EditTicket TicketController API request works and output expected results |:green_circle:|March 30, 2021|
- | <a name="700"> 705     |       [7.5](#6)        | Utilizing Postman, ensure DeleteTicket TicketController API request works and output expected results |:green_circle:|March 30, 2021|
-| <a name="800"> 800     |       [8](#6)        | Utilizing Postman, ensure all TicketCommentController API requests work and output expected results  |:green_circle:|TBD|
-| <a name="900"> 900     |       [9](#6)        | Utilizing Postman, ensure all UserController requests API work and output expected results  |:red_circle:|TBD|
+| <a name="700"> 700     |       [7](#7)        | Utilizing Postman, ensure all TicketController API requests work and output expected results |:green_circle:|March 30, 2021|
+ | <a name="700"> 701     |       [7.1](#7)        | Utilizing Postman, ensure GetAllTickets TicketController API request works and output expected results |:green_circle:|March 30, 2021|
+ | <a name="700"> 702     |       [7.2](#7)        | Utilizing Postman, ensure GetTicket TicketController API request works and output expected results |:green_circle:|March 30, 2021|
+ | <a name="700"> 703     |       [7.3](#7)        | Utilizing Postman, ensure AddTicket TicketController API request works and output expected results |:green_circle:|March 30, 2021|
+ | <a name="700"> 704     |       [7.4](#7)        | Utilizing Postman, ensure EditTicket TicketController API request works and output expected results |:green_circle:|March 30, 2021|
+ | <a name="700"> 705     |       [7.5](#7)        | Utilizing Postman, ensure DeleteTicket TicketController API request works and output expected results |:green_circle:|March 30, 2021|
+| <a name="800"> 800     |       [8](#8)        | Utilizing Postman, ensure all TicketCommentController API requests work and output expected results  |:green_circle:|TBD|
+| <a name="900"> 900     |       [9](#9)        | Utilizing Postman, ensure all UserController requests API work and output expected results  |:red_circle:|TBD|
 
    
 ***
