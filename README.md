@@ -130,6 +130,10 @@ Then populate drop by selection to select groups available and update user’s g
 | <a name="501"> 501     |       [5.1](#51)      | Utilizing any role besides Department Manager role, enusre close ticket is not a drop down option |:red_circle:|TBD|
 | <a name="502"> 502     |       [5.2](#52)      | Utilizing any role besides Department Manager role, enusre pending close ticket is a drop down option|:red_circle:|TBD|
 | <a name="600"> 600     |       [6](#6)        | Utilizing a Department Manager role user attempt to change user permissions |:red_circle:|TBD|
+| <a name="600"> 700     |       [6](#6)        | Utilizing Postman, ensure all TicketController API requests work and output expected results |:green_circle:|March 30, 2021|
+| <a name="600"> 800     |       [6](#6)        | Utilizing Postman, ensure all TicketCommentController API requests work and output expected results  |:green_circle:|TBD|
+| <a name="600"> 900     |       [6](#6)        | Utilizing Postman, ensure all UserController requests API work and output expected results  |:red_circle:|TBD|
+
    
 ***
 <a name="head9"></a>
