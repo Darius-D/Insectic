@@ -109,9 +109,9 @@ Then populate drop by selection to select groups available and update user’s g
 | <a name="51"></a> 5.1 | The System shall only allow Department managers to close tickets | Demonstration | [501](#501) | 
 |<a name="52"></a> 5.2 | The System shall provide users the option to place ticket in pending close status | Demonstration | [502](#502) |
 |<a name="6"></a>  6 | The System shall allow Department managers to move team member groups around | Demonstration | [600](#600) |
-|<a name="7"></a>  7 | The System shall utilize a API to perform C.R.U.D operations for the tickets | Test | [700](#700) |
-|<a name="8"></a>  8 | The System shall utilize a API to perform C.R.U.D operations for the Comments | Test | [800](#800) |
-|<a name="9"></a>  9 | The System shall utilize a API to perform C.R.U.D operations for the Users | Test | [900](#900) |
+|<a name="7"></a>  7 | The System shall utilize a API to perform C.R.U.D operations for the Ticket Objects | Test | [700](#700) |
+|<a name="8"></a>  8 | The System shall utilize a API to perform C.R.U.D operations for the Comment Objects | Test | [800](#800) |
+|<a name="9"></a>  9 | The System shall utilize a API to perform C.R.U.D operations for the User Objects | Test | [900](#900) |
 
 ***
 <a name="head8"></a>
