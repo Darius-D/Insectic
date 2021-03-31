@@ -33,19 +33,30 @@ namespace InsecticDatabaseApi.InsecticData
 
         public void DeleteUser(string userId)
         {
-            var existingUser = _insecticContext.Tickets.Find(userId);
+            var existingUser = _insecticContext.UsersList.Find(userId);
 
-            _insecticContext.Tickets.Remove(existingUser);
+            _insecticContext.UsersList.Remove(existingUser);
             _insecticContext.SaveChanges();
         }
 
-        public void EditUser(string userId)
+        public void EditUser(User user)
         {
-            var existingUser = _insecticContext.Tickets.Find(userId);
+            var existingUser = _insecticContext.UsersList.Find(user.UserId);
 
-
-            _insecticContext.Tickets.Update(existingUser);
-            _insecticContext.SaveChanges();
+            if (existingUser != null)
+            {
+                existingUser.UserId = user.UserId;
+                existingUser.ContactNumber = user.ContactNumber;
+                existingUser.Email = user.Email;
+                existingUser.FirstName = user.FirstName;
+                existingUser.LastName = user.LastName;
+                existingUser.ProfilePicture = user.ProfilePicture;
+                existingUser.ResourceGroup = user.ResourceGroup;
+                existingUser.UserRoles = user.UserRoles;
+                
+                _insecticContext.UsersList.Update(existingUser);
+                _insecticContext.SaveChanges();
+            }
         }
     }
 }
