@@ -26,7 +26,6 @@ namespace InsecticDatabaseApi.Models
         [DataType(DataType.DateTime)]
         DateTime CommentDateTime { get; }
 
-        [MinLength(3)]
         public string Comment { get; set; }
 
          TicketComment()

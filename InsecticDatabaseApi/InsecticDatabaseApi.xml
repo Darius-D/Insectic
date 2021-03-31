@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InsecticDatabaseApi</name>
+    </assembly>
+    <members>
+        <member name="M:InsecticDatabaseApi.Controllers.TicketController.GetAllTickets">
+            <summary>
+            Returns all tickets in the Db.
+            </summary>
+            <returns>List opf type Ticket</returns>
+        </member>
+        <member name="M:InsecticDatabaseApi.InsecticData.CommentData.GetAllComments">
+            <summary>
+            Will return all comments in the database
+            </summary>
+            <returns>a List of type TicketComment</returns>
+        </member>
+        <member name="M:InsecticDatabaseApi.InsecticData.CommentData.GetAllCommentsForTicket(System.Guid)">
+            <summary>
+            Returns all comments associated with a desired ticket. 
+            </summary>
+            <param name="id">requires the TicketId of the ticket in question.</param>
+            <returns>a List of type TicketComment</returns>
+        </member>
+        <member name="M:InsecticDatabaseApi.InsecticData.CommentData.GetComment(System.Guid)">
+            <summary>
+            Returns a single comment by Guid
+            </summary>
+            <param name="id">Requires specific comment id</param>
+            <returns>a single TicketComment object</returns>
+        </member>
+        <member name="M:InsecticDatabaseApi.InsecticData.CommentData.AddComment(InsecticDatabaseApi.Models.TicketComment,InsecticDatabaseApi.Models.Ticket)">
+            <summary>
+            Adds a comment to the desired ticket and saves it in the DB. 
+            </summary>
+            <param name="comment"> Takes in the newly created ticket</param>
+            <param name="ticket"> Takes in the ticket comment is associated with</param>
+        </member>
+        <member name="M:InsecticDatabaseApi.InsecticData.TicketData.GetAllTickets">
+            <summary>
+            Returns all tickets in the Db.
+            </summary>
+            <returns>List opf type Ticket</returns>
+        </member>
+        <member name="M:InsecticDatabaseApi.InsecticData.TicketData.GetTicket(System.Guid)">
+            <summary>
+            Returns a single ticket by ticket Id.
+            </summary>
+            <param name="id"></param>
+            <returns>a single Ticket object</returns>
+        </member>
+        <member name="M:InsecticDatabaseApi.InsecticData.TicketData.AddTicket(InsecticDatabaseApi.Models.Ticket)">
+            <summary>
+            Adds a ticket object to the Db
+            </summary>
+            <param name="ticket">requires a ticket object</param>
+        </member>
+        <member name="M:InsecticDatabaseApi.InsecticData.TicketData.DeleteTicket(System.Guid)">
+            <summary>
+            Removes the ticket from the Db. For Admins only.
+            </summary>
+            <param name="ticketId">Requires the ticket Id of the ticket you want to delete</param>
+        </member>
+    </members>
+</doc>

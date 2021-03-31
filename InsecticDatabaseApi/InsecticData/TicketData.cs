@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using InsecticDatabaseApi.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace InsecticDatabaseApi.InsecticData
 {
@@ -17,10 +15,7 @@ namespace InsecticDatabaseApi.InsecticData
         }
 
 
-        /// <summary>
-        /// Returns all tickets in the Db.
-        /// </summary>
-        /// <returns>List opf type Ticket</returns>
+        
         public List<Ticket> GetAllTickets()
         {
             return _insecticContext.Tickets.ToList();
@@ -28,11 +23,7 @@ namespace InsecticDatabaseApi.InsecticData
 
 
 
-        /// <summary>
-        /// Returns a single ticket by ticket Id.
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns>a single Ticket object</returns>
+        
         public Ticket GetTicket(Guid id)
         {
             return _insecticContext.Tickets.Find(id);
@@ -40,10 +31,7 @@ namespace InsecticDatabaseApi.InsecticData
 
 
 
-        /// <summary>
-        /// Adds a ticket object to the Db
-        /// </summary>
-        /// <param name="ticket">requires a ticket object</param>
+       
         public void AddTicket(Ticket ticket)
         {
             ticket.TicketId = Guid.NewGuid();
@@ -52,10 +40,7 @@ namespace InsecticDatabaseApi.InsecticData
             
         }
 
-        /// <summary>
-        /// Removes the ticket from the Db. For Admins only.
-        /// </summary>
-        /// <param name="ticketId">Requires the ticket Id of the ticket you want to delete</param>
+        
         public void DeleteTicket(Guid ticketId)
         {
             var existingTicket = _insecticContext.Tickets.Find(ticketId);
@@ -65,13 +50,28 @@ namespace InsecticDatabaseApi.InsecticData
             
         }
 
+
+
+        
         public void EditTicket(Ticket ticket)
         {
-            
-            
-                _insecticContext.Tickets.Update(ticket);
+            var existingTicket = _insecticContext.Tickets.Find(ticket.TicketId);
+
+            if (existingTicket != null)
+            {
+                existingTicket.TicketId = ticket.TicketId;
+                existingTicket.TicketDescription = ticket.TicketDescription;
+                existingTicket.Category = ticket.Category;
+                existingTicket.DueDate = ticket.DueDate;
+                existingTicket.Email = ticket.Email;
+                existingTicket.IncidentDate = ticket.IncidentDate;
+                existingTicket.PhoneNumber = ticket.PhoneNumber;
+                existingTicket.Priority = ticket.Priority;
+                existingTicket.Status = ticket.Status;
+
+                _insecticContext.Tickets.Update(existingTicket);
                 _insecticContext.SaveChanges();
-            
+            }
         }
     }
 }

@@ -11,11 +11,11 @@ namespace InsecticDatabaseApi.Models
         
         [Key]
         public Guid TicketId { get; set; }
-        public int Category { get; set; }
+        public string Category { get; set; }
         
-        public int Priority { get; set; }
+        public string Priority { get; set; }
 
-        public int Status { get; set; }
+        public string Status { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime IncidentDate { get; set; } = DateTime.Now;

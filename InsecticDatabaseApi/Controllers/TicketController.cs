@@ -18,7 +18,10 @@ namespace InsecticDatabaseApi.Controllers
         {
             _ticketData = ticket;
         }
-
+        /// <summary>
+        /// Returns all tickets in the Db.
+        /// </summary>
+        /// <returns>List of type Ticket</returns>
         [HttpGet]
         [Route("api/[controller]")]
         public IActionResult GetAllTickets()
@@ -26,6 +29,14 @@ namespace InsecticDatabaseApi.Controllers
             return Ok(_ticketData.GetAllTickets());
         }
 
+
+
+
+        /// <summary>
+        /// Returns a single ticket by ticket Id.
+        /// </summary>
+        /// <param name="id">Guid of the ticket wanting to pull</param>
+        /// <returns>a single Ticket object</returns>
         [HttpGet]
         [Route("api/[controller]/{id}")]
         public IActionResult GetTicket(Guid id)
@@ -39,6 +50,13 @@ namespace InsecticDatabaseApi.Controllers
             return NotFound($"Ticket with Guid of {id} does not exist");
         }
 
+
+
+        /// <summary>
+        /// Adds a ticket object to the Db
+        /// </summary>
+        /// <param name="newTicket">requires a ticket object. ticket Guid will be auto generated.</param>
+        /// <returns>the location in the header. Might remove this. </returns>
         [HttpPost]
         [Route("api/[controller]")]
         public IActionResult AddTicket(Ticket newTicket)
@@ -48,6 +66,13 @@ namespace InsecticDatabaseApi.Controllers
 
         }
 
+
+
+        /// <summary>
+        /// Removes the ticket from the Db. For Admins only.
+        /// </summary>
+        /// <param name="id">Requires the ticket Guid id of the ticket you want to delete</param>
+        /// <returns>status 202 Ok or NotFound object result</returns>
         [HttpDelete]
         [Route("api/[controller]/{id}")]
         public IActionResult DeleteTicket(Guid id)
@@ -62,15 +87,23 @@ namespace InsecticDatabaseApi.Controllers
 
         }
 
+
+
+        /// <summary>
+        /// Edits an existing ticket. 
+        /// </summary>
+        /// <param name="id">the Guid of the ticket you want to edit.</param>
+        /// <param name="ticket">Json body as Ticket object</param>
+        /// <returns>void</returns>
         [HttpPatch]
         [Route("api/[controller]/{id}")]
         public IActionResult EditTicket( Guid id, Ticket ticket)
         {
-            var existingTicket = _ticketData.GetTicket(id);
+            Ticket existingTicket = _ticketData.GetTicket(id);
 
             if (existingTicket != null)
             {
-                existingTicket.TicketId = existingTicket.TicketId;
+                ticket.TicketId = existingTicket.TicketId;
                 _ticketData.EditTicket(ticket);
                 return Ok();
             }
