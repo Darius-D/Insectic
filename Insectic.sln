@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insectic", "Insectic\Insectic.csproj", "{643AC140-EB99-43F1-907E-3AFAE8A06EC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsecticDatabaseApi", "InsecticDatabaseApi\InsecticDatabaseApi.csproj", "{107AFCE5-E041-41BB-A61D-F81EFB85544A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsecticDatabaseApi", "InsecticDatabaseApi\InsecticDatabaseApi.csproj", "{107AFCE5-E041-41BB-A61D-F81EFB85544A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsecticApiTests", "InsecticApiTests\InsecticApiTests.csproj", "{64D9DABA-B9D7-4A89-91D4-5A9A8576627A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{107AFCE5-E041-41BB-A61D-F81EFB85544A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{107AFCE5-E041-41BB-A61D-F81EFB85544A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{107AFCE5-E041-41BB-A61D-F81EFB85544A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64D9DABA-B9D7-4A89-91D4-5A9A8576627A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D9DABA-B9D7-4A89-91D4-5A9A8576627A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D9DABA-B9D7-4A89-91D4-5A9A8576627A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D9DABA-B9D7-4A89-91D4-5A9A8576627A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
