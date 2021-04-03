@@ -34,8 +34,9 @@ Insectic will be an interactive bug/patches tracking web application that will f
 ### <p align ="center"> ERD [🔝](#table-of-contents) </p>
 ***
 <a name="erd"></a>
+<p align="center">
 ![](img/diagram.JPG)
-
+</p>
 ***
 <a name="head4"></a>
 
