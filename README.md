@@ -145,7 +145,7 @@ Then populate drop by selection to select groups available and update user’s g
  | <a name="700"> 704     |       [7.4](#7)        | Utilizing Postman, ensure EditTicket TicketController API request works and output expected results |:green_circle:|March 30, 2021|
  | <a name="700"> 705     |       [7.5](#7)        | Utilizing Postman, ensure DeleteTicket TicketController API request works and output expected results |:green_circle:|March 30, 2021|
 | <a name="800"> 800     |       [8](#8)        | Utilizing Postman, ensure all TicketCommentController API requests work and output expected results  |:green_circle:|TBD|
-| <a name="900"> 900     |       [9](#9)        | Utilizing Postman, ensure all UserController requests API work and output expected results  |:red_circle:|TBD|
+| <a name="900"> 900     |       [9](#9)        | Utilizing Postman, ensure all UserController requests API work and output expected results  |:green_circle:|TBD|
 
    
 ***
