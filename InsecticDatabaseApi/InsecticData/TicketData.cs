@@ -9,6 +9,7 @@ namespace InsecticDatabaseApi.InsecticData
     public class TicketData : ITicketData
     {
         private InsecticContext _insecticContext;
+
         public TicketData(InsecticContext insecticContext)
         {
             _insecticContext = insecticContext;
@@ -19,6 +20,7 @@ namespace InsecticDatabaseApi.InsecticData
         public List<Ticket> GetAllTickets()
         {
             return _insecticContext.Tickets.ToList();
+
         }
 
 

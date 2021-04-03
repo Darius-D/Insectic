@@ -3,22 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using InsecticDatabaseApi.Controllers;
 using Xunit;
 
 namespace InsecticApiTests.Tickets
 {
-    class TicketControllerTest
+    public class TicketControllerTest
     {
-        [Fact]
-        public async Task GetTicket_ShouldReturnSingle_ByTicketId()
-        {
-
-
-            //Arrange
-
-            //Act
-
-            //Assert
-        }
+        
     }
 }

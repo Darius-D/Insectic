@@ -37,10 +37,15 @@ namespace InsecticApiTests
             var ticketList =
                 JsonConvert.DeserializeObject<List<Ticket>>(await response.Content.ReadAsStringAsync());
             ticketList.Should().NotContainNulls();
+
+            //var ticketList =
+            //    JsonConvert.DeserializeObject<List<Ticket>>(await response.Content.ReadAsStringAsync());
+            //ticketList.Should().HaveCount(3);
         }
 
-        //This test checks to make sure a OK status is returned when pulling a single ticket. The ticket id is hard coded in the test
-        //:18a6d40b-1422-493a-b7d9-9965ebdc4fdc: which is the Id variable. Unsure if this can be done differently. 
+
+        //This test checks to make sure a OK status is returned when pulling a single ticket. The ticket id is hard
+        //coded in the test :18a6d40b-1422-493a-b7d9-9965ebdc4fdc: which is the Id variable. Unsure if this can be done differently. 
         [Fact]
         public async Task Get_Should_Retrieve_Single_Ticket()
         {

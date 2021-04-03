@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace Insectic.Models
@@ -51,5 +53,8 @@ namespace Insectic.Models
             var nextSpace = ticket.TicketDescription.LastIndexOf(" ", length, StringComparison.Ordinal);
             return $"{ticket.TicketDescription.Substring(0, (nextSpace > 0) ? nextSpace : length).Trim()}…";
         }
+
     }
+
+
 }

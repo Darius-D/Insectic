@@ -29,9 +29,6 @@ namespace InsecticDatabaseApi.Controllers
             return Ok(_ticketData.GetAllTickets());
         }
 
-
-
-
         /// <summary>
         /// Returns a single ticket by ticket Id.
         /// </summary>
