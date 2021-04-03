@@ -31,7 +31,7 @@ Insectic will be an interactive bug/patches tracking web application that will f
 <a name="head3"></a>
 ### <p align="center"> :page_facing_up: [ Use-Case Diagram](https://github.com/Darius-D/Insectic/blob/main/CaseUseDiagram.jpg) :page_facing_up: </p>
 ***
-### <p align ="center"> ERD [🔝](#table-of-contents) </p>
+### <p align ="center"><a href="https://github.com/Darius-D/Insectic/blob/main/img/myERD.jpg"> ERD<a/> [🔝](#table-of-contents) </p>
 ***
 <a name="erd"></a>
 ![](img/diagram.JPG)
