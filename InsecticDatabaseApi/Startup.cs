@@ -35,10 +35,12 @@ namespace InsecticDatabaseApi
             services.AddControllers();
             services.AddDbContext<InsecticContext>(options => options.UseSqlServer(
                 Configuration.GetConnectionString("InsecticApiConnectionString")));
+
             // add service.scoped for interfaces for crud 
             services.AddScoped<ITicketData, TicketData>();
             services.AddScoped<ICommentData, CommentData>();
             services.AddScoped<IUserData, UserData>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "InsecticDatabaseApi", Version = "v1" });

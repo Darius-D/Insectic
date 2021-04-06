@@ -32,6 +32,7 @@ namespace InsecticDatabaseApi.Models
         public string TicketDescription { get; set; }
 
 
+        public List<TicketComment> Comments { get; set; }
        
         
     }

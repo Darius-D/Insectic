@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InsecticDatabaseApi.Migrations
 {
     [DbContext(typeof(InsecticContext))]
-    [Migration("20210331060947_ThirdMigration")]
+    [Migration("20210406030024_ThirdMigration")]
     partial class ThirdMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,7 +51,12 @@ namespace InsecticDatabaseApi.Migrations
                     b.Property<string>("TicketDescription")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("TicketId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Tickets");
                 });
@@ -73,9 +78,13 @@ namespace InsecticDatabaseApi.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("CommentId");
+
+                    b.HasIndex("TicketId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("TicketComments");
                 });
@@ -111,6 +120,40 @@ namespace InsecticDatabaseApi.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("UsersList");
+                });
+
+            modelBuilder.Entity("InsecticDatabaseApi.Models.Ticket", b =>
+                {
+                    b.HasOne("InsecticDatabaseApi.Models.User", null)
+                        .WithMany("Tickets")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("InsecticDatabaseApi.Models.TicketComment", b =>
+                {
+                    b.HasOne("InsecticDatabaseApi.Models.Ticket", null)
+                        .WithMany("Comments")
+                        .HasForeignKey("TicketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("InsecticDatabaseApi.Models.User", null)
+                        .WithMany("comments")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("InsecticDatabaseApi.Models.Ticket", b =>
+                {
+                    b.Navigation("Comments");
+                });
+
+            modelBuilder.Entity("InsecticDatabaseApi.Models.User", b =>
+                {
+                    b.Navigation("comments");
+
+                    b.Navigation("Tickets");
                 });
 #pragma warning restore 612, 618
         }

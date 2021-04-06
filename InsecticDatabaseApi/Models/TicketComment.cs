@@ -16,14 +16,14 @@ namespace InsecticDatabaseApi.Models
 
         [Key]
         public Guid CommentId { get; set; }
-
-        [ForeignKey("TicketId")]
+        
         public Guid TicketId { get; set; }
 
         [Required]
         public string UserId { get; set; }
 
-        [DataType(DataType.DateTime)] 
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime CommentDateTime { get; set; }
 
         public string Comment { get; set; }

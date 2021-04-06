@@ -18,6 +18,7 @@ namespace InsecticDatabaseApi.Controllers
         {
             _ticketData = ticket;
         }
+
         /// <summary>
         /// Returns all tickets in the Db.
         /// </summary>
@@ -59,8 +60,8 @@ namespace InsecticDatabaseApi.Controllers
         public IActionResult AddTicket(Ticket newTicket)
         {
             _ticketData.AddTicket(newTicket);
-            return Created(HttpContext.Request.Scheme + "://" + HttpContext.Request.Host + HttpContext.Request.Path + "/" + newTicket.TicketId, newTicket);
-
+            //return Created(HttpContext.Request.Scheme + "://" + HttpContext.Request.Host + HttpContext.Request.Path + "/" + newTicket.TicketId, newTicket);
+            return Ok();
         }
 
 

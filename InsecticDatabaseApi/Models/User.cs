@@ -40,7 +40,11 @@ namespace InsecticDatabaseApi.Models
         [DataType(DataType.ImageUrl)]
         public string ProfilePicture { get; set; }
 
-        
+        public List<Ticket> Tickets { get; set; }
+
+        public List<TicketComment> comments { get; set; }
+
+
 
     }
 }
