@@ -46,4 +46,4 @@
 </p>
 
 ##   <p align="center"> Ticket Api List </p>
-<img src="/img/TicketControllerApi.JPG"/>
+<img src="/img/APIDiagram.JPG"/>
