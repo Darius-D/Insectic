@@ -178,6 +178,13 @@ Then populate drop by selection to select groups available and update user’s g
     ('JTran','Jackie', 'Tran', 'fakeJTran@gmail.com','3694567891', null, 'Admin', null,'Password'),
     ('GRoss','Greg', 'Ross', 'fakeGreg@gmail.com','7414567891', null, 'Admin', null,'Password'),
     ('BBetsy','Ben', 'Besty', 'fakeBennyBoy@gmail.com','7894567891', null, 'Admin', null,'Password')
+    
+    INSERT INTO Tickets(TicketCategory,Priority, Status, IncidentDate, DueDate,TicketDescription)   
+    values
+    ('Logic error', 'Urgent', 'pending Closure', '20200702', null, 'logic error found', 'ddub'),
+    ('patch error', 'Routine', 'assigned', '20200702', null, 'logic error found', 'MDubo'),
+    ('error', 'High', 'awtg assignment', '20200702', null, 'logic error found', 'Rdub'),
+    ('Logic error', 'Low', 'Closed', '20200702', null, 'logic error found', 'JTran')
 ***
 <a name="head10"></a> 
 ###  <p align="center"> TODO:// [🔝](#table-of-contents) </p>
