@@ -168,6 +168,7 @@ Then populate drop by selection to select groups available and update user’s g
  ###   <p align="center"><a href="https://github.com/Darius-D/Insectic/tree/main/prototype"> :construction: Click to See Current Prototype :construction:</a></p>
 ***
  ### <p align="center"> SQL Mock DB values </p>
+     //Users Table
     insert into Users( UserId,FirstName,LastName,Email,PhoneNumber,ResourceGroup,UserRoles,ProfilePicture, UserPassword)
     values
     ('ddub','Darius', 'Dub', 'fake@gmail.com','8605786672', null, 'Admin', null,'Password'),
