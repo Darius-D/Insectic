@@ -164,9 +164,20 @@ Then populate drop by selection to select groups available and update user’s g
 |08| Created an API in my soultion to act as the "middle-man" between my webapp and my database. The API has three controllers "Tickets". " ticketComments", and "users". The Ticket controller CRUD actionmethods are complete but an error populates on postman when trying to send a "Patch" request. My generated message of "Ticket with Guid of {00000000-0000-0000-0000-000000000000} does not exist" is returned to me. That message should only return if the ticket is not in the Database. The get request works with the inputted GUID so the ticket is in the DB. | After placing several stoppers, I noticed my Guid was not being passed to the action method and instead was getting passed a empty Guid. The reason behind this was do to my action method parameter was named guid of type Guid. by changing the identifier to id of type Guid the action method started to pass the input request id to the GetTicket method inside the action method to pull the existing ticket and perform a deep copy. I was not aware the paramter neame has to match the {id} route argument identifier. |March 30,2021| March 31, 2021|
 |09|Created some tests for my API using WebApplicationFactory and Xunit. Tests work however the tests do modify the database. and require hard coded values to compare to that are pre-existing in the database. Currently looking for a way to use Moq to run Unit tests without having to modify Db or hard code dynamic values. Click here to see image of test setup. <a href="https://github.com/Darius-D/Insectic/blob/main/img/tests.JPG">test setup</a>  | No current solution| March 31,2021|TDB|
 |10|While consuming APIs in postman worked, I ran into issues with sending post request in my project. The properties that required DateTime inputs are requiring Datetime inputs even though in the model the datatype is DateTime.Date. Currently lookign for solutions to this issue. | No current solution| April 6,2021|TDB|
- ***
+***
  ###   <p align="center"><a href="https://github.com/Darius-D/Insectic/tree/main/prototype"> :construction: Click to See Current Prototype :construction:</a></p>
- ***
+***
+ ### <p align="center"> SQL Mock DB values </p>
+    insert into Users( UserId,FirstName,LastName,Email,PhoneNumber,ResourceGroup,UserRoles,ProfilePicture, UserPassword)
+    values
+    ('ddub','Darius', 'Dub', 'fake@gmail.com','8605786672', null, 'Admin', null,'Password'),
+    ('MDubo','Marcus', 'Dub', 'fakeMarcus@gmail.com','4934567891', null, 'Admin', null,'Password'),
+    ('Rdub','Renee', 'Dub', 'fakeRenee@gmail.com','2384567891', null, 'Admin', null,'Password'),
+    ('SillyS','Susie', 'Sally', 'sillySally@gmail.com','7854567891', null, 'Admin', null,'Password'),
+    ('JTran','Jackie', 'Tran', 'fakeJTran@gmail.com','3694567891', null, 'Admin', null,'Password'),
+    ('GRoss','Greg', 'Ross', 'fakeGreg@gmail.com','7414567891', null, 'Admin', null,'Password'),
+    ('BBetsy','Ben', 'Besty', 'fakeBennyBoy@gmail.com','7894567891', null, 'Admin', null,'Password')
+***
 <a name="head10"></a> 
 ###  <p align="center"> TODO:// [🔝](#table-of-contents) </p>
 
