@@ -37,7 +37,7 @@ Insectic will be an interactive bug/patches tracking web application that will f
 ###    <p align="center">Database Diagram [🔝](#table-of-contents) </p>
 
 <p align="center">  
-  <img src="/img/newdiagram.JPG" />
+  <img src="/img/NewDiagram.JPG" />
 </p>
 
 
