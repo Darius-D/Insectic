@@ -168,10 +168,11 @@ Then populate drop by selection to select groups available and update user’s g
  ###   <p align="center"><a href="https://github.com/Darius-D/Insectic/tree/main/prototype"> :construction: Click to See Current Prototype :construction:</a></p>
 ***
  ### <p align="center"> SQL Mock DB values </p>
-     //Users Table
+
+    -- Users
     insert into Users( UserId,FirstName,LastName,Email,PhoneNumber,ResourceGroup,UserRoles,ProfilePicture, UserPassword)
     values
-    ('ddub','Darius', 'Dub', 'fake@gmail.com','8605786672', null, 'Admin', null,'Password'),
+    ('Ddub','Darius', 'Dub', 'fake@gmail.com','8605786672', null, 'Admin', null,'Password'),
     ('MDubo','Marcus', 'Dub', 'fakeMarcus@gmail.com','4934567891', null, 'Admin', null,'Password'),
     ('Rdub','Renee', 'Dub', 'fakeRenee@gmail.com','2384567891', null, 'Admin', null,'Password'),
     ('SillyS','Susie', 'Sally', 'sillySally@gmail.com','7854567891', null, 'Admin', null,'Password'),
@@ -179,12 +180,36 @@ Then populate drop by selection to select groups available and update user’s g
     ('GRoss','Greg', 'Ross', 'fakeGreg@gmail.com','7414567891', null, 'Admin', null,'Password'),
     ('BBetsy','Ben', 'Besty', 'fakeBennyBoy@gmail.com','7894567891', null, 'Admin', null,'Password')
     
-    INSERT INTO Tickets(TicketCategory,Priority, Status, IncidentDate, DueDate,TicketDescription)   
+    select * From Users
+    --Tickets
+    INSERT INTO Tickets(TicketCategory,Priority, Status, IncidentDate, DueDate,TicketDescription, UserId)
     values
-    ('Logic error', 'Urgent', 'pending Closure', '20200702', null, 'logic error found', 'ddub'),
+    ('Logic error', 'Urgent', 'pending Closure', '20200702', null, 'logic error found', 'Ddub'),
     ('patch error', 'Routine', 'assigned', '20200702', null, 'logic error found', 'MDubo'),
     ('error', 'High', 'awtg assignment', '20200702', null, 'logic error found', 'Rdub'),
     ('Logic error', 'Low', 'Closed', '20200702', null, 'logic error found', 'JTran')
+    
+    select * from Tickets
+    --Comments
+    INSERT INTO TicketComments(TicketId, UserId, CommentDate, UserComment)
+    Values
+    (100, 'Ddub',   GETDATE(), 'This is a test comment for ticket ID 100 made by user Ddub'),
+    (100, 'MDubo',  GETDATE(), 'This is a test comment for ticket ID 100 made by user MDubo'),
+    (101, 'JTran',  GETDATE(), 'This is a test comment for ticket ID 101 made by user JTran'),
+    (102, 'GRoss',  GETDATE(), 'This is a test comment for ticket ID 102 made by user GRoss'),
+    (103, 'BBetsy', GETDATE(), 'This is a test comment for ticket ID 103 made by user BBetsy'),
+    (101, 'SillyS', GETDATE(), 'This is a test comment for ticket ID 101 made by user SillyS')
+    
+    select * from TicketComments
+    
+    -- Tests
+    SELECT * 
+    FROM Tickets
+    WHERE UserId like 'Mdubo'
+    
+    Select * 
+    FROM TicketComments
+    Where TicketId = 100 AND CommentId = 100
 ***
 <a name="head10"></a> 
 ###  <p align="center"> TODO:// [🔝](#table-of-contents) </p>
