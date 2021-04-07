@@ -5,7 +5,13 @@
     grid-template-rows: 1fr minmax(0,200px);
     background-color: rgb(37, 38, 39);
     grid-gap: 0px;
-    color: #f4f4f4;
+    color: black;
+}
+
+select, input, textarea {
+    border: none;
+    padding-left: 10px;
+    border-radius: 10px;
 }
 .tac4 {
     position: absolute;
@@ -31,7 +37,7 @@ form {
     display: flex;
     flex-direction: column;
     padding: 15px;
-    background: linear-gradient(45deg, rgb(48, 47, 47), rgb(114, 114, 117));
+    background: linear-gradient(45deg, rgb(235, 146, 52,.8), rgb(232, 141, 44,.8));
     margin: 100px auto;
     border-radius: 8px;
     text-align: center;

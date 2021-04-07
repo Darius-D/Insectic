@@ -16,7 +16,7 @@ namespace InsecticDatabaseApi.Models
 
         [Key]
         public Guid CommentId { get; set; }
-        
+        [Required]
         public Guid TicketId { get; set; }
 
         [Required]
@@ -25,7 +25,7 @@ namespace InsecticDatabaseApi.Models
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime CommentDateTime { get; set; }
-
+        [Required]
         public string Comment { get; set; }
 
          

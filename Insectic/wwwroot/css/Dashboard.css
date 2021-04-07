@@ -82,6 +82,7 @@ table {
     height: 100%;
     margin: 5px;
     border-radius: 10px;
+    max-height: 300px;
     /*box-shadow: 10px 10px 7px rgba(0,0,0,.7);*/
     
 }
@@ -124,22 +125,26 @@ table {
 
 .urgent {
     background: rgb(180, 30, 30);
+    /* ReSharper disable once UnexpectedValue */
     box-shadow: 8px 8px 5px rgb(135, 12, 12,.9);
     
 }
 
 .box-two {
     background: rgb(120, 224, 219);
+    /* ReSharper disable once UnexpectedValue */
     box-shadow: 8px 8px 5px rgb(10, 145, 138, .9);
 }
 
 .box-three {
     background: rgb(166, 230, 107);
+    /* ReSharper disable once UnexpectedValue */
     box-shadow: 10px 8px 5px rgb(65, 110, 23, .9);
 }
 
 .box-four {
     background: rgb(226, 201, 120);
+    /* ReSharper disable once UnexpectedValue */
     box-shadow: 10px 8px 5px rgb(214, 170, 26, .8);
 }
 

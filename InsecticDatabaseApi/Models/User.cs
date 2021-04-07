@@ -38,11 +38,12 @@ namespace InsecticDatabaseApi.Models
         public int UserRoles { get; set; }
 
         [DataType(DataType.ImageUrl)]
+        [AllowNull]
         public string ProfilePicture { get; set; }
 
-        public List<Ticket> Tickets { get; set; }
+        
 
-        public List<TicketComment> comments { get; set; }
+        
 
 
 

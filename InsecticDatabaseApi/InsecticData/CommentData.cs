@@ -58,6 +58,13 @@ namespace InsecticDatabaseApi.InsecticData
             return _insecticContext.TicketComments.Find(id);
         }
 
+        //Todo Make Api controller that can run this. 
+        public List<TicketComment> GetUserComments(string userId)
+        {
+            var userComments = GetAllComments().Where(c => c.UserId == userId).ToList();
+            return userComments;
+        }
+
 
 
         /// <summary>

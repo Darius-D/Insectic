@@ -18,6 +18,11 @@ namespace InsecticDatabaseApi.InsecticData
             throw new NotImplementedException();
         }
 
+        public List<Ticket> GetUserTickets(string userId)
+        {
+            throw new NotImplementedException();
+        }
+
         public void AddTicket(Ticket ticket)
         {
             throw new NotImplementedException();

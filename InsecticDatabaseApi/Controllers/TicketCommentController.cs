@@ -53,6 +53,21 @@ namespace InsecticDatabaseApi.Controllers
             return NotFound($"Comments associated with Guid of Ticket Guid of {id} do not exist");
         }
 
+        //Todo change route
+        [HttpGet]
+        [Route("apidoub/[controller]/{userId}")]
+        public IActionResult GetTicketCommentsForUser(string userId)
+        {
+            var commentList = _commentData.GetUserComments(userId);
+            if (commentList != null)
+            {
+                return Ok(commentList);
+            }
+
+            return NotFound($"Comments associated with user Id of {userId} do not exist");
+        }
+
+
         //These two will block one out TODO://
 
         /// <summary>

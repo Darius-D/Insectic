@@ -13,6 +13,8 @@ namespace InsecticDatabaseApi.InsecticData
 
         List<TicketComment> GetAllCommentsForTicket(Guid id);
 
+        public List<TicketComment> GetUserComments(string userId);
+
         TicketComment GetComment(Guid id);
 
         void AddComment(Guid ticketId, TicketComment comment);

@@ -27,4 +27,8 @@
     <ProjectReference Include="..\InsecticDatabaseApi\InsecticDatabaseApi.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Tickets\" />
+  </ItemGroup>
+
 </Project>

@@ -24,6 +24,7 @@ namespace InsecticDatabaseApi.InsecticData
             return _insecticContext.UsersList.Find(id);
         }
 
+
         public void AddUser(User user)
         {
             
@@ -39,6 +40,7 @@ namespace InsecticDatabaseApi.InsecticData
             _insecticContext.SaveChanges();
         }
 
+
         public void EditUser(User user)
         {
             var existingUser = _insecticContext.UsersList.Find(user.UserId);
@@ -53,6 +55,7 @@ namespace InsecticDatabaseApi.InsecticData
                 existingUser.ProfilePicture = user.ProfilePicture;
                 existingUser.ResourceGroup = user.ResourceGroup;
                 existingUser.UserRoles = user.UserRoles;
+                
                 
                 _insecticContext.UsersList.Update(existingUser);
                 _insecticContext.SaveChanges();

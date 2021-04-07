@@ -32,8 +32,16 @@ namespace InsecticDatabaseApi.InsecticData
         }
 
 
+        //ToDo Make Api controller that can run this. 
+        public List<Ticket> GetUserTickets(string userId)
+        {
+            
+            var userTickets = GetAllTickets().Where(t => t.UserId == userId).ToList();
+            return userTickets;
+        }
 
-       
+
+
         public void AddTicket(Ticket ticket)
         {
             ticket.TicketId = Guid.NewGuid();
@@ -70,7 +78,7 @@ namespace InsecticDatabaseApi.InsecticData
                 existingTicket.PhoneNumber = ticket.PhoneNumber;
                 existingTicket.Priority = ticket.Priority;
                 existingTicket.Status = ticket.Status;
-
+                
                 _insecticContext.Tickets.Update(existingTicket);
                 _insecticContext.SaveChanges();
             }

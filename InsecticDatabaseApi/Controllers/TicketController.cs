@@ -48,6 +48,20 @@ namespace InsecticDatabaseApi.Controllers
             return NotFound($"Ticket with Guid of {id} does not exist");
         }
 
+        //Todo change route
+        [HttpGet]
+        [Route("apit/[controller]/{id}")]
+        public IActionResult GetTicketByUser(string userId)
+        {
+            var ticket = _ticketData.GetUserTickets(userId);
+            if (ticket != null)
+            {
+                return Ok(_ticketData.GetUserTickets(userId));
+            }
+
+            return NotFound($"Tickets associated with the User Id of {userId} do not exist");
+        }
+
 
 
         /// <summary>

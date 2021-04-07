@@ -12,6 +12,8 @@ namespace InsecticDatabaseApi.InsecticData
 
         Ticket GetTicket(Guid id);
 
+        public List<Ticket> GetUserTickets(string userId);
+
         void AddTicket(Ticket ticket);
 
         void DeleteTicket(Guid ticketId);

@@ -1,6 +1,6 @@
 ﻿
 
-@model Insectic.Models.TicketForm
+@model Insectic.Models.TicketJsonModel
 
 @{
     Layout = "_InsecticDefault";
@@ -27,22 +27,22 @@
             <label asp-for="Category">BugCategory</label>
             <select name="Category" id="Category">
                 <option value="0">Bug Category</option>
-                <option value="1">Functionality Error</option>
-                <option value="2">Logic Error</option>
-                <option value="3">Syntactic Error</option>
-                <option value="4">Error Handling Error</option>
-                <option value="5">Calculation Error</option>
-                <option value="6">Security Defect</option>
+                <option value="Functionality Error">Functionality Error</option>
+                <option value="Logic Error">Logic Error</option>
+                <option value="Syntactic Error">Syntactic Error</option>
+                <option value="Error Handling Error">Error Handling Error</option>
+                <option value="Calculation Error">Calculation Error</option>
+                <option value="Security Defect">Security Defect</option>
             </select>
         </div>
         <div class=custom-button>
             <label asp-for="Priority">Priority</label>
             <select name="Priority" id="Priority">
                 <option value="0">Priority</option>
-                <option value="1">Urgent</option>
-                <option value="2">High</option>
-                <option value="3">Routine</option>
-                <option value="4">Low</option>
+                <option value="Urgent">Urgent</option>
+                <option value="High">High</option>
+                <option value="Routine">Routine</option>
+                <option value="Low">Low</option>
             </select>
         </div>
         <div>
@@ -53,10 +53,10 @@
             <label asp-for="Status">CurrentStatus</label>
             <select name="Status" id="Status">
                 <option value="0">Current Status</option>
-                <option value="1">Awtg Assignment</option>
-                <option value="2">In Progress</option>
-                <option value="3">Pending Closure</option>
-                <option value="4">Close</option>
+                <option value="Awtg Assignment">Awtg Assignment</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Pending Closure">Pending Closure</option>
+                <option value="Closed">Close</option>
             </select>
         </div>
     </div>

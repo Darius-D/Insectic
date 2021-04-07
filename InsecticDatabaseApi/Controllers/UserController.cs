@@ -27,7 +27,7 @@ namespace InsecticDatabaseApi.Controllers
         /// <returns>List of type User</returns>
         [HttpGet]
         [Route("api/[controller]")]
-        public IActionResult GetAllTickets()
+        public IActionResult GetAllUsers()
         {
             return Ok(_userData.GetAllUsers());
         }
