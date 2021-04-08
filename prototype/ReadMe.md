@@ -1,7 +1,8 @@
-# <p align="center" > :stop_sign: Caution: This is a prototype as of April 7, 2021. :stop_sign: </p>
-<p align="center" > Anything below is subject to change</p>
-<p align="center" ><a href=https://github.com/Darius-D/Insectic/blob/main/README.md> Main Branch</a></p>
-## <p align="center" > Curent working features written in HTML </p>
+#   <p align="center" > :stop_sign: Caution: This is a prototype as of April 7, 2021. :stop_sign: </p>
+  <p align="center" > Anything below is subject to change</p>
+  <p align="center" ><a href=https://github.com/Darius-D/Insectic/blob/main/README.md> Return to Main Page</a></p>
+  <p align="center" ><a href=https://github.com/Darius-D/Insectic/blob/main/README.md> Go to see my code </a></p>
+##   <p align="center" > Curent working features written in HTML </p>
 
 <p> This is currently my dashboard AKA my CorkBoard. This has links that look like post-it notes that scale and rotate upon hovering. The footer has sticky notes that the user can edit with a simple double click. The notes will later be stored in cookies. 
  The sticky notes have a overflow of auto allowing for a the sticky note to hold unlimited amounts of characters with out modifying the view. Multiple  media queries allow this page to be mobile friendly periodically removing elements as screen size shrinks. With mobile phones, only the nav links will be available to allow the user to make tickets, view tickets and manage team members. </p> 
