@@ -241,18 +241,19 @@ Then populate drop by selection to select groups available and update user’s g
 - [x] Create Contact Page Profile Cards
 - [ ] Create View Tickets Page
 - [x] create database Api
+- [ ] Create Scrum board
+- [ ] Create Manage Team View Page and BLL
 - [ ] Assign name values to grid columns and rows for easier media queries.
-- [ ] Create model for view tickets page
 - [x] Normalize DB
-- [ ] Link DB
+- [x] Link DB
 - [ ] Optimize Mobile View
-- [ ] Optimize classes
+- [X] Optimize classes
 - [ ] Create Unit tests
 - [ ] Run Unit Tests
 - [ ] Do beta test with users
 - [ ] Apply feedback
 - [ ] Run second Beta Test
 - [ ] Run Alpha Test
-- [ ] Rerun all tests
+
 
 [To Top](#table-of-contents)
