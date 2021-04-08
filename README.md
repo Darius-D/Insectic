@@ -166,18 +166,6 @@ Then populate drop by selection to select groups available and update user’s g
 ***
  ### <p align="center"> SQL Mock DB <a href="https://github.com/Darius-D/Insectic/blob/main/InsecticMockData.sql">Script</a>: Users:20, Tickets:500, TicketComments:750 </p>
    
-    
-    
-    select * from TicketComments
-    
-    -- Tests
-    SELECT * 
-    FROM Tickets
-    WHERE UserId like 'Mdubo'
-    
-    Select * 
-    FROM TicketComments
-    Where TicketId = 100 AND CommentId = 100
 ***
 <a name="head10"></a> 
 ###  <p align="center"> TODO:// [🔝](#table-of-contents) </p>
