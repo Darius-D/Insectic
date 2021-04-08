@@ -1,4 +1,4 @@
-
+#  <p align="center"> <a href=https://github.com/Darius-D/Insectic/tree/main/prototype> Click here</a> to see current Prototype and Code </p>
  ## Table of Contents 
  1. [Why Insectic?](#head)
  2. [What is Insectic](#head2)
