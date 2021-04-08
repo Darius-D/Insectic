@@ -31,7 +31,7 @@
 <p align="center">
   
   
-![](/img/nNewTicketViewPage.png)
+![](/img/NewTicketViewPage.png)
 
 ***
 ##  <p align="center"> Prototype AddressBook view
