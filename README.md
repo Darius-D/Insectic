@@ -164,7 +164,7 @@ Then populate drop by selection to select groups available and update user’s g
 ***
  ###   <p align="center"><a href="https://github.com/Darius-D/Insectic/tree/main/prototype"> :construction: Click to See Current Prototype :construction:</a></p>
 ***
- ### <p align="center"> SQL Mock DB <a href=>Script</a>: Users:20, Tickets:500, TicketComments:750 </p>
+ ### <p align="center"> SQL Mock DB <a href="https://github.com/Darius-D/Insectic/blob/main/InsecticMockData.sql">Script</a>: Users:20, Tickets:500, TicketComments:750 </p>
    
     
     
