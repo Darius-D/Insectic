@@ -1,11 +1,11 @@
-# <p align="center" > :stop_sign: Caution: This is a prototype as of April 6, 2021. :stop_sign: </p>
+# <p align="center" > :stop_sign: Caution: This is a prototype as of April 7, 2021. :stop_sign: </p>
 <p align="center" > Anything below is subject to change</p>
 
 ## <p align="center" > Curent working features written in HTML </p>
 
-<p> This is currently my dashboard AKA my CorkBoard. This has links that look like post-it notes that scale and rotate upon hovering. The footer has stickey notes that the user can 
-  edit with a simple double click. The stickey notes have a overflow of auto allowing for a the stickey note to hold unlimited amounts of characters with out modifying the view. Mulitiple media queries allow this page to be mobile friendly periodically removing elements as screen size shrinks. With mobile phones, only the nav links will be available to allow the user to make tickets, view tickets and manage team members. </p> 
-  <p> The table is currently a work in porgess as I will need to use Javascript to find a way to make the scroll work on the table without altering the page layout.</p>
+<p> This is currently my dashboard AKA my CorkBoard. This has links that look like post-it notes that scale and rotate upon hovering. The footer has stickey notes that the user can edit with a simple double click. The notes will later be stored in cookies. 
+ The stickey notes have a overflow of auto allowing for a the stickey note to hold unlimited amounts of characters with out modifying the view. Mulitiple media queries allow this page to be mobile friendly periodically removing elements as screen size shrinks. With mobile phones, only the nav links will be available to allow the user to make tickets, view tickets and manage team members. </p> 
+  <p> The table is currently a work in progress and will be used as a Scrum Board </p>
   
  ###  <p align="center"> Major Changes </p> 
  |Date|Change Made|Current status|
@@ -14,12 +14,15 @@
   |March 15, 2021|Added small tacks to pages in various locations to add small details. Tack images are position:relative. | Implemented|
  |March 19, 2021| Moved single ticket table into four seperate tables in their respective priorities making sorting much easier. Prior image can be found in img folder named /dashbord2.1.JPG for reference.| Implemented|
  |March 21, 2021|Made a Todo list in replace of the original assigned ticket table. This will populate what tasks are assigned to the member by their team leader. This change will be temporary as I create a SCRUM board view page. | Implemented|
- |March 30, 2021|Made an API in my solution to be the middleman between my web application and my database. the API has three contollers with various CRUD action Methods.| Implemented|
+ |March 30, 2021|Made an API in my solution to be the "middleman" between my web application and my database. the API has three contollers with various CRUD action Methods.| Implemented|
+ |April 4, 2021| Altered the Create Ticket View Page to match the theme of this project while implementing a drop down menu that populates all users in the Database|implemented|
+ |April 6, 2021| Complete overhaul of the Address Book View page and the logic being the "corkboard" view page. The Dashboard is not pulling data from a SQL Db and not Local Db mock Data. This is done via my Webapp controller sending requests to my API that is connected to the DB.|implemented|
+ 
   
   ***
   
 ###  <p align="center"> Current Dashboard view </p>
-![](/img/dashboardV3.JPG)
+![](/img/NewDashboard.png)
 
 ***
 
@@ -28,13 +31,13 @@
 <p align="center">
   
   
-![](/img/newTicketPage.JPG)
+![](/img/nNewTicketViewPage.png)
 
 ***
 ##  <p align="center"> Prototype AddressBook view
   <p> This view will populate a contact card for each user in the repository with an individual profile picture, mailto: Email link and role. In the case of having more than six users, the address book will overflow into a scroll on the conatiner allowing for additional cards without disfiguring the layout. The colors currently used were for testing purposes and will be changed shortly. </p>
 ***
-<img src="/img/contact2.JPG">
+<img src="/img/NewAddressBookViewPage.png">
 
 ***
 
