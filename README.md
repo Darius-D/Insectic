@@ -164,62 +164,8 @@ Then populate drop by selection to select groups available and update user’s g
 ***
  ###   <p align="center"><a href="https://github.com/Darius-D/Insectic/tree/main/prototype"> :construction: Click to See Current Prototype :construction:</a></p>
 ***
- ### <p align="center"> SQL Mock DB values </p>
-    --Users
-    Delete From Users
-    insert into Users( UserId,FirstName,LastName,Email,PhoneNumber,ResourceGroup,UserRoles,ProfilePicture, UserPassword)
-    values
-    ('Ddub','Darius', 'Dub', 'fake@gmail.com','8605786672', null, 'Admin', null,'Password'),
-    ('MDubo','Marcus', 'Dub', 'fakeMarcus@gmail.com','4934567891', null, 'Admin', null,'Password'),
-    ('Rdub','Renee', 'Dub', 'fakeRenee@gmail.com','2384567891', null, 'Admin', null,'Password'),
-    ('SillyS','Susie', 'Sally', 'sillySally@gmail.com','7854567891', null, 'Admin', null,'Password'),
-    ('JTran','Jackie', 'Tran', 'fakeJTran@gmail.com','3694567891', null, 'Admin', null,'Password'),
-    ('GRoss','Greg', 'Ross', 'fakeGreg@gmail.com','7414567891', null, 'Admin', null,'Password'),
-    ('BBetsy','Ben', 'Besty', 'fakeBennyBoy@gmail.com','7894567891', null, 'Admin', null,'Password')
-    select * From Users
-    --Tickets
-    Delete From Tickets
-    INSERT INTO Tickets(TicketCategory,Priority, Status, IncidentDate, DueDate,TicketDescription, UserId)
-    values
-    ('Functionality Error', 'Urgent', 'pending Closure', '20200702', null, 'Can not see viewpage', 'Ddub'),
-    ('Functionality Error', 'High', 'In Progress', '20200702', null, 'logic error found', 'MDubo'),
-    ('Functionality Error', 'Routine', 'In Progres', '20200702', null, 'logic error found', 'BBetsy'),
-    ('Functionality Error', 'Low', 'pending Closure', '20200702', null, 'logic error found', 'Ddub'),
-    ('Logic Error', 'Urgent', 'In Progress', '20200702', null, 'logic error found', 'MDubo'),
-    ('Logic Error', 'High', 'Awtg Assignment', '20200702', null, 'logic error found', 'SillyS'),
-    ('Logic Error', 'Routine', 'In Progress', '20200702', null, 'logic error found', 'JTran'),
-    ('Logic Error', 'Low', 'Awtg Assignment', '20200702', null, 'logic error found', 'JTran'),
-    ('Syntactic Error', 'Urgent', 'In Progress', '20200702', null, 'logic error found', 'Ddub'),
-    ('Syntactic Error', 'High', 'Awtg Assignment', '20200702', null, 'logic error found', 'MDubo'),
-    ('Syntactic Error', 'Routine', 'pAwtg Assignment', '20200702', null, 'logic error found', 'JTran'),
-    ('Syntactic Error', 'Low', 'In Progress', '20200702', null, 'logic error found', 'GRoss'),
-    ('Error Handling Error', 'Urgent', 'In Progress', '20200702', null, 'logic error found', 'MDubo'),
-    ('Error Handling Error', 'High', 'pending Closure', '20200702', null, 'logic error found', 'GRoss'),
-    ('Error Handling Error', 'Routine', 'In Progress', '20200702', null, 'logic error found', 'Ddub'),
-    ('Error Handling Error', 'Low', 'Awtg Assignment', '20200702', null, 'logic error found', 'MDubo'),
-    ('Calculation Error', 'Urgent', 'In Progress', '20200702', null, 'logic error found', 'Ddub'),
-    ('Calculation Error', 'High', 'In Progres', '20200702', null, 'logic error found', 'BBetsy'),
-    ('Calculation Error', 'Routine', 'pending Closure', '20200702', null, 'logic error found', 'MDubo'),
-    ('Calculation Error', 'Low', 'In Progress', '20200702', null, 'logic error found', 'Ddub'),
-    ('Security Defect', 'Urgent', 'pending Closure', '20200702', null, 'logic error found', 'Ddub'),
-    ('Security Defect', 'High', 'Awtg Assignment', '20200702', null, 'logic error found', 'SillyS'),
-    ('Security Defect', 'Routine', 'pending Closure', '20200702', null, 'logic error found', 'BBetsy'),
-    ('Security Defect', 'Low', 'pending Closure', '20200702', null, 'logic error found', 'MDubo'),
-    ('Calculation Error', 'Urgent', 'pending Closure', '20200702', null, 'logic error found', 'JTran'),
-    ('patch error', 'Routine', 'assigned', '20200702', null, 'logic error found', 'MDubo'),
-    ('error', 'High', 'awtg assignment', '20200702', null, 'logic error found', 'Rdub'),
-    ('Logic error', 'Low', 'Closed', '20200702', null, 'logic error found', 'JTran')
-    
-    select * from Tickets
-    --Comments
-    INSERT INTO TicketComments(TicketId, UserId, CommentDate, UserComment)
-    Values
-    (100, 'Ddub',   GETDATE(), 'This is a test comment for ticket ID 100 made by user Ddub'),
-    (100, 'MDubo',  GETDATE(), 'This is a test comment for ticket ID 100 made by user MDubo'),
-    (101, 'JTran',  GETDATE(), 'This is a test comment for ticket ID 101 made by user JTran'),
-    (102, 'GRoss',  GETDATE(), 'This is a test comment for ticket ID 102 made by user GRoss'),
-    (103, 'BBetsy', GETDATE(), 'This is a test comment for ticket ID 103 made by user BBetsy'),
-    (101, 'SillyS', GETDATE(), 'This is a test comment for ticket ID 101 made by user SillyS')
+ ### <p align="center"> SQL Mock DB <a href=>Script</a>: Users:20, Tickets:500, TicketComments:750 </p>
+   
     
     
     select * from TicketComments
