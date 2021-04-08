@@ -30,8 +30,8 @@ namespace InsecticApiTests
         {
           var values =JsonConvert.SerializeObject( new Ticket()
             {
-                Category = "Bug", Priority = "3", Status = "pending", Email = "ddubose@gmail.com",
-                PhoneNumber = "860-578-6672", UserId = "123456",
+                Category = "Bug", Priority = "3", Status = "pending",
+               
                 DueDate = null, IncidentDate = DateTime.Today, TicketDescription = "test description"
             });
 

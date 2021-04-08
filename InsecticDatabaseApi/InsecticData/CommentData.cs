@@ -9,6 +9,7 @@ namespace InsecticDatabaseApi.InsecticData
     public class CommentData : ICommentData
     {
         private InsecticContext _insecticContext;
+
         public CommentData(InsecticContext insecticContext)
         {
             _insecticContext = insecticContext;
@@ -19,7 +20,7 @@ namespace InsecticDatabaseApi.InsecticData
         /// Will return all comments in the database
         /// </summary>
         /// <returns>a List of type TicketComment</returns>
-        public List<TicketComment> GetAllComments()
+        public List<Comment> GetAllComments()
         {
             return _insecticContext.TicketComments.ToList();
         }
@@ -31,9 +32,9 @@ namespace InsecticDatabaseApi.InsecticData
         /// </summary>
         /// <param name="id">requires the TicketId of the ticket in question.</param>
         /// <returns>a List of type TicketComment</returns>
-        public List<TicketComment> GetAllCommentsForTicket(Guid id)
+        public List<Comment> GetAllCommentsForTicket(int id)
         {
-            List<TicketComment> ticketComments = new List<TicketComment>();
+            List<Comment> ticketComments = new List<Comment>();
 
             foreach (var ticket in _insecticContext.TicketComments)
             {
@@ -53,13 +54,13 @@ namespace InsecticDatabaseApi.InsecticData
         /// </summary>
         /// <param name="id">Requires specific comment id</param>
         /// <returns>a single TicketComment object</returns>
-        public TicketComment GetComment(Guid id)
+        public Comment GetComment(Guid id)
         {
             return _insecticContext.TicketComments.Find(id);
         }
 
         //Todo Make Api controller that can run this. 
-        public List<TicketComment> GetUserComments(string userId)
+        public List<Comment> GetUserComments(string userId)
         {
             var userComments = GetAllComments().Where(c => c.UserId == userId).ToList();
             return userComments;
@@ -72,12 +73,12 @@ namespace InsecticDatabaseApi.InsecticData
         /// </summary>
         /// <param name="comment"> Takes in the newly created ticket</param>
         /// <param name="ticketId"> Takes in the ticket Guid comment is associated with</param>
-        public void AddComment(Guid ticketId, TicketComment comment)
+        public void AddComment(Guid ticketId, Comment comment)
         {
 
-            comment.CommentId = Guid.NewGuid();
-            comment.TicketId = ticketId;
-            comment.CommentDateTime = DateTime.Now;
+            //comment.CommentId = Guid.NewGuid();
+            //comment.TicketId = ticketId;
+            comment.CommentDate = DateTime.Now;
             _insecticContext.TicketComments.Add(comment);
             _insecticContext.SaveChanges();
         }
@@ -101,7 +102,7 @@ namespace InsecticDatabaseApi.InsecticData
 
 
 
-        public void EditComment(TicketComment comment)
+        public void EditComment(Comment comment)
         {
             var existingComment = _insecticContext.TicketComments.Find(comment.CommentId);
 
@@ -110,7 +111,7 @@ namespace InsecticDatabaseApi.InsecticData
                 existingComment.TicketId = comment.TicketId;
                 existingComment.CommentId = comment.CommentId;
                 existingComment.UserId = comment.UserId;
-                existingComment.Comment = comment.Comment;
+                existingComment.UserComment = comment.UserComment;
                 _insecticContext.TicketComments.Update(existingComment);
                 _insecticContext.SaveChanges();
             }

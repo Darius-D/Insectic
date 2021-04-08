@@ -10,13 +10,13 @@ namespace InsecticDatabaseApi.InsecticData
     {
         List<Ticket> GetAllTickets();
 
-        Ticket GetTicket(Guid id);
+        Ticket GetTicket(int id);
 
         public List<Ticket> GetUserTickets(string userId);
 
         void AddTicket(Ticket ticket);
 
-        void DeleteTicket(Guid ticketId);
+        void DeleteTicket(int ticketId);
 
         void EditTicket(Ticket ticket);
     }

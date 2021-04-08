@@ -26,7 +26,7 @@ namespace InsecticDatabaseApi.InsecticData
 
 
         
-        public Ticket GetTicket(Guid id)
+        public Ticket GetTicket(int id)
         {
             return _insecticContext.Tickets.Find(id);
         }
@@ -44,14 +44,14 @@ namespace InsecticDatabaseApi.InsecticData
 
         public void AddTicket(Ticket ticket)
         {
-            ticket.TicketId = Guid.NewGuid();
+            //ticket.TicketId = Guid.NewGuid();
             _insecticContext.Tickets.Add(ticket);
             _insecticContext.SaveChanges();
             
         }
 
         
-        public void DeleteTicket(Guid ticketId)
+        public void DeleteTicket(int ticketId)
         {
             var existingTicket = _insecticContext.Tickets.Find(ticketId);
 
@@ -73,9 +73,9 @@ namespace InsecticDatabaseApi.InsecticData
                 existingTicket.TicketDescription = ticket.TicketDescription;
                 existingTicket.Category = ticket.Category;
                 existingTicket.DueDate = ticket.DueDate;
-                existingTicket.Email = ticket.Email;
+                //existingTicket.Email = ticket.Email;
                 existingTicket.IncidentDate = ticket.IncidentDate;
-                existingTicket.PhoneNumber = ticket.PhoneNumber;
+                //existingTicket.PhoneNumber = ticket.PhoneNumber;
                 existingTicket.Priority = ticket.Priority;
                 existingTicket.Status = ticket.Status;
                 

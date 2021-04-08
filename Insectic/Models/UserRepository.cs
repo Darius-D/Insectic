@@ -7,11 +7,11 @@ namespace Insectic.Models
 {
     public class UserRepository
     {
-        private static List<User> users = new List<User>();
+        private static List<UserJsonModel> users = new List<UserJsonModel>();
 
-        public static IEnumerable<User> Users => users;
+        public static IEnumerable<UserJsonModel> Users => users;
 
-        public static void AddUser(User user)
+        public static void AddUser(UserJsonModel user)
         {
             users.Add(user);
         }

@@ -8,18 +8,14 @@ namespace Insectic.Models
 {
     public class Comment
     {
-        private static int count = 100;
-        public string UserFirstName { get; set; }
-        public string UserLastName { get; set; }
-        public int TicketId { get; set; }
-        public string UserId { get; set; }
-        public int CommentId { get; }
-        public DateTime CommentDateTime { get; set; }
+        public int CommentId { get; set; }
 
-        public Comment()
-        {
-            CommentId = count;
-            count++;
-        }
+        public int TicketId { get; set; }
+
+        public string? UserId { get; set; }
+
+        public DateTime CommentDate { get; set; }
+
+        public string? UserComment { get; set; }
     }
 }

@@ -10,8 +10,8 @@ namespace InsecticDatabaseApi.Models
     public class Ticket
     {
         
-        [Key]
-        public Guid TicketId { get; set; }
+        
+        public int TicketId { get; set; }
         
         public string Category { get; set; }
         
@@ -19,25 +19,18 @@ namespace InsecticDatabaseApi.Models
         
         public string Status { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
-        public DateTime IncidentDate { get; set; } = DateTime.Now;
+        public DateTime IncidentDate { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        
         public DateTime? DueDate { get; set; }
 
-        [DataType(DataType.PhoneNumber)]
-        public string PhoneNumber { get; set; }
-
-        [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }
 
         public string TicketDescription { get; set; }
 
-        public string UserId { get; set; } 
-        
-       
-        
+        public string UserId { get; set; }
+
+        public List<Comment> Comments { get; set; }
+
+
     }
 }

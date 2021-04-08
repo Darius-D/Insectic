@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using InsecticDatabaseApi.InsecticData;
 using InsecticDatabaseApi.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace InsecticDatabaseApi.Controllers
 {
@@ -42,7 +43,7 @@ namespace InsecticDatabaseApi.Controllers
         /// <returns>a single Ticket object</returns>
         [HttpGet]
         [Route("api/[controller]/{id}")]
-        public IActionResult GetTicketComments(Guid id)
+        public IActionResult GetTicketComments(int id)
         {
             var commentList = _commentData.GetAllCommentsForTicket(id);
             if (commentList != null)
@@ -98,7 +99,7 @@ namespace InsecticDatabaseApi.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("api/[controller]/{id}")]
-        public IActionResult AddComment(TicketComment newComment, Guid id)
+        public IActionResult AddComment(Comment newComment, Guid id)
         {
             _commentData.AddComment(id, newComment);
             return Ok($"Comment has been added to ticket with Guid of {id}");
@@ -136,9 +137,9 @@ namespace InsecticDatabaseApi.Controllers
         /// <returns></returns>
         [HttpPatch]
         [Route("api/[controller]/{id}")]
-        public IActionResult EditTicket(Guid id, TicketComment comment)
+        public IActionResult EditTicket(Guid id, Comment comment)
         {
-            TicketComment existingComment = _commentData.GetComment(id);
+            Comment existingComment = _commentData.GetComment(id);
 
             if (existingComment != null)
             {
@@ -152,5 +153,7 @@ namespace InsecticDatabaseApi.Controllers
 
             return NotFound($"Comment with Guid of {comment.CommentId} does not exist");
         }
+
+        
     }
 }

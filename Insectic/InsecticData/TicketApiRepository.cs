@@ -17,7 +17,7 @@ namespace Insectic.InsecticData
     {
         private static readonly HttpClient Client = new HttpClient();
 
-        public static List<TicketJsonModel> GetAllTickets()
+        public static List<TicketJsonModel>? GetAllTickets()
         {
             var response = Client.GetStringAsync("https://localhost:44342/api/Ticket/");
 
@@ -27,7 +27,7 @@ namespace Insectic.InsecticData
 
         }
 
-        public static TicketJsonModel GetTicket(string guid)
+        public static TicketJsonModel? GetTicket(string guid)
         {
             
             var response = Client.GetStringAsync("https://localhost:44342/api/Ticket/"+guid);
@@ -53,26 +53,26 @@ namespace Insectic.InsecticData
 
 
         }
-        //was made with help of Postman to help me make one with httpclient.
-        //public static void AddTicket(TicketJsonModel ticket)
-        //{
-        //    var client = new RestClient("https://localhost:44342/api/Ticket");
-        //    client.Timeout = -1;
-        //    var request = new RestRequest(Method.POST);
-        //    request.AddHeader("Content-Type", "application/json");
-        //    request.AddParameter("application/json", $"{{\r\n    \"category\": \"{ticket.Category}\",\r\n    \"priority\": \"{ticket.Priority}\",\r\n    \"status\": \"{ticket.Status}\",\r\n    \"incidentDate\": \"0001-01-01T00:00:00\",\r\n    \"dueDate\": \"0001-01-01T00:00:00\",\r\n    \"phoneNumber\": \"{ticket.PhoneNumber}\",\r\n    \"email\": \"{ticket.Email}\",\r\n    \"ticketDescription\": \"{ticket.TicketDescription}\"\r\n}}", ParameterType.RequestBody);
-        //    IRestResponse response = client.Execute(request);
-        //    Console.WriteLine(response.Content); 
-        //}
-
-        public static void EditTicket()
+        
+        //Would like to change this to httpclient however I can not get my current Http Edit method to work.
+        public static void EditTicket(int ticketId, TicketJsonModel ticket)
         {
-            throw new NotImplementedException();
+            var client = new RestClient("https://localhost:44342/api/Ticket/" + ticketId);
+            client.Timeout = -1;
+            var request = new RestRequest(Method.PATCH);
+            request.AddHeader("Content-Type", "application/json");
+            request.AddParameter("application/json", $"{{\r\n    \"category\": \"{ticket.Category}\",\r\n    \"priority\": \"{ticket.Priority}\",\r\n    \"status\": \"{ticket.Status}\",\r\n    \"ticketDescription\": \"{ticket.TicketDescription}\"\r\n}}", ParameterType.RequestBody);
+            IRestResponse response = client.Execute(request);
+            
         }
 
-        public static void DeleteTicket()
+        public static void DeleteTicket(int ticketId)
         {
-            throw new NotImplementedException();
+            var client = new RestClient("https://localhost:44342/api/Ticket/" + ticketId);
+            client.Timeout = -1;
+            var request = new RestRequest(Method.DELETE);
+            IRestResponse response = client.Execute(request);
+            Console.WriteLine(response.Content);
         }
     }
 }

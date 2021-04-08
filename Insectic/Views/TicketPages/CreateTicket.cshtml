@@ -1,5 +1,6 @@
 ﻿
 
+@using Insectic.InsecticData
 @model Insectic.Models.TicketJsonModel
 
 @{
@@ -24,7 +25,7 @@
     </div>
     <div class="first-row row">
         <div>
-            <label asp-for="Category">BugCategory</label>
+            <label asp-for="Category">BugCategory:</label>
             <select name="Category" id="Category">
                 <option value="0">Bug Category</option>
                 <option value="Functionality Error">Functionality Error</option>
@@ -36,7 +37,7 @@
             </select>
         </div>
         <div class=custom-button>
-            <label asp-for="Priority">Priority</label>
+            <label asp-for="Priority">Priority:</label>
             <select name="Priority" id="Priority">
                 <option value="0">Priority</option>
                 <option value="Urgent">Urgent</option>
@@ -46,11 +47,11 @@
             </select>
         </div>
         <div>
-            <label asp-for="IncidentDate">Incident Date</label>
+            <label asp-for="IncidentDate">Incident Date:</label>
             <input type="datetime-local" id="IncidentDate" name="IncidentDate">
         </div>
         <div class="custom-button">
-            <label asp-for="Status">CurrentStatus</label>
+            <label asp-for="Status">CurrentStatus:</label>
             <select name="Status" id="Status">
                 <option value="0">Current Status</option>
                 <option value="Awtg Assignment">Awtg Assignment</option>
@@ -63,13 +64,15 @@
 
     <div class="second-row row">
         <div class="custom-button">
-            <label for="PlaceHolder">place Holder</label>
-            <select name="PlaceHolder" id="PlaceHolder">
-                <option value="0">Current Status</option>
-                <option value="1">Awtg Assignment</option>
-                <option value="2">In Progress</option>
-                <option value="3">Pending Closure</option>
-                <option value="4">Close</option>
+            <label asp-for="UserId">Submitting User:</label>
+            <select name="UserId" id="UserId">
+                @{
+                    
+                    foreach (var user in UserApiRepository.GetAllUsers())
+                    {
+                        <option value="@user.UserId">@user.FirstName @user.LastName</option>
+                    }
+                }
             </select>
         </div>
 
@@ -78,16 +81,6 @@
             <input type="datetime-local" id="DueDate" name="DueDate">
         </div>
 
-        <div>
-            <label asp-for="PhoneNumber">Contact Number</label>
-            <input type="tel" id="PhoneNumer" name="PhoneNumber" placeholder="123-456-7890"
-                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-        </div>
-
-        <div>
-            <label asp-for="Email">Email</label>
-            <input type="email" name="Email" id="Email" placeholder="work Email addresss">
-        </div>
     </div>
     <div class="third-row">
         <label asp-for="TicketDescription">Ticket Description:</label>

@@ -37,7 +37,7 @@ namespace InsecticDatabaseApi.Controllers
         /// <returns>a single Ticket object</returns>
         [HttpGet]
         [Route("api/[controller]/{id}")]
-        public IActionResult GetTicket(Guid id)
+        public IActionResult GetTicket(int id)
         {
             var ticket = _ticketData.GetTicket(id);
             if (ticket != null)
@@ -87,7 +87,7 @@ namespace InsecticDatabaseApi.Controllers
         /// <returns>status 202 Ok or NotFound object result</returns>
         [HttpDelete]
         [Route("api/[controller]/{id}")]
-        public IActionResult DeleteTicket(Guid id)
+        public IActionResult DeleteTicket(int id)
         {
             if (_ticketData.GetTicket(id) != null)
             {
@@ -109,7 +109,7 @@ namespace InsecticDatabaseApi.Controllers
         /// <returns>void</returns>
         [HttpPatch]
         [Route("api/[controller]/{id}")]
-        public IActionResult EditTicket( Guid id, Ticket ticket)
+        public IActionResult EditTicket( int id, Ticket ticket)
         {
             Ticket existingTicket = _ticketData.GetTicket(id);
 

@@ -9,18 +9,18 @@ namespace InsecticDatabaseApi.InsecticData
 {
     public interface ICommentData
     {
-        List<TicketComment> GetAllComments();
+        List<Comment> GetAllComments();
 
-        List<TicketComment> GetAllCommentsForTicket(Guid id);
+        List<Comment> GetAllCommentsForTicket(int id);
 
-        public List<TicketComment> GetUserComments(string userId);
+        public List<Comment> GetUserComments(string userId);
 
-        TicketComment GetComment(Guid id);
+        Comment GetComment(Guid id);
 
-        void AddComment(Guid ticketId, TicketComment comment);
+        void AddComment(Guid ticketId, Comment comment);
 
         void DeleteComment(Guid commentId);
 
-        void EditComment(TicketComment comment);
+        void EditComment(Comment comment);
     }
 }

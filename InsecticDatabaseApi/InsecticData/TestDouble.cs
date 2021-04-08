@@ -13,6 +13,11 @@ namespace InsecticDatabaseApi.InsecticData
             throw new NotImplementedException();
         }
 
+        public Ticket GetTicket(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Ticket GetTicket(Guid id)
         {
             throw new NotImplementedException();
@@ -24,6 +29,11 @@ namespace InsecticDatabaseApi.InsecticData
         }
 
         public void AddTicket(Ticket ticket)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteTicket(int ticketId)
         {
             throw new NotImplementedException();
         }

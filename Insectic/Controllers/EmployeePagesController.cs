@@ -12,7 +12,7 @@ namespace Insectic.Controllers
         [HttpGet]
         public ViewResult AddressBook()
         {
-            var test = new User("1234", "null")
+            var test = new UserJsonModel()
             {
                 ProfilePicture = "https://source.unsplash.com/random",
                 FirstName = "Darius",
