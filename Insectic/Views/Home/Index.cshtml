@@ -61,7 +61,7 @@
                     {
                         <tr>
                             <td>@ticket.TicketId</td>
-                            <td>@TicketLogic.TruncateAtWord(ticket)</td>
+                            <td><a asp-action="#">@TicketLogic.TruncateAtWord(ticket,50)</a></td>
                             <td>@ticket.Status</td>
                         </tr>
                     }

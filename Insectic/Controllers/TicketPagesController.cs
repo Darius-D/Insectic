@@ -1,18 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using Insectic.BLL;
 using Insectic.InsecticData;
 using Insectic.Models;
-using Microsoft.Extensions.Logging;
+
 
 namespace Insectic.Controllers
 {
     public class TicketPagesController : Controller
     {
         
-
+       
 
         [HttpGet]
         public IActionResult CreateTicket()
@@ -21,7 +19,7 @@ namespace Insectic.Controllers
             return View(); 
         }
 
-        //Todo This works however the dates still don't go into the DB correctly. 
+        
         [HttpPost]
         public IActionResult CreateTicket( TicketJsonModel ticket)
         {
@@ -32,6 +30,20 @@ namespace Insectic.Controllers
             TicketApiRepository.NewTicket(ticket);
 
             return RedirectToAction("Index","Home");
+        }
+
+       
+        [HttpGet]
+        public async Task<IActionResult> ViewTickets()
+        {
+            return  View(TicketApiRepository.GetAllTickets());
+        }
+
+        [HttpPost]
+        public IActionResult Filter(string sortBy)
+        {
+            var tickets = TicketLogic.FilterCollection(sortBy);
+            return View("ViewTickets", tickets);
         }
     }
 }

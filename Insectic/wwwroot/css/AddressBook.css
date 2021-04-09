@@ -1,9 +1,6 @@
 ﻿
 
 
-
-
-
 .Main-section {
     display: grid;
     grid-gap: 1em;
@@ -14,12 +11,14 @@
     grid-auto-flow: dense;
     overflow: auto;
 }
-
+ .tac, tac2{
+     display: none;
+ }
 .profile {
     width: 200px;
     height: 250px;
     margin: 10px;
-    background: rgb(133, 133, 240);
+    background: rgb(247 105 105);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +32,6 @@
     text-align: center;
     color: black;
     border-bottom: solid rgb(0, 0, 0) 1px;
-    ;
 }
 
 .role {
@@ -49,16 +47,19 @@
 .bottom-profile {
     position: absolute;
     top: 140px;
-    background: rgb(129, 218, 129);
-    width: 100%;
+    background: rgb(211 224 211);
+    width: 90%;
     max-height: 100%;
     border-radius: 10px;
     padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: auto;
 }
-
+.bottom-profile::-webkit-scrollbar {
+    width: 5px;
+}
 .image img {
     width: 100%;
     height: 90px;
