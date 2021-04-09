@@ -6,8 +6,7 @@
   
   ##    <p align="center" > Curent working features written in HTML </p>
 
-<p> This is currently my dashboard AKA my CorkBoard. This has links that look like post-it notes that scale and rotate upon hovering. The footer has sticky notes that the user can edit with a simple double click. The notes will later be stored in cookies. 
- The sticky notes have a overflow of auto allowing for a the sticky note to hold unlimited amounts of characters with out modifying the view. Multiple  media queries allow this page to be mobile friendly periodically removing elements as screen size shrinks. With mobile phones, only the nav links will be available to allow the user to make tickets, view tickets and manage team members. The table is currently a work in progress and will be used as a Scrum Board </p>
+<p> This is currently my dashboard AKA my CorkBoard. This has links that look like post-it notes that scale and rotate upon hovering. The footer has sticky notes that the user can edit with a simple double click. The notes will later be stored in cookies. The sticky notes have a overflow of auto allowing for a the sticky note to hold unlimited amounts of characters with out modifying the view. Multiple  media queries allow this page to be mobile friendly periodically removing elements as screen size shrinks. With mobile phones, only the nav links will be available to allow the user to make tickets, view tickets and manage team members. The table is currently a work in progress and will be used as a Scrum Board. The ticket priority boxes have custom scrollbars allowing for an unlimited number of tickets without impacting the browser view page. </p>
   
  ###  <p align="center"> Major Changes </p> 
  |Date|Change Made|Current status|
@@ -33,7 +32,7 @@
 ***
 
  ##  <p align="center"> Prototype Ticket Submission View
-  <p> The Ticket submission view has yet to be formatted to work with my default layout; this explains why my top navbar does not yet match my Home page. This will be corrected in the next "push". The ticket page has user input validation in all required fields ensuring  an error comes up prior to the HTTP post action method being called. This will ensure no data the user entered is lost due to page refresh. Currently the 'textarea' tag is causing complications do to the lack of reactivity with the CSS grid layout. This will be corrected by media queries in the next "push". The Ticket submission view will retain the footer editable notes functionality. Java script will be used to store the note details to users cache files to ensure they remain the same upon view transfers.  </p>
+  <p>  The ticket page has user input validation in all required fields ensuring  an error comes up prior to the HTTP post action method being called. This will ensure no data the user entered is lost due to page refresh. Currently the 'textarea' tag is causing complications do to the lack of reactivity with the CSS grid layout. This will be corrected by media queries in the next "push". The Ticket submission view will retain the footer editable notes functionality. Java script will be used to store the note details to users cache files to ensure they remain the same upon view transfers.  </p>
 <p align="center">
   
   
@@ -45,7 +44,7 @@
 ![](/img/ViewAllTickets.JPG)
 ***
 ##  <p align="center"> Prototype AddressBook view
-  <p> This view will populate a contact card for each user in the repository with an individual profile picture, mailto: Email link and role. In the case of having more than six users, the address book will overflow into a scroll on the container allowing for additional cards without disfiguring the layout. The colors currently used were for testing purposes and will be changed shortly. </p>
+  <p> This view  populates a contact card for each user in the repository with an individual profile picture, mailto: Email link, role, and phone number that will appear upon hovering over the phone icon. This will be done with Css. In the case of having more than six users, the address book overflows into a scroll on the container allowing for additional cards without disfiguring the layout. The colors currently used were for testing purposes and will be changed shortly. </p>
 ***
 <img src="/img/NewAddressBookViewPage.png">
 
