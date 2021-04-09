@@ -7,8 +7,7 @@
   ##    <p align="center" > Curent working features written in HTML </p>
 
 <p> This is currently my dashboard AKA my CorkBoard. This has links that look like post-it notes that scale and rotate upon hovering. The footer has sticky notes that the user can edit with a simple double click. The notes will later be stored in cookies. 
- The sticky notes have a overflow of auto allowing for a the sticky note to hold unlimited amounts of characters with out modifying the view. Multiple  media queries allow this page to be mobile friendly periodically removing elements as screen size shrinks. With mobile phones, only the nav links will be available to allow the user to make tickets, view tickets and manage team members. </p> 
-  <p> The table is currently a work in progress and will be used as a Scrum Board </p>
+ The sticky notes have a overflow of auto allowing for a the sticky note to hold unlimited amounts of characters with out modifying the view. Multiple  media queries allow this page to be mobile friendly periodically removing elements as screen size shrinks. With mobile phones, only the nav links will be available to allow the user to make tickets, view tickets and manage team members. The table is currently a work in progress and will be used as a Scrum Board </p>
   
  ###  <p align="center"> Major Changes </p> 
  |Date|Change Made|Current status|
