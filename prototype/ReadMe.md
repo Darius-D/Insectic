@@ -36,7 +36,7 @@
 ![](/img/NewTicketViewPage.png)
 ***
 ##  <p align="center"> Prototype View Tickets viewpage
-  <p> This view  populates a every ticket in the DB including "closed" tickets. This is to allow for data collection. This view page now has the ability to sort the table with the ability to filter tickets out coming in the near future. </p>
+  <p> This view  populates a every ticket in the DB including "closed" tickets. This is to allow for data collection. This view page now has the ability to sort the table with the ability to filter tickets out coming in the near future. The Headers have a position"sticky" to allow them to stay on top of the page. The table colors are simply place holders.</p>
 
 ![](/img/ViewAllTickets.JPG)
 ***
