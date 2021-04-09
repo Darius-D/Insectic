@@ -34,7 +34,11 @@
   
   
 ![](/img/NewTicketViewPage.png)
+***
+##  <p align="center"> Prototype View Tickets viewpage
+  <p> This view  populates a every ticket in the DB including "closed" tickets. This is to allow for data collection. This view page now has the ability to sort the table with the ability to filter tickets out coming in the near future. </p>
 
+![](/img/ViewAllTickets.JPG)
 ***
 ##  <p align="center"> Prototype AddressBook view
   <p> This view will populate a contact card for each user in the repository with an individual profile picture, mailto: Email link and role. In the case of having more than six users, the address book will overflow into a scroll on the container allowing for additional cards without disfiguring the layout. The colors currently used were for testing purposes and will be changed shortly. </p>
