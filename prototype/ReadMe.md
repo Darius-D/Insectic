@@ -23,7 +23,7 @@
  
   
   ***
-  
+  <p>Still a work in progress. Intended updates coming soon: An analytics nav button, working SCRUM board on dashboard page, better "corkboard" button, adding session state to save sticky note context. </p>
 ###  <p align="center"> Current Dashboard view </p>
 ![](/img/NewDashboard.png)
 
