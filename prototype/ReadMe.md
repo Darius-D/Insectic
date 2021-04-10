@@ -32,9 +32,9 @@
 
 ###  <p align="center"> Pending V2 Dashboard: color are for development only. Views are as ordered: Desktop greater that 850px, desktop/tablet less than 800px, cellphone/tablet less than 500px   </p>
 
-![](/img/Dashboardv2.JPG)
+![](/prototype/img/Dashboardv2.JPG)
+![](/prototype/img/800pxDashboardv2.JPG)
 ![](/prototype/img/550pxDashboardv2.JPG)
-![](/img/550pxDashboardv2.JPG)
 
 ***
 
