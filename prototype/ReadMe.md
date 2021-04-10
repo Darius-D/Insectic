@@ -19,6 +19,7 @@
  |April 4, 2021| Altered the Create Ticket View Page to match the theme of this project while implementing a drop down menu that populates all users in the Database|implemented|
  |April 6, 2021| Complete overhaul of the Address Book View page and the logic being the "corkboard" view page. The Dashboard is not pulling data from a SQL Db and not Local Db mock Data. This is done via my Webapp controller sending requests to my API that is connected to the DB.|implemented|
  |April 9, 2021| Created a view All Tickets page. This page has the ability to sort  the tickets with a filter and counter coming in the near future. |implemented|
+ |April 10, 2021| Created a completely new layout. This layout is 100% mobile friendly and easier to insert partial views and components into. Still undecided on if I will implement this new design. Awaiting constructive critisism from friends. See V2 layout below| TBD|
  
   
 ***
