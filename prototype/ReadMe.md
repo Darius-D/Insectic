@@ -33,7 +33,7 @@
 
 ###  <p align="center"> Current Version 3 view pages: still undergoing color pallet selection and feature upgrades</p>
 
-![](/prototype/img/Version%302.JPG)
+![](/prototype/img/version%203.JPG)
 
 
 ***
