@@ -186,10 +186,10 @@ Then populate drop by selection to select groups available and update user’s g
 - [X] Optimize classes
 - [ ] Create Unit tests
 - [ ] Run Unit Tests
-- [ ] Do beta test with users
-- [ ] Apply feedback
-- [ ] Run second Beta Test
-- [ ] Run Alpha Test
+- [ ] Regression Tests
+- [ ] Intigration Tests
+- [ ] Systems Test
+- [ ] Acceptance Test
 
 
 [To Top](#table-of-contents)
