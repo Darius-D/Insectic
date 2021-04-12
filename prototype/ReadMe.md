@@ -38,22 +38,18 @@
 
 ***
 
- ##  <p align="center"> Prototype Ticket Submission View
-  <p>  The ticket page has user input validation in all required fields ensuring  an error comes up prior to the HTTP post action method being called. This will ensure no data the user entered is lost due to page refresh. Currently the 'textarea' tag is causing complications do to the lack of reactivity with the CSS grid layout. This will be corrected by media queries in the next "push". The Ticket submission view will retain the footer editable notes functionality. Java script will be used to store the note details to users cache files to ensure they remain the same upon view transfers.  </p>
-<p align="center">
+ ##  <p align="center"> Prototype Ticket Submission View 
+  <p>  The ticket page has user input validation in all required fields ensuring  an error comes up prior to the HTTP post action method being called. This will ensure no data the user entered is lost due to page refresh. Submitting User and Assign to user now generate a drop down list based on values in the Database. I intend to use this feature to autofill the ticket form to save the user time.   </p>
+
   
-  
-![](/img/NewTicketViewPage.png)
 ***
 ##  <p align="center"> Prototype View Tickets viewpage
   <p> This view  populates a every ticket in the DB including "closed" tickets. This is to allow for data collection. This view page now has the ability to sort the table with the ability to filter tickets out coming in the near future. The Headers have a position"sticky" to allow them to stay on top of the page. The table colors are simply place holders.</p>
 
-![](/img/ViewAllTickets.JPG)
 ***
 ##  <p align="center"> Prototype AddressBook view
   <p> This view  populates a contact card for each user in the repository with an individual profile picture, mailto: Email link, role, and phone number that will appear upon hovering over the phone icon. This will be done with Css. In the case of having more than six users, the address book overflows into a scroll on the container allowing for additional cards without disfiguring the layout. The colors currently used were for testing purposes and will be changed shortly. </p>
 ***
-
 
 ##   <p align="center"> Ticket Api List </p>
 <img src="/img/APIDiagram.JPG"/>
