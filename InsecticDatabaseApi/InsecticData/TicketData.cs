@@ -20,12 +20,8 @@ namespace InsecticDatabaseApi.InsecticData
         public List<Ticket> GetAllTickets()
         {
             return _insecticContext.Tickets.ToList();
-
         }
 
-
-
-        
         public Ticket GetTicket(int id)
         {
             return _insecticContext.Tickets.Find(id);

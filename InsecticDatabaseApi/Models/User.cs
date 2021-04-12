@@ -32,8 +32,5 @@ namespace InsecticDatabaseApi.Models
         public List<Ticket> Tickets { get; set; }
 
         
-
-
-
     }
 }

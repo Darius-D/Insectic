@@ -1,27 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Insectic.BLL;
 using Insectic.InsecticData;
 using Insectic.Models;
-
+using Microsoft.AspNetCore.Mvc;
 
 namespace Insectic.Controllers
 {
     public class TicketPagesController : Controller
     {
-        
-       
-
         [HttpGet]
         public IActionResult CreateTicket()
         {
             ViewBag.Image = "https://source.unsplash.com/random";
-            return View(); 
+            return View();
         }
 
-        
+
         [HttpPost]
-        public IActionResult CreateTicket( TicketJsonModel ticket)
+        public IActionResult CreateTicket(TicketJsonModel ticket)
         {
             //Local machine storage
             //TicketRepository.AddTicket(ticket);
@@ -29,14 +25,14 @@ namespace Insectic.Controllers
             ViewBag.Image = "https://source.unsplash.com/random";
             TicketApiRepository.NewTicket(ticket);
 
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
         }
 
-       
+
         [HttpGet]
         public async Task<IActionResult> ViewTickets()
         {
-            return  View(TicketApiRepository.GetAllTickets());
+            return View(TicketApiRepository.GetAllTickets());
         }
 
         [HttpPost]
