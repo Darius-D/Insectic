@@ -25,11 +25,11 @@
   
 ***
 
-  <p align="center">Still a work in progress. Intended updates coming soon: An analytics nav button, working SCRUM board on dashboard page, better "corkboard" button, adding session state to save sticky note context. </p>
+  <p align="center">Still a work in progress. Intended updates coming soon: Analytic Charts, working SCRUM board on dashboard page and its own page, better</p>
   
   
-###  <p align="center"> Current Dashboard view </p>
-![](/img/NewDashboard.png)
+###  <p align="center"> Old Version 2 page views </p>
+![](/img/Version%202)
 
 ###  <p align="center"> Pending V2 Dashboard: color are for development only. Views are as ordered: Desktop greater that 850px, desktop/tablet less than 800px, cellphone/tablet less than 500px   </p>
 
@@ -54,16 +54,7 @@
 ##  <p align="center"> Prototype AddressBook view
   <p> This view  populates a contact card for each user in the repository with an individual profile picture, mailto: Email link, role, and phone number that will appear upon hovering over the phone icon. This will be done with Css. In the case of having more than six users, the address book overflows into a scroll on the container allowing for additional cards without disfiguring the layout. The colors currently used were for testing purposes and will be changed shortly. </p>
 ***
-<img src="/img/NewAddressBookViewPage.png">
 
-***
-
-##   <p align="center"> Prototype "CorkBoard" Mobile view page </p>
-  <p> The mobile view has a drop down hamburger menu that allows the user to go to their profile page and return to the "corkboard". </p>
-  
-<p align="center">  
-  <img src="/img/mobileview.png" />
-</p>
 
 ##   <p align="center"> Ticket Api List </p>
 <img src="/img/APIDiagram.JPG"/>
