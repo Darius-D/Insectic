@@ -6,7 +6,7 @@
   
   ##    <p align="center" > Curent working features written in HTML </p>
 
-<p> This is currently my dashboard AKA my CorkBoard. This has links that look like post-it notes that scale and rotate upon hovering. The footer has sticky notes that the user can edit with a simple double click. The notes will later be stored in cookies. The sticky notes have a overflow of auto allowing for a the sticky note to hold unlimited amounts of characters with out modifying the view. Multiple  media queries allow this page to be mobile friendly periodically removing elements as screen size shrinks. With mobile phones, only the nav links will be available to allow the user to make tickets, view tickets and manage team members. The table is currently a work in progress and will be used as a Scrum Board. The ticket priority boxes have custom scrollbars allowing for an unlimited number of tickets without impacting the browser view page. </p>
+<p> This is currently my dashboard AKA my CorkBoard. As of April 12th, 2021 I have removed the footer sticky notes. I did this to allow for easier media queries while also reducing clutter. I have now started to implement version 3 which took carried with it some features from V2. V3 has a better page layout reducing the need for media queries by 70%. This has allowed for better accessibility and mobile views. All colors are simply for ease of constructing and editing my code. Color pallet will be applied once all back end work is completed. See V2 and V3 below along with the mobile views. </p>
   
  ###  <p align="center"> Major Changes </p> 
  |Date|Change Made|Current status|
@@ -19,7 +19,7 @@
  |April 4, 2021| Altered the Create Ticket View Page to match the theme of this project while implementing a drop down menu that populates all users in the Database|implemented|
  |April 6, 2021| Complete overhaul of the Address Book View page and the logic being the "corkboard" view page. The Dashboard is not pulling data from a SQL Db and not Local Db mock Data. This is done via my Webapp controller sending requests to my API that is connected to the DB.|implemented|
  |April 9, 2021| Created a view All Tickets page. This page has the ability to sort  the tickets with a filter and counter coming in the near future. |implemented|
- |April 10, 2021| Created a completely new layout. This layout is 100% mobile friendly and easier to insert partial views and components into. Still undecided on if I will implement this new design. Awaiting constructive critisism from friends. See V2 layout below| Partial imlementation|
+ |April 10, 2021| Created a completely new layout. This layout is 100% mobile friendly and easier to insert partial views and components into. Still undecided on if I will implement this new design. Awaiting constructive criticism  from friends. See V2 layout below| Partial implementation|
  |April 12, 2021| After receiving opinions from friends, I have decided to do a partial change. The intent is to remain original such as version 2 but be less cluttered and distracting in version 3. Please see Version 2 and version 3 changes below.| Implemented|
  
   
