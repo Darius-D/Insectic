@@ -1,6 +1,5 @@
 # <p align="center"> Welcome to my project, Insect-IC!</p>
-##  <p align="center"><u> <a href=https://github.com/Darius-D/Insectic/tree/main/prototype> Click here</a></u> to see current Prototype and Here to see the <a href=https://github.com/Darius-D/Insectic/tree/master> Code </a></p>
-## <p align="center"> or below to learn more </p>
+##  <p align="center"><u> <a href=https://github.com/Darius-D/Insectic/tree/main/prototype> Click here</a></u> to see current Prototype and Here to see the <a href=https://github.com/Darius-D/Insectic/tree/master> Code </a> or below to learn more </p>
  ### Table of Contents 
  1. [Why Insectic?](#head)
  2. [What is Insectic](#head2)
