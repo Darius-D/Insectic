@@ -28,14 +28,13 @@
   <p align="center">Still a work in progress. Intended updates coming soon: Analytic Charts, working SCRUM board on dashboard page and its own page, better</p>
   
   
-###  <p align="center"> Old Version 2 page views </p>
+###  <p align="center"> Old Version 2 view pages </p>
 ![](/prototype/img/Version%202.JPG)
 
-###  <p align="center"> Pending V2 Dashboard: color are for development only. Views are as ordered: Desktop greater that 850px, desktop/tablet less than 800px, cellphone/tablet less than 500px   </p>
+###  <p align="center"> Current Version 3 view pages: still undergoing color pallet selection and feature upgrades</p>
 
-![](/prototype/img/Dashboardv2.JPG)
-![](/prototype/img/800pxDashboardv2.JPG)
-![](/prototype/img/550pxDashboardv2.JPG)
+![](/prototype/img/Version%302.JPG)
+
 
 ***
 
