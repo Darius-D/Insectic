@@ -121,12 +121,12 @@ Then populate drop by selection to select groups available and update user’s g
 
 | Test ID | Requirement ID | Test Prodedure | Current Status | TimeStamp |
 |:--------:|:--------------:|:--------------:|:--------------:|:---------:|
-|  <a name="100"></a>100  |     [1](#1)          | Fill out form on page and verify model biniding occured and stored the values to a new user object |:red_circle:|TBD|
+|  <a name="100"></a>100  |     [1](#1)          | Fill out form on page and verify model biniding occured and stored the values to a new user object |:green_circle:|TBD|
 | <a name="101"></a> 101     |     [1.1](#11)        | Utilizing GitHub authentication, ensure new user object is created and values are stores in the DB |:red_circle:|TBD|
 | <a name="200">200     |     [2](#2)         | With seveal users created in multiple roles, verify all pages render appropriate headers |:red_circle:|TBD|
 | <a name="300">300     |      [3](#3)        | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
-| <a name="301">301     |       [3.1](#31)      | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
-| <a name="302">302     |      [3.2](#32)       | Upon creation of a ticket verify all not null fields are assigned values in the ticket table on server|:red_circle:|TBD|
+| <a name="301">301     |       [3.1](#31)      | Upon creation of a ticket verify ticket values are unique utilizing test method |:green_circle:|TBD|
+| <a name="302">302     |      [3.2](#32)       | Upon creation of a ticket verify all required fields are assigned values in the ticket table on server|:green_circle:|TBD|
 |<a name="400"> 400     |      [4](#4)         | Inspect the Analytics web page ensuring data values are correct and match data in the server |:red_circle:|TBD|
 | <a name="401">401     |      [4.1](#41)       | Utilizing a department Manager assigned user account, verify detailed analytics page displayes correct information  |:red_circle:|TBD|
 | <a name="402">402     |       [4.2](#42)      | Utilizing a Team Leader assigned user account, verify detailed analytics page displayes correct information  |:red_circle:|TBD|
@@ -175,14 +175,14 @@ Then populate drop by selection to select groups available and update user’s g
 - [x] Create Ticket Submission view
 - [x] Create Contact Page
 - [x] Create Contact Page Profile Cards
-- [ ] Create View Tickets Page
+- [x] Create View Tickets Page
 - [x] create database Api
 - [ ] Create Scrum board
 - [ ] Create Manage Team View Page and BLL
-- [ ] Assign name values to grid columns and rows for easier media queries.
+- [x] Assign name values to grid columns and rows for easier media queries.
 - [x] Normalize DB
 - [x] Link DB
-- [ ] Optimize Mobile View
+- [x] Optimize Mobile View
 - [X] Optimize classes
 - [ ] Create Unit tests
 - [ ] Run Unit Tests
