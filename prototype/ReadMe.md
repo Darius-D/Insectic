@@ -52,4 +52,5 @@
 ***
 
 ##   <p align="center"> Ticket Api List 
+  Current Api list. Api was created by myself to be the bridge between my web application and Db. All URIs have passed in Postman and Unit tests are still being created to allow for easier testing in the future. I am using Xunit for these tests along with Moq and Fake it easy do deal with dependencies. 
 <img src="/img/APIDiagram.JPG"/> </p>
