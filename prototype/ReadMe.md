@@ -38,18 +38,18 @@
 
 ***
 
- ##  <p align="center"> Prototype Ticket Submission View 
+ ##  <p align="center"> Prototype Ticket Submission View  page
   <p>  The ticket page has user input validation in all required fields ensuring  an error comes up prior to the HTTP post action method being called. This will ensure no data the user entered is lost due to page refresh. Submitting User and Assign to user now generate a drop down list based on values in the Database. I intend to use this feature to autofill the ticket form to save the user time.   </p>
 
   
 ***
-##  <p align="center"> Prototype View Tickets viewpage
-  <p> This view  populates a every ticket in the DB including "closed" tickets. This is to allow for data collection. This view page now has the ability to sort the table with the ability to filter tickets out coming in the near future. The Headers have a position"sticky" to allow them to stay on top of the page. The table colors are simply place holders.</p>
+##  <p align="center"> Prototype View Tickets view page
+  <p> This view  populates a every ticket in the DB including "closed" tickets. This is to allow for data collection. This view page now has the ability to sort the table with the ability to filter tickets out coming in the near future. The Headers have a position"sticky" to allow them to stay on top of the page. The table colors are simply place holders. Will add feature to only show tickets that are assigned to the users resource group or themselves in the near future. </p>
 
 ***
 ##  <p align="center"> Prototype AddressBook view
-  <p> This view  populates a contact card for each user in the repository with an individual profile picture, mailto: Email link, role, and phone number that will appear upon hovering over the phone icon. This will be done with Css. In the case of having more than six users, the address book overflows into a scroll on the container allowing for additional cards without disfiguring the layout. The colors currently used were for testing purposes and will be changed shortly. </p>
+  <p> This view  populates a contact card for each user in the repository with an individual profile picture, mailto: Email link, role, and phone number that will appear upon hovering over the phone icon. This will be done with Css. In the case of having more than six users, the address book overflows into a scroll on the container allowing for additional cards without disfiguring the layout. The colors currently used were for testing purposes and will be changed shortly. Upon screen getting wider, media queries have been added to increase the number of columns </p>
 ***
 
-##   <p align="center"> Ticket Api List </p>
-<img src="/img/APIDiagram.JPG"/>
+##   <p align="center"> Ticket Api List 
+<img src="/img/APIDiagram.JPG"/> </p>
