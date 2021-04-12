@@ -29,7 +29,7 @@
   
   
 ###  <p align="center"> Old Version 2 page views </p>
-![](/img/Version%202)
+![](/prototype/img/Version%202.JPG)
 
 ###  <p align="center"> Pending V2 Dashboard: color are for development only. Views are as ordered: Desktop greater that 850px, desktop/tablet less than 800px, cellphone/tablet less than 500px   </p>
 
