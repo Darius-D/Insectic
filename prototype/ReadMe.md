@@ -31,7 +31,7 @@
 ###  <p align="center"> Old Version 2 view pages </p>
 ![](/prototype/img/Version%202.JPG)
 
-###  <p align="center"> Current Version 3 view pages: still undergoing color pallet selection and feature upgrades</p>
+###  <p align="center"> Current Version 3 view pages: WIP, still undergoing color pallet, layout selection and feature upgrades</p>
 
 ![](/prototype/img/version%203.JPG)
 
