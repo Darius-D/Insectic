@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+
 
 namespace InsecticDatabaseApi.Models
 {
@@ -20,6 +16,8 @@ namespace InsecticDatabaseApi.Models
         public string Email { get; set; }
 
         public string ContactNumber { get; set; }
+
+        public string Supervisor { get; set; }
 
         public string UserPassword { get; set; }
 

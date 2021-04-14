@@ -1,0 +1,79 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Layout.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    @RenderSection("LinkOne", false)
+    @RenderSection("LinkTwo", false)
+    <title>@RenderSection("Title",true)</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <nav class="TopNavBar">
+            <div class="navigation">
+                <ul class=nav-list>
+                    <li class="top-links"><a asp-controller="Home" asp-action="Dashboard">Corkboard</a></li>
+                    <li class="top-links"><a href="#">About</a></li>
+                    <li class="top-links"><a asp-controller="Home" asp-action="Privacy">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="header">
+                <a href="#">Insectic Layout V2</a>
+            </div>
+            <div class="profile">
+                <a href="#"><img src="https://source.unsplash.com/random" alt=""></a>
+            </div>
+        </nav>
+        <div class="sideNav">
+            <ul class="sideNav-links">
+                <li class="side-links"><a asp-controller="Home" asp-action="Dashboard"><span class="material-icons icons">dashboard</span><span class=link-text>Corkboard</span></a></li>
+                <li class="side-links">
+                    <a asp-controller="TicketPages" asp-action="Create">
+                        <span class="material-icons icons">note_add</span><span class=link-text>Create Ticket</span>
+                    </a>
+                </li>
+                <li class="side-links">
+                    <a asp-controller="TicketPages" asp-action="Index">
+                        <span class="material-icons icons">view_list</span><span class=link-text> View Tickets </span>
+                    </a>
+                </li>
+                <li class="side-links">
+                    <a href="#">
+                        <span class="material-icons icons">analytics</span><span class=link-text>Analytics</span>
+                    </a>
+                </li>
+                <li class="side-links">
+                    <a asp-controller="EmployeePages" asp-action="Contacts">
+                        <span class="material-icons icons">account_circle</span><span class=link-text>Contacts</span>
+                    </a>
+                </li>
+                <li class="side-links">
+                    <a href="#">
+                        <span class="material-icons icons">supervisor_account</span><span class=link-text>Manage Team</span>
+                    </a>
+                </li>
+                <li class="side-links">
+                    <a href="#">
+                        <span class="material-icons icons">table_chart</span><span class=link-text>Scrum Board</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <main class="Main-Content">
+            @RenderBody()
+        </main>
+
+        <div class="Footer">
+            <p> &copy; Darius Dubose</p>
+        </div>
+    </div>
+</body>
+
+</html>

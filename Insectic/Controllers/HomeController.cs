@@ -25,7 +25,13 @@ namespace Insectic.Controllers
 
             return View();
         }
+        public IActionResult Dashboard()
+        {
+            ViewBag.Name = "Darius";
+            ViewBag.Image = "https://source.unsplash.com/random";
 
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

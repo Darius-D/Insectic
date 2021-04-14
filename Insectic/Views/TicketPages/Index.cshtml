@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Insectic.Models.TicketJsonModel>
+
+@{
+    Layout = "_Layout";
+}
+@section LinkOne
+{
+    <link rel="stylesheet" href="/css/TicketIndex.css">
+}
+@section Title
+{Ticket Home}
+
+<div class="PageHeader">
+    <h1>Total Tickets: @Model.ToList().Count</h1>
+</div>
+<div class="TableContainer">
+    <table class="ticket-table">
+        <thead>
+            <tr>
+                <th>
+                    Ticket ID
+                </th>
+                <th>
+                    Priority
+                </th>
+                <th>
+                    Category
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Incident Date
+                </th>
+                <th>
+                    DueDate
+                </th>
+                <th style="text-align: center;" id="break-word">
+                    Description
+                </th>
+                <th>
+                    Submitting User
+                </th>
+                <th>
+                    Assigned User
+                </th>
+                <th>
+                    Actions
+                </th>
+                <th class="sticky-top ">
+                    <form asp-controller="TicketPages" asp-action="Filter" method="post" class="d-inline-block">
+                        <select name="sortBy" id="sortBy" class="d-inline-block">
+                            <option value="0">Filter by</option>
+                            <option value="TicketId">Ticket ID</option>
+                            <option value="Priority">Priority</option>
+                            <option value="Category">Category</option>
+                            <option value="Status">Status</option>
+                            <option value="IncidentDate">Incident Date</option>
+                            <option value="DueDate">Due Date</option>
+                            <option value="UserId">User ID</option>
+                        </select>
+                        <input type="submit" />
+                    </form>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.TicketId)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Priority)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Category)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                    <td>@Html.DisplayFor(modelItem => item.IncidentDate)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DueDate)</td>
+                    <td style="text-align: center;">
+                        <div class="scroll-cell">@Html.DisplayFor(modelItem => item.TicketDescription)</div>
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.TicketId)</td>
+                    <td>@Html.DisplayFor(modelItem => item.TicketId)</td>
+                    <td><a href="#">View</a></td>
+                    <td><a href="#">Edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

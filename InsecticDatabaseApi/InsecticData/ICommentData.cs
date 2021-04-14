@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using InsecticDatabaseApi.Models;
 
 namespace InsecticDatabaseApi.InsecticData
@@ -15,11 +11,11 @@ namespace InsecticDatabaseApi.InsecticData
 
         public List<Comment> GetUserComments(string userId);
 
-        Comment GetComment(Guid id);
+        Comment GetComment(int id);
 
-        void AddComment(Guid ticketId, Comment comment);
+        void AddComment(int ticketId, Comment comment);
 
-        void DeleteComment(Guid commentId);
+        void DeleteComment(int commentId);
 
         void EditComment(Comment comment);
     }

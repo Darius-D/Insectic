@@ -1,0 +1,31 @@
+﻿@using Insectic.InsecticData
+
+@{
+    Layout = "_Layout";
+}
+@section Title
+{
+    Team Members
+}
+@section LinkOne
+{
+    <link rel="stylesheet" href="/css/Contacts.css">
+}
+<div class="PageHeader">
+    <h1>Check out our amazing team!</h1>
+</div>
+<div class="ContactContainer">
+    @foreach (var user in UserApiRepository.GetAllUsers())
+    {
+        <figure class="snip1336">
+            <img src="/img/image4.jpeg" alt="sample87"/>
+            <figcaption>
+                <img src="/img/dummy-user.jpg" alt="profile-sample4" class="profile"/>
+                <h2>@user.FirstName @user.LastName<span>Role:@user.UserRoles Group: @user.ResourceGroup</span></h2>
+                <p>user profile</p>
+                <a href=@($"Mailto:{user.Email}") class="follow">Email</a>
+                <a href="#" class="info">More Info</a>
+            </figcaption>
+        </figure>
+    }
+</div>

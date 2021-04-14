@@ -10,17 +10,10 @@ namespace Insectic.Controllers
     public class EmployeePagesController : Controller
     {
         [HttpGet]
-        public ViewResult AddressBook()
+        public ViewResult Contacts()
         {
-            var test = new UserJsonModel()
-            {
-                ProfilePicture = "https://source.unsplash.com/random",
-                FirstName = "Darius",
-                LastName = "Dubose",
-                Email = "dariusdubose1@gmail.com",
-
-            };
-            return View("AddressBook", test);
+          
+            return View("Contacts");
         }
     }
 }

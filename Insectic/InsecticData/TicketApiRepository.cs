@@ -55,8 +55,24 @@ namespace Insectic.InsecticData
         }
         
         //Would like to change this to httpclient however I can not get my current Http Edit method to work.
-        public static void EditTicket(int ticketId, TicketJsonModel ticket)
+        public static async void EditTicket(int ticketId, TicketJsonModel ticket)
         {
+
+            var values = JsonConvert.SerializeObject(ticket);
+
+
+            var httpContent = new StringContent(values, Encoding.UTF8, "application/json");
+            var httpResponse = await Client.PatchAsync("https://localhost:44342/api/Ticket", httpContent);
+            if (httpResponse.Content != null)
+            {
+                var responseContent = await httpResponse.Content.ReadAsStringAsync();
+            }
+            return;
+
+
+
+
+
             var client = new RestClient("https://localhost:44342/api/Ticket/" + ticketId);
             client.Timeout = -1;
             var request = new RestRequest(Method.PATCH);

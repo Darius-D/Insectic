@@ -4,14 +4,16 @@ using InsecticDatabaseApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace InsecticDatabaseApi.Migrations
 {
     [DbContext(typeof(InsecticContext))]
-    partial class InsecticContextModelSnapshot : ModelSnapshot
+    [Migration("20210414042729_listRemoval")]
+    partial class listRemoval
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,8 +44,6 @@ namespace InsecticDatabaseApi.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CommentId");
-
-                    b.HasIndex("TicketId");
 
                     b.ToTable("TicketComments");
                 });
@@ -87,11 +87,9 @@ namespace InsecticDatabaseApi.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(25)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("TicketId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Tickets");
                 });
@@ -143,34 +141,6 @@ namespace InsecticDatabaseApi.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("InsecticDatabaseApi.Models.Comment", b =>
-                {
-                    b.HasOne("InsecticDatabaseApi.Models.Ticket", null)
-                        .WithMany("Comments")
-                        .HasForeignKey("TicketId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("InsecticDatabaseApi.Models.Ticket", b =>
-                {
-                    b.HasOne("InsecticDatabaseApi.Models.User", null)
-                        .WithMany("Tickets")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("InsecticDatabaseApi.Models.Ticket", b =>
-                {
-                    b.Navigation("Comments");
-                });
-
-            modelBuilder.Entity("InsecticDatabaseApi.Models.User", b =>
-                {
-                    b.Navigation("Tickets");
                 });
 #pragma warning restore 612, 618
         }

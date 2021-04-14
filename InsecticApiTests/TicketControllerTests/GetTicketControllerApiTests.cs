@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -16,15 +17,45 @@ using Xunit;
 
 namespace InsecticApiTests.Tickets
 {
+    public class ExistingUserIdData : IEnumerable<object[]>
+    {
+        public IEnumerator<object[]> GetEnumerator()
+        {
+            yield return new object[]{"testId",new List<Ticket>()};
+            yield return new object[] { "userId", new List<Ticket>(){ new Ticket()}};
+            
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+    }
+    public class NotFoundUserIdData : IEnumerable<object[]>
+    {
+        public IEnumerator<object[]> GetEnumerator()
+        {
+            yield return new object[] { "testId" };
+            yield return new object[] { "userId" };
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+    }
+
+
+
+    
     public class GetTicketControllerApiTests
     {
-        //this is a stub that makes an instance of dependency that does not need to be tested
-        private readonly Mock<ITicketData> repoStub = new Mock<ITicketData>();
-
+        private readonly Mock<ITicketData> repoStub = new Mock<ITicketData>(MockBehavior.Strict);
+        
         Random random = new Random();
 
-        [Fact]
-        public void GetAllTickets_RETURNS_ALL_TICKETS_ASSIGNED_TO_USER()
+        [Fact] // Good Test
+        public void GetAllTickets_ReturnsAllTickets_ListOfTickets()
         {
 
             //Arrange
@@ -42,7 +73,7 @@ namespace InsecticApiTests.Tickets
         }
 
         [Fact]
-        public void GetTicket_RETURNS_SINGLE_TICKET_BASED_ON_TICKET_ID()
+        public void GetTicket_ReturnsTicketWithSameTicketId_Ticket()
         {
             //Arrange
             var hardCodeDate = new DateTime(year: 2021, month: 04, day: 11, hour: 04, minute: 04, second: 04);
@@ -70,7 +101,7 @@ namespace InsecticApiTests.Tickets
                     TicketDescription = "test", TicketId = 103, UserId = "ddub"
                 }
             };
-            var fakeDependency = A.Fake<ITicketData>(); // Fake Interface/dependency
+            var fakeDependency = A.Fake<ITicketData>();
             var testController = new TicketController(fakeDependency);
             A.CallTo(() => fakeDependency.GetTicket(searchId)).Returns(fakeTickets.Find(p => p.TicketId == searchId));
 
@@ -88,80 +119,60 @@ namespace InsecticApiTests.Tickets
         public void GetTicketByUser_SHOULD_RETURN_ONLY_TICKET_ASSIGNED_TO_USER()
         {
             //Arrange
-            var userSearch = "test";
-            var fakeTickets = new List<Ticket>
-            {
-                new Ticket
-                {
-                    Category = "urgent", Comments = null, DueDate = null, IncidentDate = DateTime.MinValue,
-                    Priority = "urgent", Status = "pending", TicketDescription = "test", TicketId = 100,
-                    UserId = "rand1"
-                },
-                new Ticket
-                {
-                    Category = "urgent", Comments = null, DueDate = null, IncidentDate = DateTime.MinValue,
-                    Priority = "urgent", Status = "pending", TicketDescription = "test", TicketId = 101, UserId = "test"
-                },
-                new Ticket
-                {
-                    Category = "urgent", Comments = null, DueDate = null, IncidentDate = DateTime.MinValue,
-                    Priority = "urgent", Status = "pending", TicketDescription = "test", TicketId = 102, UserId = "test"
-                },
-                new Ticket
-                {
-                    Category = "urgent", Comments = null, DueDate = null, IncidentDate = DateTime.MinValue,
-                    Priority = "urgent", Status = "pending", TicketDescription = "test", TicketId = 103, UserId = "rand"
-                }
-            };
-
-            var fakeDependency = A.Fake<ITicketData>();
-            var testController = new TicketController(fakeDependency);
-
-            A.CallTo(() => fakeDependency.GetUserTickets(userSearch))
-                .ReturnsLazily(fakeTickets.Where(t => t.UserId.Equals(userSearch)).ToList);
-
-            //Act
-            var actionResult = testController.GetTicketByUser(userSearch);
-            //Assert
-            var result = actionResult as OkObjectResult;
-            var returnTicketList = result.Value as List<Ticket>;
-            Assert.Equal(new List<Ticket> {fakeTickets[1], fakeTickets[2]}, returnTicketList);
-        }
-
-        [Fact]
-        public void GetTicketByUser_WithNonExistingUser_ReturnsNotFound()
-        {
-            //Arrange
-            //since I want this to fail, the It.isAny<string> tells moq to put any value in there. 
-            //This is saying with this inserted, the return should be a null list. 
-
-            repoStub.Setup(repo => repo.GetUserTickets(It.IsAny<string>()))
-                .Returns((List<Ticket>) null);
-
-            //creates a controller object and passes in our mock dependency 
-            var controller = new TicketController(repoStub.Object);
-
-            //Act
-            var result = controller.GetTicketByUser(It.IsAny<string>());
-            //Assert
-
-            Assert.IsType<NotFoundObjectResult>(result);
-        }
-        [Fact]
-        public void GetTicketByUser_WithExistingUser_ListOfTickets()
-        {
-            //Arrange 
-            var expectedTicket = new List<Ticket>{ CreateRandomTicket(),CreateRandomTicket()};
-            repoStub.Setup(repo => repo.GetUserTickets(It.IsAny<string>()))
-                .Returns(expectedTicket);
-            var controller = new TicketController(repoStub.Object);
-            //Act
-            var result = controller.GetTicketByUser(It.IsAny<string>());
-            //Assert
-
-            Assert.IsType<OkObjectResult>(result);
             
+            //Act
+
+            //Assert
         }
+
+
+
+        
+        //param tests allow for multi tests with edge cases.
+       //[Theory]
+       //[ClassData(typeof(NotFoundUserIdData))]
+       // public void GetTicketByUser_WithNonExistingUser_ReturnsNotFound(string userId)
+       // {
+        
+       // //Arrange
+       // //since I want this to fail, the It.isAny<string> tells moq to put any value in there. 
+       // //This is saying with this inserted, the return should be a null list. 
+
+       // repoStub.Setup(repo => repo.GetUserTickets(userId))
+       //         .Returns((List<Ticket>)null);
+
+       //     //creates a controller object and passes in our mock dependency 
+       //     var sut = new TicketController(repoStub.Object);
+
+       //     //Act
+       //     var result = sut.GetTicketByUser(userId);
+       //     //Assert
+       //     repoStub.VerifyAll();
+
+       //     Assert.IsType<NotFoundObjectResult>(result);
+        //}
+        //[Theory]
+        //[ClassData(typeof(ExistingUserIdData))]
+        //public void GetTicketByUser_WithExistingUser_ListOfTickets(string userId, List<Ticket>tickets)
+        //{
+
+        //    //Arrange
+        //    //since I want this to fail, the It.isAny<string> tells moq to put any value in there. 
+        //    //This is saying with this inserted, the return should be a null list. 
+
+        //    repoStub.Setup(repo => repo.GetUserTickets(userId))
+        //        .Returns(tickets);
+
+        //    //creates a controller object and passes in our mock dependency 
+        //    var sut = new TicketController(repoStub.Object);
+
+        //    //Act
+        //    var result = sut.GetTicketByUser(userId);
+        //    //Assert
+        //    repoStub.VerifyAll();
+
+        //    Assert.IsType<OkObjectResult>(result);
+        //}
 
         private Ticket CreateRandomTicket()
         {

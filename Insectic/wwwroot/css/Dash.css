@@ -1,0 +1,185 @@
+﻿.Main-Content {
+    padding: 10px;
+    overflow: auto;
+    grid-area: Main-Content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 5px;
+    grid-template-areas:
+        "SideContent SideContent SideContent SideContent Box1 Box1 Box1 Box1 Box2 Box2 Box2 Box2"
+        "SideContent SideContent SideContent SideContent Box1 Box1 Box1 Box1 Box2 Box2 Box2 Box2"
+        "SideContent SideContent SideContent SideContent Box1 Box1 Box1 Box1 Box2 Box2 Box2 Box2"
+        "SideContent SideContent SideContent SideContent Box1 Box1 Box1 Box1 Box2 Box2 Box2 Box2"
+        "SideContent SideContent SideContent SideContent Box1 Box1 Box1 Box1 Box2 Box2 Box2 Box2"
+        "SideContent SideContent SideContent SideContent FreeSpace FreeSpace FreeSpace FreeSpace FreeSpace FreeSpace FreeSpace FreeSpace"
+        "SideContent SideContent SideContent SideContent Box4 Box4 Box4 Box4 Box3 Box3 Box3 Box3"
+        "SideContent SideContent SideContent SideContent Box4 Box4 Box4 Box4 Box3 Box3 Box3 Box3"
+        "SideContent SideContent SideContent SideContent Box4 Box4 Box4 Box4 Box3 Box3 Box3 Box3"
+        "SideContent SideContent SideContent SideContent Box4 Box4 Box4 Box4 Box3 Box3 Box3 Box3"
+        "SideContent SideContent SideContent SideContent Box4 Box4 Box4 Box4 Box3 Box3 Box3 Box3"
+        "StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes";
+}
+/* Side Table Styling */
+.SideContent {
+    grid-area: SideContent;
+    background: rgb(115, 171, 224);
+    box-shadow: 10px 5px 5px rgb(10, 90, 166,.4);
+    border-radius: 20px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+    .SideContent table {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+.tableHeader {
+    display: grid;
+    grid-template-columns: .25fr 1fr .25fr;
+    grid-template-areas: "left middle right";
+}
+
+    .tableHeader h2 {
+        grid-area: middle;
+        padding-top: 3px;
+    }
+
+    .tableHeader span {
+        padding: 5px;
+    }
+/* Main box styling */
+.Box {
+    margin: 5px;
+    border-radius: 20px;
+    padding: 10px;
+    overflow: auto;
+    box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+    display: flex;
+    flex-direction: column;
+}
+
+    .box::-webkit-scrollbar {
+        width: 10px;
+        background: blue;
+    }
+
+.top-box {
+    display: flex;
+    flex: 1;
+    padding: 5px 20px;
+    justify-content: space-between;
+}
+
+.bottom-box {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+
+th, td {
+    padding: 5px;
+    border-bottom: black solid 1px;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    padding: 5px;
+    border: black solid 2px;
+    overflow: auto;
+    width: 100%;
+}
+
+.Box1 {
+    grid-area: Box1;
+    background: rgb(180, 30, 30);
+    /* ReSharper disable once UnexpectedValue */
+    box-shadow: 8px 8px 5px rgb(135, 12, 12,.9);
+}
+
+.Box2 {
+    grid-area: Box2;
+    background: rgb(120, 224, 219);
+    /* ReSharper disable once UnexpectedValue */
+    box-shadow: 8px 8px 5px rgb(10, 145, 138, .9);
+}
+
+.Box4 {
+    grid-area: Box4;
+    background: rgb(226, 201, 120);
+    /* ReSharper disable once UnexpectedValue */
+    box-shadow: 10px 8px 5px rgb(214, 170, 26, .8);
+}
+
+.Box3 {
+    grid-area: Box3;
+    background: rgb(166, 230, 107);
+    /* ReSharper disable once UnexpectedValue */
+    box-shadow: 10px 8px 5px rgb(65, 110, 23, .9);
+}
+/*  Scrollin gtext styling */
+.FreeSpace {
+    grid-area: FreeSpace;
+}
+
+
+.StickyNotes {
+    grid-area: StickyNotes;
+    border-radius: 20px;
+    display: flex;
+    color: rgb(7, 7, 7);
+    align-items: center;
+    margin: 5px;
+}
+/*Scroll bar styling*/
+
+.Box::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width:800px) {
+    .SideContent {
+        display: none;
+    }
+
+    .Main-Content {
+        grid-template-areas:
+            "Box1 Box1 Box1 Box1 Box1 Box1 Box2 Box2 Box2 Box2 Box2 Box2"
+            "Box1 Box1 Box1 Box1 Box1 Box1 Box2 Box2 Box2 Box2 Box2 Box2"
+            "Box1 Box1 Box1 Box1 Box1 Box1 Box2 Box2 Box2 Box2 Box2 Box2"
+            "Box1 Box1 Box1 Box1 Box1 Box1 Box2 Box2 Box2 Box2 Box2 Box2"
+            "Box1 Box1 Box1 Box1 Box1 Box1 Box2 Box2 Box2 Box2 Box2 Box2"
+            "FreeSpace FreeSpace FreeSpace FreeSpace FreeSpace FreeSpace FreeSpace FreeSpace FreeSpace FreeSpace FreeSpace FreeSpace"
+            "Box4 Box4 Box4 Box4 Box4 Box4 Box3 Box3 Box3 Box3 Box3 Box3"
+            "Box4 Box4 Box4 Box4 Box4 Box4 Box3 Box3 Box3 Box3 Box3 Box3"
+            "Box4 Box4 Box4 Box4 Box4 Box4 Box3 Box3 Box3 Box3 Box3 Box3"
+            "Box4 Box4 Box4 Box4 Box4 Box4 Box3 Box3 Box3 Box3 Box3 Box3"
+            "Box4 Box4 Box4 Box4 Box4 Box4 Box3 Box3 Box3 Box3 Box3 Box3"
+            "StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes StickyNotes";
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .StickyNotes {
+        display: none;
+    }
+
+    .FreeSpace {
+        display: none;
+    }
+
+    .Main-Content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Box {
+        min-height: 200px;
+    }
+}

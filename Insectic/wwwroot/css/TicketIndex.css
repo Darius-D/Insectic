@@ -1,0 +1,118 @@
+﻿.Main-Content {
+    grid-area: Main-Content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(0, 60px) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader"
+        "TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer"
+        "TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer"
+        "TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer"
+        "TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer"
+        "TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer"
+        "TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer"
+        "TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer"
+        "TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer"
+        "TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer"
+        "TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer"
+        "TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer TableContainer";
+}
+
+.PageHeader {
+    grid-area: PageHeader;
+    background: #009879;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.TableContainer {
+    grid-area: TableContainer;
+    margin: 0 10px;
+    position: relative;
+    overflow: auto;
+}
+
+.ticket-table {
+    position: relative;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: .9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+}
+
+    .ticket-table th {
+        position: sticky;
+        background: #009879;
+        top: 0;
+    }
+
+    .ticket-table thead tr {
+        color: rgb(241, 241, 241);
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .ticket-table th, td {
+        padding: 12px 15px;
+    }
+
+    .ticket-table td {
+        overflow: auto;
+    }
+
+#break-word {
+    word-break: break-all;
+}
+
+.scroll-cell {
+    overflow: auto;
+    max-height: 100px;
+}
+
+.ticket-table tbody tr {
+    border-bottom: thin solid rgba(0, 0, 0, 0.867);
+}
+
+    .ticket-table tbody tr:nth-of-type(odd) {
+        background: #f0e08a;
+    }
+
+    .ticket-table tbody tr:nth-of-type(even) {
+        background: #dfebe0;
+    }
+
+    .ticket-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+
+.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+/* Scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #b2cec8;
+    border-radius: 10px;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #0ee63d;
+    }

@@ -11,7 +11,7 @@ namespace Insectic.InsecticData
 {
     public interface ITicketRepository
     {
-
+            
             public  List<TicketJsonModel> GetAllTickets();
             
 

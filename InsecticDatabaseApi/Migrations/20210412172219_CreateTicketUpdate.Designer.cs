@@ -4,14 +4,16 @@ using InsecticDatabaseApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace InsecticDatabaseApi.Migrations
 {
     [DbContext(typeof(InsecticContext))]
-    partial class InsecticContextModelSnapshot : ModelSnapshot
+    [Migration("20210412172219_CreateTicketUpdate")]
+    partial class CreateTicketUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -128,9 +130,6 @@ namespace InsecticDatabaseApi.Migrations
                     b.Property<string>("ResourceGroup")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Supervisor")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserPassword")
                         .IsRequired()

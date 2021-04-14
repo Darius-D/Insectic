@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using InsecticDatabaseApi.Models;
 
 namespace InsecticDatabaseApi.InsecticData
@@ -9,7 +7,7 @@ namespace InsecticDatabaseApi.InsecticData
     public class UserData : IUserData
     {
 
-        private InsecticContext _insecticContext;
+        private readonly InsecticContext _insecticContext;
         public UserData(InsecticContext insecticContext)
         {
             _insecticContext = insecticContext;
@@ -22,6 +20,22 @@ namespace InsecticDatabaseApi.InsecticData
         public User GetUser(string id)
         {
             return _insecticContext.UsersList.Find(id);
+        }
+
+        public List<User> GetUsersBySupervisor(string supervisor)
+        { 
+            return GetAllUsers().Where(u => u.Supervisor == supervisor).ToList();
+        }
+
+
+        public List<User> GetUserByResourceGroup(string resourceGroup)
+        {
+            return GetAllUsers().Where(u => u.ResourceGroup == resourceGroup).ToList();
+        }
+
+        public List<User> GetUserByRole(string role)
+        {
+            return GetAllUsers().Where(u => u.UserRoles == role).ToList();
         }
 
 
@@ -45,8 +59,7 @@ namespace InsecticDatabaseApi.InsecticData
         {
             var existingUser = _insecticContext.UsersList.Find(user.UserId);
 
-            if (existingUser != null)
-            {
+            
                 existingUser.UserId = user.UserId;
                 existingUser.ContactNumber = user.ContactNumber;
                 existingUser.Email = user.Email;
@@ -55,11 +68,11 @@ namespace InsecticDatabaseApi.InsecticData
                 existingUser.ProfilePicture = user.ProfilePicture;
                 existingUser.ResourceGroup = user.ResourceGroup;
                 existingUser.UserRoles = user.UserRoles;
-                
+                existingUser.Supervisor = user.Supervisor;
                 
                 _insecticContext.UsersList.Update(existingUser);
                 _insecticContext.SaveChanges();
-            }
+            
         }
     }
 }

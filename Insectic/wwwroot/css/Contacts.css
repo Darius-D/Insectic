@@ -1,0 +1,198 @@
+﻿.Main-Content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(0,60px) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader"
+        "ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer"
+        "ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer"
+        "ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer"
+        "ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer"
+        "ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer"
+        "ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer"
+        "ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer"
+        "ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer"
+        "ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer"
+        "ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer"
+        "ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer";
+    grid-area: Main-Content;
+}
+
+.PageHeader {
+    grid-area: PageHeader;
+    text-align: center;
+    padding-top: 10px;
+    background: blue;
+    border-radius: 0 0 8px 8px;
+    margin: 0 10px;
+}
+
+.ContactContainer {
+    background: rgba(43, 145, 204, 0.8);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.7);
+    margin: 10px;
+    grid-area: ContactContainer;
+    overflow: auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, auto);
+    padding: 20px;
+}
+
+/* Card Styling */
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
+
+.snip1336 {
+    font-family: 'Roboto', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    min-width: 230px;
+    max-width: 315px;
+    width: 100%;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.4em;
+    background-color: #0c0a0a;
+}
+
+figure {
+    height: 350px;
+    border-radius: 9px;
+}
+
+.snip1336 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.snip1336 img {
+    max-width: 100%;
+    vertical-align: top;
+    opacity: 0.85;
+}
+
+.snip1336 figcaption {
+    width: 100%;
+    background-color: #dfa3a3;
+    padding: 25px;
+    position: relative;
+}
+
+    .snip1336 figcaption:before {
+        position: absolute;
+        content: '';
+        bottom: 100%;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 55px 0 0 400px;
+        border-color: transparent transparent transparent #fafafa;
+    }
+
+    .snip1336 figcaption a {
+        padding: 5px;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        font-size: 0.7em;
+        text-transform: uppercase;
+        margin: 10px 0;
+        display: inline-block;
+        opacity: 0.65;
+        width: 47%;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+        .snip1336 figcaption a:hover {
+            opacity: 1;
+        }
+
+.snip1336 .profile {
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100%;
+    left: 25px;
+    z-index: 1;
+    max-width: 90px;
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.snip1336 .follow {
+    margin-right: 4%;
+    border-color: #2980b9;
+    color: #2980b9;
+}
+
+.snip1336 h2 {
+    margin: 0 0 5px;
+    font-weight: 300;
+}
+
+    .snip1336 h2 span {
+        display: block;
+        font-size: 0.5em;
+        color: #2980b9;
+    }
+
+.snip1336 p {
+    margin: 0 0 10px;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+/* Scroll bar  */
+/* Scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #b2cec8;
+    border-radius: 10px;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #0ee63d;
+    }
+/*  media queries */
+
+@media only screen and (min-width:2300px) {
+    .ContactContainer {
+        grid-template-columns: repeat(4, auto);
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .ContactContainer {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .ContactContainer {
+        grid-template-columns: repeat(1, auto);
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .PageHeader h1 {
+        font-size: 1em;
+    }
+}

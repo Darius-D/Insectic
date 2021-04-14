@@ -1,9 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc;
 using InsecticDatabaseApi.InsecticData;
 using InsecticDatabaseApi.Models;
 
@@ -21,10 +16,7 @@ namespace InsecticDatabaseApi.Controllers
             _userData = user;
         }
 
-        /// <summary>
-        /// Returns all users in the Db.
-        /// </summary>
-        /// <returns>List of type User</returns>
+       
         [HttpGet]
         [Route("api/[controller]")]
         public IActionResult GetAllUsers()
@@ -38,13 +30,33 @@ namespace InsecticDatabaseApi.Controllers
         public IActionResult GetUser(string id)
         {
             var user = _userData.GetUser(id);
-            if (user != null)
+
+            if (user == null)
             {
-                return Ok(_userData.GetUser(id));
+                return NotFound($"User with Id of {id} does not exist");
             }
+            return Ok(_userData.GetUser(id));
+        }
 
-            return NotFound($"User with Id of {id} does not exist");
+        [HttpGet]
+        [Route("api/[controller]/ForSupervisor{supervisor}")]
+        public IActionResult GetUsersOfSupervisor(string supervisorId)
+        {
+            var user = _userData.GetUser(supervisorId);
 
+            if (user == null)
+            {
+                return NotFound($"Supervisor with Id of {supervisorId} does not exist");
+            }
+            return Ok(_userData.GetUsersBySupervisor(supervisorId));
+        }
+
+        //todo: add table for resource group and implement resource groups
+        [HttpGet]
+        [Route("api/[controller]/ForGroup{group}")]
+        public IActionResult GetUsersOfResourceGroup(string group)
+        {
+            return Ok(_userData.GetUserByResourceGroup(group));
         }
 
         [HttpPost]
@@ -53,38 +65,35 @@ namespace InsecticDatabaseApi.Controllers
         {
             _userData.AddUser(newUser);
             return Created(HttpContext.Request.Scheme + "://" + HttpContext.Request.Host + HttpContext.Request.Path + "/" + newUser.UserId, newUser);
-
         }
 
 
         [HttpDelete]
         [Route("api/[controller]/{id}")]
-        public IActionResult DeleteTicket(string id)
+        public IActionResult DeleteUser(string id)
         {
-            if (_userData.GetUser(id) != null)
+            if (_userData.GetUser(id) == null)
             {
-                _userData.DeleteUser(id);
-                return Ok();
+                return NotFound($"User with Id of {id} does not exist");
             }
-
-            return NotFound($"User with Id of {id} does not exist");
-
+            _userData.DeleteUser(id);
+            return Ok();
         }
 
         [HttpPatch]
         [Route("api/[controller]/{id}")]
-        public IActionResult EditTicket(string id, User user)
+        public IActionResult EditUser(string id, User user)
         {
             User existingUser = _userData.GetUser(id);
 
-            if (existingUser != null)
+            if (existingUser == null)
             {
-                user.UserId = existingUser.UserId;
-                _userData.EditUser(user);
-                return Ok();
+                return NotFound($"User with Id of {user.UserId} does not exist");
             }
 
-            return NotFound($"User with Id of {user.UserId} does not exist");
+            user.UserId = existingUser.UserId;
+            _userData.EditUser(user);
+            return Ok("successfully updated user profile.");
         }
     }
 }

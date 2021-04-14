@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
+
 
 namespace InsecticDatabaseApi.Models
 {
@@ -22,6 +16,7 @@ namespace InsecticDatabaseApi.Models
         
         public string UserComment { get; set; }
 
+        
     }
 
 }

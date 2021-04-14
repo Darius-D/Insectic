@@ -1,0 +1,168 @@
+﻿.Main-Content {
+    grid-area: Main-Content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "FullTop FullTop FullTop FullTop FullTop FullTop FullTop FullTop FullTop FullTop FullTop FullTop"
+        "FullTop FullTop FullTop FullTop FullTop FullTop FullTop FullTop FullTop FullTop FullTop FullTop"
+        "TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm"
+        "TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm"
+        "TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm"
+        "TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm"
+        "TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm"
+        "TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm"
+        "TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm"
+        "TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm"
+        "TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm"
+        "TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm TicketForm";
+}
+
+.FullTop {
+    grid-area: FullTop;
+    font-weight: bolder;
+    font-size: 25px;
+    background-color: lightblue;
+    border-radius: 20px;
+    margin: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TicketForm {
+    grid-area: TicketForm;
+    background: rgb(158, 231, 84);
+    margin: 20px;
+    border-radius: 20px;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+        "headerTop headerTop headerTop headerTop headerTop headerTop headerTop headerTop headerTop headerTop headerTop headerTop "
+        ". . . . . . . . . . . ."
+        "Category Category Category Category Category Category Category Category Category Category Category Category"
+        "Dates Dates Dates Dates Dates Dates Dates Dates Dates Dates Dates Dates"
+        "Users Users Users Users Users Users Users Users Users Users Users Users"
+        ". . . . . . . . . . . ."
+        "TBL TBL TBL TBL TBL TBL TBL TBL TBL TBL TBL TBL"
+        "TextB TextB TextB TextB TextB TextB TextB TextB TextB TextB TextB TextB"
+        "TextB TextB TextB TextB TextB TextB TextB TextB TextB TextB TextB TextB"
+        "TextB TextB TextB TextB TextB TextB TextB TextB TextB TextB TextB TextB"
+        "TextB TextB TextB TextB TextB TextB TextB TextB TextB TextB TextB TextB"
+        "TextB TextB TextB TextB TextB TextB TextB TextB TextB TextB TextB TextB"
+        ". . . . . . . . . . . .";
+}
+
+.headerTop {
+    grid-area: headerTop;
+    background: rgb(114, 155, 72);
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.Category {
+    grid-area: Category;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 5px;
+}
+
+.Dates {
+    grid-area: Dates;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 5px;
+}
+
+select, input {
+    border-radius: 8px;
+    height: 30px;
+    margin: 3px 0;
+    min-width: 200px;
+    border: none;
+    padding: 5px 10px;
+}
+
+    input[type="submit"]:hover {
+        background: green;
+        font-size: 20px;
+        transition: background 1.5s ease-in;
+    }
+
+.Users {
+    grid-area: Users;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+.TextB {
+    grid-area: TextB;
+    padding: 0 30px;
+    display: grid;
+    margin: 0 auto;
+}
+
+textarea {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 10px;
+}
+
+.textinput {
+    float: left;
+    width: 100%;
+    min-height: 75px;
+    outline: none;
+    resize: none;
+    border: 1px solid grey;
+}
+
+.TBL {
+    grid-area: TBL;
+    display: flex;
+    justify-content: center;
+}
+
+.Users {
+    grid-area: Users;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width:500px) {
+    .Category {
+        padding-top: 5px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .FullTop {
+        font-size: .5em;
+        text-align: center;
+    }
+
+    .Dates {
+        justify-content: flex-start;
+    }
+
+    select {
+        width: 100%
+    }
+
+    input {
+        min-width: unset;
+        padding: unset
+    }
+}

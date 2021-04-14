@@ -24,7 +24,9 @@ namespace Insectic.Models
 
         public string? TicketDescription { get; set; }
 
-        public string? UserId { get; set; }
+        public string UserId { get; set; }
+
+        public string? AssignedUser { get; set; }
 
         public List<Comment>? Comments { get; set; }
     }

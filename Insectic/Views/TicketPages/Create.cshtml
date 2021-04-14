@@ -1,28 +1,27 @@
-﻿
-@using Insectic.InsecticData
+﻿@using Insectic.InsecticData
 @model Insectic.Models.TicketJsonModel
 
 @{
-    Layout = "_InsecticDefault";
-
+    Layout = "_Layout";
 }
-
 
 @section LinkOne
 {
-    <link rel="stylesheet" href="/css/CreateTickets.css">
+    <link rel="stylesheet" href="/css/CreateTicket.css">
 }
 
 @section Title
-{Edit Ticket}
+{Create Ticket}
 
-<img class="tac3"src="/img/pngegg.png" alt="">
-<img class="tac4"src="/img/pngegg(1).png" alt=""> 
-<form method="post">
-    <div>
+<div class="FullTop">
+    <h1>Ticket Submission Form</h1>
+</div>
+
+<form method="post" class="TicketForm">
+    <div class=headerTop>
         <h1>Create A Ticket</h1>
     </div>
-    <div class="first-row row">
+    <div class="Category">
         <div>
             <label asp-for="Category">BugCategory:</label>
             <select name="Category" id="Category">
@@ -45,10 +44,6 @@
                 <option value="Low">Low</option>
             </select>
         </div>
-        <div>
-            <label asp-for="IncidentDate">Incident Date:</label>
-            <input type="datetime-local" id="IncidentDate" name="IncidentDate">
-        </div>
         <div class="custom-button">
             <label asp-for="Status">CurrentStatus:</label>
             <select name="Status" id="Status">
@@ -61,11 +56,22 @@
         </div>
     </div>
 
-    <div class="second-row row">
-        <div class="custom-button">
+    <div class="Users">
+        <div class="dropdown">
             <label asp-for="UserId">Submitting User:</label>
             <select name="UserId" id="UserId">
-            <option value="null">Select User</option>
+                <option value="null">Select User</option>
+                @{
+
+                    foreach (var user in UserApiRepository.GetAllUsers())
+                    {
+                        <option value="@user.UserId">@user.FirstName @user.LastName</option>
+                    }
+                }
+            </select>
+            <label asp-for="UserId">Assign to:</label>
+            <select name="UserId" id="UserId">
+                <option value="null">Select User</option>
                 @{
 
                     foreach (var user in UserApiRepository.GetAllUsers())
@@ -75,6 +81,13 @@
                 }
             </select>
         </div>
+    </div>
+    <div class="Dates">
+
+        <div>
+            <label asp-for="IncidentDate">Incident Date:</label>
+            <input type="datetime-local" id="IncidentDate" name="IncidentDate">
+        </div>
 
         <div>
             <label asp-for="DueDate">Due Date</label>
@@ -82,11 +95,15 @@
         </div>
 
     </div>
-    <div class="third-row">
-        <label asp-for="TicketDescription">Ticket Description:</label>
-        <textarea name="TicketDescription" cols="105" rows="10"
+    <div class="TBL">
+        <label asp-for="TicketDescription">Ticket Description</label>
+    </div>
+    <div class="TextB">
+        <textarea class="textinput" name="TicketDescription" cols="105" rows="10"
                   placeholder="Please enter detailed account of current issue and actions already taken."></textarea>
         <input type="submit" class="submit-button" value="Submit Ticket">
     </div>
 
+
 </form>
+

@@ -7,30 +7,18 @@ namespace InsecticDatabaseApi.InsecticData
 {
     public class CommentData : ICommentData
     {
-        private InsecticContext _insecticContext;
+        private readonly InsecticContext _insecticContext;
 
         public CommentData(InsecticContext insecticContext)
         {
             _insecticContext = insecticContext;
         }
 
-
-        /// <summary>
-        /// Will return all comments in the database
-        /// </summary>
-        /// <returns>a List of type TicketComment</returns>
         public List<Comment> GetAllComments()
         {
             return _insecticContext.TicketComments.ToList();
         }
 
-
-
-        /// <summary>
-        /// Returns all comments associated with a desired ticket. 
-        /// </summary>
-        /// <param name="id">requires the TicketId of the ticket in question.</param>
-        /// <returns>a List of type TicketComment</returns>
         public List<Comment> GetAllCommentsForTicket(int id)
         {
             List<Comment> ticketComments = new List<Comment>();
@@ -46,19 +34,12 @@ namespace InsecticDatabaseApi.InsecticData
             return ticketComments;
         }
 
-
-
-        /// <summary>
-        /// Returns a single comment by Guid
-        /// </summary>
-        /// <param name="id">Requires specific comment id</param>
-        /// <returns>a single TicketComment object</returns>
-        public Comment GetComment(Guid id)
+        public Comment GetComment(int id)
         {
             return _insecticContext.TicketComments.Find(id);
         }
 
-        //Todo Make Api controller that can run this. 
+        
         public List<Comment> GetUserComments(string userId)
         {
             var userComments = GetAllComments().Where(c => c.UserId == userId).ToList();
@@ -66,17 +47,9 @@ namespace InsecticDatabaseApi.InsecticData
         }
 
 
-
-        /// <summary>
-        /// Adds a comment to the desired ticket and saves it in the DB. 
-        /// </summary>
-        /// <param name="comment"> Takes in the newly created ticket</param>
-        /// <param name="ticketId"> Takes in the ticket Guid comment is associated with</param>
-        public void AddComment(Guid ticketId, Comment comment)
+        public void AddComment(int ticketId, Comment comment)
         {
 
-            //comment.CommentId = Guid.NewGuid();
-            //comment.TicketId = ticketId;
             comment.CommentDate = DateTime.Now;
             _insecticContext.TicketComments.Add(comment);
             _insecticContext.SaveChanges();
@@ -85,7 +58,7 @@ namespace InsecticDatabaseApi.InsecticData
 
 
 
-        public void DeleteComment(Guid commentId)
+        public void DeleteComment(int commentId)
         {
             var existingComment = _insecticContext.TicketComments.Find(commentId);
 
@@ -99,7 +72,7 @@ namespace InsecticDatabaseApi.InsecticData
         }
 
 
-
+        
 
         public void EditComment(Comment comment)
         {
@@ -107,6 +80,7 @@ namespace InsecticDatabaseApi.InsecticData
 
             if (existingComment != null)
             {
+                
                 existingComment.TicketId = comment.TicketId;
                 existingComment.CommentId = comment.CommentId;
                 existingComment.UserId = comment.UserId;

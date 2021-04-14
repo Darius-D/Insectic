@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
-using FluentAssertions;
 
 namespace InsecticDatabaseApi.Models
 {
@@ -21,16 +17,15 @@ namespace InsecticDatabaseApi.Models
 
         public DateTime IncidentDate { get; set; }
 
-        
         public DateTime? DueDate { get; set; }
-
 
         public string TicketDescription { get; set; }
 
         public string UserId { get; set; }
 
-        public List<Comment> Comments { get; set; }
+        public string AssignedUser { get; set; }
 
+        public List<Comment> Comments { get; set; }
 
     }
 }

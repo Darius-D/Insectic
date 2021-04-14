@@ -1,0 +1,201 @@
+﻿.material-icons.orange600 {
+    color: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: minmax(10px, 60px) repeat(10,1fr) minmax(10px, 60px);
+    gap: 0px 0px;
+    grid-template-areas:
+        "TopNavBar TopNavBar TopNavBar TopNavBar TopNavBar TopNavBar TopNavBar TopNavBar TopNavBar TopNavBar TopNavBar TopNavBar"
+        "SideNav SideNav Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content"
+        "SideNav SideNav Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content"
+        "SideNav SideNav Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content"
+        "SideNav SideNav Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content"
+        "SideNav SideNav Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content"
+        "SideNav SideNav Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content"
+        "SideNav SideNav Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content"
+        "SideNav SideNav Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content"
+        "SideNav SideNav Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content"
+        "SideNav SideNav Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content Main-Content"
+        "Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer";
+}
+/* start of Page layout assignment Page Layout Assigment */
+/* Top Nav Bar Styling */
+.TopNavBar {
+    grid-area: TopNavBar;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3,1fr);
+    gap: 0px 0px;
+    align-items: center;
+    grid-template-areas:
+        "firstCol secondCol thirdCol";
+    background: #41575c;
+    color: white;
+}
+
+.navigation {
+    grid-area: firstCol;
+    padding-left: 30px;
+}
+
+.header {
+    grid-area: secondCol;
+    margin: 0 auto;
+}
+
+    .header:hover {
+        color: #9cD1dB;
+    }
+
+.profile {
+    grid-area: thirdCol;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+}
+
+.nav-list li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+    .nav-list li a:hover {
+        border-bottom: 1px solid #9cD1dB;
+        font-size: 20px;
+        transition: transform 3s ease;
+    }
+
+.profile img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+/* End of Top Nav Bar styling */
+/* Start of side Nav bar styling */
+.sideNav {
+    grid-area: SideNav;
+    background: url(/img/corkboard.jpg);
+    max-width: 270px;
+    display: grid;
+    grid-template-columns: repeat (1fr );
+}
+
+.sideNav-links {
+    padding: 30px 0;
+    display: grid;
+    gap: 20px;
+    height: 100%;
+    /* background:rgb(13, 150, 136);  */
+    background: url(/img/corkboard.jpg) center center cover/no-repeat;
+    z-index: 99;
+    overflow: auto;
+}
+
+    .sideNav-links::-webkit-scrollbar {
+        width: 1px;
+    }
+
+    .sideNav-links li {
+        width: 100%;
+        height: 100%;
+        display: block;
+        text-align: center;
+    }
+
+        .sideNav-links li a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 100%;
+            background: #5ccBE1;
+            width: 80%;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+
+    .sideNav-links .icons {
+        padding-right: 20px;
+    }
+
+    .sideNav-links a:hover {
+        background: #9cD1dB;
+        box-shadow: 10px 10px 7px #41575C;
+        transition: background .4s linear;
+        scale: (1.25);
+    }
+/* End of Side Bar styling */
+/* Start of Main Content Sytling */
+.Main-Content {
+    grid-area: Main-Content;
+    background: url(/img/Paper.png) center center/cover no-repeat;
+}
+
+.Footer {
+    grid-area: Footer;
+    /* background: #064D5c; */
+    background: #41575c;
+    /* background: rgb(56, 56, 56); */
+    /* background: url(/img/corkboard.jpg); */
+    text-align: center;
+}
+
+
+@media only screen and (max-width:750px) {
+    .sideNav-links li a {
+        margin-left: unset;
+        border-bottom-left-radius: unset;
+        border-top-left-radius: unset;
+        background: unset;
+    }
+
+    .sideNav-links {
+        padding: unset;
+        gap: unset;
+    }
+
+    .navigation {
+        padding-left: 0px;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .sideNav-links .icons {
+        display: block;
+        padding: 0 0 0 5px;
+    }
+}
+/* will remove my text links from side nav */
+@media only screen and (max-width:450px) {
+    .link-text {
+        display: none;
+    }
+}

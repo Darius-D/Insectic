@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -39,14 +36,14 @@ namespace InsecticDatabaseApi.Models
             ticket.Property(p => p.TicketDescription).IsRequired();
             ticket.Property(p => p.Priority).IsRequired().HasMaxLength(20);
             ticket.Property(p => p.UserId).IsRequired();
-
             
+
             comment.Property(p => p.CommentId).ValueGeneratedOnAdd();
             comment.Property(p => p.UserComment).IsRequired();
             comment.Property(p => p.CommentDate).IsRequired().HasColumnType("datetime2").HasPrecision(0);
             comment.Property(p => p.TicketId).IsRequired();
             comment.Property(p => p.UserId).IsRequired();
-
+            
 
         }
 

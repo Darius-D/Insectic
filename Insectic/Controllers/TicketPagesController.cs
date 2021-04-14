@@ -9,7 +9,7 @@ namespace Insectic.Controllers
     public class TicketPagesController : Controller
     {
         [HttpGet]
-        public IActionResult CreateTicket()
+        public IActionResult Create()
         {
             ViewBag.Image = "https://source.unsplash.com/random";
             return View();
@@ -25,21 +25,30 @@ namespace Insectic.Controllers
             ViewBag.Image = "https://source.unsplash.com/random";
             TicketApiRepository.NewTicket(ticket);
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Dashboard", "Home");
         }
 
 
         [HttpGet]
-        public async Task<IActionResult> ViewTickets()
+        public async Task<IActionResult> Index()
         {
-            return View(TicketApiRepository.GetAllTickets());
+            return View( TicketApiRepository.GetAllTickets());
         }
 
         [HttpPost]
         public IActionResult Filter(string sortBy)
         {
             var tickets = TicketLogic.FilterCollection(sortBy);
-            return View("ViewTickets", tickets);
+            return View("Index", tickets);
         }
+
+        //[HttpGet]
+        //public async Task<IActionResult> Edit(int id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //}
     }
 }
