@@ -1,11 +1,22 @@
-﻿.Main-Content {
+﻿body {
+    background: url(/img/corkboard.jpg);
+}
+.Main-Content {
+    background: url(/img/corkboard.jpg);
+}
+.innerContainer {
     padding: 10px;
     overflow: auto;
     grid-area: Main-Content;
+    height: 98%;
+    overflow: auto;
+    margin: 10px;
+    background: url(/img/paper.png) center center/cover no-repeat;
+    border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 5px;
+    gap: 0 5px;
     grid-template-areas:
         "SideContent SideContent SideContent SideContent Box1 Box1 Box1 Box1 Box2 Box2 Box2 Box2"
         "SideContent SideContent SideContent SideContent Box1 Box1 Box1 Box1 Box2 Box2 Box2 Box2"
@@ -23,32 +34,92 @@
 /* Side Table Styling */
 .SideContent {
     grid-area: SideContent;
+    display: grid;
+    grid-template-rows: .1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "NoteBody";
     background: rgb(115, 171, 224);
     box-shadow: 10px 5px 5px rgb(10, 90, 166,.4);
     border-radius: 20px;
     margin-top: 5px;
     text-align: center;
+    overflow: auto;
+    position: relative;
 }
 
-    .SideContent table {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-.tableHeader {
+.noteHeaderContainer {
+    grid-area: header;
     display: grid;
+    position: relative;
+    position: sticky;
+    top: 0;
+    background: rgb(82, 155, 224);
     grid-template-columns: .25fr 1fr .25fr;
     grid-template-areas: "left middle right";
 }
 
-    .tableHeader h2 {
-        grid-area: middle;
-        padding-top: 3px;
-    }
+.noteBodyContainer {
+    grid-area: NoteBody;
+    overflow: auto;
+}
 
-    .tableHeader span {
-        padding: 5px;
-    }
+.noteHeaderContainer h2 {
+    grid-area: middle;
+    padding-top: 3px;
+}
+
+.noteHeaderContainer span {
+    padding: 5px;
+}
+
+.noteBox {
+    display: grid;
+    grid-template-columns: .1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "titleLeftCol titleRightCol"
+        "noteLeftCol noteRightCol";
+    margin: 0 auto;
+    border: 1px solid black;
+    width: 95%;
+    min-height: fit-content;
+    max-height: 100px;
+    margin-top: 1.5px;
+    margin-bottom: 8px;
+    overflow: auto;
+}
+
+.noteTitle {
+    padding-left: 5px;
+    grid-area: titleLeftCol;
+}
+
+.noteBody {
+    padding-left: 5px;
+    grid-area: noteLeftCol;
+}
+
+.noteTitleText {
+    padding-left: 5px;
+    text-align: left;
+    grid-area: titleRightCol;
+}
+
+.noteBodyText {
+    padding-left: 5px;
+    text-align: left;
+    grid-area: noteRightCol;
+}
+
+.noteBox:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.noteBox:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
 /* Main box styling */
 .Box {
     margin: 5px;
@@ -62,7 +133,7 @@
 
     .box::-webkit-scrollbar {
         width: 10px;
-        background: blue;
+        background: rgb(52, 52, 245);
     }
 
 .top-box {
@@ -73,6 +144,7 @@
 }
 
 .bottom-box {
+    overflow: auto;
     flex: 3;
     display: flex;
     justify-content: center;
@@ -84,7 +156,7 @@ th, td {
     text-align: center;
 }
 
-table {
+.bottom-box table {
     border-collapse: collapse;
     padding: 5px;
     border: black solid 2px;
@@ -119,6 +191,67 @@ table {
     /* ReSharper disable once UnexpectedValue */
     box-shadow: 10px 8px 5px rgb(65, 110, 23, .9);
 }
+/*Scrollbar styling */
+.noteBodyContainer::-webkit-scrollbar {
+    width: 15px;
+}
+
+.noteBodyContainer::-webkit-scrollbar-thumb {
+    background-color: lightblue;
+    border-radius: 100px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+}
+
+.noteBodyContainer::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.innerContainer::-webkit-scrollbar {
+    width: 15px;
+}
+
+.innerContainer::-webkit-scrollbar-thumb {
+    background-color: lightblue;
+    border-radius: 100px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+}
+
+.innerContainer::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.noteBox::-webkit-scrollbar {
+    width: 15px;
+}
+
+.noteBox::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 100px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+}
+
+.noteBox::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.bottom-box::-webkit-scrollbar {
+    width: 15px;
+}
+
+.bottom-box::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 100px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+}
+.bottom-box::-webkit-scrollbar-corner{
+    background: transparent;
+}
+
+.bottom-box::-webkit-scrollbar-track {
+    background-color: transparent;
+}
 /*  Scrollin gtext styling */
 .FreeSpace {
     grid-area: FreeSpace;
@@ -133,12 +266,6 @@ table {
     align-items: center;
     margin: 5px;
 }
-/*Scroll bar styling*/
-
-.Box::-webkit-scrollbar {
-    width: 10px;
-}
-
 
 
 /* Media Queries */
@@ -148,7 +275,7 @@ table {
         display: none;
     }
 
-    .Main-Content {
+    .innerContainer {
         grid-template-areas:
             "Box1 Box1 Box1 Box1 Box1 Box1 Box2 Box2 Box2 Box2 Box2 Box2"
             "Box1 Box1 Box1 Box1 Box1 Box1 Box2 Box2 Box2 Box2 Box2 Box2"
@@ -174,7 +301,7 @@ table {
         display: none;
     }
 
-    .Main-Content {
+    .innerContainer {
         display: flex;
         flex-direction: column;
     }

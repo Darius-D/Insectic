@@ -103,7 +103,7 @@ a {
     background: url(/img/corkboard.jpg);
     max-width: 270px;
     display: grid;
-    grid-template-columns: repeat (1fr );
+    grid-template-columns: auto;
 }
 
 .sideNav-links {
@@ -111,7 +111,6 @@ a {
     display: grid;
     gap: 20px;
     height: 100%;
-    /* background:rgb(13, 150, 136);  */
     background: url(/img/corkboard.jpg) center center cover/no-repeat;
     z-index: 99;
     overflow: auto;
@@ -159,10 +158,7 @@ a {
 
 .Footer {
     grid-area: Footer;
-    /* background: #064D5c; */
     background: #41575c;
-    /* background: rgb(56, 56, 56); */
-    /* background: url(/img/corkboard.jpg); */
     text-align: center;
 }
 

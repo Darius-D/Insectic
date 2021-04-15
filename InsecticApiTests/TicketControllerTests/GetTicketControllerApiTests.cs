@@ -73,8 +73,6 @@ namespace InsecticApiTests.TicketControllerTests
            Assert.Equal("Ticket with Id of 123 does not exist", returnString.Value);
         }
 
-
-
         [Fact]
         public void GetTicketByUserId_WithNonExistingUser_ReturnsNotFoundResults()
         {
@@ -127,6 +125,7 @@ namespace InsecticApiTests.TicketControllerTests
             Assert.Equal(tickets,returnValue.Value);
         }
 
+        //error with controller reading ticket
         //[Fact]
         //public void AddTicket_ValidTicket_CreatedStatusCode()
         //{
