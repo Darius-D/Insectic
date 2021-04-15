@@ -7,6 +7,8 @@ namespace InsecticDatabaseApi.InsecticData
 {
     public class CommentData : ICommentData
     {
+
+
         private readonly InsecticContext _insecticContext;
 
         public CommentData(InsecticContext insecticContext)
@@ -14,10 +16,12 @@ namespace InsecticDatabaseApi.InsecticData
             _insecticContext = insecticContext;
         }
 
+
         public List<Comment> GetAllComments()
         {
             return _insecticContext.TicketComments.ToList();
         }
+
 
         public List<Comment> GetAllCommentsForTicket(int id)
         {
@@ -34,12 +38,12 @@ namespace InsecticDatabaseApi.InsecticData
             return ticketComments;
         }
 
+
         public Comment GetComment(int id)
         {
             return _insecticContext.TicketComments.Find(id);
         }
 
-        
         public List<Comment> GetUserComments(string userId)
         {
             var userComments = GetAllComments().Where(c => c.UserId == userId).ToList();
@@ -56,8 +60,6 @@ namespace InsecticDatabaseApi.InsecticData
         }
 
 
-
-
         public void DeleteComment(int commentId)
         {
             var existingComment = _insecticContext.TicketComments.Find(commentId);
@@ -71,8 +73,6 @@ namespace InsecticDatabaseApi.InsecticData
             
         }
 
-
-        
 
         public void EditComment(Comment comment)
         {

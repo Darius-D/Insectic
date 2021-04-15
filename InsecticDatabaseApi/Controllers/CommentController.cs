@@ -82,7 +82,6 @@ namespace InsecticDatabaseApi.Controllers
             }
 
             return NotFound($"Comment with Id of {id} does not exist");
-
         }
 
         [HttpPatch]
@@ -104,6 +103,5 @@ namespace InsecticDatabaseApi.Controllers
             return NotFound($"Comment with Guid of {comment.CommentId} does not exist");
         }
 
-        
     }
 }
