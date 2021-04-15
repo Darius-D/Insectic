@@ -1,4 +1,4 @@
-#   <p align="center" > :stop_sign: Caution: This is a WIP prototype as of April 12, 2021. :stop_sign: </p>
+#   <p align="center" > :stop_sign: Caution: This is a WIP prototype as of April 14, 2021. :stop_sign: </p>
   <p align="center" > Anything below is subject to change</p>
   <p align="center" ><a href=https://github.com/Darius-D/Insectic/blob/main/README.md> :pushpin: Return to Main Page :pushpin: </a></p>
   <p align="center" ><a href=https://github.com/Darius-D/Insectic/tree/master> :pushpin: Go to see my code :pushpin: </a></p>
@@ -6,7 +6,7 @@
   
   ##    <p align="center" > Curent working features written in HTML </p>
 
-<p> This is currently my dashboard AKA my CorkBoard. As of April 12th, 2021 I have removed the footer sticky notes. I did this to allow for easier media queries while also reducing clutter. I have now started to implement version 3 which took carried with it some features from V2. V3 has a better page layout reducing the need for media queries by 70%. This has allowed for better accessibility and mobile views. All colors are simply for ease of constructing and editing my code. Color pallet will be applied once all back end work is completed. See V2 and V3 below along with the mobile views. </p>
+<p> This is currently my dashboard AKA my CorkBoard. As of April 12th, 2021 I have removed the footer sticky notes. I did this to allow for easier media queries while also reducing clutter. I have now started to implement version 3.1 which took carried with it some features from V2. V3 has a better page layout reducing the need for media queries by 70%. This has allowed for better accessibility and mobile views. All colors are simply for ease of constructing and editing my code. Color pallet will be applied once all back end work is completed. See V2 and V3 below along with the mobile views. </p>
   
  ###  <p align="center"> Major Changes </p> 
  |Date|Change Made|Current status|
