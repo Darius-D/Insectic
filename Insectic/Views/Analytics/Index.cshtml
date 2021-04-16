@@ -1,0 +1,293 @@
+﻿@using Insectic.InsecticData
+@using Insectic.BLL
+
+@{
+    Layout = "_Layout";
+}
+
+@section LinkOne
+{
+    <!-- GoogleGraph for pie chart -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Func Error',    @TicketLogic.CountTicketCategory().Item1],
+                ['Logic Error',      @TicketLogic.CountTicketCategory().Item2],
+                ['Syntactic Error',  @TicketLogic.CountTicketCategory().Item3],
+                ['Error Handling',@TicketLogic.CountTicketCategory().Item4],
+                ['Calc Error',    @TicketLogic.CountTicketCategory().Item5],
+                ['Security Defect',   @TicketLogic.CountTicketCategory().Item6],
+                ['Patch Error',    @TicketLogic.CountTicketCategory().Item7]
+            ]);
+
+            var options = {
+                title: 'Current Ticket Ratios',
+                backgroundColor: '#333',
+                legendTextStyle: { color: '#f4f4f4' },
+                is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
+    </script>
+    <!-- Google Graph for Bar Charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Day', 'Tickets Created', 'Tickets Closed'],
+                ['M', 7, 2],
+                ['T', 14, 14],
+                ['W', 30, 18],
+                ['Th', 7, 30],
+                ['F', 43, 67],
+                ['S', 55, 48],
+                ['Su', 32, 34]
+            ]);
+
+            var options = {
+                chart: {
+                    title: 'Team Performance',
+                    subtitle: 'Ticket Weekly Statistics',
+                    legendTextStyle: { color: '#f4f4f4' },
+                    background: '#333',
+                },
+                chartArea:{
+                    backgroundColor:{
+                        fill:  '#333',
+                        fillOpacity: .9
+                    },
+                },
+                backgroundColor: {
+                    fill: '#333',
+                    fillOpacity: 0.8
+                },
+                annotations:{
+                    textStyle:{
+                        color: 'white',
+                    },
+                },
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+    </script>
+    <!-- Google Graph for pie chart -->
+}
+@section LinkTwo
+{
+    <link rel="stylesheet" href="/css/Analytics.css">
+}
+@section Title
+{
+    Analytics
+}
+<section class="analyticsContainer">
+
+    <div class="AnalyticsPageHeader">
+        <h1>Analytics</h1>
+    </div>
+
+
+    <div class="ticketCountContainer container">
+        <div class="ContainerHeader">
+            <h2>Priority Counts</h2>
+        </div>
+        <div class="ticketCount block">
+            <div class="dataBox">
+                <h3>Urgent Tickets:</h3>
+                <div class="circle">@TicketLogic.CountTicketPriority().Item1</div>
+            </div>
+            <div class="dataBox">
+                <h3>High Tickets:</h3>
+                <div class="circle">@TicketLogic.CountTicketPriority().Item2</div>
+            </div>
+            <div class="dataBox">
+                <h3>Routine Tickets:</h3>
+                <div class="circle">@TicketLogic.CountTicketPriority().Item3</div>
+            </div>
+            <div class="dataBox">
+                <h3>Low Tickets:</h3>
+                <div class="circle">@TicketLogic.CountTicketPriority().Item4</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ticketStatusContainer container">
+        <div class="ContainerHeader">
+            <h2>Ticket Status Statistics</h2>
+        </div>
+        <div class="topRow block">
+            <div class="dataBox">
+                <h4>Functionality Errors:</h4>
+                <div class="square">@TicketLogic.CountTicketCategory().Item1</div>
+            </div>
+            <div class="dataBox">
+                <h4>Logic Errors:</h4>
+                <div class="square">@TicketLogic.CountTicketCategory().Item2</div>
+            </div>
+            <div class="dataBox">
+                <h4>Syntactic Errors:</h4>
+                <div class="square">@TicketLogic.CountTicketCategory().Item3</div>
+            </div>
+            <div class="dataBox">
+                <h4>Error Handlings:</h4>
+                <div class="square">@TicketLogic.CountTicketCategory().Item4</div>
+            </div>
+            <div class="dataBox">
+                <h4>Calculation Errors:</h4>
+                <div class="square">@TicketLogic.CountTicketCategory().Item5</div>
+            </div>
+            <div class="dataBox">
+                <h4>Security Defects:</h4>
+                <div class="square">@TicketLogic.CountTicketCategory().Item6</div>
+            </div>
+            <div class="dataBox">
+                <h4>Patch Errors:</h4>
+                <div class="square">@TicketLogic.CountTicketCategory().Item7</div>
+            </div>
+
+        </div>
+        <div class="bottomRow block">
+            <div class="dataBox">
+                Total Opened Tickets
+                <div class="square">@TicketLogic.CountTicketStatus().Item1</div>
+            </div>
+            <div class="dataBox">
+                Awtg Assignment
+                <div class="square">@TicketLogic.CountTicketStatus().Item2</div>
+            </div>
+            <div class="dataBox">
+                Assigned
+                <div class="square">@TicketLogic.CountTicketStatus().Item5</div>
+            </div>
+            <div class="dataBox">
+                In Progress
+                <div class="square">@TicketLogic.CountTicketStatus().Item3</div>
+            </div>
+            <div class="dataBox">
+                Pending Review
+                <div class="square">@TicketLogic.CountTicketStatus().Item4</div>
+            </div>
+            <div class="dataBox">
+                Closed
+                <div class="square">@TicketLogic.CountTicketStatus().Item6</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ticketDataContainer container">
+
+        <div class="ContainerHeader">
+            <h2>Due Date Tables</h2>
+        </div>
+
+
+        <div class="DatatableOne tableBox">
+            
+                <table>
+                    <thead>
+                    <tr>
+                        <th class="tableHead" colspan=4>Past Due Tickets</th>
+                    </tr>
+
+                    <tr>
+                        <th>Ticket Id</th>
+                        <th>Ticket Description</th>
+                        <th>Ticket Status</th>
+                        <th>Ticket Due Date</th>
+                    </tr>
+
+                    </thead>
+                    <tbody>
+                    @foreach (var x in @TicketLogic.GetPastDueTickets())
+                    {
+                        <tr>
+                            <td>@x.TicketId</td>
+                            <td>@x.Priority</td>
+                            <td>@x.Status</td>
+                            <td>@x.DueDate</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            
+        </div>
+        <div class="DataTableTwo tableBox">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="tableHead" colspan=3>Filter By Date</th>
+                    </tr>
+                    <tr>
+                        <th>Ticket Id</th>
+                        <th>Ticket Description</th>
+                        <th>Ticket Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>Ticket ID</td>
+                        <td class="scroll-cell">Ticket Description</td>
+                        <td>Ticket Status</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="ticketGraphsContainer container">
+
+        <div class="ContainerHeader">
+            <h2>Ticket Graphs</h2>
+        </div>
+
+
+
+        <div class="pieChart">
+            <div id="piechart_3d"></div>
+        </div>
+
+        <div class="lineGraph">
+            <div id="columnchart_material"></div>
+        </div>
+    </div>
+    <div class="employeeDataContainer container">
+
+        <div class="ContainerHeader">
+            <h2>Employees</h2>
+        </div>
+
+        <div class="RoleCount block">
+
+            <div class="dataBox">
+                <h3>Admins:</h3>
+                <div class="circle">1</div>
+            </div>
+            <div class="dataBox">
+                <h3>Team Leads:</h3>
+                <div class="circle">1</div>
+            </div>
+            <div class="dataBox">
+                <h3>Team:</h3>
+                <div class="circle">1</div>
+            </div>
+        </div>
+
+    </div>
+
+</section>

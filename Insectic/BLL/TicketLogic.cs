@@ -10,7 +10,7 @@ namespace Insectic.BLL
     public static class TicketLogic
     {
 
-        public static Tuple<int, int, int, int> CountTicketCategory()
+        public static Tuple<int, int, int, int> CountTicketPriority()
         {
             var tickets = TicketApiRepository.GetAllTickets();
 
@@ -42,9 +42,94 @@ namespace Insectic.BLL
                 }
             }
 
-            return new Tuple<int, int, int, int>(urgentTicketCount, highTicketCount, routineTicketCount, lowTicketCount);
+            return new Tuple<int, int, int, int>(urgentTicketCount, highTicketCount, routineTicketCount,
+                lowTicketCount);
         }
 
+        public static Tuple<int, int, int, int, int, int, int> CountTicketCategory()
+        {
+            var tickets = TicketApiRepository.GetAllTickets();
+
+            var FuncError = 0;
+            var LogicError = 0;
+            var SyntacticError = 0;
+            var ErrorHandling = 0;
+            var calcError = 0;
+            var secDefect = 0;
+            var patchError = 0;
+
+            foreach (var t in tickets.Where(x => x.Status!.ToLower() != "closed"))
+            {
+                switch (t.Category!.ToLower())
+                {
+                    case "functionality error":
+                        FuncError++;
+                        break;
+                    case "logic error":
+                        LogicError++;
+                        break;
+                    case "syntactic error":
+                        SyntacticError++;
+                        break;
+                    case "error handling error":
+                        ErrorHandling++;
+                        break;
+                    case "calculation error":
+                        calcError++;
+                        break;
+                    case "patch error":
+                        patchError++;
+                        break;
+                    case "security defect":
+                        secDefect++;
+                        break;
+                }
+            }
+
+            return new Tuple<int, int, int, int, int, int, int>(FuncError, LogicError, SyntacticError, ErrorHandling,
+                calcError, secDefect, patchError);
+        }
+
+        public static Tuple<int, int, int, int, int,int> CountTicketStatus()
+        {
+            var tickets = TicketApiRepository.GetAllTickets();
+
+            var awtgAssignment = 0;
+            var inProgress = 0;
+            var pendingReview = 0;
+            var closed = 0;
+            var assigned = 0;
+
+
+
+            foreach (var t in tickets)
+            {
+                switch (t.Status.ToLower())
+                {
+
+                    case "closed":
+                        closed++;
+                        break;
+                    case "in progress":
+                        inProgress++;
+                        break;
+                    case "awtg assignment":
+                        awtgAssignment++;
+                        break;
+                    case "assigned":
+                        assigned++;
+                        break;
+                    case "pending closure":
+                        pendingReview++;
+                        break;
+
+                }
+            }
+
+            var openTickets = awtgAssignment + inProgress + pendingReview + closed + assigned;
+            return new Tuple<int, int, int, int, int, int>(openTickets, awtgAssignment, inProgress, pendingReview, assigned,closed);
+        }
+    
 
         public static string TruncateAtWord(TicketJsonModel ticket, int charLength = 20)
         {
@@ -84,6 +169,11 @@ namespace Insectic.BLL
             return TicketApiRepository.GetAllTickets().OrderBy(f => f.TicketId);
         }
 
+        public static List<TicketJsonModel> GetPastDueTickets()
+        {
+            var list = TicketApiRepository.GetAllTickets();
+            return list.Where(t => t.DueDate < DateTime.Now).ToList();
+        }
     }
 
 }
