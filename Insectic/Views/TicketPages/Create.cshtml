@@ -48,7 +48,7 @@
             <label asp-for="Status">CurrentStatus:</label>
             <select name="Status" id="Status">
                 <option value="0">Current Status</option>
-                <option value="Awtg Assignment">Awtg Assignment</option>
+                <option value="Awtg Assignment">Awtg. Assignment</option>
                 <option value="In Progress">In Progress</option>
                 <option value="Pending Closure">Pending Closure</option>
                 <option value="Closed">Close</option>
@@ -69,8 +69,8 @@
                     }
                 }
             </select>
-            <label asp-for="UserId">Assign to:</label>
-            <select name="UserId" id="UserId">
+            <label asp-for="AssignedUser">Assign to:</label>
+            <select name="AssignedUser" id="AssignedUser">
                 <option value="null">Select User</option>
                 @{
 

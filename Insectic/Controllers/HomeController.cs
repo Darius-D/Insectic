@@ -1,36 +1,29 @@
 ﻿using Insectic.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
+using System.Dynamic;
 using System.Threading.Tasks;
+using Insectic.BLL;
+using Insectic.InsecticData;
+
 
 namespace Insectic.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ITicketRepository _ticketRepository;
+        public HomeController(ILogger<HomeController> logger, ITicketRepository repository)
         {
             _logger = logger;
+            _ticketRepository = repository;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Dashboard()
         {
-            ViewBag.Name = "Darius";
-            ViewBag.Image = "https://source.unsplash.com/random";
-
-            return View();
-        }
-        public IActionResult Dashboard()
-        {
-            ViewBag.Name = "Darius";
-            ViewBag.Image = "https://source.unsplash.com/random";
-
-            return View();
+            
+            return View(await _ticketRepository.GetAllTicketsAsync()!);
         }
         public IActionResult Privacy()
         {

@@ -3,14 +3,14 @@
 @model Insectic.Models.TicketJsonModel
 
 @{
-    Layout = "_InsecticDefault";
+    Layout = "_Layout";
 
 }
 
 
 @section LinkOne
 {
-    <link rel="stylesheet" href="/css/CreateTickets.css">
+    <link rel="stylesheet" href="/css/CreateTicket.css">
 }
 
 @section Title
@@ -20,7 +20,7 @@
 <img class="tac4"src="/img/pngegg(1).png" alt=""> 
 <form method="post">
     <div>
-        <h1>Create A Ticket</h1>
+        <h1>Edit Ticket</h1>
     </div>
     <div class="first-row row">
         <div>
@@ -53,7 +53,7 @@
             <label asp-for="Status">CurrentStatus:</label>
             <select name="Status" id="Status">
                 <option value="0">Current Status</option>
-                <option value="Awtg Assignment">Awtg Assignment</option>
+                <option value="Awtg Assignment">Awtg. Assignment</option>
                 <option value="In Progress">In Progress</option>
                 <option value="Pending Closure">Pending Closure</option>
                 <option value="Closed">Close</option>

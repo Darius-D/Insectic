@@ -11,23 +11,20 @@ namespace Insectic.InsecticData
 {
     public interface ITicketRepository
     {
-            
-            public  List<TicketJsonModel> GetAllTickets();
-            
 
-            public  TicketJsonModel GetTicket(string guid);
-           
-
-            public  void NewTicket(TicketJsonModel ticket);
-            
-
-            public  void EditTicket(int ticketId, TicketJsonModel ticket);
-            
-            
-
-            public  void DeleteTicket(int ticketId);
-
+        public  Task<List<TicketJsonModel>>? GetAllTicketsAsync();
         
+        public  Task<TicketJsonModel?> GetTicket(string guid);
+        
+        public  void NewTicket(TicketJsonModel ticket);
+        
+
+        public   void EditTicket(int ticketId, TicketJsonModel ticket);
+        
+        public  void DeleteTicket(int ticketId);
+
+
+
     }
 
 

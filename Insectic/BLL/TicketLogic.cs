@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Insectic.InsecticData;
 using Insectic.Models;
 
@@ -9,18 +8,18 @@ namespace Insectic.BLL
 {
     public static class TicketLogic
     {
-
+        private static readonly ITicketRepository Repository = new TicketApiRepository();
         public static Tuple<int, int, int, int> CountTicketPriority()
         {
-            var tickets = TicketApiRepository.GetAllTickets();
+            var tickets = Repository.GetAllTicketsAsync()!.Result.ToList();
 
             var urgentTicketCount = 0;
             var highTicketCount = 0;
             var routineTicketCount = 0;
             var lowTicketCount = 0;
 
-            if (tickets != null)
-            {
+            
+            
                 foreach (var t in tickets.Where(x => x.Status!.ToLower() != "closed"))
                 {
 
@@ -40,7 +39,7 @@ namespace Insectic.BLL
                             break;
                     }
                 }
-            }
+            
 
             return new Tuple<int, int, int, int>(urgentTicketCount, highTicketCount, routineTicketCount,
                 lowTicketCount);
@@ -48,12 +47,12 @@ namespace Insectic.BLL
 
         public static Tuple<int, int, int, int, int, int, int> CountTicketCategory()
         {
-            var tickets = TicketApiRepository.GetAllTickets();
+            var tickets = Repository.GetAllTicketsAsync()!.Result.ToList();
 
-            var FuncError = 0;
-            var LogicError = 0;
-            var SyntacticError = 0;
-            var ErrorHandling = 0;
+            var funcError = 0;
+            var logicError = 0;
+            var syntacticError = 0;
+            var errorHandling = 0;
             var calcError = 0;
             var secDefect = 0;
             var patchError = 0;
@@ -63,16 +62,16 @@ namespace Insectic.BLL
                 switch (t.Category!.ToLower())
                 {
                     case "functionality error":
-                        FuncError++;
+                        funcError++;
                         break;
                     case "logic error":
-                        LogicError++;
+                        logicError++;
                         break;
                     case "syntactic error":
-                        SyntacticError++;
+                        syntacticError++;
                         break;
                     case "error handling error":
-                        ErrorHandling++;
+                        errorHandling++;
                         break;
                     case "calculation error":
                         calcError++;
@@ -86,13 +85,13 @@ namespace Insectic.BLL
                 }
             }
 
-            return new Tuple<int, int, int, int, int, int, int>(FuncError, LogicError, SyntacticError, ErrorHandling,
+            return new Tuple<int, int, int, int, int, int, int>(funcError, logicError, syntacticError, errorHandling,
                 calcError, secDefect, patchError);
         }
 
         public static Tuple<int, int, int, int, int,int> CountTicketStatus()
         {
-            var tickets = TicketApiRepository.GetAllTickets();
+            var tickets = Repository.GetAllTicketsAsync()!.Result.ToList();
 
             var awtgAssignment = 0;
             var inProgress = 0;
@@ -104,7 +103,7 @@ namespace Insectic.BLL
 
             foreach (var t in tickets)
             {
-                switch (t.Status.ToLower())
+                switch (t.Status!.ToLower())
                 {
 
                     case "closed":
@@ -143,35 +142,35 @@ namespace Insectic.BLL
         {
             if (sortBy == "UserId")
             {
-                return TicketApiRepository.GetAllTickets().OrderBy(f => f.UserId);
+                return Repository.GetAllTicketsAsync()!.Result.ToList().OrderBy(f => f.UserId);
             }
             if (sortBy == "IncidentDate")
             {
-                return TicketApiRepository.GetAllTickets().OrderBy(f => f.IncidentDate);
+                return Repository.GetAllTicketsAsync()!.Result.ToList().OrderBy(f => f.IncidentDate);
             }
             if (sortBy == "DueDate")
             {
-                return TicketApiRepository.GetAllTickets().OrderBy(f => f.DueDate);
+                return Repository.GetAllTicketsAsync()!.Result.ToList().OrderBy(f => f.DueDate);
             }
             if (sortBy == "Status")
             {
-                return TicketApiRepository.GetAllTickets().OrderBy(f => f.Status);
+                return Repository.GetAllTicketsAsync()!.Result.ToList().OrderBy(f => f.Status);
             }
             if (sortBy == "Category")
             {
-                return TicketApiRepository.GetAllTickets().OrderBy(f => f.Category);
+                return Repository.GetAllTicketsAsync()!.Result.ToList().OrderBy(f => f.Category);
             }
             if (sortBy == "Priority")
             {
-                return TicketApiRepository.GetAllTickets().OrderBy(f => f.Priority);
+                return Repository.GetAllTicketsAsync()!.Result.ToList().OrderBy(f => f.Priority);
             }
            
-            return TicketApiRepository.GetAllTickets().OrderBy(f => f.TicketId);
+            return Repository.GetAllTicketsAsync()!.Result.ToList().OrderBy(f => f.TicketId);
         }
 
         public static List<TicketJsonModel> GetPastDueTickets()
         {
-            var list = TicketApiRepository.GetAllTickets();
+            var list = Repository.GetAllTicketsAsync()!.Result.ToList();
             return list.Where(t => t.DueDate < DateTime.Now).ToList();
         }
     }

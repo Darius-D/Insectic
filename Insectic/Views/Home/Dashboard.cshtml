@@ -1,9 +1,13 @@
-﻿@using System.Collections
+﻿@model IEnumerable<Insectic.Models.TicketJsonModel>
 @using Insectic.BLL
 @using Insectic.InsecticData
+@using System.Collections
 
 @{
     Layout = "_Layout";
+}
+@{
+    IEnumerable <TicketJsonModel> logic = (IEnumerable<TicketJsonModel>) ViewData["Logic"];
 }
 @section LinkOne{
     <link rel="stylesheet" href="/css/Dash.css">
@@ -12,236 +16,236 @@
 @section Title
 {CorkBoard}
 <div class="innerContainer">
-<div class="SideContent">
-    <div class="noteHeaderContainer">
-        <h2>Notes</h2>
-        <a href="#"><span class="material-icons">add_circle_outline</span></a>
+    <div class="SideContent">
+        <div class="noteHeaderContainer">
+            <h2>Notes</h2>
+            <a href="#"><span class="material-icons">add_circle_outline</span></a>
+        </div>
+
+        <div class="noteBodyContainer">
+            <div class="noteBox">
+                <h4 class="noteTitle">Title: </h4>
+                <h4 class="noteBody">Note:</h4>
+                <h4 class="noteTitleText">test Note</h4>
+                <h4 class=noteBodyText>Make Delete Note method with anchror tag!</h4>
+            </div>
+            <div class="noteBox">
+                <h4 class="noteTitle">Title: </h4>
+                <h4 class="noteBody">Note:</h4>
+                <h4 class="noteTitleText">test Note</h4>
+                <h4 class=noteBodyText>Make Note Model!</h4>
+            </div>
+            <div class="noteBox">
+                <h4 class="noteTitle">Title: </h4>
+                <h4 class="noteBody">Note:</h4>
+                <h4 class="noteTitleText">test Note</h4>
+                <h4 class=noteBodyText>Make + button create new note</h4>
+            </div>
+            <div class="noteBox">
+                <h4 class="noteTitle">Title: </h4>
+                <h4 class="noteBody">Note:</h4>
+                <h4 class="noteTitleText">test Note</h4>
+                <h4 class=noteBodyText>Inject view data of IEnumerable of type Notes to make this note list</h4>
+            </div>
+            <div class="noteBox">
+                <h4 class="noteTitle">Title: </h4>
+                <h4 class="noteBody">Note:</h4>
+                <h4 class="noteTitleText">test Note</h4>
+                <h4 class=noteBodyText>Test Note</h4>
+            </div>
+            <div class="noteBox">
+                <h4 class="noteTitle">Title: </h4>
+                <h4 class="noteBody">Note:</h4>
+                <h4 class="noteTitleText">test Note</h4>
+                <h4 class=noteBodyText>Test Note</h4>
+            </div>
+            <div class="noteBox">
+                <h4 class="noteTitle">Title: </h4>
+                <h4 class="noteBody">Note:</h4>
+                <h4 class="noteTitleText">test Note</h4>
+                <h4 class=noteBodyText>Test Note</h4>
+            </div>
+            <div class="noteBox">
+                <h4 class="noteTitle">Title: </h4>
+                <h4 class="noteBody">Note:</h4>
+                <h4 class="noteTitleText">test Note</h4>
+                <h4 class=noteBodyText>Test Note</h4>
+            </div>
+            <div class="noteBox">
+                <h4 class="noteTitle">Title: </h4>
+                <h4 class="noteBody">Note:</h4>
+                <h4 class="noteTitleText">test Note</h4>
+                <h4 class=noteBodyText>Test Note</h4>
+            </div>
+            <div class="noteBox">
+                <h4 class="noteTitle">Title: </h4>
+                <h4 class="noteBody">Note:</h4>
+                <h4 class="noteTitleText">test Note</h4>
+                <h4 class=noteBodyText>Test Note</h4>
+            </div>
+            <div class="noteBox">
+                <h4 class="noteTitle">Title: </h4>
+                <h4 class="noteBody">Note:</h4>
+                <h4 class="noteTitleText">test Note</h4>
+                <h4 class=noteBodyText>Test Note</h4>
+            </div>
+            <div class="noteBox">
+                <h4 class="noteTitle">Title: </h4>
+                <h4 class="noteBody">Note:</h4>
+                <h4 class="noteTitleText">test Note</h4>
+                <h4 class=noteBodyText>Test Note</h4>
+            </div>
+
+
+
+
+        </div>
     </div>
 
-    <div class="noteBodyContainer">
-        <div class="noteBox">
-            <h4 class="noteTitle">Title: </h4>
-            <h4 class="noteBody">Note:</h4>
-            <h4 class="noteTitleText">test Note</h4>
-            <h4 class=noteBodyText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias error temporibus magni eius iusto sequi quam necessitatibus reprehenderit libero, praesentium repudiandae rerum nemo veniam neque qui. Doloribus adipisci voluptas quo!</h4>
-        </div>
-        <div class="noteBox">
-            <h4 class="noteTitle">Title: </h4>
-            <h4 class="noteBody">Note:</h4>
-            <h4 class="noteTitleText">test Note</h4>
-            <h4 class=noteBodyText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias error temporibus magni eius iusto sequi quam necessitatibus reprehenderit libero, praesentium repudiandae rerum nemo veniam neque qui. Doloribus adipisci voluptas quo!</h4>
-        </div>
-        <div class="noteBox">
-            <h4 class="noteTitle">Title: </h4>
-            <h4 class="noteBody">Note:</h4>
-            <h4 class="noteTitleText">test Note</h4>
-            <h4 class=noteBodyText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias error temporibus magni eius iusto sequi quam necessitatibus reprehenderit libero, praesentium repudiandae rerum nemo veniam neque qui. Doloribus adipisci voluptas quo!</h4>
-        </div>
-        <div class="noteBox">
-            <h4 class="noteTitle">Title: </h4>
-            <h4 class="noteBody">Note:</h4>
-            <h4 class="noteTitleText">test Note</h4>
-            <h4 class=noteBodyText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias error temporibus magni eius iusto sequi quam necessitatibus reprehenderit libero, praesentium repudiandae rerum nemo veniam neque qui. Doloribus adipisci voluptas quo!</h4>
-        </div>
-        <div class="noteBox">
-            <h4 class="noteTitle">Title: </h4>
-            <h4 class="noteBody">Note:</h4>
-            <h4 class="noteTitleText">test Note</h4>
-            <h4 class=noteBodyText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias error temporibus magni eius iusto sequi quam necessitatibus reprehenderit libero, praesentium repudiandae rerum nemo veniam neque qui. Doloribus adipisci voluptas quo!</h4>
-        </div>
-        <div class="noteBox">
-            <h4 class="noteTitle">Title: </h4>
-            <h4 class="noteBody">Note:</h4>
-            <h4 class="noteTitleText">test Note</h4>
-            <h4 class=noteBodyText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias error temporibus magni eius iusto sequi quam necessitatibus reprehenderit libero, praesentium repudiandae rerum nemo veniam neque qui. Doloribus adipisci voluptas quo!</h4>
-        </div>
-        <div class="noteBox">
-            <h4 class="noteTitle">Title: </h4>
-            <h4 class="noteBody">Note:</h4>
-            <h4 class="noteTitleText">test Note</h4>
-            <h4 class=noteBodyText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias error temporibus magni eius iusto sequi quam necessitatibus reprehenderit libero, praesentium repudiandae rerum nemo veniam neque qui. Doloribus adipisci voluptas quo!</h4>
-        </div>
-        <div class="noteBox">
-            <h4 class="noteTitle">Title: </h4>
-            <h4 class="noteBody">Note:</h4>
-            <h4 class="noteTitleText">test Note</h4>
-            <h4 class=noteBodyText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias error temporibus magni eius iusto sequi quam necessitatibus reprehenderit libero, praesentium repudiandae rerum nemo veniam neque qui. Doloribus adipisci voluptas quo!</h4>
-        </div>
-        <div class="noteBox">
-            <h4 class="noteTitle">Title: </h4>
-            <h4 class="noteBody">Note:</h4>
-            <h4 class="noteTitleText">test Note</h4>
-            <h4 class=noteBodyText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias error temporibus magni eius iusto sequi quam necessitatibus reprehenderit libero, praesentium repudiandae rerum nemo veniam neque qui. Doloribus adipisci voluptas quo!</h4>
-        </div>
-        <div class="noteBox">
-            <h4 class="noteTitle">Title: </h4>
-            <h4 class="noteBody">Note:</h4>
-            <h4 class="noteTitleText">test Note</h4>
-            <h4 class=noteBodyText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias error temporibus magni eius iusto sequi quam necessitatibus reprehenderit libero, praesentium repudiandae rerum nemo veniam neque qui. Doloribus adipisci voluptas quo!</h4>
-        </div>
-        <div class="noteBox">
-            <h4 class="noteTitle">Title: </h4>
-            <h4 class="noteBody">Note:</h4>
-            <h4 class="noteTitleText">test Note</h4>
-            <h4 class=noteBodyText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias error temporibus magni eius iusto sequi quam necessitatibus reprehenderit libero, praesentium repudiandae rerum nemo veniam neque qui. Doloribus adipisci voluptas quo!</h4>
-        </div>
-        <div class="noteBox">
-            <h4 class="noteTitle">Title: </h4>
-            <h4 class="noteBody">Note:</h4>
-            <h4 class="noteTitleText">test Note</h4>
-            <h4 class=noteBodyText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias error temporibus magni eius iusto sequi quam necessitatibus reprehenderit libero, praesentium repudiandae rerum nemo veniam neque qui. Doloribus adipisci voluptas quo!</h4>
+    <div class="Box Box1">
+
+        <div class="top-box">
+            <h1>@TicketLogic.CountTicketPriority().Item1</h1>
+            <h2>Urgent</h2>
         </div>
 
+        <div class="bottom-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan=3>Urgent Priority Tickets</th>
+                    </tr>
+                    <tr>
+                        <th>Ticket Id</th>
+                        <th>Ticket Description</th>
+                        <th>Ticket Status</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-
+                    @foreach (var ticket in @Model.Where(x => x.Priority.ToLower().Equals("urgent") && x.Status.ToLower() != "closed"))
+                    {
+                        <tr>
+                            <td>@ticket.TicketId</td>
+                            <td>@TicketLogic.TruncateAtWord(ticket, 50)</td>
+                            <td>@ticket.Status</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
 
     </div>
-</div>
 
-<div class="Box Box1">
+    <div class="Box Box2">
 
-    <div class="top-box">
-        <h1>@TicketLogic.CountTicketPriority().Item1</h1>
-        <h2>Urgent</h2>
+        <div class="top-box">
+            <h1>@TicketLogic.CountTicketPriority().Item3</h1>
+            <h2>Routine</h2>
+        </div>
+
+        <div class="bottom-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan=3>Routine Priority Tickets</th>
+                    </tr>
+                    <tr>
+                        <th>Ticket Id</th>
+                        <th>Ticket Description</th>
+                        <th>Ticket Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var ticket in @Model.Where(x => x.Priority.ToLower().Equals("routine") && x.Status.ToLower() != "closed"))
+                    {
+
+                        <tr>
+                            <td>@ticket.TicketId</td>
+                            <td>@ticket.TicketDescription</td>
+                            <td>@ticket.Status</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 
-    <div class="bottom-box">
-        <table>
-            <thead>
-                <tr>
-                    <th colspan=3>Urgent Priority Tickets</th>
-                </tr>
-                <tr>
-                    <th>Ticket Id</th>
-                    <th>Ticket Description</th>
-                    <th>Ticket Status</th>
-                </tr>
-            </thead>
-            <tbody>
+    <div class="example1 FreeSpace">
 
-            @foreach (var ticket in TicketApiRepository.GetAllTickets().Where(x=> x.Priority.ToLower().Equals("urgent") && x.Status.ToLower() != "closed"))
-            {
-                <tr>
-                    <td>@ticket.TicketId</td>
-                    <td><a asp-action="#">@TicketLogic.TruncateAtWord(ticket,50)</a></td>
-                    <td>@ticket.Status</td>
-                </tr>
-            }
-            </tbody>
-        </table>
     </div>
 
-</div>
 
-<div class="Box Box2">
+    <div class="Box Box3">
 
-    <div class="top-box">
-        <h1>@TicketLogic.CountTicketPriority().Item3</h1>
-        <h2>Routine</h2>
+        <div class="top-box">
+            <h1>@TicketLogic.CountTicketPriority().Item4</h1>
+            <h2>Low</h2>
+        </div>
+
+        <div class="bottom-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan=3>Low Priority Tickets</th>
+                    </tr>
+                    <tr>
+                        <th>Ticket Id</th>
+                        <th>Ticket Description</th>
+                        <th>Ticket Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ticket in @Model.Where(x => x.Priority.ToLower().Equals("low") && x.Status.ToLower() != "closed"))
+                    {
+                        Console.WriteLine(ticket.TicketId);
+                        <tr>
+                            <td>@ticket.TicketId</td>
+                            <td>@ticket.TicketDescription</td>
+                            <td>@ticket.Status</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 
-    <div class="bottom-box">
-        <table>
-            <thead>
-                <tr>
-                    <th colspan=3>Routine Priority Tickets</th>
-                </tr>
-                <tr>
-                    <th>Ticket Id</th>
-                    <th>Ticket Description</th>
-                    <th>Ticket Status</th>
-                </tr>
-            </thead>
-            <tbody>
+    <div class="Box Box4">
 
-            @foreach (var ticket in TicketApiRepository.GetAllTickets().Where(x=> x.Priority.ToLower().Equals("routine") && x.Status.ToLower() != "closed"))
-            {
-                        
-                <tr>
-                    <td>@ticket.TicketId</td>
-                    <td>@ticket.TicketDescription</td>
-                    <td>@ticket.Status</td>
-                </tr>
-            }
-            </tbody>
-        </table>
+        <div class="top-box">
+            <h1>@TicketLogic.CountTicketPriority().Item2</h1>
+            <h2>High</h2>
+        </div>
+
+        <div class="bottom-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan=3>High Priority Tickets</th>
+                    </tr>
+                    <tr>
+                        <th>Ticket Id</th>
+                        <th>Ticket Description</th>
+                        <th>Ticket Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var ticket in @Model.Where(x => x.Priority.ToLower().Equals("high") && x.Status.ToLower() != "closed"))
+                    {
+                        <tr>
+                            <td>@ticket.TicketId</td>
+                            <td>@TicketLogic.TruncateAtWord(ticket, 50)</td>
+                            <td>@ticket.Status</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
     </div>
-</div>
-
-<div class="example1 FreeSpace">
-
-</div>
-
-
-<div class="Box Box3">
-
-    <div class="top-box">
-        <h1>@TicketLogic.CountTicketPriority().Item4</h1>
-        <h2>Low</h2>
+    <div class="StickyNotes">
+        <marquee behavior="scroll" direction="left" scrollamount="2">My scrolling analytics text</marquee>
     </div>
-
-    <div class="bottom-box">
-        <table>
-            <thead>
-                <tr>
-                    <th colspan=3>Low Priority Tickets</th>
-                </tr>
-                <tr>
-                    <th>Ticket Id</th>
-                    <th>Ticket Description</th>
-                    <th>Ticket Status</th>
-                </tr>
-            </thead>
-            <tbody>
-            @foreach (var ticket in TicketApiRepository.GetAllTickets().Where(x=> x.Priority.ToLower().Equals("low") && x.Status.ToLower() != "closed"))
-            {
-                Console.WriteLine(ticket.TicketId);
-                <tr>
-                    <td>@ticket.TicketId</td>
-                    <td>@ticket.TicketDescription</td>
-                    <td>@ticket.Status</td>
-                </tr>
-            }
-            </tbody>
-        </table>
-    </div>
-</div>
-
-<div class="Box Box4">
-
-    <div class="top-box">
-        <h1>@TicketLogic.CountTicketPriority().Item2</h1>
-        <h2>High</h2>
-    </div>
-
-    <div class="bottom-box">
-        <table>
-            <thead>
-                <tr>
-                    <th colspan=3>High Priority Tickets</th>
-                </tr>
-                <tr>
-                    <th>Ticket Id</th>
-                    <th>Ticket Description</th>
-                    <th>Ticket Status</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            @foreach (var ticket in TicketApiRepository.GetAllTickets().Where(x=> x.Priority.ToLower().Equals("high") && x.Status.ToLower() != "closed"))
-            {
-                <tr>
-                    <td>@ticket.TicketId</td>
-                    <td><a asp-action="#">@TicketLogic.TruncateAtWord(ticket,50)</a></td>
-                    <td>@ticket.Status</td>
-                </tr>
-            }
-            </tbody>
-        </table>
-    </div>
-
-</div>
-<div class="StickyNotes">
-    <marquee behavior="scroll" direction="left" scrollamount="2">My scrolling analytics text</marquee>
-</div>
 </div>

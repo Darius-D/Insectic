@@ -8,31 +8,37 @@ namespace Insectic.Controllers
 {
     public class TicketPagesController : Controller
     {
+        private readonly ITicketRepository _ticketRepository;
+        
+        public TicketPagesController(ITicketRepository repository)
+        {
+            _ticketRepository = repository;
+        }
+
+        
+
         [HttpGet]
         public IActionResult Create()
         {
-            ViewBag.Image = "https://source.unsplash.com/random";
+            
             return View();
         }
 
 
         [HttpPost]
-        public IActionResult CreateTicket(TicketJsonModel ticket)
+        public IActionResult Create(TicketJsonModel ticket)
         {
-            //Local machine storage
-            //TicketRepository.AddTicket(ticket);
+            
+            _ticketRepository.NewTicket(ticket);
 
-            ViewBag.Image = "https://source.unsplash.com/random";
-            TicketApiRepository.NewTicket(ticket);
-
-            return RedirectToAction("Dashboard", "Home");
+            return  RedirectToAction("Dashboard", "Home");
         }
 
 
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return View( TicketApiRepository.GetAllTickets());
+            return View(await _ticketRepository.GetAllTicketsAsync()!);
         }
 
         [HttpPost]
@@ -42,13 +48,6 @@ namespace Insectic.Controllers
             return View("Index", tickets);
         }
 
-        //[HttpGet]
-        //public async Task<IActionResult> Edit(int id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //}
+       
     }
 }
