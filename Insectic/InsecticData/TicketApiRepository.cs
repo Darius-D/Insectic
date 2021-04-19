@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Insectic.Models;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RestSharp;
 
@@ -23,9 +24,9 @@ namespace Insectic.InsecticData
 
         }
 
-        public async Task<TicketJsonModel?> GetTicket(string guid)
+        public async Task<TicketJsonModel?> GetTicket(int ticketId)
         {
-            var response = await Client.GetStringAsync("https://localhost:44342/api/Ticket/"+ guid);
+            var response = await Client.GetStringAsync("https://localhost:44342/api/Ticket/"+ ticketId.ToString());
 
             TicketJsonModel? ticket = JsonConvert.DeserializeObject<TicketJsonModel>(response);
 
@@ -49,14 +50,11 @@ namespace Insectic.InsecticData
 
 
             var httpContent = new StringContent(values, Encoding.UTF8, "application/json");
-            var httpResponse = await Client.PatchAsync("https://localhost:44342/api/Ticket", httpContent);
+            var httpResponse = await Client.PatchAsync("https://localhost:44342/api/Ticket" + ticketId, httpContent);
             var responseContent = await httpResponse.Content.ReadAsStringAsync();
-            
+
             return;
 
-
-
-            //sharpRest
 
             //var client = new RestClient("https://localhost:44342/api/Ticket/" + ticketId);
             //client.Timeout = -1;
@@ -64,7 +62,7 @@ namespace Insectic.InsecticData
             //request.AddHeader("Content-Type", "application/json");
             //request.AddParameter("application/json", $"{{\r\n    \"category\": \"{ticket.Category}\",\r\n    \"priority\": \"{ticket.Priority}\",\r\n    \"status\": \"{ticket.Status}\",\r\n    \"ticketDescription\": \"{ticket.TicketDescription}\"\r\n}}", ParameterType.RequestBody);
             //IRestResponse response = client.Execute(request);
-            
+
         }
 
         public  void DeleteTicket(int ticketId)

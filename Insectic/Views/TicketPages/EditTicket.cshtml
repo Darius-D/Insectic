@@ -16,17 +16,24 @@
 @section Title
 {Edit Ticket}
 
-<img class="tac3"src="/img/pngegg.png" alt="">
-<img class="tac4"src="/img/pngegg(1).png" alt=""> 
-<form method="post">
-    <div>
-        <h1>Edit Ticket</h1>
+<div class="FullTop">
+    <h1>Edit Ticket From</h1>
+</div>
+
+<form method="post" class="TicketForm">
+    <div class=headerTop>
+        <h1>Edit Ticket @Model.TicketId</h1>
     </div>
-    <div class="first-row row">
+    <div class="Category">
+        <div>
+            <label asp-for="TicketId">Ticket:</label>
+            <input asp-for="TicketId" value="@Model.TicketId" readonly/>
+
+        </div>
         <div>
             <label asp-for="Category">BugCategory:</label>
             <select name="Category" id="Category">
-                <option value="0">Bug Category</option>
+                <option value="@Model.Category">@Model.Category</option>
                 <option value="Functionality Error">Functionality Error</option>
                 <option value="Logic Error">Logic Error</option>
                 <option value="Syntactic Error">Syntactic Error</option>
@@ -35,10 +42,10 @@
                 <option value="Security Defect">Security Defect</option>
             </select>
         </div>
-        <div class=custom-button>
+        <div>
             <label asp-for="Priority">Priority:</label>
             <select name="Priority" id="Priority">
-                <option value="0">Priority</option>
+                <option value="@Model.Priority">@Model.Priority</option>
                 <option value="Urgent">Urgent</option>
                 <option value="High">High</option>
                 <option value="Routine">Routine</option>
@@ -46,13 +53,9 @@
             </select>
         </div>
         <div>
-            <label asp-for="IncidentDate">Incident Date:</label>
-            <input type="datetime-local" id="IncidentDate" name="IncidentDate">
-        </div>
-        <div class="custom-button">
             <label asp-for="Status">CurrentStatus:</label>
             <select name="Status" id="Status">
-                <option value="0">Current Status</option>
+                <option value="@Model.Status">@Model.Status</option>
                 <option value="Awtg Assignment">Awtg. Assignment</option>
                 <option value="In Progress">In Progress</option>
                 <option value="Pending Closure">Pending Closure</option>
@@ -61,11 +64,22 @@
         </div>
     </div>
 
-    <div class="second-row row">
-        <div class="custom-button">
+    <div class="Users">
+        <div class="dropdown">
             <label asp-for="UserId">Submitting User:</label>
             <select name="UserId" id="UserId">
-            <option value="null">Select User</option>
+                <option value="@Model.UserId">@Model.UserId</option>
+                @{
+
+                    foreach (var user in UserApiRepository.GetAllUsers())
+                    {
+                        <option value="@user.UserId">@user.FirstName @user.LastName</option>
+                    }
+                }
+            </select>
+            <label asp-for="AssignedUser">Assign to:</label>
+            <select name="AssignedUser" id="AssignedUser">
+                <option value="@Model.AssignedUser">@Model.AssignedUser</option>
                 @{
 
                     foreach (var user in UserApiRepository.GetAllUsers())
@@ -75,6 +89,13 @@
                 }
             </select>
         </div>
+    </div>
+    <div class="Dates">
+
+        <div>
+            <label asp-for="IncidentDate">Incident Date:</label>
+            <input type="text" id="IncidentDate" name="IncidentDate" value="@Model.IncidentDate" readonly/>
+        </div>
 
         <div>
             <label asp-for="DueDate">Due Date</label>
@@ -82,11 +103,14 @@
         </div>
 
     </div>
-    <div class="third-row">
-        <label asp-for="TicketDescription">Ticket Description:</label>
-        <textarea name="TicketDescription" cols="105" rows="10"
-                  placeholder="Please enter detailed account of current issue and actions already taken."></textarea>
-        <input type="submit" class="submit-button" value="Submit Ticket">
+    <div class="TBL">
+        <label asp-for="TicketDescription">Ticket Description</label>
     </div>
+    <div class="TextB">
+        <textarea class="textinput" name="TicketDescription" cols="105" rows="10"
+                  placeholder="Please enter detailed account of current issue and actions already taken.">@Model.TicketDescription</textarea>
+        <input type="submit" class="submit-button" value="Confirm Ticket Changes">
+    </div>
+
 
 </form>

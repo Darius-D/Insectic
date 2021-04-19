@@ -48,6 +48,19 @@ namespace Insectic.Controllers
             return View("Index", tickets);
         }
 
-       
+        [HttpGet]
+        [Route("ticketPages/EditTicket/{ticketId}")]
+        public async Task<IActionResult> EditTicket(int ticketId)
+        {
+            var ticket = await _ticketRepository.GetTicket(ticketId);
+            return View(ticket);
+        }
+
+        [HttpPost]
+        public IActionResult EditTicket(TicketJsonModel ticket)
+        {
+            _ticketRepository.EditTicket(ticket.TicketId,ticket);
+            return RedirectToAction("Dashboard", "Home");
+        }
     }
 }

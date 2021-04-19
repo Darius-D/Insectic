@@ -26,6 +26,7 @@ namespace InsecticDatabaseApi.Controllers
         public IActionResult GetTicket(int id)
         {
             var ticket = _ticketData.GetTicket(id);
+
             if (ticket == null)
             {
                 return NotFound($"Ticket with Id of {id} does not exist");

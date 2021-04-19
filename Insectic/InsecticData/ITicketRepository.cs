@@ -14,7 +14,7 @@ namespace Insectic.InsecticData
 
         public  Task<List<TicketJsonModel>>? GetAllTicketsAsync();
         
-        public  Task<TicketJsonModel?> GetTicket(string guid);
+        public  Task<TicketJsonModel?> GetTicket(int ticketId);
         
         public  void NewTicket(TicketJsonModel ticket);
         

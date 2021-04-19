@@ -67,21 +67,21 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>@Html.DisplayFor(modelItem => item.TicketId)</td>
-                    <td>@Html.DisplayFor(modelItem => item.Priority)</td>
-                    <td>@Html.DisplayFor(modelItem => item.Category)</td>
-                    <td>@Html.DisplayFor(modelItem => item.Status)</td>
-                    <td>@Html.DisplayFor(modelItem => item.IncidentDate)</td>
-                    <td>@Html.DisplayFor(modelItem => item.DueDate)</td>
-                    <td style="text-align: center;">
-                        <div class="scroll-cell">@Html.DisplayFor(modelItem => item.TicketDescription)</div>
-                    </td>
-                    <td>@Html.DisplayFor(modelItem => item.TicketId)</td>
-                    <td>@Html.DisplayFor(modelItem => item.TicketId)</td>
-                    <td><a href="#">View</a></td>
-                    <td><a href="#">Edit</a></td>
-                </tr>
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.TicketId)</td>
+                <td>@Html.DisplayFor(modelItem => item.Priority)</td>
+                <td>@Html.DisplayFor(modelItem => item.Category)</td>
+                <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                <td>@Html.DisplayFor(modelItem => item.IncidentDate)</td>
+                <td>@Html.DisplayFor(modelItem => item.DueDate)</td>
+                <td style="text-align: center;">
+                    <div class="scroll-cell">@Html.DisplayFor(modelItem => item.TicketDescription)</div>
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.TicketId)</td>
+                <td>@Html.DisplayFor(modelItem => item.TicketId)</td>
+                <td><a href="#">View</a></td>
+                <td><a asp-action="EditTicket" asp-route-ticketId="@item.TicketId">Edit</a></td>
+            </tr>
             }
         </tbody>
     </table>
