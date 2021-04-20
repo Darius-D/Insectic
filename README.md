@@ -126,7 +126,7 @@ Then populate drop by selection to select groups available and update user’s g
 | <a name="300">300     |      [3](#3)        | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
 | <a name="301">301     |       [3.1](#31)      | Upon creation of a ticket verify ticket values are unique utilizing test method |:green_circle:|TBD|
 | <a name="302">302     |      [3.2](#32)       | Upon creation of a ticket verify all required fields are assigned values in the ticket table on server|:green_circle:|TBD|
-|<a name="400"> 400     |      [4](#4)         | Inspect the Analytics web page ensuring data values are correct and match data in the server |:red_circle:|TBD|
+|<a name="400"> 400     |      [4](#4)         | Inspect the Analytics web page ensuring data values are correct and match data in the server |:green_circle:|TBD|
 | <a name="401">401     |      [4.1](#41)       | Utilizing a department Manager assigned user account, verify detailed analytics page displayes correct information  |:red_circle:|TBD|
 | <a name="402">402     |       [4.2](#42)      | Utilizing a Team Leader assigned user account, verify detailed analytics page displayes correct information  |:red_circle:|TBD|
 | <a name="403">403     |       [4.3](#43)      | Utilizing a Team Member assigned user account, verify detailed analytics page displayes correct information  |:red_circle:|TBD|
