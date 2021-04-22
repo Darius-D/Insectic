@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using FluentAssertions.Extensions;
 using Insectic.InsecticData;
 using Insectic.Models;
 
@@ -172,6 +173,116 @@ namespace Insectic.BLL
         {
             var list = Repository.GetAllTicketsAsync()!.Result.ToList();
             return list.Where(t => t.DueDate < DateTime.Now).ToList();
+        }
+
+        public static Tuple<int, int, int, int, int, int, int> GetTicketsCreatedByWeekday()
+        {
+            var date = DateTime.Now.Date;
+            var ticketList = Repository.GetAllTicketsAsync();
+            var i = date.DayOfWeek;
+            var test = (int)i;
+            var beginningOfWeek = date.Subtract(TimeSpan.FromDays(test));
+            var endOfWeek = beginningOfWeek.AddDays(6);
+
+            var thisWeeksList =ticketList.Result.Where(c => c.IncidentDate.Date >= beginningOfWeek && c.IncidentDate.Date <= endOfWeek);
+            
+
+            var sunday = 0;
+            var monday = 0;
+            var tuesday = 0;
+            var wednesday = 0;
+            var thursday = 0;
+            var friday = 0;
+            var saturday = 0;
+
+            foreach (var ticket in thisWeeksList)
+            {
+
+                switch (ticket.IncidentDate.DayOfWeek)
+                {
+                    case DayOfWeek.Sunday:
+                        sunday++;
+                        break;
+                    case DayOfWeek.Monday:
+                        monday++;
+                        break;
+                    case DayOfWeek.Tuesday:
+                        tuesday++;
+                        break;
+                    case DayOfWeek.Wednesday:
+                        wednesday++;
+                        break;
+                    case DayOfWeek.Thursday:
+                        thursday++;
+                        break;
+                    case DayOfWeek.Friday:
+                        friday++;
+                        break;
+                    case DayOfWeek.Saturday:
+                        saturday++;
+                        break;
+                }
+
+            }
+
+
+
+            return new Tuple<int, int, int, int, int, int, int>(sunday, monday, tuesday, wednesday, thursday, friday, saturday);
+        }
+
+        //todo: Create time log for when tickets are closed. 
+        public static Tuple<int, int, int, int, int, int, int> GetTicketsClosedByWeekday()
+        {
+            var date = DateTime.Now.Date;
+            var ticketList = Repository.GetAllTicketsAsync();
+            var i = date.DayOfWeek;
+            var test = (int)i;
+            var beginningOfWeek = date.Subtract(TimeSpan.FromDays(test));
+            var endOfWeek = beginningOfWeek.AddDays(6);
+
+            var thisWeeksList = ticketList.Result.Where(c => c.IncidentDate.Date >= beginningOfWeek && c.IncidentDate.Date <= endOfWeek && c.Status.Equals("Closed"));
+
+
+            var sunday = 0;
+            var monday = 0;
+            var tuesday = 0;
+            var wednesday = 0;
+            var thursday = 0;
+            var friday = 0;
+            var saturday = 0;
+
+            foreach (var ticket in thisWeeksList)
+            {
+
+                switch (ticket.IncidentDate.DayOfWeek)
+                {
+                    case DayOfWeek.Sunday:
+                        sunday++;
+                        break;
+                    case DayOfWeek.Monday:
+                        monday++;
+                        break;
+                    case DayOfWeek.Tuesday:
+                        tuesday++;
+                        break;
+                    case DayOfWeek.Wednesday:
+                        wednesday++;
+                        break;
+                    case DayOfWeek.Thursday:
+                        thursday++;
+                        break;
+                    case DayOfWeek.Friday:
+                        friday++;
+                        break;
+                    case DayOfWeek.Saturday:
+                        saturday++;
+                        break;
+                }
+
+            }
+
+            
+            return new Tuple<int, int, int, int, int, int, int>(sunday, monday, tuesday, wednesday, thursday, friday, saturday);
         }
     }
 

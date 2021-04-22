@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Insectic.Models;
@@ -13,6 +14,7 @@ namespace Insectic.InsecticData
     public class TicketApiRepository : ITicketRepository
     {
         private static readonly HttpClient Client = new HttpClient();
+
 
         public async Task<List<TicketJsonModel>>? GetAllTicketsAsync()
         {
@@ -43,25 +45,16 @@ namespace Insectic.InsecticData
 
         }
         
-        public  async void EditTicket(int ticketId, TicketJsonModel ticket)
+        public void EditTicket(TicketJsonModel ticket)
         {
 
-            var values = JsonConvert.SerializeObject(ticket);
-
-
-            var httpContent = new StringContent(values, Encoding.UTF8, "application/json");
-            var httpResponse = await Client.PatchAsync("https://localhost:44342/api/Ticket" + ticketId, httpContent);
-            var responseContent = await httpResponse.Content.ReadAsStringAsync();
-
-            return;
-
-
-            //var client = new RestClient("https://localhost:44342/api/Ticket/" + ticketId);
-            //client.Timeout = -1;
-            //var request = new RestRequest(Method.PATCH);
-            //request.AddHeader("Content-Type", "application/json");
-            //request.AddParameter("application/json", $"{{\r\n    \"category\": \"{ticket.Category}\",\r\n    \"priority\": \"{ticket.Priority}\",\r\n    \"status\": \"{ticket.Status}\",\r\n    \"ticketDescription\": \"{ticket.TicketDescription}\"\r\n}}", ParameterType.RequestBody);
-            //IRestResponse response = client.Execute(request);
+            var client = new RestClient("https://localhost:44342/api/Ticket/" + ticket.TicketId);
+            client.Timeout = -1;
+            var request = new RestRequest(Method.PATCH);
+            request.AddHeader("Content-Type", "application/json");
+            request.AddParameter("application/json",JsonConvert.SerializeObject(ticket), ParameterType.RequestBody);
+            IRestResponse response = client.Execute(request);
+            Console.WriteLine(response.Content);
 
         }
 

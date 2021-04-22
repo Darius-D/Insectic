@@ -6,7 +6,6 @@ namespace InsecticDatabaseApi.Models
     public class Ticket
     {
         
-        
         public int TicketId { get; set; }
         
         public string Category { get; set; }

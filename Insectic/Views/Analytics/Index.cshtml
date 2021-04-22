@@ -44,13 +44,13 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Day', 'Tickets Created', 'Tickets Closed'],
-                ['M', 7, 2],
-                ['T', 14, 14],
-                ['W', 30, 18],
-                ['Th', 7, 30],
-                ['F', 43, 67],
-                ['S', 55, 48],
-                ['Su', 32, 34]
+                ['M', @TicketLogic.GetTicketsCreatedByWeekday().Item2,   2],
+                ['T', @TicketLogic.GetTicketsCreatedByWeekday().Item3, 14],
+                ['W', @TicketLogic.GetTicketsCreatedByWeekday().Item4, 18],
+                ['Th', @TicketLogic.GetTicketsCreatedByWeekday().Item5, 30],
+                ['F', @TicketLogic.GetTicketsCreatedByWeekday().Item6, 67],
+                ['S', @TicketLogic.GetTicketsCreatedByWeekday().Item7, 48],
+                ['Su', @TicketLogic.GetTicketsCreatedByWeekday().Item1, 34]
             ]);
 
             var options = {
@@ -190,7 +190,8 @@
     <div class="ticketDataContainer container">
 
         <div class="ContainerHeader">
-            <h2>Due Date Tables</h2>
+            <h2>Due Date Tables: </h2>
+            <h3>Today's Date: @DateTime.Now.ToShortDateString()</h3>
         </div>
 
 

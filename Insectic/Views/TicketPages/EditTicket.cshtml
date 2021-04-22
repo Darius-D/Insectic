@@ -66,17 +66,8 @@
 
     <div class="Users">
         <div class="dropdown">
-            <label asp-for="UserId">Submitting User:</label>
-            <select name="UserId" id="UserId">
-                <option value="@Model.UserId">@Model.UserId</option>
-                @{
-
-                    foreach (var user in UserApiRepository.GetAllUsers())
-                    {
-                        <option value="@user.UserId">@user.FirstName @user.LastName</option>
-                    }
-                }
-            </select>
+            <label asp-for="UserId">Originating User:</label>
+            <input asp-for="UserId" value="@Model.UserId" readonly />
             <label asp-for="AssignedUser">Assign to:</label>
             <select name="AssignedUser" id="AssignedUser">
                 <option value="@Model.AssignedUser">@Model.AssignedUser</option>
@@ -108,7 +99,7 @@
     </div>
     <div class="TextB">
         <textarea class="textinput" name="TicketDescription" cols="105" rows="10"
-                  placeholder="Please enter detailed account of current issue and actions already taken.">@Model.TicketDescription</textarea>
+                  placeholder="Please enter detailed account of current issue and actions already taken." readonly>@Model.TicketDescription</textarea>
         <input type="submit" class="submit-button" value="Confirm Ticket Changes">
     </div>
 

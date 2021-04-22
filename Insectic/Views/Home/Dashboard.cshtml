@@ -19,9 +19,29 @@
     <div class="SideContent">
         <div class="noteHeaderContainer">
             <h2>Notes</h2>
-            <a href="#"><span class="material-icons">add_circle_outline</span></a>
+            <a href="#" class="openButton" onclick="openForm()"><span class="material-icons">add_circle_outline</span></a>
         </div>
-
+        @* JavaScript note form *@
+        <div class="openBtn">
+        </div>
+        <div class="loginPopup">
+            <div class="formPopup" id="popupForm">
+                <form method="POST" class="formContainer">
+                    <h2>Create New Note</h2>
+                    <label for="noteTitle">
+                        <strong>Title:</strong>
+                    </label>
+                    <input type="text" id="NoteTitle" placeholder="Note Title" name="NoteTitle" required>
+                    <label for="NoteBody">
+                        <strong>Note Body:</strong>
+                    </label>
+                    <input type="text" id="NoteBody" placeholder="Note contents" name="NoteBody" required>
+                    <button type="submit" class="btn">Add Note</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+        </div>
+        @* Javascript notes form *@
         <div class="noteBodyContainer">
             <div class="noteBox">
                 <h4 class="noteTitle">Title: </h4>
@@ -29,75 +49,6 @@
                 <h4 class="noteTitleText">test Note</h4>
                 <h4 class=noteBodyText>Make Delete Note method with anchror tag!</h4>
             </div>
-            <div class="noteBox">
-                <h4 class="noteTitle">Title: </h4>
-                <h4 class="noteBody">Note:</h4>
-                <h4 class="noteTitleText">test Note</h4>
-                <h4 class=noteBodyText>Make Note Model!</h4>
-            </div>
-            <div class="noteBox">
-                <h4 class="noteTitle">Title: </h4>
-                <h4 class="noteBody">Note:</h4>
-                <h4 class="noteTitleText">test Note</h4>
-                <h4 class=noteBodyText>Make + button create new note</h4>
-            </div>
-            <div class="noteBox">
-                <h4 class="noteTitle">Title: </h4>
-                <h4 class="noteBody">Note:</h4>
-                <h4 class="noteTitleText">test Note</h4>
-                <h4 class=noteBodyText>Inject view data of IEnumerable of type Notes to make this note list</h4>
-            </div>
-            <div class="noteBox">
-                <h4 class="noteTitle">Title: </h4>
-                <h4 class="noteBody">Note:</h4>
-                <h4 class="noteTitleText">test Note</h4>
-                <h4 class=noteBodyText>Test Note</h4>
-            </div>
-            <div class="noteBox">
-                <h4 class="noteTitle">Title: </h4>
-                <h4 class="noteBody">Note:</h4>
-                <h4 class="noteTitleText">test Note</h4>
-                <h4 class=noteBodyText>Test Note</h4>
-            </div>
-            <div class="noteBox">
-                <h4 class="noteTitle">Title: </h4>
-                <h4 class="noteBody">Note:</h4>
-                <h4 class="noteTitleText">test Note</h4>
-                <h4 class=noteBodyText>Test Note</h4>
-            </div>
-            <div class="noteBox">
-                <h4 class="noteTitle">Title: </h4>
-                <h4 class="noteBody">Note:</h4>
-                <h4 class="noteTitleText">test Note</h4>
-                <h4 class=noteBodyText>Test Note</h4>
-            </div>
-            <div class="noteBox">
-                <h4 class="noteTitle">Title: </h4>
-                <h4 class="noteBody">Note:</h4>
-                <h4 class="noteTitleText">test Note</h4>
-                <h4 class=noteBodyText>Test Note</h4>
-            </div>
-            <div class="noteBox">
-                <h4 class="noteTitle">Title: </h4>
-                <h4 class="noteBody">Note:</h4>
-                <h4 class="noteTitleText">test Note</h4>
-                <h4 class=noteBodyText>Test Note</h4>
-            </div>
-            <div class="noteBox">
-                <h4 class="noteTitle">Title: </h4>
-                <h4 class="noteBody">Note:</h4>
-                <h4 class="noteTitleText">test Note</h4>
-                <h4 class=noteBodyText>Test Note</h4>
-            </div>
-            <div class="noteBox">
-                <h4 class="noteTitle">Title: </h4>
-                <h4 class="noteBody">Note:</h4>
-                <h4 class="noteTitleText">test Note</h4>
-                <h4 class=noteBodyText>Test Note</h4>
-            </div>
-
-
-
 
         </div>
     </div>
@@ -246,6 +197,6 @@
 
     </div>
     <div class="StickyNotes">
-        <marquee behavior="scroll" direction="left" scrollamount="2">My scrolling analytics text</marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="2">Your Assigned Tickets:#  Tickets due with in 7 days: #  Tickets past Due: # </marquee>
     </div>
 </div>

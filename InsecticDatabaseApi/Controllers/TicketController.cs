@@ -13,7 +13,7 @@ namespace InsecticDatabaseApi.Controllers
         {
             _ticketData = ticket;
         }
-
+        //https://port4332/api/Ticket
         [HttpGet]
         [Route("api/[controller]")]
         public IActionResult GetAllTickets()

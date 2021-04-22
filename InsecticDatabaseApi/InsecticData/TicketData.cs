@@ -52,8 +52,6 @@ namespace InsecticDatabaseApi.InsecticData
         {
             var existingTicket = _insecticContext.Tickets.Find(ticket.TicketId);
 
-            
-            
                 existingTicket.TicketId = ticket.TicketId;
                 existingTicket.TicketDescription = ticket.TicketDescription;
                 existingTicket.Category = ticket.Category;

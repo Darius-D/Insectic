@@ -50,7 +50,7 @@
                 <th class="sticky-top ">
                     <form asp-controller="TicketPages" asp-action="Filter" method="post" class="d-inline-block">
                         <select name="sortBy" id="sortBy" class="d-inline-block">
-                            <option value="0">Filter by</option>
+                            <option value="0">SortBy by</option>
                             <option value="TicketId">Ticket ID</option>
                             <option value="Priority">Priority</option>
                             <option value="Category">Category</option>
@@ -77,8 +77,8 @@
                 <td style="text-align: center;">
                     <div class="scroll-cell">@Html.DisplayFor(modelItem => item.TicketDescription)</div>
                 </td>
-                <td>@Html.DisplayFor(modelItem => item.TicketId)</td>
-                <td>@Html.DisplayFor(modelItem => item.TicketId)</td>
+                <td>@Html.DisplayFor(modelItem => item.UserId)</td>
+                <td>@Html.DisplayFor(modelItem => item.AssignedUser)</td>
                 <td><a href="#">View</a></td>
                 <td><a asp-action="EditTicket" asp-route-ticketId="@item.TicketId">Edit</a></td>
             </tr>

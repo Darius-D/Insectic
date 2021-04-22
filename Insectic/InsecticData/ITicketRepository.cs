@@ -19,7 +19,7 @@ namespace Insectic.InsecticData
         public  void NewTicket(TicketJsonModel ticket);
         
 
-        public   void EditTicket(int ticketId, TicketJsonModel ticket);
+        public   void EditTicket(TicketJsonModel ticket);
         
         public  void DeleteTicket(int ticketId);
 

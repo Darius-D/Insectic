@@ -59,7 +59,7 @@ namespace Insectic.Controllers
         [HttpPost]
         public IActionResult EditTicket(TicketJsonModel ticket)
         {
-            _ticketRepository.EditTicket(ticket.TicketId,ticket);
+            _ticketRepository.EditTicket(ticket);
             return RedirectToAction("Dashboard", "Home");
         }
     }

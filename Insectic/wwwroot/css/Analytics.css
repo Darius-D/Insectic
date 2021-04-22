@@ -4,7 +4,7 @@ body {
 }
 
 .analyticsContainer {
-    background: #333;
+    background: white;
     grid-area: Main-Content;
     height: 100%;
     width: 100%;
@@ -34,6 +34,7 @@ body {
     grid-template-columns: repeat(auto, 1fr);
     grid-template-rows: 30px 1fr;
     border-bottom: black solid 3px;
+    padding-bottom: 10px;
 }
 
 .ticketCount {
@@ -41,7 +42,7 @@ body {
 }
 
     .ticketCount .dataBox {
-        background: linear-gradient(45deg, blue, green);
+        background: #f3f3f3;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -103,7 +104,7 @@ body {
 }
 
 .ticketStatusContainer .dataBox {
-    background: linear-gradient(45deg, blue, green);
+    background: #f3f3f3;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -262,9 +263,10 @@ tbody tr {
     grid-template-areas:
         "topD topD"
         "leftD rightD";
-    max-width: 90%;
+    
     padding: 10px;
-    border-bottom: 3px solid #000;
+    border-bottom: 3px #000 dashed;
+    
 }
 
     .ticketGraphsContainer .ContainerHeader {
@@ -289,7 +291,7 @@ tbody tr {
 
 .RoleCount {
     display: grid;
-    grid-template-columns: repeat (auto, 1fr);
+    grid-template-columns: auto;
     grid-template-rows: auto;
 }
 
