@@ -1,4 +1,4 @@
-#   <p align="center" > :stop_sign: Caution: This is a WIP prototype as of April 14, 2021. :stop_sign: </p>
+#   <p align="center" > :stop_sign: Caution: This is a WIP prototype as of April 26, 2021. :stop_sign: </p>
   <p align="center" > Anything below is subject to change</p>
   <p align="center" ><a href=https://github.com/Darius-D/Insectic/blob/main/README.md> :pushpin: Return to Main Page :pushpin: </a></p>
   <p align="center" ><a href=https://github.com/Darius-D/Insectic/tree/master> :pushpin: Go to see my code :pushpin: </a></p>
@@ -21,6 +21,7 @@
  |April 9, 2021| Created a view All Tickets page. This page has the ability to sort  the tickets with a filter and counter coming in the near future. |implemented|
  |April 10, 2021| Created a completely new layout. This layout is 100% mobile friendly and easier to insert partial views and components into. Still undecided on if I will implement this new design. Awaiting constructive criticism  from friends. See V2 layout below| Partial implementation|
  |April 12, 2021| After receiving opinions from friends, I have decided to do a partial change. The intent is to remain original such as version 2 but be less cluttered and distracting in version 3. Please see Version 2 and version 3 changes below.| Implemented|
+ |April 26,2021| Made further changes to the Adressbook view page.| Implemented|
  
   
 ***
