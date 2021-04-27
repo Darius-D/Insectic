@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: minmax(0,60px) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
+    grid-gap: 0px 0px;
     grid-template-areas:
         "PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader PageHeader"
         "ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer ContactContainer"
@@ -23,15 +23,15 @@
     grid-area: PageHeader;
     text-align: center;
     padding-top: 10px;
-    background: blue;
+    background: lightblue;
     border-radius: 0 0 8px 8px;
     margin: 0 10px;
 }
 
 .ContactContainer {
-    background: rgba(43, 145, 204, 0.8);
+    background: rgba(43, 145, 204, 0.7);
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.7);
+    
     margin: 10px;
     grid-area: ContactContainer;
     overflow: auto;
@@ -61,6 +61,7 @@
 figure {
     height: 350px;
     border-radius: 9px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.4);
 }
 
 .snip1336 * {
@@ -78,7 +79,8 @@ figure {
 
 .snip1336 figcaption {
     width: 100%;
-    background-color: #dfa3a3;
+    /* background-color: #dfa3a3;*/
+    background: url(/img/corkboard.jpg);
     padding: 25px;
     position: relative;
 }
@@ -97,13 +99,16 @@ figure {
 
     .snip1336 figcaption a {
         padding: 5px;
-        border: 1px solid #ffffff;
-        color: #ffffff;
+        border: 1px solid black;
+        background: lightblue;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+        border-radius: 8px;
+        color: black;
         font-size: 0.7em;
         text-transform: uppercase;
         margin: 10px 0;
         display: inline-block;
-        opacity: 0.65;
+        opacity: 01;
         width: 47%;
         text-align: center;
         text-decoration: none;
@@ -112,7 +117,7 @@ figure {
     }
 
         .snip1336 figcaption a:hover {
-            opacity: 1;
+            background: #2980b9;
         }
 
 .snip1336 .profile {
@@ -123,18 +128,24 @@ figure {
     z-index: 1;
     max-width: 90px;
     opacity: 1;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    
 }
 
 .snip1336 .follow {
     margin-right: 4%;
-    border-color: #2980b9;
-    color: #2980b9;
+    border-color: black;
+    color: darkblue;
+    box-shadow:   5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 
 .snip1336 h2 {
     margin: 0 0 5px;
     font-weight: 300;
+    background: rgb(166, 230, 107);
+    color: black;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 
     .snip1336 h2 span {
@@ -146,6 +157,13 @@ figure {
 .snip1336 p {
     margin: 0 0 10px;
     font-size: 0.8em;
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    background: white;
+    border-radius: 8px;
+    opacity: .05;
+    font-weight: bold;
     letter-spacing: 1px;
     opacity: 0.8;
 }

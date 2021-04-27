@@ -141,6 +141,7 @@
     flex: 1;
     padding: 5px 20px;
     justify-content: space-between;
+    border-bottom: black solid thin;
 }
 
 .bottom-box {

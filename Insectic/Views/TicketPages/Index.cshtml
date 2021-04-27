@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Insectic.Models.TicketJsonModel>
+﻿@using Insectic.BLL
+@using Microsoft.AspNetCore.Authentication
+@model IEnumerable<Insectic.Models.TicketJsonModel>
 
 @{
     Layout = "_Layout";
@@ -18,7 +20,7 @@
         <thead>
             <tr>
                 <th>
-                    Ticket ID
+                    Ticket Id
                 </th>
                 <th>
                     Priority

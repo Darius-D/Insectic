@@ -4,7 +4,7 @@ body {
 }
 
 .analyticsContainer {
-    background: white;
+    background: url(/img/corkboard.jpg);
     grid-area: Main-Content;
     height: 100%;
     width: 100%;
@@ -29,20 +29,28 @@ body {
 }
 
 .ticketCountContainer {
+    padding-top: 10px;
     grid-area: TicketCount;
     display: grid;
     grid-template-columns: repeat(auto, 1fr);
     grid-template-rows: 30px 1fr;
-    border-bottom: black solid 3px;
     padding-bottom: 10px;
+    background: blue;
+    border-radius: 10px;
+    margin: 0 10px;
 }
-
+.ticketCountContainer h2 {
+    
+    border-radius: 10px;
+    color: black;
+    z-index: 99;
+}
 .ticketCount {
     justify-content: space-evenly;
 }
 
     .ticketCount .dataBox {
-        background: #f3f3f3;
+        background: rgb(106, 231, 225);
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -77,18 +85,26 @@ body {
 
     .ticketStatusContainer .ContainerHeader {
         grid-area: header;
+        margin-top: 5px;
+        border-top: solid black 1px;
+        
     }
 
 .topRow {
     grid-area: top-row;
     display: grid;
-    width: 100%;
+    
+    background: url(/img/corkboard.jpg);
+    border-radius: 10px;
+    margin: 0 10px;
 }
 
 .bottomRow {
     grid-area: bottom-row;
     display: grid;
-    width: 100%;
+    background: url(/img/corkboard.jpg);
+    border-radius: 10px;
+    margin: 5px 10px;
 }
 
 .square {
@@ -104,7 +120,7 @@ body {
 }
 
 .ticketStatusContainer .dataBox {
-    background: #f3f3f3;
+    background: rgb(214, 135, 135);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
