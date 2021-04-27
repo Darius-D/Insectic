@@ -50,7 +50,7 @@
 ***
 ##  <p align="center"> Prototype AddressBook view
   <p> This view  populates a contact card for each user in the repository with an individual profile picture, mailto: Email link, role, and phone number that will appear upon hovering over the phone icon. This will be done with Css. In the case of having more than six users, the address book overflows into a scroll on the container allowing for additional cards without disfiguring the layout. The colors currently used were for testing purposes and will be changed shortly. Upon screen getting wider, media queries have been added to increase the number of columns </p>
-  ![](/prototype/img/newAddressBook.png)
+  ![](prototype/img/newAddressBook.png)
 ***
 
 ##   <p align="center"> Ticket Api List 
