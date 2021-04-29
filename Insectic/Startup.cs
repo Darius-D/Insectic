@@ -8,7 +8,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Insectic.Data;
 using Insectic.InsecticData;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 namespace Insectic
 {
@@ -27,6 +30,14 @@ namespace Insectic
             services.AddControllersWithViews();
             services.AddHttpClient();
             services.AddScoped<ITicketRepository, TicketApiRepository>();
+            services.AddRazorPages();
+
+            services.AddDbContext<InsecticContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("InsecticContextConnection")));
+            services.AddAuthorization(options =>
+            {
+                options.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,13 +58,15 @@ namespace Insectic
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
-
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Dashboard}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }
