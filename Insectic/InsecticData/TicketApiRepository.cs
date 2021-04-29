@@ -22,7 +22,7 @@ namespace Insectic.InsecticData
             
             List<TicketJsonModel>? ticketList = JsonConvert.DeserializeObject<List<TicketJsonModel>>(response);
 
-                return ticketList!;
+            return ticketList!;
 
         }
 
@@ -32,7 +32,7 @@ namespace Insectic.InsecticData
 
             TicketJsonModel? ticket = JsonConvert.DeserializeObject<TicketJsonModel>(response);
 
-                return ticket;
+            return ticket;
         }
 
         public  async void NewTicket(TicketJsonModel ticket)
