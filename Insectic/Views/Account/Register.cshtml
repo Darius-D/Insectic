@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+@model Insectic.Models.ViewModels.RegisterModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Registration.css">
+    <title>Register</title>
+</head>
+<body>
+<div class="body-container">
+    <div class="register-container">
+        <h2>Register</h2>
+        <form method="post">
+            <div class="inputbox">
+                <input asp-for="FirstName" class="top-input" type="text" placeholder="First Name" required>
+                <input asp-for="LastName" type="text" placeholder="Last Name" required>
+            </div>
+            <div class="inputbox">
+                <input asp-for="Email" class="top-input" type="email" placeholder="Email" required>
+                <input asp-for="ConfirmEmail" type="email" placeholder="Confirm Email" required />
+            </div>
+            <div class="inputbox">
+                <input asp-for="ContactNumber" type="text" placeholder="Phone#: 555-123-4567" required>
+            </div>
+            <div class="inputbox">
+                <input asp-for="Password" class="top-input" type="password" placeholder="Password" required>
+                <input asp-for="ConfirmPassword" type="password" placeholder=" Confirm Password" required/>
+            </div>
+            <input class="submit" type="submit" value="Register">
+            <a asp-action="Login">Already have an account? Login</a>
+        </form>
+    </div>
+</div>
+</body>
+</html>

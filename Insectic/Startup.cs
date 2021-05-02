@@ -8,8 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Insectic.Data;
 using Insectic.InsecticData;
+using Insectic.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 
@@ -30,14 +30,17 @@ namespace Insectic
             services.AddControllersWithViews();
             services.AddHttpClient();
             services.AddScoped<ITicketRepository, TicketApiRepository>();
-            services.AddRazorPages();
 
-            services.AddDbContext<InsecticContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("InsecticContextConnection")));
-            services.AddAuthorization(options =>
-            {
-                options.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
-            });
+            //for custom Identity
+
+            services.AddIdentity<IdentityUserModel, UserRole>(option => option.User.RequireUniqueEmail = true).AddEntityFrameworkStores<IdentityAppContext>();
+
+            services.AddDbContext<IdentityAppContext>(cfg =>
+                cfg.UseSqlServer(Configuration.GetConnectionString("InsecticContextConnection")));
+
+            services.AddRazorPages();
+            
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

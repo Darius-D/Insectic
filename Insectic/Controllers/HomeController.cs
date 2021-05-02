@@ -3,9 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 using System.Dynamic;
+using System.Security.Claims;
+using System.Security.Principal;
 using System.Threading.Tasks;
 using Insectic.BLL;
 using Insectic.InsecticData;
+
 
 
 namespace Insectic.Controllers
@@ -22,6 +25,7 @@ namespace Insectic.Controllers
 
         public async Task<IActionResult> Dashboard()
         {
+           //ViewBag.currentUser = User.FindFirstValue(ClaimTypes.Name);
             
             return View(await _ticketRepository.GetAllTicketsAsync()!);
         }
