@@ -22,6 +22,7 @@
  |April 10, 2021| Created a completely new layout. This layout is 100% mobile friendly and easier to insert partial views and components into. Still undecided on if I will implement this new design. Awaiting constructive criticism  from friends. See V2 layout below| Partial implementation|
  |April 12, 2021| After receiving opinions from friends, I have decided to do a partial change. The intent is to remain original such as version 2 but be less cluttered and distracting in version 3. Please see Version 2 and version 3 changes below.| Implemented|
  |April 26,2021| Made further changes to the Adressbook view page.| Implemented|
+ |May01,2021| Made custom MS Identity tables to utilize orginial DB and view pages. .| Implemented|
  
   
 ***
