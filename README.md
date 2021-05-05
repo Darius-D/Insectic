@@ -122,8 +122,8 @@ Then populate drop by selection to select groups available and update user’s g
 |:--------:|:--------------:|:--------------:|:--------------:|:---------:|
 |  <a name="100"></a>100  |     [1](#1)          | Fill out form on page and verify model biniding occured and stored the values to a new user object |:green_circle:|TBD|
 | <a name="101"></a> 101     |     [1.1](#11)        | Utilizing GitHub authentication, ensure new user object is created and values are stores in the DB |:red_circle:|TBD|
-| <a name="200">200     |     [2](#2)         | With seveal users created in multiple roles, verify all pages render appropriate headers |:red_circle:|TBD|
-| <a name="300">300     |      [3](#3)        | Upon creation of a ticket verify ticket values are unique utilizing test method |:red_circle:|TBD|
+| <a name="200">200     |     [2](#2)         | With seveal users created in multiple roles, verify all pages render appropriate headers |:green_circle:|TBD|
+| <a name="300">300     |      [3](#3)        | Upon creation of a ticket verify ticket values are unique utilizing test method |:green_circle:|TBD|
 | <a name="301">301     |       [3.1](#31)      | Upon creation of a ticket verify ticket values are unique utilizing test method |:green_circle:|TBD|
 | <a name="302">302     |      [3.2](#32)       | Upon creation of a ticket verify all required fields are assigned values in the ticket table on server|:green_circle:|TBD|
 |<a name="400"> 400     |      [4](#4)         | Inspect the Analytics web page ensuring data values are correct and match data in the server |:green_circle:|TBD|
