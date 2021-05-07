@@ -39,8 +39,13 @@ namespace Insectic
                 cfg.UseSqlServer(Configuration.GetConnectionString("InsecticContextConnection")));
 
             services.AddRazorPages();
-            
-            
+
+            services.AddAuthorization(opt =>
+            {
+                opt.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+            });
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

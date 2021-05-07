@@ -53,7 +53,7 @@ namespace InsecticDatabaseApi.Controllers
         public IActionResult AddTicket(Ticket newTicket)
         {
             _ticketData.AddTicket(newTicket);
-            return Created(HttpContext.Request.Scheme + "://" + HttpContext.Request.Host + HttpContext.Request.Path + "/" + newTicket.TicketId, newTicket);
+            return Ok();
 
         }
 

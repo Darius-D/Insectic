@@ -125,32 +125,27 @@ namespace InsecticApiTests.TicketControllerTests
             Assert.Equal(tickets,returnValue.Value);
         }
 
-        //error with controller reading ticket
-        //[Fact]
-        //public void AddTicket_ValidTicket_CreatedStatusCode()
-        //{
-        //    //Arrange
-        //    var tic = new Ticket()
-        //    {
-        //        TicketId = 123,
-        //        TicketDescription = "test",
-        //        UserId = "testUId",
-        //        AssignedUser = "ddubose",
-        //        Category = "testBug",
-        //        IncidentDate = new DateTime(2021, 11, 04),
-        //        Priority = "urgent",
-        //        Status = "in Progress",
-        //        Comments = null,
-        //        DueDate = null
-        //    };
-        //    var sut = new TicketController(repoStub.Object);
-        //    repoStub.Setup(repo => repo.AddTicket(tic));
-        //    //Act
-        //    var result = sut.AddTicket(tic);
-        //    //Assert
-        //    repoStub.VerifyAll();
-            
-        //}
+
+        [Fact]
+        public void AddTicket_ValidTicket_CreatedStatusCode()
+        {
+            //Arrange
+            var tic = new Ticket()
+            {
+                TicketId = 123, TicketDescription = "test", UserId = "testUId",
+                AssignedUser = "ddubose", Category = "testBug", IncidentDate = new DateTime(2021, 11, 04),
+                Priority = "urgent", Status = "in Progress"
+            };
+
+           
+            repoStub.Setup(repo => repo.AddTicket(tic));
+            var sut = new TicketController(repoStub.Object);
+            //Act
+            var result = sut.AddTicket(tic);
+            //Assert
+            Assert.IsType<OkResult>(result);
+
+        }
 
 
 

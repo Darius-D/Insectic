@@ -1,14 +1,20 @@
 ﻿using System;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Insectic.Models;
 using Insectic.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Newtonsoft.Json;
 
 namespace Insectic.Controllers
 {
+    
     public class AccountController : Controller
     {
+        private HttpClient Client = new HttpClient();
         private UserManager<IdentityUserModel> UserMgr { get; }
         private SignInManager<IdentityUserModel> SignInMgr { get; }
         public AccountController(UserManager<IdentityUserModel> userManager,
@@ -18,31 +24,35 @@ namespace Insectic.Controllers
             SignInMgr = signInManager;
 
         }
+        [AllowAnonymous]
         [HttpGet]
         public IActionResult Register()
         {
             return View();
         }
-
+        [AllowAnonymous]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterModel userModel)
         {
             if (ModelState.IsValid)
             {
+                
                 var user = new IdentityUserModel()
                 {
                     FirstName = userModel.FirstName, LastName = userModel.LastName, 
-                    ContactNumber = userModel.ContactNumber, UserName = userModel.FirstName[0] + userModel.LastName, Email = userModel.Email 
+                    ContactNumber = userModel.ContactNumber, UserName = userModel.Email, Email = userModel.Email
                 };
                 var result = await UserMgr.CreateAsync(user, userModel.Password);
+                
                 if (result.Succeeded)
                 {
+
                     await SignInMgr.SignOutAsync();
                     if ((await SignInMgr.PasswordSignInAsync(user.UserName, userModel.Password, false, false))
                         .Succeeded)
                     {
-                        return RedirectToAction("Dashboard", "Home");
+                        return RedirectToAction("Login", "Account");
                     }
                 }
                 else
@@ -54,9 +64,17 @@ namespace Insectic.Controllers
 
             return View();
         }
-        public async Task<IActionResult> Login()
+        [AllowAnonymous]
+        public IActionResult Login()
         {
-            var result = await SignInMgr.PasswordSignInAsync("TestUserName", "Test123!", false, false);
+            return View();
+        }
+        [AllowAnonymous]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginModel login)
+        {
+            var result = await SignInMgr.PasswordSignInAsync(login.UserName, login.Password, false, false);
             if (result.Succeeded)
             {
                 return RedirectToAction("Dashboard", "Home");
@@ -74,33 +92,5 @@ namespace Insectic.Controllers
             return RedirectToAction("Login", "Account");
         }
         
-        //public async Task<IActionResult> Register()
-        //{
-        //    try
-        //    {
-        //        ViewBag.Message = "User already registered";
-
-        //        IdentityUserModel user = await UserMgr.FindByNameAsync("TestUsers");
-        //        if (user == null)
-        //        {
-        //            user = new IdentityUserModel();
-        //            user.UserName = "TestUser";
-        //            user.Email = "TestUser @TestUser.com";
-        //            user.ContactNumber = "555-123-4567";
-        //            user.FirstName = "john";
-        //            user.LastName = "Doe";
-
-        //            IdentityResult result = await UserMgr.CreateAsync(user, "Test123!");
-        //            ViewBag.Message = "user was created";
-        //        }
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        ViewBag.Message = ex.Message;
-        //    }
-
-        //    return View();
-        //}
-
     }
 }
