@@ -44,7 +44,7 @@ namespace InsecticApiTests.TicketControllerTests
             var tic = new Ticket()
             {
                 TicketId = 123, TicketDescription = "test", UserId = "testUId", AssignedUser = "ddubose", Category = "testBug",
-                IncidentDate = new DateTime(2021,11,04), Priority = "urgent", Status = "in Progress", Comments = null, DueDate = null
+                IncidentDate = new DateTime(2021,11,04), Priority = "urgent", Status = "in Progress",  DueDate = null
             };
             //Arrange
             repoStub.Setup(repo => repo.GetTicket(123)).Returns(tic);

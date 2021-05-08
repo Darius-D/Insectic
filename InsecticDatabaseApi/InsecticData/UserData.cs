@@ -1,25 +1,35 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using InsecticDatabaseApi.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
+
+//todo: This entire class should be tested again
 namespace InsecticDatabaseApi.InsecticData
 {
     public class UserData : IUserData
     {
 
-        private readonly InsecticContext _insecticContext;
-        public UserData(InsecticContext insecticContext)
+        private UserManager<User> UserMgr { get; }
+        private SignInManager<User> SignInMgr { get; }
+        public UserData(UserManager<User> userManager, SignInManager<User> signInManager)
         {
-            _insecticContext = insecticContext;
+            UserMgr = userManager;
+            SignInMgr = signInManager;
         }
-        public List<User> GetAllUsers()
+        public  List<User> GetAllUsers()
         {
-            return _insecticContext.UsersList.ToList();
+            var results = UserMgr.Users.ToListAsync();
+            return results.Result;
+
         }
 
-        public User GetUser(string id)
+        public async Task<User> GetUser(string userName)
         {
-            return _insecticContext.UsersList.Find(id);
+            var result = await UserMgr.FindByNameAsync(userName);
+            return result;
         }
 
         public List<User> GetUsersBySupervisor(string supervisor)
@@ -33,46 +43,23 @@ namespace InsecticDatabaseApi.InsecticData
             return GetAllUsers().Where(u => u.ResourceGroup == resourceGroup).ToList();
         }
 
-        public List<User> GetUserByRole(string role)
+        //todo: insert Identity Role manager
+        //public List<User> GetUserByRole(string role)
+        //{
+        //    return GetAllUsers().Where(u => u.UserRoles == role).ToList();
+        //}
+
+        //todo:test out method
+        public async Task DeleteUser(string userEmail)
         {
-            return GetAllUsers().Where(u => u.UserRoles == role).ToList();
+            var existingUser  = await UserMgr.FindByEmailAsync(userEmail);
+            await UserMgr.DeleteAsync(existingUser);
         }
 
-
-        public void AddUser(User user)
+        //todo: test method
+        public async void EditUser(User user)
         {
-            
-            _insecticContext.UsersList.Add(user);
-            _insecticContext.SaveChanges();
-        }
-
-        public void DeleteUser(string userId)
-        {
-            var existingUser = _insecticContext.UsersList.Find(userId);
-
-            _insecticContext.UsersList.Remove(existingUser);
-            _insecticContext.SaveChanges();
-        }
-
-
-        public void EditUser(User user)
-        {
-            var existingUser = _insecticContext.UsersList.Find(user.UserId);
-
-            
-                existingUser.UserId = user.UserId;
-                existingUser.ContactNumber = user.ContactNumber;
-                existingUser.Email = user.Email;
-                existingUser.FirstName = user.FirstName;
-                existingUser.LastName = user.LastName;
-                existingUser.ProfilePicture = user.ProfilePicture;
-                existingUser.ResourceGroup = user.ResourceGroup;
-                existingUser.UserRoles = user.UserRoles;
-                existingUser.Supervisor = user.Supervisor;
-                
-                _insecticContext.UsersList.Update(existingUser);
-                _insecticContext.SaveChanges();
-            
+            var existingUser = await UserMgr.UpdateAsync(user);
         }
     }
 }

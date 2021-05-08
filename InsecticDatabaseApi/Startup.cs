@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 using InsecticDatabaseApi.InsecticData;
 using InsecticDatabaseApi.Models;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.AspNetCore.Authorization;
 namespace InsecticDatabaseApi
 {
     public class Startup
@@ -41,6 +41,10 @@ namespace InsecticDatabaseApi
             services.AddScoped<ICommentData, CommentData>();
             services.AddScoped<IUserData, UserData>();
 
+            services.AddIdentity<User,UserRole>(option => option.User.RequireUniqueEmail = true).AddEntityFrameworkStores<InsecticContext>();
+
+            services.AddDbContext<InsecticContext>(cfg =>
+                cfg.UseSqlServer(Configuration.GetConnectionString("InsecticContextConnection")));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "InsecticDatabaseApi", Version = "v1" });
@@ -64,6 +68,7 @@ namespace InsecticDatabaseApi
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

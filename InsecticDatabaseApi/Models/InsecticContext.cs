@@ -1,10 +1,11 @@
 ﻿using FluentAssertions;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 
 namespace InsecticDatabaseApi.Models  
 {
-    public class InsecticContext : DbContext
+    public class InsecticContext : IdentityDbContext<User, UserRole, int>
     {
         public InsecticContext(DbContextOptions<InsecticContext> options) : base(options)
         {
@@ -12,18 +13,17 @@ namespace InsecticDatabaseApi.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             var user = modelBuilder.Entity<User>();
             var ticket = modelBuilder.Entity<Ticket>();
             var comment = modelBuilder.Entity<Comment>();
 
             user.ToTable("Users");
-            user.Property(p => p.UserId).IsRequired().HasMaxLength(25);
+            user.HasKey(p => p.Id);
             user.Property(p => p.FirstName).IsRequired().HasMaxLength(30);
             user.Property(p => p.LastName).HasMaxLength(30).IsRequired();
             user.Property(p => p.Email).IsRequired();
-            user.Property(p => p.ContactNumber).HasMaxLength(15).HasColumnName("PhoneNumber").IsRequired();
-            user.Property(p => p.UserPassword).IsRequired();
-            user.Property(p => p.UserRoles).IsRequired();
+            user.Property(p => p.PhoneNumber).HasMaxLength(15).HasColumnName("PhoneNumber").IsRequired();
             user.Property(p => p.ResourceGroup).HasMaxLength(50);
             
 
@@ -49,6 +49,6 @@ namespace InsecticDatabaseApi.Models
 
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Comment> TicketComments { get; set; }
-        public DbSet<User> UsersList { get; set; }
+        
     }
 }

@@ -24,7 +24,5 @@ namespace InsecticDatabaseApi.Models
 
         public string AssignedUser { get; set; }
 
-        public List<Comment> Comments { get; set; }
-
     }
 }

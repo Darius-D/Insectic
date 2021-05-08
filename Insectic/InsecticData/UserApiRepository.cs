@@ -4,6 +4,8 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Insectic.Models;
+using Insectic.Models.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RestSharp;
 
@@ -35,6 +37,10 @@ namespace Insectic.InsecticData
 
         }
 
+        //public static ObjectResult AddUser(RegisterModel user)
+        //{
+        //    var response = Client.PostAsync("https://Localhost:44342/api/User")
+        //}
 
         //would like to convert from RestSharp to http client. currently having issues with http client method in testing
         public static void EditUser(string userId, UserJsonModel user)

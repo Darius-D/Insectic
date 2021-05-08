@@ -39,27 +39,27 @@ namespace Insectic.Controllers
             if (ModelState.IsValid)
             {
                 
-                var user = new IdentityUserModel()
-                {
-                    FirstName = userModel.FirstName, LastName = userModel.LastName, 
-                    PhoneNumber = userModel.ContactNumber, UserName = userModel.Email, Email = userModel.Email, Department = userModel.Department
-                };
-                var result = await UserMgr.CreateAsync(user, userModel.Password);
+                //var user = new IdentityUserModel()
+                //{
+                //    FirstName = userModel.FirstName, LastName = userModel.LastName, 
+                //    PhoneNumber = userModel.ContactNumber, UserName = userModel.Email, Email = userModel.Email, Department = userModel.Department
+                //};
+                //var result = await UserMgr.CreateAsync(user, userModel.Password);
                 
-                if (result.Succeeded)
-                {
+                //if (result.Succeeded)
+                //{
 
-                    await SignInMgr.SignOutAsync();
-                    if ((await SignInMgr.PasswordSignInAsync(user.UserName, userModel.Password, false, false))
-                        .Succeeded)
-                    {
-                        return RedirectToAction("Login", "Account");
-                    }
-                }
-                else
-                {  
-                    return View();
-                }
+                //    await SignInMgr.SignOutAsync();
+                //    if ((await SignInMgr.PasswordSignInAsync(user.UserName, userModel.Password, false, false))
+                //        .Succeeded)
+                //    {
+                //        return RedirectToAction("Login", "Account");
+                //    }
+                //}
+                //else
+                //{  
+                //    return View();
+                //}
                  
             }
 
