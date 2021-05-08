@@ -18,9 +18,6 @@ namespace InsecticDatabaseApi.InsecticData
 
         //List<User> GetUserByRole(string role);
 
-
-        Task DeleteUser(string userEmail);
-
         void EditUser(User userId);
         
 

@@ -49,13 +49,6 @@ namespace InsecticDatabaseApi.InsecticData
         //    return GetAllUsers().Where(u => u.UserRoles == role).ToList();
         //}
 
-        //todo:test out method
-        public async Task DeleteUser(string userEmail)
-        {
-            var existingUser  = await UserMgr.FindByEmailAsync(userEmail);
-            await UserMgr.DeleteAsync(existingUser);
-        }
-
         //todo: test method
         public async void EditUser(User user)
         {
