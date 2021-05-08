@@ -34,16 +34,18 @@ namespace InsecticDatabaseApi.Controllers
 
 
         [HttpGet]
-        [Route("api/[controller]/{id}")]
-        public IActionResult GetUser(string id)
+        [Route("api/[controller]/{userName}")]
+        public async Task<IActionResult> GetUser(string userName)
         {
-            var user = _userData.GetUser(id);
+            var user = await UserMgr.FindByNameAsync(userName);
 
-            if (user == null)
+            if (user != null)
             {
-                return NotFound($"User with Id of {id} does not exist");
+                return Ok(user);
             }
-            return Ok(_userData.GetUser(id));
+
+            return NotFound($"User with Id of {userName} does not exist");
+
         }
 
         [HttpGet]
@@ -68,7 +70,7 @@ namespace InsecticDatabaseApi.Controllers
 
         [HttpPost]
         [Route("api/[controller]")]
-        public async Task AddUser(UserViewModel userModel)
+        public async Task<IActionResult> AddUser(UserViewModel userModel)
         {
             var user = new User()
             {
@@ -88,14 +90,12 @@ namespace InsecticDatabaseApi.Controllers
                 if ((await SignInMgr.PasswordSignInAsync(user.UserName, userModel.Password, false, false))
                     .Succeeded)
                 {
-                    Console.WriteLine("yes"); 
+                    return Ok("Successfully Deleted");
                 }
             }
-            else
-            {
-                Console.WriteLine("no");
-            }
-            
+
+            return BadRequest("Failed to Add User");
+
         }
 
 
@@ -106,16 +106,15 @@ namespace InsecticDatabaseApi.Controllers
             if (await UserMgr.FindByEmailAsync(id) != null)
             {
                await UserMgr.DeleteAsync(UserMgr.FindByEmailAsync(id).Result);
-               return Ok("Successfully Deleted");
+               return Ok($"Successfully Deleted User with User ID of {id}");
             }
 
-            return BadRequest("failed to delete User, User not found");
-
+            return BadRequest($"failed to delete User, User with User ID of {id} not found");
 
         }
 
         [HttpPatch]
-        [Route("api/[controller]/{id}")]
+        [Route("api/[controller]/{userName}")]
         public IActionResult EditUser(string userName, User user)
         {
             var existingUser = _userData.GetUser(userName);
