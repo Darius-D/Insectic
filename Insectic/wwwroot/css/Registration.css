@@ -37,7 +37,14 @@ input {
     padding: 5px;
     color: black;
 }
-
+.link-text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.dropdown {
+    width: 100%;
+}
 a {
     text-decoration: none;
     padding-top: 5px;

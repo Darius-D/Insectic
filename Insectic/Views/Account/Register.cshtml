@@ -21,6 +21,20 @@
                 <input asp-for="FirstName" class="top-input" type="text" placeholder="First Name" required>
                 <input asp-for="LastName" type="text" placeholder="Last Name" required>
             </div>
+            <div>
+                <select name="Department" id="Department" class="dropdown">
+                    <option value="null">Department</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Development">Development</option>
+                    <option value="Cloud">Cloud</option>
+                    <option value="Operations">Operations</option>
+                    <option value="Human Resources">Human Resources</option>
+                    <option value="Finances">Finances</option>
+                    <option value="Legal">Legal</option>
+                    <option value="Technology and Research">Research</option>
+                </select>
+            </div>
             <div class="inputbox">
                 <input asp-for="Email" class="top-input" type="email" placeholder="Email" required>
                 <input asp-for="ConfirmEmail" type="email" placeholder="Confirm Email" required />
@@ -33,7 +47,7 @@
                 <input asp-for="ConfirmPassword" type="password" placeholder=" Confirm Password" required/>
             </div>
             <input class="submit" type="submit" value="Register">
-            <a asp-action="Login">Already have an account? Login</a>
+            <a asp-action="Login" class="link-text">Already have an account? Login</a>
         </form>
     </div>
 </div>
