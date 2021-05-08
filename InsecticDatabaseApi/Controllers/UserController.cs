@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using InsecticDatabaseApi.InsecticData;
@@ -100,14 +101,17 @@ namespace InsecticDatabaseApi.Controllers
 
         [HttpDelete]
         [Route("api/[controller]/{id}")]
-        public IActionResult DeleteUser(string id)
+        public async Task<IActionResult> DeleteUser(string id)
         {
-            if (_userData.GetUser(id) == null)
+            if (await UserMgr.FindByEmailAsync(id) != null)
             {
-                return NotFound($"User with Id of {id} does not exist");
+               await UserMgr.DeleteAsync(UserMgr.FindByEmailAsync(id).Result);
+               return Ok("Successfully Deleted");
             }
-            _userData.DeleteUser(id);
-            return Ok();
+
+            return BadRequest("failed to delete User, User not found");
+
+
         }
 
         [HttpPatch]
