@@ -1,4 +1,4 @@
-#   <p align="center" > :stop_sign: Caution: This is a WIP prototype as of May 01, 2021. :stop_sign: </p>
+#   <p align="center" > :stop_sign: Caution: This is a WIP prototype as of May 07, 2021. :stop_sign: </p>
   <p align="center" > Anything below is subject to change</p>
   <p align="center" ><a href=https://github.com/Darius-D/Insectic/blob/main/README.md> :pushpin: Return to Main Page :pushpin: </a></p>
   <p align="center" ><a href=https://github.com/Darius-D/Insectic/tree/master> :pushpin: Go to see my code :pushpin: </a></p>
@@ -23,6 +23,7 @@
  |April 12, 2021| After receiving opinions from friends, I have decided to do a partial change. The intent is to remain original such as version 2 but be less cluttered and distracting in version 3. Please see Version 2 and version 3 changes below.| Implemented|
  |April 26,2021| Made further changes to the Adressbook view page.| Implemented|
  |May01,2021| Made custom MS Identity tables to utilize orginial DB and view pages. .| Implemented|
+ |May07,2021|MS Identity operations are being moved to the API project to reomve all CRUD operations from the web applications. MS identity was first added directly to the web application to ensure stability during testing. All CRUD operations for Identity will be moved entirely to the API project further seperating priority of concerns. | semi-Implemented. WIP|
  
   
 ***
