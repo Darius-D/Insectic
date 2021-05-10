@@ -90,7 +90,7 @@ namespace Insectic.Controllers
             }
             return View();
         }
-
+        
         public async Task<IActionResult> Logout()
         {
             await SignInMgr.SignOutAsync();
