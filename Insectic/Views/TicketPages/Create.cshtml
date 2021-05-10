@@ -59,13 +59,13 @@
     <div class="Users">
         <div class="dropdown">
             <label asp-for="UserId">Submitting User:</label>
-            <select name="UserId" id="UserId">
+            <select asp-for="UserId" name="UserId" id="UserId">
                 <option value="null">Select User</option>
                 @{
 
                     foreach (var user in UserApiRepository.GetAllUsers())
                     {
-                        <option value="@user.UserId">@user.FirstName @user.LastName</option>
+                        <option value="@user.Email">@user.FirstName @user.LastName</option>
                     }
                 }
             </select>
@@ -76,7 +76,7 @@
 
                     foreach (var user in UserApiRepository.GetAllUsers())
                     {
-                        <option value="@user.UserId">@user.FirstName @user.LastName</option>
+                        <option value="@user.Email">@user.FirstName @user.LastName</option>
                     }
                 }
             </select>

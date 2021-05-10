@@ -75,7 +75,7 @@
 
                     foreach (var user in UserApiRepository.GetAllUsers())
                     {
-                        <option value="@user.UserId">@user.FirstName @user.LastName</option>
+                        <option value="@user.Email">@user.FirstName @user.LastName</option>
                     }
                 }
             </select>

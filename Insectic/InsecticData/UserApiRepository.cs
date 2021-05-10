@@ -36,7 +36,7 @@ namespace Insectic.InsecticData
                 return user;
 
         }
-
+        //todo: make this method so users can be created. 
         //public static ObjectResult AddUser(RegisterModel user)
         //{
         //    var response = Client.PostAsync("https://Localhost:44342/api/User")
@@ -49,7 +49,7 @@ namespace Insectic.InsecticData
             client.Timeout = -1;
             var request = new RestRequest(Method.PATCH);
             request.AddHeader("Content-Type", "application/json");
-            request.AddParameter("application/json", $"{{\r\n  \"firstName\": \"{user.FirstName}\",\r\n  \"lastName\": \"{user.LastName}\",\r\n  \"email\": \"{user.Email}\",\r\n  \"contactNumber\": \"{user.ContactNumber}\",\r\n  \"userPassword\": \"{user.UserPassword}\",\r\n  \"resourceGroup\": \"{user.ResourceGroup}\",\r\n  \"userRoles\": \"{user.UserRoles}\",\r\n  \"profilePicture\": \"{user.ProfilePicture}\"\r\n}}", ParameterType.RequestBody);
+            request.AddParameter("application/json", $"{{\r\n  \"firstName\": \"{user.FirstName}\",\r\n  \"lastName\": \"{user.LastName}\",\r\n  \"email\": \"{user.Email}\",\r\n  \"contactNumber\": \"{user.PhoneNumber}\",\r\n  \"resourceGroup\": \"{user.ResourceGroup}\",\r\n  \"profilePicture\": \"{user.ProfilePicture}\"\r\n}}", ParameterType.RequestBody);
             IRestResponse response = client.Execute(request);
             
         }

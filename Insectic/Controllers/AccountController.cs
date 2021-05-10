@@ -38,14 +38,18 @@ namespace Insectic.Controllers
         {
             if (ModelState.IsValid)
             {
-                
+
                 //var user = new IdentityUserModel()
                 //{
-                //    FirstName = userModel.FirstName, LastName = userModel.LastName, 
-                //    PhoneNumber = userModel.ContactNumber, UserName = userModel.Email, Email = userModel.Email, Department = userModel.Department
+                //    FirstName = userModel.FirstName,
+                //    LastName = userModel.LastName,
+                //    PhoneNumber = userModel.ContactNumber,
+                //    UserName = userModel.Email,
+                //    Email = userModel.Email,
+                //    Department = userModel.Department
                 //};
                 //var result = await UserMgr.CreateAsync(user, userModel.Password);
-                
+
                 //if (result.Succeeded)
                 //{
 
@@ -57,10 +61,10 @@ namespace Insectic.Controllers
                 //    }
                 //}
                 //else
-                //{  
+                //{
                 //    return View();
                 //}
-                 
+
             }
 
             return View();

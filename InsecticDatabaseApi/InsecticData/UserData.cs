@@ -26,12 +26,6 @@ namespace InsecticDatabaseApi.InsecticData
 
         }
 
-        public async Task<User> GetUser(string userName)
-        {
-            var result = await UserMgr.FindByNameAsync(userName);
-            return result;
-        }
-
         public List<User> GetUsersBySupervisor(string supervisor)
         { 
             return GetAllUsers().Where(u => u.Supervisor == supervisor).ToList();

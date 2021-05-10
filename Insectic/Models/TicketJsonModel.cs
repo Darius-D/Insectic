@@ -18,16 +18,13 @@ namespace Insectic.Models
 
         public DateTime IncidentDate { get; set; }
 
-
         public DateTime? DueDate { get; set; }
 
-
-        public string? TicketDescription { get; set; }
+        public string TicketDescription { get; set; }
 
         public string UserId { get; set; }
 
         public string? AssignedUser { get; set; }
 
-        public List<Comment>? Comments { get; set; }
     }
 }

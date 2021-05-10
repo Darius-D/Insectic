@@ -50,15 +50,15 @@ namespace InsecticDatabaseApi.Controllers
 
         [HttpGet]
         [Route("api/[controller]/ForSupervisor{supervisor}")]
-        public IActionResult GetUsersOfSupervisor(string supervisorId)
+        public IActionResult GetUsersOfSupervisor(string supervisor)
         {
-            var user = _userData.GetUser(supervisorId);
+            var user = UserMgr.Users.Where(u => u.Supervisor.Equals(supervisor));
 
-            if (user == null)
+            if (!user.Any())
             {
-                return NotFound($"Supervisor with Id of {supervisorId} does not exist");
+                return NotFound($"Supervisor with Id of {supervisor} does not exist");
             }
-            return Ok(_userData.GetUsersBySupervisor(supervisorId));
+            return Ok(_userData.GetUsersBySupervisor(supervisor));
         }
 
         [HttpGet]
@@ -113,20 +113,24 @@ namespace InsecticDatabaseApi.Controllers
 
         }
 
+
+        //todo: fix this method
         [HttpPatch]
         [Route("api/[controller]/{userName}")]
-        public IActionResult EditUser(string userName, User user)
+        public async Task<IActionResult> EditUser(string userName, User user)
         {
-            var existingUser = _userData.GetUser(userName);
 
-            if (existingUser == null)
+            if ( await UserMgr.FindByNameAsync(userName) != null)
             {
-                return NotFound($"User with user Name of {userName} does not exist");
+              var results = await UserMgr.UpdateAsync(user);
+
+              if (results.Succeeded)
+                  return Ok($"User with user Id of {userName} has been updated.");
+
+              return NotFound($"User with user Name of {userName} does not exist");
             }
 
-            user.Id = existingUser.Id;
-            _userData.EditUser(user);
-            return Ok("successfully updated user profile.");
+            return NotFound($"User with user Name of {userName} does not exist");
         }
     }
 }

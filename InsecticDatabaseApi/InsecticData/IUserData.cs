@@ -10,8 +10,6 @@ namespace InsecticDatabaseApi.InsecticData
     {
         List<User> GetAllUsers();
 
-        Task<User> GetUser(string id);
-
         List<User> GetUsersBySupervisor(string supervisor);
 
         List<User> GetUserByResourceGroup(string group);

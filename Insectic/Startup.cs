@@ -39,11 +39,11 @@ namespace Insectic
                 cfg.UseSqlServer(Configuration.GetConnectionString("InsecticContextConnection")));
 
             services.AddRazorPages();
-
-            services.AddAuthorization(opt =>
-            {
-                opt.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
-            });
+            //forces the user to log in 
+            //services.AddAuthorization(opt =>
+            //{
+            //    opt.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+            //});
 
 
         }
