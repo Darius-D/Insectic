@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using FluentAssertions.Extensions;
 using Insectic.InsecticData;
 using Insectic.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Insectic.BLL
 {
     public static class TicketLogic
     {
         private static readonly ITicketRepository Repository = new TicketApiRepository();
+       
         public static Tuple<int, int, int, int> CountTicketPriority()
         {
             var tickets = Repository.GetAllTicketsAsync()!.Result.ToList();
@@ -129,8 +132,7 @@ namespace Insectic.BLL
             var openTickets = awtgAssignment + inProgress + pendingReview + closed + assigned;
             return new Tuple<int, int, int, int, int, int>(openTickets, awtgAssignment, inProgress, pendingReview, assigned,closed);
         }
-    
-
+        
         public static string TruncateAtWord(TicketJsonModel ticket, int charLength = 20)
         {
             if (ticket.TicketDescription!.Length < charLength) 
@@ -284,6 +286,8 @@ namespace Insectic.BLL
             
             return new Tuple<int, int, int, int, int, int, int>(sunday, monday, tuesday, wednesday, thursday, friday, saturday);
         }
+
+       
     }
 
 }

@@ -40,6 +40,7 @@ namespace InsecticDatabaseApi
             services.AddScoped<ITicketData, TicketData>();
             services.AddScoped<ICommentData, CommentData>();
             services.AddScoped<IUserData, UserData>();
+            services.AddScoped<INoteData, NoteData>();
 
             services.AddIdentity<User,UserRole>(option => option.User.RequireUniqueEmail = true).AddEntityFrameworkStores<InsecticContext>();
 

@@ -17,24 +17,23 @@ namespace Insectic.InsecticData
         private static readonly HttpClient Client = new HttpClient();
        
 
-        public static List<UserJsonModel>? GetAllUsers()
+        public static List<IdentityUserModel>? GetAllUsers()
         {
             var response = Client.GetStringAsync("https://localhost:44342/api/User/");
 
-            List<UserJsonModel>? userList = JsonConvert.DeserializeObject<List<UserJsonModel>>(response.Result);
+            List<IdentityUserModel>? userList = JsonConvert.DeserializeObject<List<IdentityUserModel>>(response.Result);
 
             return userList;
 
         }
 
-        public static UserJsonModel? GetUser(string userId)
+        public static IdentityUserModel? GetUser(string userId)
         {
             var response = Client.GetStringAsync("https://localhost:44342/api/User/" + userId);
 
-            UserJsonModel? user = JsonConvert.DeserializeObject<UserJsonModel>(response.Result);
-
+            var user = JsonConvert.DeserializeObject<IdentityUserModel>(response.Result);
             
-                return user;
+            return user;
 
         }
        
@@ -48,7 +47,7 @@ namespace Insectic.InsecticData
         }
 
         //would like to convert from RestSharp to http client. currently having issues with http client method in testing
-        public static void EditUser(string userId, UserJsonModel user)
+        public static void EditUser(string userId, IdentityUserModel user)
         {
             var client = new RestClient("https://localhost:44342/api/User/" + userId);
             client.Timeout = -1;

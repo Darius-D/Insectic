@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using Insectic.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +18,7 @@ namespace InsecticDatabaseApi.Models
             var user = modelBuilder.Entity<User>();
             var ticket = modelBuilder.Entity<Ticket>();
             var comment = modelBuilder.Entity<Comment>();
+            var note = modelBuilder.Entity<Note>();
 
             user.ToTable("Users");
             user.HasKey(p => p.Id);
@@ -43,12 +45,18 @@ namespace InsecticDatabaseApi.Models
             comment.Property(p => p.CommentDate).IsRequired().HasColumnType("datetime2").HasPrecision(0);
             comment.Property(p => p.TicketId).IsRequired();
             comment.Property(p => p.UserId).IsRequired();
-            
+
+            note.HasKey(k => k.NoteId);
+            note.Property(k => k.NoteId).ValueGeneratedOnAdd();
+            note.Property(p => p.UserId).IsRequired();
+            note.Property(p => p.Title).IsRequired();
+            note.Property(p => p.NoteBody).IsRequired();
 
         }
 
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Comment> TicketComments { get; set; }
+        public DbSet<Note> Notes { get; set; }
         
     }
 }

@@ -18,12 +18,14 @@ namespace Insectic.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ITicketRepository _ticketRepository;
+        private readonly INoteRepository _noteRepository;
         private UserManager<IdentityUserModel> _userManager;
-        public HomeController(ILogger<HomeController> logger, ITicketRepository repository, UserManager<IdentityUserModel> userManager)
+        public HomeController(ILogger<HomeController> logger, ITicketRepository repository, UserManager<IdentityUserModel> userManager, INoteRepository noteRepository)
         {
             _logger = logger;
             _ticketRepository = repository;
             _userManager = userManager;
+            _noteRepository = noteRepository;
 
         }
 
@@ -43,6 +45,13 @@ namespace Insectic.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddNote(Note note)
+        {
+            await _noteRepository.NewNoteAsync(note);
+            return RedirectToAction("Dashboard");
         }
     }
 }

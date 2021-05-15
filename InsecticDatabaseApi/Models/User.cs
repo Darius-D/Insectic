@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 
 
 namespace InsecticDatabaseApi.Models
@@ -9,10 +8,10 @@ namespace InsecticDatabaseApi.Models
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string? ResourceGroup { get; set; }
-        public string? ProfilePicture { get; set; }
-        public string? Supervisor { get; set; }
-        public string? Department { get; set; }
+        public string ResourceGroup { get; set; }
+        public string ProfilePicture { get; set; }
+        public string Supervisor { get; set; }
+        public string Department { get; set; }
 
     }
 }

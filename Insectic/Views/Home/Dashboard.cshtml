@@ -26,30 +26,30 @@
         </div>
         <div class="loginPopup">
             <div class="formPopup" id="popupForm">
-                <form method="POST" class="formContainer">
+                <form method="post" class="formContainer">
                     <h2>Create New Note</h2>
                     <label for="noteTitle">
                         <strong>Title:</strong>
                     </label>
-                    <input type="text" id="NoteTitle" placeholder="Note Title" name="NoteTitle" required>
+                    <input type="text" placeholder="Note Title" name="Title" id="Title" required>
                     <label for="NoteBody">
                         <strong>Note Body:</strong>
                     </label>
-                    <input type="text" id="NoteBody" placeholder="Note contents" name="NoteBody" required>
-                    <button type="submit" class="btn">Add Note</button>
+                    <input type="text" id="NoteBody" placeholder="Note contents" name="NoteBody"  required>
+                    <button type="submit" class="btn" asp-action="AddNote">Add Note</button>
                     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
                 </form>
             </div>
         </div>
         @* Javascript notes form *@
+        @* Make a foreach loop to display notes *@
         <div class="noteBodyContainer">
             <div class="noteBox">
-                <h4 class="noteTitle">Title: </h4>
+                <h4 class="noteTitle">Title: test </h4>
                 <h4 class="noteBody">Note:</h4>
                 <h4 class="noteTitleText">test Note</h4>
                 <h4 class=noteBodyText>Make Delete Note method with anchor tag!</h4>
             </div>
-
         </div>
     </div>
 

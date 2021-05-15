@@ -24,6 +24,7 @@ namespace Insectic
             services.AddControllersWithViews();
             services.AddHttpClient();
             services.AddScoped<ITicketRepository, TicketApiRepository>();
+            services.AddScoped<INoteRepository, NoteApiRepository>();
 
             //for custom Identity
 

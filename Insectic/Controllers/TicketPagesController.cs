@@ -1,7 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using Insectic.BLL;
 using Insectic.InsecticData;
 using Insectic.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Insectic.Controllers
@@ -9,10 +11,12 @@ namespace Insectic.Controllers
     public class TicketPagesController : Controller
     {
         private readonly ITicketRepository _ticketRepository;
+        private readonly UserManager<IdentityUserModel> _userManager;
         
-        public TicketPagesController(ITicketRepository repository)
+        public TicketPagesController(ITicketRepository repository, UserManager<IdentityUserModel> userManager)
         {
             _ticketRepository = repository;
+            _userManager = userManager;
         }
 
         
@@ -38,7 +42,15 @@ namespace Insectic.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return View(await _ticketRepository.GetAllTicketsAsync()!);
+            var TicketList = await _ticketRepository.GetAllTicketsAsync();
+
+            //foreach (var ticket in TicketList)
+            //{
+            //    var user = UserApiRepository.GetUser(ticket.UserId);
+            //    ticket.UserId = user.FirstName + user.LastName;
+            //}
+            
+            return View(TicketList);
         }
 
         [HttpPost]
