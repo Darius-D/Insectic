@@ -1,0 +1,346 @@
+﻿
+body {
+    background: #333;
+}
+
+.analyticsContainer {
+    background: url(/img/corkboard.jpg);
+    grid-area: Main-Content;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "pageHeader pageHeader pageHeader pageHeader pageHeader pageHeader pageHeader pageHeader pageHeader pageHeader pageHeader pageHeader"
+        "TicketCountContainer TicketCountContainer TicketCountContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer"
+        "TicketCountContainer TicketCountContainer TicketCountContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer"
+        "TicketCountContainer TicketCountContainer TicketCountContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer"
+        "TicketCountContainer TicketCountContainer TicketCountContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer TicketStatusContainer"
+        "TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer"
+        "TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer"
+        "TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer"
+        "TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer TicketDataContainer"
+        "TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer"
+        "TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer"
+        "TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer TicketGraphContainer"
+        "employeeDataContainer employeeDataContainer employeeDataContainer employeeDataContainer employeeDataContainer employeeDataContainer employeeDataContainer employeeDataContainer employeeDataContainer employeeDataContainer employeeDataContainer employeeDataContainer";
+}
+
+.AnalyticsPageHeader {
+    grid-area: pageHeader;
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 3px solid black;
+}
+
+.ticketCountContainer {
+    padding-top: 10px;
+    grid-area: TicketCountContainer;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding-bottom: 10px;
+    background: blue;
+    border-radius: 10px;
+    margin: 0 10px;
+
+}
+.ticketCountContainer h2 {
+    
+    border-radius: 10px;
+    color: black;
+    z-index: 99;
+}
+.ticketCount {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+    .ticketCount .dataBox {
+        background: rgb(106, 231, 225);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 5px;
+        padding: 10px;
+    }
+
+.circle {
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    margin-top: 5px;
+    background: white;
+}
+
+.ticketStatusContainer {
+    grid-area: TicketStatusContainer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 1fr 1fr;
+    grid-template-areas:
+        "header"
+        "top-row"
+        "bottom-row";
+    border-bottom: black solid 3px;
+}
+
+    .ticketStatusContainer .ContainerHeader {
+        grid-area: header;
+        margin-top: 5px;
+        border-top: solid black 1px;
+        
+    }
+
+.topRow {
+    grid-area: top-row;
+    display: grid;
+    
+    background: url(/img/corkboard.jpg);
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.bottomRow {
+    grid-area: bottom-row;
+    display: grid;
+    background: url(/img/corkboard.jpg);
+    border-radius: 10px;
+    margin: 5px 10px;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    width: 50%;
+    height: 32px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.ticketStatusContainer .dataBox {
+    background: rgb(214, 135, 135);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px;
+    min-height: 110px;
+    margin: 10px;
+}
+
+.ticketDataContainer {
+    grid-area: TicketDataContainer;
+    display: grid;
+    grid-template-columns: repeat (2, 1fr );
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+        "top top"
+        "leftT rightT";
+    border-bottom: 3px solid black;
+}
+
+    .ticketDataContainer .ContainerHeader {
+        grid-area: top;
+    }
+
+    .ticketDataContainer .DatatableOne {
+        display: flex;
+        justify-content: center;
+        grid-area: leftT;
+        display: flex;
+        overflow: auto;
+        justify-content: center;
+        padding: 5px;
+        max-height: 300px;
+        margin-bottom: 10px;
+    }
+
+    .ticketDataContainer .DataTableTwo {
+        display: flex;
+        overflow: auto;
+        justify-content: center;
+        grid-area: rightT;
+        padding: 5px;
+        max-height: 300px;
+        margin-bottom: 10px;
+    }
+
+    
+        
+        
+    
+table {
+    width: 100%;
+    overflow: scroll;
+    border-collapse: collapse;
+}
+
+th {
+    position: sticky;
+    background: red;
+    top: 0;
+}
+
+th, td {
+    padding: 2px 5px;
+    text-align: left;
+}
+
+td {
+    overflow: auto;
+    max-width: 200px;
+}
+
+tbody tr {
+    border-bottom: thin solid rgba(0, 0, 0, 0.867);
+}
+
+    tbody tr:nth-of-type(odd) {
+        background: #f0e08a;
+    }
+
+    tbody tr:nth-of-type(even) {
+        background: #dfebe0;
+    }
+
+    tbody tr:last-of-type {
+        border-bottom: 2px solid #161616;
+    }
+
+.DataTableTwo::-webkit-scrollbar {
+    width: 15px;
+}
+
+.DataTableTwo::-webkit-scrollbar-thumb {
+    background-color: rgb(233, 228, 228);
+    border-radius: 100px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+}
+
+.DataTableTwo::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.DataTableTwo::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.DatatableOne::-webkit-scrollbar {
+    width: 15px;
+}
+
+.DatatableOne::-webkit-scrollbar-thumb {
+    background-color: rgb(233, 228, 228);
+    border-radius: 100px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+}
+
+.DatatableOne::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.DatatableOne::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.analyticsContainer::-webkit-scrollbar {
+    width: 15px;
+}
+
+.analyticsContainer::-webkit-scrollbar-thumb {
+    background-color: #f4f4f4;
+    border-radius: 100px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+}
+
+.analyticsContainer::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.analyticsContainer::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.tableHead {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: green;
+    width: 100%;
+}
+
+.ticketGraphsContainer {
+    grid-area: TicketGraphContainer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+        "topD topD"
+        "leftD rightD";
+    
+    padding: 10px;
+    border-bottom: 3px #000 dashed;
+    
+}
+
+    .ticketGraphsContainer .ContainerHeader {
+        grid-area: topD;
+    }
+
+    .ticketGraphsContainer .pieChart {
+        grid-area: leftD;
+    }
+
+    .ticketGraphsContainer .lineGraph {
+        grid-area: rightD;
+        
+    }
+
+.employeeDataContainer {
+    grid-area: employeeDataContainer;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+.RoleCount {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+    .RoleCount .dataBox {
+        background: linear-gradient(45deg, blue, green);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 5px;
+        padding: 10px;
+    }
+
+.ContainerHeader {
+    text-align: center;
+}
+
+.block {
+    display: flex;
+}
+
+.dataBox {
+    text-align: center;
+    width: 100%;
+    border-radius: 8px;
+}

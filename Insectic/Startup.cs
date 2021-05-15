@@ -1,16 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Insectic.InsecticData;
 using Insectic.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 
 namespace Insectic
@@ -39,6 +33,7 @@ namespace Insectic
                 cfg.UseSqlServer(Configuration.GetConnectionString("InsecticContextConnection")));
 
             services.AddRazorPages();
+
             //forces the user to log in 
             //services.AddAuthorization(opt =>
             //{

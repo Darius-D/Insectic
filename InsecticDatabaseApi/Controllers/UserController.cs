@@ -71,7 +71,7 @@ namespace InsecticDatabaseApi.Controllers
         }
 
         [HttpPost]
-        [Route("api/[controller]")]
+        [Route("api/[controller]/AddUser")]
         public async Task<IActionResult> AddUser(UserViewModel userModel)
         {
             var user = new User()
@@ -92,7 +92,7 @@ namespace InsecticDatabaseApi.Controllers
                 if ((await SignInMgr.PasswordSignInAsync(user.UserName, userModel.Password, false, false))
                     .Succeeded)
                 {
-                    return Ok("Successfully Deleted");
+                    return Ok("Successfully Added");
                 }
             }
 

@@ -114,7 +114,7 @@
 
                         <tr>
                             <td>@ticket.TicketId</td>
-                            <td>@ticket.TicketDescription</td>
+                            <td>@TicketLogic.TruncateAtWord(ticket, 50)</td>
                             <td>@ticket.Status</td>
                         </tr>
                     }
@@ -153,7 +153,7 @@
                         Console.WriteLine(ticket.TicketId);
                         <tr>
                             <td>@ticket.TicketId</td>
-                            <td>@ticket.TicketDescription</td>
+                            <td>@TicketLogic.TruncateAtWord(ticket, 50)</td>
                             <td>@ticket.Status</td>
                         </tr>
                     }

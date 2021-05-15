@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Insectic.Models;
 using Insectic.Models.ViewModels;
@@ -36,11 +37,15 @@ namespace Insectic.InsecticData
                 return user;
 
         }
-        //todo: make this method so users can be created. 
-        //public static ObjectResult AddUser(RegisterModel user)
-        //{
-        //    var response = Client.PostAsync("https://Localhost:44342/api/User")
-        //}
+       
+        public static async void AddUser(RegisterModel user)
+        {
+            var newUser = JsonConvert.SerializeObject(user);
+            var httpContent = new StringContent(newUser, Encoding.UTF8, "application/json");
+            var response = await Client.PostAsync("https://Localhost:44342/api/User/AddUser", httpContent);
+            var responseContent = await response.Content.ReadAsStringAsync();
+
+        }
 
         //would like to convert from RestSharp to http client. currently having issues with http client method in testing
         public static void EditUser(string userId, UserJsonModel user)

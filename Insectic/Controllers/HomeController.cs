@@ -3,12 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 using System.Dynamic;
+using System.Linq;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Threading.Tasks;
 using Insectic.BLL;
 using Insectic.InsecticData;
-
+using Microsoft.AspNetCore.Identity;
 
 
 namespace Insectic.Controllers
@@ -17,16 +18,19 @@ namespace Insectic.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ITicketRepository _ticketRepository;
-        public HomeController(ILogger<HomeController> logger, ITicketRepository repository)
+        private UserManager<IdentityUserModel> _userManager;
+        public HomeController(ILogger<HomeController> logger, ITicketRepository repository, UserManager<IdentityUserModel> userManager)
         {
             _logger = logger;
             _ticketRepository = repository;
+            _userManager = userManager;
+
         }
 
         public async Task<IActionResult> Dashboard()
         {
-           //ViewBag.currentUser = User.FindFirstValue(ClaimTypes.Name);
-            
+            //ViewBag.currentUser = User.FindFirstValue(ClaimTypes.Name);
+
             return View(await _ticketRepository.GetAllTicketsAsync()!);
         }
         public IActionResult Privacy()
