@@ -81,7 +81,7 @@
                 </td>
                 <td>@Html.DisplayFor(modelItem => item.UserId)</td>
                 <td>@Html.DisplayFor(modelItem => item.AssignedUser)</td>
-                <td><a href="#">View</a></td>
+                <td><a asp-action="View" asp-route-ticketId="@item.TicketId">View</a></td>
                 <td><a asp-action="EditTicket" asp-route-ticketId="@item.TicketId">Edit</a></td>
             </tr>
             }

@@ -1,0 +1,82 @@
+﻿
+@using Insectic.InsecticData
+@model Insectic.Models.TicketJsonModel
+
+@{
+    Layout = "_InsecticLayout";
+
+}
+
+
+@section LinkOne
+{
+    <link rel="stylesheet" href="/css/CreateTicket.css">
+}
+
+@section Title
+{Edit Ticket}
+
+<div class="FullTop">
+    <h1>View Ticket</h1>
+</div>
+
+<form method="post" class="TicketForm">
+    <div class=headerTop>
+        <h1>Viewing Ticket @Model.TicketId</h1>
+    </div>
+    <div class="Category">
+        <div>
+            <label asp-for="TicketId">Ticket:</label>
+            <input asp-for="TicketId" value="@Model.TicketId" readonly/>
+
+        </div>
+        <div>
+            <label asp-for="Category">BugCategory:</label>
+            <input type="text"asp-for="Category" value="@Model.Category"readonly/>
+        </div>
+        <div>
+            <label asp-for="Priority">Priority:</label>
+            <input type="text" value="@Model.Priority" readonly />
+        </div>
+        <div>
+            <label asp-for="Status">CurrentStatus:</label>
+            <input asp-for="Status" type="text" value="@Model.Status" readonly/>
+        </div>
+    </div>
+
+    <div class="Users">
+        <div class="dropdown">
+            <label asp-for="UserId">Originating User:</label>
+            <input asp-for="UserId" value="@Model.UserId" readonly />
+            <label asp-for="AssignedUser">Assign to:</label>
+            <input type="text" value="@Model.AssignedUser" readonly />
+        </div>
+    </div>
+    <div class="Dates">
+
+        <div>
+            <label asp-for="IncidentDate">Incident Date:</label>
+            <input type="text" id="IncidentDate" name="IncidentDate" value="@Model.IncidentDate" readonly/>
+        </div>
+
+        <div>
+            <label asp-for="DueDate">Due Date</label>
+            <input type="datetime-local" asp-for="DueDate" value="@Model.DueDate" readonly />
+        </div>
+
+    </div>
+    <div class="TBL">
+        <label asp-for="TicketDescription">Ticket Description</label>
+    </div>
+    <div class="TextB">
+        <textarea class="textinput" name="TicketDescription" cols="105" rows="10"
+                  readonly style="border-radius: 10px">@Model.TicketDescription</textarea>
+        <div style="display: flex; justify-content: space-between">
+            <a href="#">Add Comment</a>
+            <a asp-action="EditTicket" asp-route-ticketId="@Model.TicketId">Edit Ticket</a>
+        </div>
+        
+    </div>
+
+
+</form>

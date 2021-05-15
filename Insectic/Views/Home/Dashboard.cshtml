@@ -77,7 +77,7 @@
                     @foreach (var ticket in @Model.Where(x => x.Priority.ToLower().Equals("urgent") && x.Status.ToLower() != "closed"))
                     {
                         <tr>
-                            <td>@ticket.TicketId</td>
+                            <td><a asp-controller="TicketPages" asp-action="View" asp-route-ticketId="@ticket.TicketId"> @ticket.TicketId</a></td>
                             <td>@TicketLogic.TruncateAtWord(ticket, 50)</td>
                             <td>@ticket.Status</td>
                         </tr>
@@ -113,7 +113,7 @@
                     {
 
                         <tr>
-                            <td>@ticket.TicketId</td>
+                            <td><a asp-controller="TicketPages" asp-action="View" asp-route-ticketId="@ticket.TicketId"> @ticket.TicketId</a></td>
                             <td>@TicketLogic.TruncateAtWord(ticket, 50)</td>
                             <td>@ticket.Status</td>
                         </tr>
@@ -152,7 +152,7 @@
                     {
                         Console.WriteLine(ticket.TicketId);
                         <tr>
-                            <td>@ticket.TicketId</td>
+                            <td><a asp-controller="TicketPages" asp-action="View" asp-route-ticketId="@ticket.TicketId"> @ticket.TicketId</a></td>
                             <td>@TicketLogic.TruncateAtWord(ticket, 50)</td>
                             <td>@ticket.Status</td>
                         </tr>
@@ -186,7 +186,7 @@
                     @foreach (var ticket in @Model.Where(x => x.Priority.ToLower().Equals("high") && x.Status.ToLower() != "closed"))
                     {
                         <tr>
-                            <td>@ticket.TicketId</td>
+                            <td><a asp-controller="TicketPages" asp-action="View" asp-route-ticketId="@ticket.TicketId"> @ticket.TicketId</a></td>
                             <td>@TicketLogic.TruncateAtWord(ticket, 50)</td>
                             <td>@ticket.Status</td>
                         </tr>
