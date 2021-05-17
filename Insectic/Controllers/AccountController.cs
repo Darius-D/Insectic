@@ -28,6 +28,8 @@ namespace Insectic.Controllers
         {
             return View();
         }
+
+
         [AllowAnonymous]
         [HttpPost]
         [ValidateAntiForgeryToken]

@@ -17,7 +17,7 @@
 </div>
 
 <div class="ContactContainer">
-    @foreach (var user in UserApiRepository.GetAllUsers())
+    @foreach (var user in UserApiRepository.GetAllUsers().Result)
     {
         <figure class="snip1336">
             <img src="/img/image4.jpeg" alt="sample87"/>

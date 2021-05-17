@@ -31,7 +31,10 @@ namespace Insectic.Controllers
 
         public async Task<IActionResult> Dashboard()
         {
-            //ViewBag.currentUser = User.FindFirstValue(ClaimTypes.Name);
+            var currentUser = User.FindFirstValue(ClaimTypes.Name);
+            var notes = await _noteRepository.GetAllNotesAsync();
+            var t  = notes/*.Where(n => n.UserId.Equals(currentUser))*/;
+            ViewBag.Notes = t;
 
             return View(await _ticketRepository.GetAllTicketsAsync()!);
         }

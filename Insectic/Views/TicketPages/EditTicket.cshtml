@@ -73,7 +73,7 @@
                 <option value="@Model.AssignedUser">@Model.AssignedUser</option>
                 @{
 
-                    foreach (var user in UserApiRepository.GetAllUsers())
+                    foreach (var user in UserApiRepository.GetAllUsers().Result)
                     {
                         <option value="@user.Email">@user.FirstName @user.LastName</option>
                     }

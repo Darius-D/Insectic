@@ -63,7 +63,7 @@
                 <option value="null">Select User</option>
                 @{
 
-                    foreach (var user in UserApiRepository.GetAllUsers())
+                    foreach (var user in UserApiRepository.GetAllUsers().Result)
                     {
                         <option value="@user.Email">@user.FirstName @user.LastName</option>
                     }
@@ -74,7 +74,7 @@
                 <option value="null">Select User</option>
                 @{
 
-                    foreach (var user in UserApiRepository.GetAllUsers())
+                    foreach (var user in UserApiRepository.GetAllUsers().Result)
                     {
                         <option value="@user.Email">@user.FirstName @user.LastName</option>
                     }

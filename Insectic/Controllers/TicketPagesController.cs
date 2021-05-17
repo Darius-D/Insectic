@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Insectic.BLL;
 using Insectic.InsecticData;
 using Insectic.Models;
@@ -42,14 +41,7 @@ namespace Insectic.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var TicketList = await _ticketRepository.GetAllTicketsAsync();
-
-            //foreach (var ticket in TicketList)
-            //{
-            //    var user = UserApiRepository.GetUser(ticket.UserId);
-            //    ticket.UserId = user.FirstName + user.LastName;
-            //}
-            
+            var TicketList = await _ticketRepository.GetAllTicketsAsync()!;
             return View(TicketList);
         }
 

@@ -17,21 +17,21 @@ namespace Insectic.InsecticData
         private static readonly HttpClient Client = new HttpClient();
        
 
-        public static List<IdentityUserModel>? GetAllUsers()
+        public static async Task<List<IdentityUserModel>>? GetAllUsers()
         {
-            var response = Client.GetStringAsync("https://localhost:44342/api/User/");
+            var response = await Client.GetStringAsync("https://localhost:44342/api/User/");
 
-            List<IdentityUserModel>? userList = JsonConvert.DeserializeObject<List<IdentityUserModel>>(response.Result);
+            List<IdentityUserModel>? userList = JsonConvert.DeserializeObject<List<IdentityUserModel>>(response);
 
             return userList;
 
         }
 
-        public static IdentityUserModel? GetUser(string userId)
+        public static async Task<IdentityUserModel?> GetUser(string userId)
         {
-            var response = Client.GetStringAsync("https://localhost:44342/api/User/" + userId);
+            var response = await Client.GetStringAsync("https://localhost:44342/api/User/" + userId);
 
-            var user = JsonConvert.DeserializeObject<IdentityUserModel>(response.Result);
+            var user = JsonConvert.DeserializeObject<IdentityUserModel>(response);
             
             return user;
 

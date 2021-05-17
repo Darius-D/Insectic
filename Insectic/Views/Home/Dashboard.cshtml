@@ -42,15 +42,20 @@
             </div>
         </div>
         @* Javascript notes form *@
-        @* Make a foreach loop to display notes *@
+        
         <div class="noteBodyContainer">
+        @foreach (var note in @ViewBag.Notes)
+        {
             <div class="noteBox">
-                <h4 class="noteTitle">Title: test </h4>
+                <h4 class="noteTitle">Title:</h4>
+                <h5 class="noteTitleText">@note.Title</h5>
                 <h4 class="noteBody">Note:</h4>
-                <h4 class="noteTitleText">test Note</h4>
-                <h4 class=noteBodyText>Make Delete Note method with anchor tag!</h4>
+                <h5 class="noteBodyText">@note.NoteBody</h5>
             </div>
+        }
         </div>
+        
+        
     </div>
 
     <div class="Box Box1">
