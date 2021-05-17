@@ -18,7 +18,7 @@ body {
 
 .register-container {
     box-shadow: 12px 12px 2px 1px rgba(55, 55, 59, 0.2);
-    background: white;
+    background: lightblue;
     border-radius: 10px;
     padding: 10px;
     margin: 0 10%;
@@ -28,14 +28,50 @@ body {
     align-items: center;
 }
 
+#message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.invalid {
+    color: red;
+}
+
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
+
+.valid {
+    color: green;
+}
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
 .inputbox {
     text-align: center;
     margin: 5px 0;
+    
 }
 
 input {
     padding: 5px;
     color: black;
+    border-radius: 8px;
 }
 .link-text {
     text-align: center;
@@ -44,6 +80,8 @@ input {
 }
 .dropdown {
     width: 100%;
+    border-radius: 8px;
+    padding-left: 5px;
 }
 a {
     text-decoration: none;
