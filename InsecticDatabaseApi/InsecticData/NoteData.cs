@@ -35,9 +35,9 @@ namespace InsecticDatabaseApi.InsecticData
 
         public void DeleteNote(int noteId)
         {
-            var existingTicket = _insecticContext.Tickets.Find(noteId);
+            var existingNote = _insecticContext.Notes.Find(noteId);
 
-            _insecticContext.Tickets.Remove(existingTicket);
+            _insecticContext.Notes.Remove(existingNote);
             _insecticContext.SaveChanges();
         }
 

@@ -51,6 +51,7 @@
                 <h5 class="noteTitleText">@note.Title</h5>
                 <h4 class="noteBody">Note:</h4>
                 <h5 class="noteBodyText">@note.NoteBody</h5>
+                <h6 class="note-bottom"><a asp-controller="Home" asp-action="DeleteNote" asp-route-noteId ="@note.noteId">Delete</a></h6>
             </div>
         }
         </div>

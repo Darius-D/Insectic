@@ -56,5 +56,12 @@ namespace Insectic.Controllers
             await _noteRepository.NewNoteAsync(note);
             return RedirectToAction("Dashboard");
         }
+
+        
+        public async Task<IActionResult> DeleteNote(int noteId)
+        {
+             _noteRepository.DeleteNoteAsync(noteId);
+            return RedirectToAction("Dashboard");
+        }
     }
 }

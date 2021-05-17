@@ -75,10 +75,12 @@
 .noteBox {
     display: grid;
     grid-template-columns: .1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr .5fr;
     grid-template-areas:
-        "titleLeftCol titleRightCol"
-        "noteLeftCol noteRightCol";
+                       "titleLeftCol titleRightCol"
+                       "noteLeftCol noteRightCol"
+                       "noteBottom noteBottom";
+
     margin: 0 auto;
     border: 1px solid black;
     width: 95%;
@@ -104,6 +106,20 @@
     text-align: left;
     grid-area: titleRightCol;
 }
+.note-bottom {
+    grid-area: 3/1/4/3;
+    
+    
+    opacity: .7;
+    display: flex;
+    justify-content: center;
+    transition: 100ms background-color;
+}
+.note-bottom:hover {
+    transition-delay: .25s;
+    background-color: red;
+    
+}
 
 .noteBodyText {
     padding-left: 5px;
@@ -112,6 +128,7 @@
 }
 
 .noteBox:first-child {
+    margin-top: 10px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }

@@ -93,8 +93,6 @@ body {
 .topRow {
     grid-area: top-row;
     display: grid;
-    
-    background: url(/img/corkboard.jpg);
     border-radius: 10px;
     margin: 0 10px;
 }
@@ -102,7 +100,6 @@ body {
 .bottomRow {
     grid-area: bottom-row;
     display: grid;
-    background: url(/img/corkboard.jpg);
     border-radius: 10px;
     margin: 5px 10px;
 }
