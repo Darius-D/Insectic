@@ -1,0 +1,3 @@
+<p>This project was originally inspired by the phoenix Project by Gene Kim, Kevin Behr. and George Spafford. The purpose of this project was to track "work" to allow me to followalong with the book where I could identity bootlenecks and trends. </p>
+<p>I started with very simple wireframes as I did not have a great idea of how I visually wanted my project to be represented. I knew later on I wanted my application to be fun and unique. The goal was not to make this web application into a production enviorment.  I also wanted to try to adhere to the TDD mindset but I ended up being slown down by that approach as my ideas and features changed daily. </p> 
+<p>TBD</p>
