@@ -9,12 +9,14 @@ body {
     background: lightseagreen;
 }
 
+
 .body-container {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .register-container {
     box-shadow: 12px 12px 2px 1px rgba(55, 55, 59, 0.2);
@@ -27,6 +29,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
 }
+
 
 #message {
     display: none;

@@ -23,6 +23,7 @@ namespace InsecticDatabaseApi.InsecticData
         {
             var results = UserMgr.Users.ToListAsync();
             return results.Result;
+            
 
         }
 
@@ -35,6 +36,7 @@ namespace InsecticDatabaseApi.InsecticData
         public List<User> GetUserByResourceGroup(string resourceGroup)
         {
             return GetAllUsers().Where(u => u.ResourceGroup == resourceGroup).ToList();
+            
         }
 
         //todo: insert Identity Role manager

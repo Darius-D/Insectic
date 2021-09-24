@@ -34,7 +34,7 @@ namespace InsecticDatabaseApi
             
             services.AddControllers();
             services.AddDbContext<InsecticContext>(options => options.UseSqlServer(
-                Configuration.GetConnectionString("InsecticApiConnectionString")));
+                Configuration.GetConnectionString("InsecticAzureDb")));
 
             // add service.scoped for interfaces for crud 
             services.AddScoped<ITicketData, TicketData>();
@@ -45,7 +45,7 @@ namespace InsecticDatabaseApi
             services.AddIdentity<User,UserRole>(option => option.User.RequireUniqueEmail = true).AddEntityFrameworkStores<InsecticContext>();
 
             services.AddDbContext<InsecticContext>(cfg =>
-                cfg.UseSqlServer(Configuration.GetConnectionString("InsecticContextConnection")));
+                cfg.UseSqlServer(Configuration.GetConnectionString("InsecticAzureContextDb")));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "InsecticDatabaseApi", Version = "v1" });
